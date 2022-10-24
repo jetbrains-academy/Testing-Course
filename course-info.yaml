@@ -1,0 +1,12 @@
+type: marketplace
+title: UI test automation with Selenium and Python
+language: English
+summary: |-
+  This is a basic course about automated UI tests written in Python and Selenium. You will learn:
+  - How to write efficient ui tests.
+  - How to use core features of Selenium for test automation.
+  - Best practices and popular frameworks for test automation.
+programming_language: Python
+environment: unittest
+content:
+- lesson1
