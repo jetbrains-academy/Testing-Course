@@ -1,0 +1,19 @@
+type: choice
+is_multiple_choice: true
+options:
+- text: ChromeDriver поддерживается разработчиками проекта Chromium
+  is_correct: true
+- text: ChromeDriver позволяет манипулировать браузером Firefox
+  is_correct: false
+- text: Можно использовать Selenium Webdriver, вызывая методы соответствующей библиотеки на языке Java
+  is_correct: true
+- text: Писать автотесты с помощью Selenium можно только на языке Python
+  is_correct: false
+- text: Благодаря универсальности интерфейса можно скопировать тесты на Python, вставить их в проект на Java, и они заработают
+  is_correct: false
+files:
+- name: main.py
+  visible: true
+- name: __init__.py
+  visible: false
+local_check: true

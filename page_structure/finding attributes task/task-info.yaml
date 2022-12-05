@@ -1,0 +1,26 @@
+type: choice
+is_multiple_choice: true
+custom_name: "task: finding attributes"
+options:
+- text: value
+  is_correct: true
+- text: input
+  is_correct: false
+- text: class
+  is_correct: true
+- text: btnK
+  is_correct: false
+- text: aria-label
+  is_correct: true
+- text: name
+  is_correct: true
+- text: type
+  is_correct: true
+- text: id
+  is_correct: false
+files:
+- name: main.py
+  visible: true
+- name: __init__.py
+  visible: false
+local_check: true
