@@ -1,0 +1,7 @@
+type: theory
+custom_name: 'selectors - the good, the bad, the ugly '
+files:
+- name: main.py
+  visible: true
+- name: __init__.py
+  visible: false

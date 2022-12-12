@@ -9,4 +9,9 @@ summary: |-
 programming_language: Python
 environment: unittest
 content:
-- lesson1
+- introduction
+- starting_browser
+- page_structure
+- finding_elements
+- practice in writing css selectors
+- finding_elements_selenium
