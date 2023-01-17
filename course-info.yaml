@@ -10,8 +10,5 @@ programming_language: Python
 environment: unittest
 content:
 - introduction
-- starting_browser
-- page_structure
-- finding_elements
-- practice in writing css selectors
-- finding_elements_selenium
+- selenium_methods
+- test_frameworks
