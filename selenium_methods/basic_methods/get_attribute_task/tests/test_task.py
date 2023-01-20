@@ -1,12 +1,14 @@
 import unittest
-import time
 from selenium import webdriver
+import time
+import math
 
-from introduction.finding_elements_selenium.find_by_text.task import *
+from selenium_methods.basic_methods.get_attribute_task.task import get_attribute
 
-def check_reply(reply):
-    problem_number = 54
-    minutes_to_delay = 5
+
+def check(reply):
+    problem_number = 2107
+    minutes_to_delay= 5
 
     ts_now = int(time.time())
     ts_past = ts_now - 60*minutes_to_delay
@@ -17,8 +19,10 @@ def check_reply(reply):
         replys = float(reply)
         if  (replys < hashcode_now and replys > hashcode_past):
             return True
+        elif replys <= hashcode_past:
+            return 0, "Срок действия кода истек, попробуйте еще раз"
         else:
-            return False
+            return 0, "Неверный код"
 
     except ValueError:
         return 0, "Неверный формат строки, должно быть число"
@@ -29,8 +33,8 @@ class TestCase(unittest.TestCase):
         try:
             browser = webdriver.Chrome()
             browser.implicitly_wait(10)
-            fill_form_by_link(browser)
+            get_attribute(browser)
             reply = browser.switch_to.alert.text
-            self.assertTrue(check_reply(reply))
+            self.assertTrue(check(reply))
         finally:
             browser.quit()

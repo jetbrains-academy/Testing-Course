@@ -1,2 +1,3 @@
-custom_name: 'selenium methods'
-
+custom_name: selenium methods
+content:
+- basic_methods

@@ -1,8 +1,6 @@
 type: theory
 files:
-- name: quit_example.py
-  visible: true
-- name: close_example.py
+- name: main.py
   visible: true
 - name: __init__.py
   visible: false
