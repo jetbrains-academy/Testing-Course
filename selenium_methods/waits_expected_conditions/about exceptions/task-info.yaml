@@ -1,0 +1,17 @@
+type: choice
+is_multiple_choice: false
+options:
+- text: NoSuchElementsException
+  is_correct: false
+- text: NoSuchElementException
+  is_correct: true
+- text: ElementNotVisibleException
+  is_correct: false
+- text: MoveTargetOutOfBoundsException
+  is_correct: false
+files:
+- name: main.py
+  visible: true
+- name: __init__.py
+  visible: false
+local_check: true
