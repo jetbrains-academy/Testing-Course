@@ -1,6 +1,7 @@
 type: theory
+custom_name: 'fixtures returning value '
 files:
-- name: test_abs_project.py
+- name: test_fixture2.py
   visible: true
 - name: __init__.py
   visible: false

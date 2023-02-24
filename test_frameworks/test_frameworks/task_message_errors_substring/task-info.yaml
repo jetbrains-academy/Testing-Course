@@ -1,0 +1,11 @@
+type: output
+custom_name: "task: correct error messages with substrings"
+files:
+- name: main.py
+  visible: true
+- name: __init__.py
+  visible: false
+- name: tests/output.txt
+  visible: false
+- name: tests/input.txt
+  visible: false

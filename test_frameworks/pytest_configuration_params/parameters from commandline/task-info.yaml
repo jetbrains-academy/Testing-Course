@@ -1,6 +1,6 @@
 type: theory
 files:
-- name: test_abs_project.py
+- name: main.py
   visible: true
 - name: __init__.py
   visible: false
