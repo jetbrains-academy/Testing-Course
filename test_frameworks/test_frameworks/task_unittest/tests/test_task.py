@@ -1,9 +1,8 @@
 import unittest
 
-from task import sum
+from test_frameworks.test_frameworks.task_unittest import answer
 
 
-# todo: replace this with an actual test
 class TestCase(unittest.TestCase):
-    def test_add(self):
-        self.assertEqual(sum(1, 2), 3, msg="adds 1 + 2 to equal 3")
+    def test_answer(self):
+        self.assertEqual(answer.answer, "FAILED (errors=1)", msg="wrong report format")

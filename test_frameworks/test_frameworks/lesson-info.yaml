@@ -5,7 +5,7 @@ content:
 - test structure
 - expecting result in test
 - correct error messages
-- task_message_errors
+- task_messages
 - task_message_errors_substring
 - how to run test cases
 - about test runners

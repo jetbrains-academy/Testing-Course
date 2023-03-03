@@ -1,11 +1,11 @@
 type: edu
-custom_name: "task: correct error messages with substrings"
+custom_name: "task: correct error messages"
 files:
 - name: task.py
   visible: true
   placeholders:
-  - offset: 48
-    length: 93
+  - offset: 56
+    length: 92
     placeholder_text: '# TODO'
 - name: tests/test_task.py
   visible: false
