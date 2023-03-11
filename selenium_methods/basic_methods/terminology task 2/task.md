@@ -1,3 +1,3 @@
-<h2>Задание на терминологию 2</h2>
+<h2>Terminology task 2</h2>
 
-<p>Какие утверждения верны о типе используемого в этом задании элемента?</p>
+<p>Which statements on the type of the element used in this task are true?</p>

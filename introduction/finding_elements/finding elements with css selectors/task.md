@@ -1,18 +1,18 @@
-## Поиск элементов с помощью CSS-селекторов
+## Finding elements with CSS selectors
 
-<p> Ниже приведены части элементов HTML-страницы, по которым с помощью синтаксиса CSS можно найти элемент:</p>
+<p> Below you can see parts of an HTML page elements we can use to find an element with the help of the CSS syntax:</p>
 
 <ul>
     <li>tag</li>
 	<li>id</li>
 	<li>name</li>
 	<li>class</li>
-    <li>значение любого другого атрибута</li>
+    <li>value of any other attribute</li>
 </ul>
 
-Давайте откроем страницу http://suninjuly.github.io/cats.html и попробуем найти элемент,
-который содержит картинку с Котом-пулей (Bullet cat).
-Ниже приведён упрощенный кусок html-кода страницы:
+Let's open the page http://suninjuly.github.io/cats.html and try to find the element containing the picture with the 
+Bullet cat.
+Below you can see a simplified fragment of the page's HTML code:
 
 ```
 <div class="col-sm-4">
@@ -22,90 +22,89 @@
 </div>
 ```
 
-Для начала мы попробуем искать элементы вручную с помощью консоли браузера,
-а в следующем уроке научимся писать код, который выполняет ту же задачу поиска.
+First, we'll try manual search with the browser console,
+and in the following lesson we'll learn how to write code that performs the same search task. 
 
-### Поиск по id
+### Search by id
 
-Какое везение! У элемента с нашей картинкой есть атрибут `id="bullet"`, а значит,
-мы однозначно можем найти её с помощью селектора `#bullet`. 
+Lucky we are! The element with our picture has an attribute `id="bullet"`, which means
+we can unmistakably find it using the `#bullet` selector. 
 
-**В синтаксисе CSS `#` означает поиск по id элемента**
+**In the CSS syntax, `#` signifies search by the element's id**
 
 
 ![img.png](img.png)
 
-Можно проверить правильность подобранного селектора непосредственно в браузере в консоли разработчика.
-Откройте консоль разработчика и перейдите в ней на вкладку Elements. 
-Затем нажмите ctrl+F и в открывшейся внизу поисковой строке введите селектор. 
-Если селектор написан правильно, то вы увидите подсвеченный элемент на веб-странице,
-а также элемент будет подсвечен жёлтым цветом в html-коде. 
-Еще в поисковой строке вы увидите количество найденных элементов. Ж
-елательно писать точные селекторы, которые позволяют найти ровно один элемент.
-В написании таких селекторов мы потренируемся в одной из следующих задач.
+We can check whether we've chosen the proper selector right in your browser's developer console.
+Open the developer console and go to the Elements tab. 
+Press ctrl+F and enter the selector in the opened search field at the bottom.
+If the selector was written correctly, you will see a highlighted element in the web page
+and yellow-marked element in the HTML code. 
+Besides, you will see the number of found elements in the search field.
+It's preferable to write accurate selectors, which allow finding exactly one element.
+We'll practice writing such selectors in one of the following tasks.
 
-### Поиск по tag
+### Search by tag
 
-Чтобы найти элемент по тегу, просто напишите название тега в поисковой строке,
-как мы делали это при поиске по id (только без знака #), например, `h1`.
-Поиск по `h1` найдёт для нас элемент с названием страницы.
-Поиск по тегам не очень удобен,
-так как разработчики используют небольшое количество тегов для разметки страниц,
-и скорее всего, одному тегу будет соответствовать множество элементов.
+To find an element by its tag, just type the name of the tag in the search field, like we did in the id search
+(only without the # sign), for example, `h1`.
+The search by `h1` will give us the element with the page heading.
+Searching by tag is not very convenient
+because developers use a limited number of markup tags 
+and most probably one tag will match numerous elements.
 
-### Поиск по значению атрибута
+### Search by attribute value
 
-Можно найти элемент, указав название атрибута и его значение.
-Например, можно переписать поиск по id в следующем виде `[id="bullet"]` вместо `#bullet`.
+We can find an element by indicating the name of an attribute and its value.
+For example, we can rewrite the id search in the following way: `[id="bullet"]` instead of `#bullet`.
 
-Лучше использовать вариант с квадратными скобками при поиске значения атрибута для тех атрибутов, у которых нет собственных коротких команд поиска. Например, давайте найдем элемент h1 по значению его атрибута value: [value="Cat memes"].
+It's better to use the format with square brackets in the attribute value search when the attribute does not have its own short search command. For example, let's find the h1 element by the value of its attribute: [value="Cat memes"].
 
-### Поиск по name
+### Search by name
 
-Этот вариант поиска является разновидностью поиска по значению атрибута и записывается так же: [name="bullet-cat"]. Мы выделяем этот вариант потому что он довольно часто используется, а также выделяется как отдельный вид поиска элементов в Selenium WebDriver.
+This is a variety of attribute value search, and it's written in the same way: [name="bullet-cat"]. We discuss it separately because it is frequently used and also considered as a separate kind of element search in Selenium WebDriver.
 
-### Поиск по class
+### Search by class
 
-Поиск по классу можно записать в виде `[class="jumbotron-heading"]`,
-так как class тоже является атрибутом элемента.
-Но раз уж классы используются практически в каждой странице при задании стилей страниц,
-то для них также имеется свой короткий вариант поиска:
-`.jumbotron-heading` . 
-То есть мы пишем значение класса и предваряем его точкой.
+You can search by class in the following way: `[class="jumbotron-heading"]`
+because class is also an element's attribute.
+However, as classes are used in literally all pages to define page styles,
+there is also a short version of search for them:
+`.jumbotron-heading`. 
+That is, we write the name of the class preceded by a dot.
 
-Давайте рассмотрим важную разницу между двумя способами поиска по классу.
-Допустим, у элемента article задано больше одного класса,
-как на странице http://suninjuly.github.io/cats.html:
+Now, let's look into the important difference between the two class searches.
+Let's say the element "article" has more than one class, like in the page
+like in the page http://suninjuly.github.io/cats.html:
 
 ``` 
 <article id="moto" class="lead text-muted" title="one-thing" name="moto">If there's one thing that the internet was made for, it's funny cat memes.</article> 
 ```
 
-Вариант `[class="lead"]` не найдет нам этот элемент, так как он ищет по точному совпадению.
-Чтобы найти элемент, нам нужно будет написать `[class="lead text-muted"]`,
-порядок классов при этом важен. `[class="text-muted lead"]` — уже не найдет искомый элемент.
+The `[class="lead"]` variant won't find the element because it requires an exact match.
+In order to find the element, we need to write `[class="lead text-muted"]`,
+minding the order of classes: `[class="text-muted lead"]` will not find the element in question.
 
-Вариант `.lead` при этом позволит найти данный элемент,
-так как он ищет простое вхождение класса в элемент. 
-Для уточнения селектора можно задать также оба класса,
-для этого нужно добавить второй класс к строке поиска без пробела и предварить его точкой:
-`.lead.text-muted` . 
-Порядок классов в отличие от первого способа здесь не важен — `.text-muted.lead`
-так же найдет нужный элемент.
-Рекомендуем пользоваться вторым способом поиска классов, так как он является более гибким.
+Meanwhile, the `.lead` variant will allow us to find the element because it searches for
+mere presence of the class in the element. 
+To refine the selector, we can also mention both classes,
+that is, add the second class in the search field without a space and preceded by a dot:
+`.lead.text-muted`. 
+Unlike the previous case, the order of classes does not matter here — `.text-muted.lead`
+will also find the needed element.
+We recommend using the latter method of searching by class, as it is more flexible.
 
-Еще одно важное замечание. Поиск по классу чувствителен к регистру,
-то есть `.Lead` уже не найдет нужный элемент.
+One more important thing. Search by class is case-sensitive, 
+so `.Lead` will not find the element.
 
-В консоли браузера вы также можете искать по простому совпадению текста в HTML,
-например, запрос lead подсветит текст lead.
-Однако, не стоит пользоваться таким поиском для выбора элементов,
-так как он слишком общий и не может использоваться в качестве селектора.
+In the browser console, you can also search by the text match in HTML,
+for example, the search for "lead" will highlight the text "lead".
+However, it's not advisable to use such a method for selecting elements because 
+it is too general and cannot be used as a selector.
 
-Мы рассмотрели разные варианты написания пути к элементу на странице,
-используя синтаксис CSS, т.е. научились писать CSS-селекторы.
-Слово "селектор" является буквальным переводом от английского слова selector.
-Selector в свою очередь происходит от глагола select, что переводится как "выбирать".
+We've discussed various ways of writing the path to a page element using the CSS syntax,
+that is, we've learned to write CSS selectors.
 
-Далее в этом уроке мы научимся искать элементы,
-комбинируя способы составления селекторов, рассмотренные в данном шаге.
+
+Next, we'll learn to find elements by combining the methods of selector writing
+discussed in this step.

@@ -1,4 +1,4 @@
-<h2> Селектор класса </h2>
-Подберите селектор для текста в подзаголовке страницы (элемент с текстом "If there's one thing that the internet was made for, it's funny cat memes.")
-Можно сделать это по-разному, но попробуйте использовать здесь класс элемента.
-Будьте внимательны и подберите уникальный селектор, чтобы по нему однозначно находился только один элемент.
+<h2> Class selector </h2>
+Choose a selector for the page subtitle text (the element with the text: "If there's one thing that the internet was made for, it's funny cat memes.")
+You can do that in several ways, but try using the element class. Be careful and choose 
+a unique selector so that it would identify exactly one element.

@@ -1,56 +1,56 @@
-# Что такое Selenium WebDriver? 
-Автотесты бывают очень разными, проверяют разные вещи и работают для разных уровней приложения. 
-Наверняка вы не раз видели так называемую "пирамиду тестирования". 
-В нашем курсе мы в основном будем говорить про end-to-end тесты,
-то есть такие, которые проверяют полную работу системы и имитируют действия пользователя. 
+# What is Selenium WebDriver? 
+There are different kinds of automated tests; they check different things and work with different application levels. 
+You must have previously seen the so-called "testing pyramid". 
+In our course, we'll mostly talk about the end-to-end tests,
+i.e., those that check the entire work of the system and simulate the user's actions. 
 
-Что нам нужно для того, чтобы написать такой тест для веб-приложения? 
+What do we need to write such a test for a web application? 
 
-Очевидно, код на языке программирования.
-Там будет содержаться какая-то логика действий 
-(например: залогинить пользователя, добавить товар в корзину) и проверки.
-Браузер, чтобы имитировать действия пользователя. 
-Желательно, какой-нибудь популярный. А еще лучше — несколько. 
-Эти две части нужно как-то связать воедино. 
-И как раз для этого нужен Selenium WebDriver. 
-По сути своей это — универсальный интерфейс, 
-который позволяет манипулировать разными браузерами напрямую из кода на языке программирования.
-Его преимущество как раз в его универсальности: за некоторыми исключениями, 
-все наши тесты, написанные один раз, можно запускать для разных браузеров.
+Apparently, we need some code in a programming language.
+It will contain a certain logic of events 
+(for example: log the user in, add an item to the shopping cart, etc.) and some tests.
+To simulate the actions of the user, you will need a browser. 
+Preferably, a popular one, and even better – several browsers. 
+These two parts need to be linked in some way, and 
+that's what we need Selenium WebDriver for. 
+Technically, it's a universal interface
+that allows manipulating different browsers directly from the code, using a programming language.
+Its advantage is its versatility: with a very few exceptions, 
+all the tests we write may be run for different browsers.
 
-Верна универсальность и в другую сторону: браузер будет выполнять одинаковые действия,
-не важно из библиотеки какого именно языка программирования эти методы будут вызваны.
-Вообще-то, Selenium WebDriver поддерживает довольно много языков программирования,
-хотя наибольшей популярностью в индустрии пользуются Java и Python.
+There's another side to its versatility, too: the browser will perform the same actions,
+no matter what programming language was used invoke these methods.
+Actually, Selenium WebDriver supports a lot of programming languages,
+though most popular in the industry are Java and Python.
 
-В этом курсе мы будем изучать именно Selenium WebDriver,
-и в текстах будем использовать термин WebDriver.
-Однако, если вы будете искать в интернете какую-то информацию,
-связанную с Selenium WebDriver, то скорее всего увидите,
-что используется более общий термин Selenium.
-Вам нужно будет смотреть на контекст, чтобы определить,
-какая часть проекта Selenium имеется в виду.
+In this course, we'll study Selenium WebDriver,
+and in the tests, we'll use the term WebDriver.
+However, if you search for some information
+related to Selenium WebDriver online, you will most probably see
+that a more general name Selenium is used.
+You will need to consider the context to understand what 
+part of the Selenium project is meant.
 
-Итого получаем вот такую картинку:
+Thus, we get the following picture:
 
  
 ![img_2.png](img_2.png)
 
 
-Это такое отношение "многие ко многим".
+It's a "many-to-many" relation.
 
-Что здесь еще важно? 
-Так как все браузеры работают слегка по-разному,
-разработчики браузеров самостоятельно реализуют "драйвер" – 
-программу, которая позволяет интерфейсу Selenium манипулировать кнопками,
-текстами, элементами и т.д. 
+What's important here? 
+As all browsers work slightly differently,
+browser developers create their own drivers – 
+programs that allow the Selenium interface manipulate buttons,
+texts, elements, etc. 
 
 В этом курсе мы будем работать со следующим набором инструментов: 
 
 ![img_1.png](img_1.png)
 
-Интересный факт!
-WebDriver стал настолько популярен, 
-что его признали стандартом протокола взаимодействия с браузером.
+Here's an interesting fact!
+WebDriver has become so popular
+that it's now recognized as the standard of a browser interaction protocol.
 https://www.w3.org/TR/webdriver1/
 https://www.selenium.dev/documentation/webdriver/

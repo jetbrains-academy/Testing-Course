@@ -1,3 +1,3 @@
-<h2> Иерархическая структура + порядок элементов </h2>
-Найдите вторую кнопку (она с текстом "Edit")
- на карточке с котом и бананом. Напишите для неё уникальный селектор, так, чтобы никакие другие элементы не выделялись. 
+<h2> Hierarchical structure + element order </h2>
+Find the second button (the one with the "Edit" text)
+in the card with the cat and the banana. Write a unique selector for it so that no other elements would be chosen.

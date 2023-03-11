@@ -1,36 +1,36 @@
-## Что представляет собой веб-страница?
+## What's a web page?
 
-Любое взаимодействие пользователя с веб приложением происходит через веб-интерфейс.
-Для того чтобы имитировать действия пользователя в автотесте нам нужно уметь находить элементы страницы,
-с которыми сценарий должен взаимодействовать. 
-В этом уроке мы разберем основные способы нахождения элементов. 
+Any interaction of the user with a web application proceeds via the web interface. 
+In order to imitate the user's actions, automated tests need to be able to find page  
+elements with which the scenario interacts.
+In this lesson, we'll discuss the main ways of finding elements. 
 
-Любая страница в интернете представляет собой html-файл, 
-в котором с помощью языка разметки HTML описана её структура.
+Any page on the internet is an HTML file,  
+with the page structure defined in the HTML language.
 
-Еще практически все сайты используют язык JavaScript,
-который позволяет сделать веб-страницу интерактивной, 
-реагировать на действия пользователя, запрашивать у пользователя данные и возвращать их.
+Besides, practically all sites use the JavaScript language,
+which allows making the web page interactive – able to  
+respond to the user's actions, request data from the user, and return data.
 
-Для полноты картины нужно упомянуть еще CSS (Cascading Style Sheets — каскадные таблицы стилей),
-который используется для вёрстки (визуального оформления страниц).
-Наверное, вы уже сталкивались с тем, что поломанная вёрстка страниц может приводить
-к очень неприятным багам на сайте.
-Благодаря WebDriver мы также можем поймать какую-то неожиданную проблему в оформлении
-— например, когда нужная пользователю кнопка оказывается перекрыта второстепенным элементом.
+Finally, we also need to mention CSS (Cascading Style Sheets),
+which is used for designing the visual appearance of a page. You've probably already
+seen cases when messed up page design results in serious 
+bugs in the site's work. Thanks to
+WebDriver, we can catch some unexpected design problems – for example, when a
+button the user needs is overlapped by some insignificant element.
 
-Сейчас нас будет интересовать в первую очередь структура страницы,
-то есть ее описание на языке HTML. Умея описывать путь к элементу на странице,
-мы можем найти такой элемент и выполнить с ним необходимые действия,
-например, отправить текст в текстовое поле или нажать на правильную кнопку.
+Now we are mostly concerned with the page structure, i.e.,
+its description in the HTML language. УBeing able to describe the path to a page element, we can find such an element 
+and perform necessary operations on it –
+for example, send a text into the text field or click the proper button.
 
-### Далее мы рассмотрим несколько способов поиска элементов внутри страницы:
+### Next, we'll discuss several ways of finding elements on a web page:
 <ul>
-<li> Поиск с помощью CSS-селекторов </li>
-<li> Поиск с помощью указания значений тегов или атрибутов элементов: ID, class, и другие </li>
-<li> Поиск с помощью языка запросов XPath </li>
+<li> Search with CSS selectors </li>
+<li> Search with tag values or element attributes: ID, class, etc. </li>
+<li> Search with the XPath query language </li>
 </ul>
-Поиск с помощью CSS-селекторов, 
-с нашей точки зрения, является наиболее удобным способом,
-так как он покрывает практически все возможные ситуации,
-и CSS-селекторы выглядят более читабельными. 
+We believe that searching with CSS selectors is most
+convenient, as this method
+covers virtually all possible situations,
+and CSS selectors are most readable.

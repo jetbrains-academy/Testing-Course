@@ -1,32 +1,33 @@
-## Подробнее об атрибутах (data-атрибуты)
+## More about attributes (data attributes)
 
-Как мы уже говорили, некоторые атрибуты напрямую не влияют на отображение элемента на страницах.
-О некоторых таких важных атрибутах мы уже поговорили. 
+As we've already said, some attributes directly affect the representation of the element on a page.
+We've already discussed some of these important attributes. 
 
-А еще список атрибутов можно расширять: это значит, 
-что разработчик может создать свой собственный атрибут и присвоить ему любые значения.
-Что это значит для тестировщика? 
-Это значит, что можно договориться с разработчиками о специальном атрибуте, 
-который вы будете использовать в своих тестах для поиска нужных элементов и 
-который не будет изменяться при исправлении верстки сайта.
-Это добавит стабильности вашим тестам. Правда, есть несколько ограничений: 
+Actually, the list of attributes can be expanded: it means that developers can create their own  
+attributes and assign any values to them.
+What does it mean to testers? 
+It means that we can agree with developers on a special attribute
+that won't change when the page coding is modified  
+and that we'll use in our tests to find necessary elements. 
+It will make your tests more stable. 
+However, there are several limitations: 
 
-веб-сайт должен использовать стандарт HTML5 (большинство современных сайтов соответствует этому требованию)
-использовать можно только латинские буквы, и символы дефис (-), двоеточие (:) и подчёркивание (_)
-Также принято названия таких атрибутов начинать со слова: "data", например, "data-button".
+the website needs to follow the HTML5 standard (most sites today do),
+and the attribute name can contain only Latin characters and the following symbols: hyphen (-), colon (:), and underscore (_).
+The names of such attributes should start with the word "data": for example, "data-button".
 
-Что еще важно знать про атрибуты элементов? 
+What else do you need to know about element attributes? 
 
-Некоторые атрибуты являются универсальными,
-они могут относиться к любому тегу и любому типу элементов.
-Например, hidden (т.е. скрытым) можно сделать любой элемент.
-Некоторые же атрибуты ассоциированы строго с определенным тегом, например, для картинки,
-которая задается тегом img, обязательно нужно указывать атрибут src.
+Some attributes are universal: they can 
+apply to any tag and any element type.
+For example, we can make any element "hidden".
+Meanwhile, some attributes are associated with a specific tag: for example, for an image, 
+which is defined by the "img" tag, we need to specify the "src" attribute.
 
-Если вы собираетесь в дальнейшем работать с автоматизацией тестирования веб-продуктов,
-то вам будет очень полезно изучить HTML более детально.
-Вы сможете быстро подбирать нужные селекторы,
-с первого взгляда на HTML-разметку будете видеть что `<a>` - это ссылка,
-`<p>` - текст, а `<ul>` - ненумерованный (маркированный) список. 
-Но это большая и широкая тема, которая заслуживает отдельного курса
-(можно проходить такие курсы самостоятельно, например, https://stepik.org/course/38218/).
+If you are planning to work with automated testing of web products in the future,
+you will need to study HTML in more detail.
+It will help you quickly choose the right selectors, and looking at the HTML code, you
+will immediately see that `<a>` is a link,
+`<p>` is text, and `<ul>` is unordered (bulleted) list. 
+However, it's a big topic, which deserves a separate course (you can take such a course on your own,
+for example, at https://stepik.org/course/38218/).

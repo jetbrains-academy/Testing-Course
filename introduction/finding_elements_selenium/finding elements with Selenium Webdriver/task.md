@@ -1,19 +1,19 @@
-<h2>Поиск элементов с помощью&nbsp;Selenium</h2>
+<h2>Finding elements with&nbsp;Selenium</h2>
 
-<p>Для поиска элементов на странице в Selenium WebDriver используются несколько стратегий, позволяющих&nbsp;искать по&nbsp;атрибутам элементов, текстам в ссылках,&nbsp;CSS-селекторам и&nbsp;XPath-селекторам. Для поиска Selenium предоставляет метод find_element, который принимает два аргумента - тип локатора и значение локатора. Существуют следующие методы&nbsp;поиска элементов:</p>
+<p>To find web page elements, Selenium WebDriver uses several strategies, which allow searching by element attributes, link text, CSS selectors, and XPath selectors. Selenium provides a search method find_element, which takes two arguments – locator type and locator value. The available search methods are the following:</p>
 
 <ul>
-	<li><strong>find_element(By.ID, value)</strong>&nbsp;&mdash; поиск по уникальному атрибуту id элемента. Если ваши разработчики проставляют всем элементам в приложении уникальный id, то вам повезло,&nbsp;и вы чаще всего будет использовать этот метод, так как&nbsp;он наиболее стабильный;</li>
-	<li><strong>find_element(By.CSS_SELECTOR, value)</strong>&nbsp;&mdash; поиск элемента с помощью правил на основе CSS. Это универсальный метод поиска, так как большинство веб-приложений использует CSS для вёрстки и задания оформления страницам. Если find_element_by_id вам не подходит из-за отсутствия id у элементов, то скорее всего вы будете использовать именно этот метод в ваших тестах;</li>
-	<li><strong>find_element(By.XPATH, value)</strong>&nbsp;&mdash; поиск с помощью языка запросов XPath, позволяет выполнять очень гибкий поиск элементов;</li>
-	<li><strong>find_element(By.NAME, value)</strong>&nbsp;&mdash; поиск по атрибуту name элемента;</li>
-	<li><strong>find_element(By.TAG_NAME, value)</strong>&nbsp;&mdash; поиск элемента по названию тега элемента;</li>
-	<li><strong>find_element(By.CLASS_NAME, value)</strong>&nbsp;&mdash; поиск по значению атрибута class;</li>
-	<li><strong>find_element(By.LINK_TEXT, value)&nbsp;</strong>&mdash; поиск ссылки на странице по полному совпадению;</li>
-	<li><strong>find_element(By.PARTIAL_LINK_TEXT, value)&nbsp;</strong>&mdash; поиск ссылки на странице, если текст селектора совпадает с любой частью текста ссылки.</li>
+	<li><strong>find_element(By.ID, value)</strong>&nbsp;&mdash; search by the unique id attribute of the element. If the developers provide a unique id to each application element, you are lucky and in most cases you will use this method, as it is the most stable;</li>
+	<li><strong>find_element(By.CSS_SELECTOR, value)</strong>&nbsp;&mdash; search by CSS rules. This is a universal search method, as most web applications use CSS for page coding and designing. If you cannot use find_element_by_id due to the absence of element ids, you will most probably use this method in your tests;</li>
+	<li><strong>find_element(By.XPATH, value)</strong>&nbsp;&mdash; search with the query language XPath, which offers great search flexibility;</li>
+	<li><strong>find_element(By.NAME, value)</strong>&nbsp;&mdash; search by the element's name attribute;</li>
+	<li><strong>find_element(By.TAG_NAME, value)</strong>&nbsp;&mdash; search by the element's tag name;</li>
+	<li><strong>find_element(By.CLASS_NAME, value)</strong>&nbsp;&mdash; search by the value of the class attribute;</li>
+	<li><strong>find_element(By.LINK_TEXT, value)&nbsp;</strong>&mdash; search for the exact match of a link;</li>
+	<li><strong>find_element(By.PARTIAL_LINK_TEXT, value)&nbsp;</strong>&mdash; search for a link in case the selector text partly matches the link text.</li>
 </ul>
 
-<p>Например, мы хотим найти кнопку со значением id=&quot;submit_button&quot;:</p>
+<p>For example, we want to find a button with the id value id=&quot;submit_button&quot;:</p>
 
 <pre>
 <code class="language-python">from selenium import webdriver
@@ -23,16 +23,16 @@ browser = webdriver.Chrome()
 browser.get("http://suninjuly.github.io/simple_form_find_task.html")
 button = browser.find_element(By.ID, "submit")</code></pre>
 
-<p>Обратите внимание, что мы импортировали класс By, который содержит все возможные локаторы.</p>
+<p>Notice that we imported the By class, which contains all possible locators.</p>
 
-<p>Если страница у вас загрузилась, но дальше ничего не происходит, вернитесь обратно в консоль, в которой вы запускали ваш скрипт. Скорее всего,&nbsp;вы увидите там ошибку <strong>NoSuchElementException</strong>. Она будет выглядеть следующим образом:</p>
+<p>If the page opened but nothing happens, return to the console where you ran the script. Most probably, you will see the <strong>NoSuchElementException</strong> error. It will look like this::</p>
 
 <pre>
 <code class="language-no-highlight">selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"id","selector":"submit"}</code></pre>
 
-<p>Ошибка очевидна: мы неправильно указали локатор&nbsp;&mdash; значит, кнопки с таким id на странице нет.</p>
+<p>The mistake is obvious: we identified the locator incorrectly and there is no button with such id on the page.</p>
 
-<p>Исправим локатор, чтобы наш код проходил без ошибок:</p>
+<p>Let's fix the locator so that our code will not throw errors:</p>
 
 <pre>
 <code class="language-python">from selenium import webdriver
@@ -42,8 +42,8 @@ browser = webdriver.Chrome()
 browser.get("http://suninjuly.github.io/simple_form_find_task.html")
 button = browser.find_element(By.ID, "submit_button")</code></pre>
 
-<h3>Поиск нескольких элементов</h3>
+<h3>Search for several elements</h3>
 
-<p>Вы можете столкнуться с ситуацией, когда на странице будет несколько элементов, подходящих под заданные вами параметры поиска. В этом случае WebDriver&nbsp;вернет вам только первый элемент, который встретит во время поиска по HTML. Если вам нужен не первый, а второй или следующие&nbsp;элементы, вам нужно либо задать более точный селектор для поиска, либо&nbsp;использовать методы <strong>find_element<span style="color:#ff4363"><u>s</u></span></strong>,&nbsp;которые мы рассмотрим чуть позже.</p>
+<p>You may face a situation when several page elements match your search parameters. In such a case, WebDriver&nbsp;will return only the first element it encounters in the HTML search. In case you rather need the second or further element, you either have to use a more specific search selector or use the <strong>find_element<span style="color:#ff4363"><u>s</u></span></strong> method,&nbsp;which we will discuss a bit later.</p>
 
-<p>Иногда в статьях про Selenium WebDriver вы также будете встречать термин &quot;локаторы&quot;, под которым&nbsp;подразумеваются стратегии поиска и значения, по которым должен выполняться поиск. Например, можно искать по локатору By.ID со значением &quot;send_button&quot;.</p>
+<p>Sometimes, articles on Selenium WebDriver will use the term "locators", which refers to search strategies and the values by which the search is performed. For example, you can search by the locator By.ID with the value &quot;send_button&quot;.</p>

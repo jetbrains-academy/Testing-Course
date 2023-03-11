@@ -1,7 +1,7 @@
-<h2> Составной селектор из нескольких классов </h2>
+<h2> Multi-class selector </h2>
 
-Структура страницы еще немного поменялась. 
-Подберите селектор к первому абзацу текста на карточке с арбузным котом (это последняя карточка).
-Текст который должен стать синим - "Watermelon story".
-  Будьте внимательны и выберите уникальный селектор, 
-чтобы синим стал один и только один элемент! 
+The page structure has changed a little again. 
+Choose a selector for the first text paragraph in the card with the watermelon cat (the last card).
+The text that has to become blue is "Watermelon story".
+Be attentive and choose a unique selector so that only a single element would 
+turn blue.

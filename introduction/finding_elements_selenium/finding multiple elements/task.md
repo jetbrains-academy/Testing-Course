@@ -1,32 +1,32 @@
-<h2>Поиск всех необходимых элементов с помощью find_elements</h2>
+<h2>Finding all necessary elements with find_elements</h2>
 
-<p>Мы уже упоминали, что метод <strong>find_element</strong> возвращает только первый из всех элементов, которые подходят под условия поиска. Иногда возникает ситуация, когда у нас есть несколько одинаковых по сути объектов на странице, например, иконки товаров в корзине интернет-магазина. В тесте нам нужно проверить, что отображаются все выбранные для покупки товары. Для этого существует метод&nbsp;<strong>find_elements</strong>, которые в отличие от <strong>find_element</strong> вернёт&nbsp;список всех найденных элементов по заданному условию. Проверив длину списка, мы можем удостовериться, что в корзине отобразилось правильное количество&nbsp;товаров. Пример кода (код приведен только для примера, сайта fake-shop.com скорее всего не существует):</p>
+<p>We have already mentioned that the method <strong>find_element</strong> returns only the first of all possible elements matching the search conditions. In some situations, there may be several identical elements on a page: for example, the item icons in the shopping cart of an online store. In our test, we need to check that all selected goods are displayed. To do that, we can use the&nbsp;<strong>find_elements</strong> method, which, unlike <strong>find_element</strong>, returns the list of all the elements found according to the search condition. Having checked the list length, we can make sure the shopping cart contains the right number of items. Here's a sample code (the code is just an illustration, the site fake-shop.com most probably does not exist):</p>
 
 <pre>
-<code class="language-python"># подготовка для теста
-# открываем страницу первого товара
-# данный сайт не существует, этот код приведен только для примера
+<code class="language-python"># test preparation
+# opening the page of the first merchandise item
+# the site does not exist, the code is just an example
 browser.get("https://fake-shop.com/book1.html")
 
-# добавляем товар в корзину
+# adding the item to the cart
 add_button = browser.find_element(By.CSS_SELECTOR, ".add")
 add_button.click()
 
-# открываем страницу второго товара
+# opening the page of the second item
 browser.get("https://fake-shop.com/book2.html")
 
-# добавляем товар в корзину
+# adding the item to the cart
 add_button = browser.find_element(By.CSS_SELECTOR, ".add")
 add_button.click()
 
-# тестовый сценарий
-# открываем корзину
+# test scenario
+# opening the cart
 browser.get("https://fake-shop.com/basket.html")
 
-# ищем все добавленные товары
+# searching for added items
 goods = browser.find_elements(By.CSS_SELECTOR, ".good")
 
-# проверяем, что количество товаров равно 2
+# checking that the number of items equals 2
 assert len(goods) == 2</code></pre>
 
-<p><span style="color:#ff4363">!Важно.</span> Обратите внимание на важную разницу в результатах, которые возвращают методы <strong>find_element</strong> и <strong>find_elements</strong>. Если первый метод не смог найти элемент на странице, то он вызовет ошибку <strong>NoSuchElementException</strong>, которая прервёт выполнение вашего кода. Второй же метод всегда возвращает валидный&nbsp;результат: если ничего не было найдено, то он вернёт пустой список и ваша программа перейдет к выполнению следующего шага в коде.</p>
+<p><span style="color:#ff4363">!Important.</span> Note the important difference in the results returned by the methods <strong>find_element</strong> and <strong>find_elements</strong>. If the former method cannot find an element on a page, it throws the <strong>NoSuchElementException</strong> error, which interrupts code execution. The latter method always returns valid results: if nothing has been found, it returns an empty list and your program proceeds to executing its next code step.</p>

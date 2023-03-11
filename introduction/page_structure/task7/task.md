@@ -1,14 +1,14 @@
-## Задание: верстка веб-страницы
-В этой задаче вы опишете несколько элементов самостоятельно, 
-чтобы еще лучше ориентироваться в устройстве HTML-странички. 
-На минутку почувствовать себя фронтенд-разработчиком очень полезно!
+## Task: coding a web page
+In this task, you will describe several elements in order to 
+better grasp the structure of HTML pages. For a short while, 
+step into frontend developer's shoes! 
 
-Предлагаем вам сверстать небольшую веб-страничку о своем питомце или о любом другом зверьке,
-которой вы хотели бы поделиться с миром.
+Try to design a simple page devoted to your pet or any other animal – a page 
+you would like to share with the world.
 
 
-1. Откройте файл `index.html`
-2. Прямо под заголовком найдите элемент с тегом img. Это элемент, в котором будет отрисовываться картинка. Добавьте ему атрибут class со значением "picture". А существующему атрибуту src добавьте значение: вставьте в кавычки ссылку на изображение.
-3. Прямо под элементом-картинкой вы найдете элемент-разделитель с тегом div. В этом блоке у нас будет имя и описание питомца. Добавьте этому элементу атрибут name со значением "about".
-3. Добавьте этому элементу потомка. Это будет заголовок: добавьте элемент с тегом h3. Не забудьте открывающий и закрывающий тег. Добавьте этому элементу атрибут id со значением pet-name. Внутри тега напишите имя или название животного.
-4. Добавьте еще одного потомка элементу div, на этот раз это будет текст, поэтому используйте тег p. Добавьте ему атрибут data-type со значением "description". Внутри тега напишите пару слов про своего питомца. Обратите внимание, что атрибут data-type не специализированный, мы его придумали сами.
+1. Open the file `index.html`.
+2. Right under the heading, find the element with the tag "img". It is the element that will display a picture. Add the class attribute with the value "picture" to it. Add a value to the existing attribute "src": insert the image link in quotes.
+3. Right under the image element, find the division element with the tag "div". In this block, we'll have the pet's name and description. Add an attribute "name" with the value "about" to it.
+4. Add a descendant to that element. It will be a heading – add an element with the "h3". Don't forget to use the opening and closing tags. Add an "id" attribute with the value with the value "pet-name". Inside the tag, write the pet's name or the species of the animal.
+5. Add another descendant of the "div" element, now it will be a text, so use the "p" tag. Add a data-type attribute with the value "description" to it. Inside the tag, write a few words about your pet. Notice that the data-type attribute is a custom one – we've made it up.

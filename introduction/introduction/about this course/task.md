@@ -1,35 +1,35 @@
-## О курсе
+## About the course
 
-Мы рады приветствовать вас на нашем курсе. 
-Мы — это Юля Лях и Леша Погибелев, ранее команда тестирования Stepik.org. 
-Этот курс - адаптированный для Edu Tools и переведенный материал из открытого курса на русском языке https://stepik.org/course/575/promo.
+We are happy to welcome you to our course. 
+We means Julia Liakh and Lesha Pogibelev, formerly – the testing team on Stepik.org. 
+This course is an Edu Tools adapted translation of materials from an open Russian-language course available at https://stepik.org/course/575/promo.
 
-В этом курсе мы попытались рассказать минимум, необходимый для ручных тестировщиков, 
-чтобы начать автоматизировать тесты с помощью языка программирования Python. 
+In this course, we tried to offer the minimum a manual tester needs 
+to start automating tests with the help of the Python language. 
 
-В этом курсе вы научитесь: 
+Here you will learn: 
 
 <ul>
-<li> Писать простые скрипты для взаимодействия с браузером </li>
-<li> Находить самые разные элементы на веб-страницах </li>
-<li> Работать с предупреждениями и разными окнами в автотестах </li>
-<li> Настраивать разные ожидания для поиска элементов </li>
-<li> Работать с системой контроля версий Git (на базовом уровне) </li>
-<li> Использовать разные тестовые фреймворки </li>
-<li> Как организовать код автотестов так, чтобы его было легко поддерживать и легко читать </li>
-<li> ... и еще много разных мелочей, tips and tricks, а также хорошие практики, которые мы сами стараемся использовать! </li>
+<li> Writing simple scripts to interact with the browser. </li>
+<li> Finding all kinds of elements in web pages. </li>
+<li> Working with warnings and various autotest windows. </li>
+<li> Setting expectations for for various element searches. </li>
+<li> Working with the version control system Git (on a basic level). </li>
+<li> Using different testing frameworks. </li>
+<li> Organize your autotest code so that it could be easily read and supported. </li>
+<li> ... and many other things – tips and tricks, as well as practices that we try to follow ourselves! </li>
 </ul>
 
-Курс содержит теорию в текстовом формате и ссылки на дополнительные материалы, 
-но всё-таки он ориентирован именно на практику и его главная ценность именно в практических заданиях.
-Вы напишете много строчек кода, разберете множество каверзных ситуаций и поймаете разные хитрые баги. 
-А еще по окончании курса у вас появится небольшой тестовый проект: 
-это финальное задание курса. 
-Этот проект можно приложить к своему резюме как демонстрацию своих умений для будущего работодателя.
+The course contains theory texts and links to additional materials, but it  
+is primarily practice-oriented, and the practical tasks are its major value.
+You will write lots of code lines, analyze numerous tricky situations, and catch all kinds of hidden bugs. 
+Besides, by the end of the course, you will have completed a small testing project –   
+the final course assignment. 
+You can add this project to your resume to demonstrate your skills to your prospective employer.
 
-*Как проходит курс?*
+*How the course proceeds*
 
-Курс разделен на 4 модуля.
-Каждый модуль — это одна неделя ваших занятий.
-Но, вообще говоря, можете проходить в свободном темпе, удобном вам. `
-`
+The course is divided into 4 modules.
+Each module is designed for one week of studies.
+However, you can proceed at your own pace, the way you find most comfortable.
+

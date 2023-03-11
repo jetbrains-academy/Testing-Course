@@ -1,16 +1,16 @@
 
-## Что такое Selenium?
-У этого термина есть несколько разных значений в зависимости от контекста. 
+## What is Selenium?
+This term might mean different things in different contexts. 
 
-Давайте разбираться! 
+Let's figure it all out! 
 
-Для начала: Selenium — это проект, который предназначен для автоматизации тестирования веб-приложений.
-Проект open-source, то есть с открытым исходным кодом.
-В любой момент можно заглянуть внутрь кода и посмотреть,
-как работает тот или иной метод, а также можно написать свои предложения разработчикам проекта,
-и сделать pull request с исправлениями и улучшениями кода.
+First: Selenium is a project designed for web application testing automation.
+It's an open-source project, which means that its source code is open.
+At any moment, one can look inside the code and see how this or that method works under the hood.
+You can also come up with your own ideas, contact the project developers, and 
+make a pull request to fix or improve the code.
 
-Это собирательный, зонтичный проект, то есть он состоит из множества самых разных компонентов. Например: 
+It's a complex, umbrella project consisting of a number of diverse components. For example: 
 
 <ul>
 <li> Selenium WebDriver </li>
@@ -18,13 +18,13 @@
 <li> Selenium Server </li>
 <li> Selenium IDE </li>
 </ul>
-и другие.
+and others.
 <br>
-А также проект содержит ряд конкретных драйверов браузера и клиентских библиотек для разных языков программирования.
+Besides, the project contains a number of specific browser drivers and client libraries for various programming languages.
 
-Обычно из контекста понятно, о какой из частей Selenium идет речь.
-В данном курсе речь пойдет о Selenium WebDriver, и всякий раз, когда мы будем говорить Selenium,
-будем иметь в виду именно эту часть проекта. А подробнее в том, что это такое, мы разберемся на следующем шаге. 
+In most cases, it's clear from the context what part of Selenium is referred to.
+In this course, we'll talk about Selenium WebDriver, and each time we mention Selenium,
+we will mean that particular part of the project. What it is about, we'll discuss in more detail the next section. 
 
 https://www.selenium.dev/
 https://github.com/seleniumhq/selenium

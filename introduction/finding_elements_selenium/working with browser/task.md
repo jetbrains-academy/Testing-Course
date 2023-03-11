@@ -1,6 +1,6 @@
-<h2>Работа с браузером в Selenium</h2>
+<h2>Working with the browser in Selenium</h2>
 
-<p>Если вы уже пробовали запускать примеры скриптов, то могли заметить, что браузер не всегда закрывается после выполнения кода. Поэтому обратите внимание на то, что необходимо явно закрывать окно браузера в нашем коде при помощи команды <strong>browser.quit().</strong> Каждый раз при открытии браузера <code>browser = webdriver.Chrome() </code>в системе создается процесс, который останется висеть, если вы вручную закроете окно браузера. Чтобы не остаться без оперативной памяти после запуска нескольких скриптов, всегда добавляйте к своим скриптам команду закрытия:</p>
+<p>If you have already tried running sample scripts, you might have noticed that the browser does not always close after executing the code. Thus, make sure to explicitly close the browser window in code using the command <strong>browser.quit().</strong> Each time you open the browser <code>browser = webdriver.Chrome()</code>, the system launches a process, which will remain there unless you manually close the browser window. In order not to run out of RAM after launching several scripts, always add the closing command to your scripts:</p>
 
 <pre><code>from selenium import webdriver
 from selenium.webdriver.common.by import By
@@ -12,16 +12,16 @@ browser.get(link)
 button = browser.find_element(By.ID, "submit_button")
 button.click()
 
-# закрываем браузер после всех манипуляций
+# closing the browser after all operations
 browser.quit()</code></pre>
 
-<p>Важно еще пояснить разницу между двумя командами:<strong> browser.close()</strong> и<strong> browser.quit()</strong>. Какая между ними разница, ведь на первый взгляд обе они осуществляют одно и то же? </p>
+<p>It's also important to clarify the difference between the two commands:<strong> browser.close()</strong> and<strong> browser.quit()</strong>. They both seem to do the same thing, so what's the difference? </p>
 
-<p>На самом деле, <strong>browser.close() </strong>закрывает <em>текущее </em>окно браузера. Это значит, что если ваш скрипт вызвал всплывающее окно, или открыл что-то в новом окне или вкладке браузера, то закроется только текущее окно, а все остальные останутся висеть. В свою очередь <strong>browser.quit() </strong>закрывает все окна, вкладки, и процессы вебдрайвера, запущенные во время тестовой сессии. Подробнее можно посмотреть здесь: <a href="https://stackoverflow.com/questions/15067107/difference-between-webdriver-dispose-close-and-quit" rel="noopener noreferrer nofollow">Difference between webdriver.Dispose(), .Close() and .Quit()</a>. Будьте внимательны с этими методами и, в общем случае, всегда используйте <strong>browser.quit(). </strong></p>
+<p>Actually, <strong>browser.close() </strong>closes the current browser window. Thus, if your script has initiated a pop-up window or opened something in a new window or tab, only the current window will close and the rest will remain open. Meanwhile, <strong>browser.quit() </strong>closes all windows, tabs, and webdriver processes launched during the testing session. You can find more details here: <a href="https://stackoverflow.com/questions/15067107/difference-between-webdriver-dispose-close-and-quit" rel="noopener noreferrer nofollow">Difference between webdriver.Dispose(), .Close() and .Quit()</a>. Be cautious with these methods and use <strong>browser.quit() </strong> in general cases.</p>
 
-<p>Но что будет, если скрипт не дойдет до выполнения этого финального шага, а упадет с ошибкой где-то раньше? </p>
+<p>Now, but what if the script does not proceed as far as executing that final step and crashes with an error at some point earlier? </p>
 
-<p>Для того чтобы гарантировать закрытие, даже если произошла ошибка в предыдущих строках, проще всего использовать конструкцию <strong>try/finally</strong>: </p>
+<p>In order to guarantee closing, even if there occurred an error in the preceding lines, the <strong>try/finally</strong> construct is the easiest solution:</p>
 
 <pre><code>from selenium import webdriver
 from selenium.webdriver.common.by import By
@@ -35,13 +35,13 @@ try:
     button.click()
 
 finally:
-    # закрываем браузер после всех манипуляций
+    # closing the browser after all operations
     browser.quit()</code></pre>
 
-<p>Можете попробовать запустить оба примера и обратить внимание на разницу.</p>
+<p>You can try launching both examples. Notice the difference.</p>
 
-<p>Подробно говорить об обработке исключений мы сейчас не будем, здесь важно понимать только то, что даже если в коде внутри блока <strong>try</strong> произойдет какая-то ошибка, то код внутри блока <strong>finally</strong> выполнится в любом случае. Советуем добавлять такую обработку ко всем своим скриптам при выполнении задач этого и следующего модулей, а в третьем модуле мы обсудим более лаконичные конструкции.</p>
+<p>We won't talk about exception processing in detail now. You just need to understand that even if an error occurs inside the <strong>try</strong> block, the code in the <strong>finally</strong> block will be executed anyway. We suggest adding such processing to all your scripts when doing the tasks of this module and the next one; in the third module, we'll discuss more concise constructs.</p>
 
-<p>Если хотите узнать больше про исключения, как их кидать, ловить и как с ними жить, то советуем к прохождению вот этот урок: <a href="https://stepik.org/lesson/24463/step/1?unit=6771" rel="noopener noreferrer nofollow"> Ошибки и исключения</a>.</p>
+<p>If you want to learn more about exceptions – how they are thrown, caught, and handled, we recommend studying the lesson  <a href="https://stepik.org/lesson/24463/step/1?unit=6771" rel="noopener noreferrer nofollow">Errors and exceptions</a>.</p>
 
-<p>(За замечание и дополнение спасибо за него нашему студенту <a href="https://stepik.org/users/41632287" rel="noopener noreferrer nofollow">Михаилу λ</a>)</p>
+<p>(Thanks to our student <a href="https://stepik.org/users/41632287" rel="noopener noreferrer nofollow">Mikhail λ</a> for his comments and suggestions.)</p>

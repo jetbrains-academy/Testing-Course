@@ -1,18 +1,18 @@
-## Установка драйвера для браузера
-В этом курсе мы будем работать с драйвером для Chrome,
-так как на данный момент это самый популярный браузер, и в первую очередь следует убедиться, 
-что веб-приложение работает для большинства пользователей.
+## Installing the driver for the browser
+In this course, we'll work with a driver for Chrome,
+as it is currently the most popular browser, and we primarily need to make sure 
+that a web application works for most users.
 
 https://gs.statcounter.com/browser-market-share/desktop/worldwide/
 
-Драйвер для Chrome разрабатывается командой браузера и носит название ChromeDriver. 
+The Chrome driver was developed by the browser team, and it is called ChromeDriver. 
 <ol>
-    <li> Установите браузер Chrome, если он еще не установлен</li>
-    <li> Уточните версию браузера - Customize and controle Google Chrome | Help | About Google Chrome </li>
-    <li> Скачайте chromdriver версии, соответствующей вашему браузеру с официального сайта по ссылке</li>
+    <li> Install the Chrome browser, unless it's already installed</li>
+    <li> Find out the version of the browser – Customize and control Google Chrome | Help | About Google Chrome </li>
+    <li> Download ChromeDriver with a version matching your browser. Use the official site link </li>
 </ol>
 
 https://sites.google.com/chromium.org/driver/downloads 
 
 
-Более подробные инструкции по установке для разных ОС смотрите в следующих шагах.
+More detailed instructions for various OS will be given in the following steps.

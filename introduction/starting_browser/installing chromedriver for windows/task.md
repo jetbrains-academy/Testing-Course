@@ -1,17 +1,16 @@
-## Установка драйвера для браузера: Windows
+## Installing the driver for the browser: Windows
 
-Для установки откройте сайт https://sites.google.com/chromium.org/driver/ 
-и скачайте ту версию ChromeDriver,
-которая соответствует версии вашего браузера.
-Чтобы узнать версию браузера, откройте новое окно в Chrome,
-в поисковой строке наберите: chrome://version/ и нажмите Enter.
-В верхней строчке вы увидите информацию про версию браузера.
+To install the driver, open the site https://sites.google.com/chromium.org/driver/ 
+and download the version of ChromeDriver
+matching the version of your browser.
+To find out the browser version, open a new window in Chrome,
+type chrome://version/ in the search box and press Enter.
+In the top line, you'll see the information on your browser version.
 
-Разархивируйте скачанный файл.
-Создайте на диске C: папку `chromedriver` и положите разархивированный ранее файл chromedriver.exe в папку `C:\chromedriver`.
-Добавьте в системную переменную PATH папку
-`C:\chromedriver`. 
-Как это сделать в разных версиях Windows, 
-описано здесь: https://www.computerhope.com/issues/ch000549.htm. 
+Unarchive the downloaded file.
+On disc C:, create a folder `chromedriver` and put the unarchived file chromedriver.exe in the folder `C:\chromedriver`.
+Add the `C:\chromedriver`folder to the system variable PATH. 
+The ways of doing that in different Windows versions
+are described here: https://www.computerhope.com/issues/ch000549.htm. 
 
-После установки переходите к шагу: (ссылка на шаг)
+After the installation, proceed to step (step link).
