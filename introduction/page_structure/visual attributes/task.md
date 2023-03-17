@@ -1,16 +1,16 @@
-### Атрибуты, которые влияют на отображение элемента
+### Attributes affecting element rendering
 
-Поговорим чуть подробнее про атрибуты элементов.
-Некоторые атрибуты влияют на отрисовку элемента на странице, 
-а другие не влияют напрямую,
-но могут использоваться в JavaScript-коде или быть нужными только для локации элемента в тестах. 
+Let's talk a bit more about element attributes. 
+Some attributes affect the element's rendering on the page, 
+and some don't affect it directly but may be used in JavaScript or 
+may be necessary for element locating in tests.
 
-Примеры атрибутов, которые повлияют на отображение и поведение элемента на странице: 
+Here are examples of attributes that affect rendering and the element's behavior: 
 
 ```
-<h1 style="color: blue;"> Заголовок будет синим, т.к. цвет задан в атрибуте style </h1>
+<h1 style="color: blue;"> The heading will be blue because the color is set in the style attribute </h1>
 
-<p hidden> Атрибут hidden скрывает элемент на странице, элемент не будет показываться </p>
+<p hidden> The attribute hidden hides the element on a page; the element won't be displayed </p>
 
-<button disabled> Кнопка с атрибутом disabled будет заблокирована </button>
+<button disabled> The button with the attribute disabled will be blocked </button>
 ```

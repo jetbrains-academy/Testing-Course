@@ -1,3 +1,3 @@
-## Task - Selenium project 
+## Task – Selenium project 
 
-Select all correct statements:
+Select all the correct statements:

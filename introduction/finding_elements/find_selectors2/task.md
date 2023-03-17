@@ -1,6 +1,6 @@
 
 This is a task description file.
-Its content will be displayed to a learner
+Its content will be displayed to the learner
 in the **Task Description** window.
 
 It supports both Markdown and HTML.
@@ -16,7 +16,7 @@ The following features are available in
 - Hints can be added anywhere in the task text.
 Type "hint" and press Tab.
 Hints should be added to an empty line in the task text.
-In hints you can use both HTML and Markdown.
+In hints, you can use both HTML and Markdown.
 <div class="hint">
 
 Text of your hint

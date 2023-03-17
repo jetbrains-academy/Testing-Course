@@ -1,22 +1,22 @@
-<h2>Задание: поиск сокровища с помощью get_attribute</h2>
+<h2>Task: treasure hunt with get_attribute</h2>
 
-<p>В данной задаче вам нужно с помощью роботов решить ту же математическую задачу, как и в прошлом задании. Но теперь значение переменной <strong>х</strong> спрятано в "сундуке", точнее, значение хранится в атрибуте <strong>valuex</strong> у картинки с изображением сундука.</p>
+<p>In this task, with the help of a robot, you need to solve the same mathematical problem as in the previous task. However, now the value of the <strong>х</strong> variable is hidden in a "chest", i.e., in the <strong>valuex</strong> attribute of the chest image.</p>
 
-<p>Ваша программа должна:</p>
+<p>Your program needs to:</p>
 
 <ol>
-	<li>Открыть страницу <a href="http://suninjuly.github.io/get_attribute.html" rel="nofollow noopener noreferrer">http://suninjuly.github.io/get_attribute.html</a>.</li>
-	<li>Найти на ней элемент-картинку, который является изображением сундука с сокровищами.</li>
-	<li>Взять у этого элемента значение атрибута <strong>valuex</strong>, которое является значением x для задачи.</li>
-	<li>Посчитать математическую функцию от x (сама функция остаётся неизменной).</li>
-	<li>Ввести ответ в текстовое поле.</li>
-	<li>Отметить checkbox "I'm the robot".</li>
-	<li>Выбрать radiobutton "Robots rule!".</li>
-	<li>Нажать на кнопку "Submit".</li>
+	<li>Open the page <a href="http://suninjuly.github.io/get_attribute.html" rel="nofollow noopener noreferrer">http://suninjuly.github.io/get_attribute.html</a>.</li>
+	<li>On the page, find the element – an image of a chest with a treasure.</li>
+	<li>Get the value of the <strong>valuex</strong> attribute of this element, which is the x value for the task.</li>
+	<li>Calculate the mathematical function of x (the function itself does not change).</li>
+	<li>Enter the answer in the text field.</li>
+	<li>Mark the checkbox "I'm the robot".</li>
+	<li>Select the radiobutton "Robots rule!".</li>
+	<li>Press the "Submit" button.</li>
 </ol>
 
-<p>Для вычисления значения выражения в п.4 используйте функцию calc(x) из предыдущей задачи.</p>
+<p>To calculate the value of the expression in (4), use the calc(x) function from the previous task.</p>
 
 <p> </p>
 
-<p>Если все сделано правильно и достаточно быстро (в этой задаче тоже есть ограничение по времени), вы увидите окно с числом. Скопируйте его в поле ниже и нажмите кнопку "Submit", чтобы получить баллы за задание.</p>
+<p>If you've done everything right and quickly enough (this task also has a time limit), you'll see a window with a number. Copy it to the field below and press the "Submit" button to receive points for the task.</p>

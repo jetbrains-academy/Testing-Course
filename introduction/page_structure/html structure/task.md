@@ -1,53 +1,53 @@
-## Язык разметки HTML 
-Нам понадобится знание трёх особенностей языка HTML:
+## HTML markup language 
+We'll need to know three features of the HTML language:
 <ol>
-<li>Страница на языке HTML состоит из элементов, 
-начало и конец элемента задаются с помощью специальных пометок – тегов (tag) </li>
-<li> У тегов есть атрибуты, которые определяют свойства элементов </li>
-<li> Страница на языке HTML имеет иерархическую структуру </li>
+<li>An HTML page consists of elements; all elements are defined by 
+a start and an end keywords, or tags. </li>
+<li> Tags have attributes, which define the properties of elements. </li>
+<li> An HTML page has a hierarchical structure.  </li>
 </ol>
 
-### 1. Tag – описывает элемент
-Начало и конец элементов обрамляются специальными словами – тегами (tag).
-Задача тегов – обозначить, какой именно тип информации на странице они представляют
-(картинка, текст, блок, ссылка и так далее). Например:
+### 1. Tag – element description
+Elements are enclosed between special keywords, or tags.
+Tags are designed to define the type of information they represent
+(image, text, block, link, etc.) For example:
 
-`<p>Здесь написан текст.</p>`
+`<p>Here goes some text.</p>`
 
-В первом примере элемент обозначен открывающим (`<p>`) и закрывающим (`</p>`) тегами,
-между тегами помещён текст, который увидит пользователь.
-Некоторым тегам закрывающий тег не нужен, достаточно только открывающего. Например, тег:
+Here the element is defined by an opening tag (`<p>`) and a closing tag (`</p>`);
+between the tags is the text the user will see. Some tags don't require 
+a closing tag – the opening one is enough. For example, the following tag:
 
 `<br>`
 
-Это тег для переноса строки, внутри него никакого текста или вложенных элементов быть не может. 
+It is a line break tag, it does not contain any text or enclosed element.
 
-### 2. Attribute – атрибуты или свойства элемента
+### 2. Attribute – element properties
 
-Элементам можно задавать различные стандартные свойства,
-а также создавать собственные свойства или атрибуты.
-Атрибуты обычно имеют вид: `attribute="value"`.
-Иногда знак "=" и значение могут быть опущены или значение может быть пустой строкой: `attribute=""`.
+We can define various standard properties for elements,
+as well as create our own properties, or attributes.
+Attributes are usually defined in the following way: `attribute="value"`.
+Sometimes, the "=" sign and the value may be skipped, or the value may be an empty string: `attribute=""`.
 
-В примере ниже помимо тегов и текста добавлен еще атрибут `href`, 
-который задаёт адрес для тега `<a>`, на которую будет вести ссылка.
+In the example below, besides the tags and text, we also have the `href` attribute, 
+which defines the address the link in the `<a>` tag goes to.
 
-`<a href="/about">Посмотреть подробнее</a> `
+`<a href="/about">See more details</a> `
 
-Рассмотрим еще несколько популярных атрибутов, которые помогут нам в поиске элементов. 
+Let's talk about a few other important attributes, which will help us find elements. 
 
-**Атрибут class**
+**class attribute**
 
-В третьем примере появляется еще один важный атрибут – класс (class). 
-Элементу задано два класса: simple-text и main. 
-Классы чаще всего используют для задания правил вёрстки с помощью CSS:
+In the example below, we see another important attribute – class. 
+Two classes are specified for the element: simple-text and main. 
+Classes are mostly used to define formatting rules with CSS:
 
-`<div class="simple-text main">Здесь написан текст.</div>`
+`<div class="simple-text main">Here goes a text.</div>`
 
-**Атрибут name**
+**name attribute**
 
-Свойство name, например, используется для задания якоря (закладки) в html-странице.
-Этот атрибут тоже можно использовать в качестве селектора для поиска элемента:
+The name attribute is used, for example, as an anchor or a bookmark in an HTML page.
+This attribute may also be used as a selector in element searching:
 ```
   <a name="top"></a>
   <p>Long text</p>
@@ -55,39 +55,39 @@
   <p><a href="#top">Go up</a></p> 
 ```
 
-**Атрибут id**
+**id attribute**
 
-В этом примере появился еще атрибут id – уникальный указатель на элемент. 
-Значение id в общем случае не должно повторяться в пределах страницы:
+In the example below, we have a new attribute – id, a unique identifier of an element. 
+In the general case, the id value should be unique within the web page:
 
-`<button id="save_button">Сохранить</button>`
+`<button id="save_button">Save</button>`
 
-**Важно**. В современных JavaScript-фреймворках id-атрибуты чаще всего генерируются динамически, 
-поэтому они изменяются каждый раз при перезагрузке страницы и совершенно нечитабельны, 
-например вы можете встретить что-то вроде `id="u_ps_0_0_n"` или `id="avadspffd"`. 
-В таких случаях вам придется пользоваться другими селекторами или использовать собственные атрибуты,
-о которых мы расскажем далее. Названия классов также могут генерироваться автоматически. 
-Поэтому предлагаем вам простое правило: 
-если увидите нечеловекочитаемое значение атрибута или если значение атрибута меняется при перезагрузке страницы,
-то не используйте его для поиска элемента.
+**Important**. In modern JavaScript frameworks, id attributes are mostly generated dynamically,
+so they change each time the page is reloaded and look obscure: for example, you can come across
+something like `id="u_ps_0_0_n"` or `id="avadspffd"`. 
+In such cases, you will need to use different selectors or your own attributes, which we will discuss later.
+Class names may also be generated automatically. That's why we suggest
+that you follow a simple rule:
+if you see an unintelligible value of an attribute or if the attribute value changes each time the page is reloaded,
+do not use it in element searches.
 
 ### 3. Иерархия в HTML-документах
 
-HTML-документ часто сравнивают с моделью семейного древа,
-в котором есть родители, дети, братья, предки и потомки. 
-Такое сравнение допустимо благодаря возможности вкладывать одни элементы в другие.
-Вложенные (дочерние) элементы могут, в свою очередь, содержать свои дочерние элементы, следовательно,
-глубина вложения элементов может быть любой.
+An HTML document is often compared with a family tree with parents,
+children, siblings, ancestors, and descendants. 
+Such a comparison is legitimate due to the possibility of nesting elements in other elements. 
+Nested (child) elements may also, in their turn, contain child elements, so the depth of
+element nesting may be unlimited.
 
 
-Давайте разберёмся с терминологией данного древа:
+Let's figure out the terminology of such a tree:
 
-потомок элемента X – элемент любой степени вложенности внутри элемента X;
-ребёнок или дочерний элемент — прямой потомок (т.е. элемент на первом уровне вложенности);
-предок элемента Y – любой элемент X, который включает в себя элемент Y;
-родитель — это прямой предок (т.е. элемент, который расположен выше строго на 1 уровень);
-братский или соседний элемент – элемент X, который расположен на одном уровне иерархии с элементом Y. Элементы X и Y имеют одного родителя.
-Теперь попробуем закрепить терминологию на примере. Возьмём такой пример HTML кода:
+descendant of element X – an element of any nesting level inside element X;
+child element — a direct descendant (i.e., an element at the first level of nesting);
+ancestor of element Y – any element X that contains element Y;
+parent — a direct ancestor (i.e., an element at exactly one level above);
+sibling, or neighbor element – element X located at the same hierarchy level as element Y. Elements X and Y have the same parent.
+Now, let's practice the terminology with an example. Let's take such HTML code:
 
 ```
 <div class="news">
@@ -95,23 +95,23 @@ HTML-документ часто сравнивают с моделью семе
     <p class="title_text">Selenium 4alpha is out now</p>
   </div>
   <div class="text_block">
-    <p class="first">After 3 years from it’s a major release, now Selenium has put out its first alpha version of Selenium 4 on Apr 24, 2019.</p>
-    <p class="second">If you want you can make your hands dirty with Selenium 4 and it’s feature by downloading the dependencies from Maven Repository.</p>
+    <p class="first">3 years after it’s major release, now Selenium has put out its first alpha version of Selenium 4 on Apr 24, 2019.</p>
+    <p class="second">If you want, you can get your hands dirty with Selenium 4 and its features by downloading the dependencies from Maven Repository.</p>
   </div>
 </div>
 ```
-Теперь нарисуем блок-схему этого HTML кода, где каждый блок будет соответствовать одному HTML элементу.
+Now, let's draw a flowchart of that HTML code, where each block will correspond to one HTML element.
 
 ![img.png](img.png)
 
-Какие элементы являются потомками элемента, имеющего class="news"?
-Это все остальные элементы в этом html-коде: элемент с class="title", 
-элемент с class="title_text" и другие. <br>
-Какие элементы можно назвать дочерними (child) элементами для элемента с class="news"?
-Только элементы с class= "title" и class="text_block". <br>
-Какие элементы являются предками элемента с class="first"? Это элементы с class="text_block" и class="news". <br>
-Какой элемент является родителем элемента с class="first"? Только элемент с class="text_block". <br>
-Какой элемент мы можем назвать братским или соседним элементом для элемента, имеющего class="first"?
-Это элемент с class="second". <br>
+Which elements are descendants of the element with class="news"?
+These are all the rest elements in the HTML code: the element with class="title", 
+the element with class="title_text", and others. <br>
+Which elements are child elements for the element with class="news"?
+Only the elements with class= "title" and class="text_block". <br>
+Which elements are ancestors of the element with class="first"? These are the elements with class="text_block" and class="news". <br>
+Which element is the parent of the element with class="first"? Only the element with class="text_block". <br>
+Which element may be called a sibling of the element with class="first"?
+That's the element with class="second". <br>
 
-Эти знания помогут нам применять мощный механизм поиска элементов с помощью CSS-селекторов.
+This theory will help us apply a powerful mechanism of element search with CSS selectors.

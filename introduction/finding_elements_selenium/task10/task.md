@@ -1,19 +1,19 @@
-<h2>Задание: уникальность селекторов</h2>
+<h2>Task: unique selectors</h2>
 
-<p>У нас уже есть простой тест из предыдущего шага, который проверяет возможность зарегистрироваться на сайте. Однако разработчики решили немного поменять верстку страницы, чтобы она выглядела более современной. Обновленная страница доступна по другой&nbsp;<a href="http://suninjuly.github.io/registration2.html" rel="nofollow noopener noreferrer" target="_blank" title="Link: http://suninjuly.github.io/registration2.html">ссылке</a>. К сожалению, в процессе изменений они случайно внесли баг в форму регистрации.</p>
+<p>We already have a simple test from the previous step, which checks the possibility of registering at a site. However, developers decided to slightly modify the coding of the page to make it look more up-to-date. The updated page is available at a different&nbsp;<a href="http://suninjuly.github.io/registration2.html" rel="nofollow noopener noreferrer" target="_blank" title="Link: http://suninjuly.github.io/registration2.html">link</a>. Unfortunately, while modifying the page, the developers accidentally left a bug in the registration form.</p>
 
-<p>Попробуйте запустить код из предыдущего шага, указав в качестве начальной страницы новую&nbsp;<a href="http://suninjuly.github.io/registration2.html" rel="nofollow noopener noreferrer" target="_blank" title="Link: http://suninjuly.github.io/registration2.html">ссылку</a>. Если ваш тест упал с ошибкой NoSuchElementException, это означает, что вы выбрали правильные селекторы и смогли обнаружить баг, который создали разработчики. Это хорошо! Значит,&nbsp;ваши тесты сработали как надо. Пугаться не стоит, здесь ошибка в приложении которое вы тестируете, а не в вашем тесте.&nbsp;</p>
+<p>Try running the code from the previous step with the new&nbsp;<a href="http://suninjuly.github.io/registration2.html" rel="nofollow noopener noreferrer" target="_blank" title="Link: http://suninjuly.github.io/registration2.html">link</a> as the start page. If your test crashes with the NoSuchElementException error, it means that you have chosen the right selectors and found the bug left by the developers. That's good. It means that your tests did work. Don't get scared, it's an error in the application you're testing, not in your test.&nbsp;</p>
 
-<p>Если же ваш тест прошел успешно, то это означает, что тест пропустил серьезный баг. В этом случае&nbsp;попробуйте поменять селекторы, сделав их уникальными. После изменения убедитесь, что ваш тест исправно проходит в старой версии&nbsp;<a href="http://suninjuly.github.io/registration1.html" rel="nofollow noopener noreferrer" target="_blank" title="Link: http://suninjuly.github.io/registration1.html">страницы</a>.</p>
+<p>If your test ran successfully, it means that the test has overlooked a serious bug. In such a case, try changing the selectors and making them unique. After the change, make sure that the test runs well on the old version of the&nbsp;<a href="http://suninjuly.github.io/registration1.html" rel="nofollow noopener noreferrer" target="_blank" title="Link: http://suninjuly.github.io/registration1.html">page</a>.</p>
 
 <ol>
 	<li>
-	<p>Тест успешно проходит&nbsp;на странице&nbsp;<a href="http://suninjuly.github.io/registration1.html" rel="noopener noreferrer nofollow" title="Link: http://suninjuly.github.io/registration1.html">http://suninjuly.github.io/registration1.html</a>﻿</p>
+	<p>The test runs successfully on the page&nbsp;<a href="http://suninjuly.github.io/registration1.html" rel="noopener noreferrer nofollow" title="Link: http://suninjuly.github.io/registration1.html">http://suninjuly.github.io/registration1.html</a>.﻿</p>
 	</li>
 	<li>
-	<p>Тест падает&nbsp;с ошибкой NoSuchElementException&nbsp;<a href="http://suninjuly.github.io/registration2.html" rel="nofollow noopener noreferrer" title="Link: http://suninjuly.github.io/registration2.html">http://suninjuly.github.io/registration2.html</a></p>
+	<p>The test crashes with NoSuchElementException&nbsp;<a href="http://suninjuly.github.io/registration2.html" rel="nofollow noopener noreferrer" title="Link: http://suninjuly.github.io/registration2.html">http://suninjuly.github.io/registration2.html</a>.</p>
 	</li>
 	<li>
-	<p>Используемые селекторы должны&nbsp;быть уникальны</p>
+	<p>The used selectors must be unique.</p>
 	</li>
 </ol>

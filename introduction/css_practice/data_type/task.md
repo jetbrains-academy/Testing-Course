@@ -1,6 +1,6 @@
-<h2> Селектор с атрибутом data-type </h2>
-Попробуйте написать селектор, 
-который найдет элемент с текстом-описанием 
-к карточке первого кота. Используйте специальный атрибут data-typе.
+<h2> Selector with data-type attribute </h2>
+Try to write a selector that
+will find the element with the description text 
+for the card with the first cat. Use the data-type attribute.
 
-Обратите внимание, что выбрать нужно только один элемент!
+Note that you need to choose only one element!

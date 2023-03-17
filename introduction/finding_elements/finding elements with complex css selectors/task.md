@@ -1,63 +1,63 @@
-<h2>Поиск элементов с помощью составных CSS-селекторов</h2>
+<h2>Finding elements with complex CSS selectors</h2>
 
-<p>Теперь предположим, что не можем найти элемент на странице, используя простой селектор, так как такой селектор находит сразу несколько элементов. Ниже мы привели часть кода простой HTML-страницы, описывающей блог. Саму страницу вы можете посмотреть по <a href="http://suninjuly.github.io/blog_example.html" rel="noopener noreferrer nofollow">ссылке</a>.</p>
+<p>Now, let's imagine that we cannot find an element on a page using a simple selector, as such a selector finds several elements at once. Below, you can see a part of the code of a simple HTML page describing a blog. You can find the page <a href="http://suninjuly.github.io/blog_example.html" rel="noopener noreferrer nofollow">here</a>.</p>
 
-<p>Вопрос: как нам найти селектор для подписи у второй картинки? Вот здесь нам поможет иерархическая структура страницы и возможность комбинировать CSS-селекторы. CSS-селекторы позволяют использовать одновременно любые селекторы, рассмотренные ранее, а также имеют некоторые дополнительные возможности для уточнения поиска.</p>
+<p>Question: how can we find a selector for the title of the second image? Here, the hierarchic page structure and the possibility of combining CSS selectors come to the resque. CSS selectors allow simultaneously using any previously considered selectors; besides, they have some additional options for fine search.</p>
 
 <pre>
 <code class="language-html">&lt;div id="posts" class="post-list"&gt;
   &lt;div id="post1" class="item"&gt;
-    &lt;div class="title"&gt;Как я провел лето&lt;/div&gt;
+    &lt;div class="title"&gt;How I spent my summer&lt;/div&gt;
     &lt;img src="./images/summer.png"&gt;
   &lt;/div&gt;
   &lt;div id="post2" class="item"&gt;
-    &lt;div class="title second"&gt;Ходили купаться&lt;/div&gt;
+    &lt;div class="title second"&gt;Went swimming&lt;/div&gt;
     &lt;img src="./images/bad_dog.jpg"&gt;
   &lt;/div&gt;
   &lt;div id="post3" class="item"&gt;
-    &lt;div class="title"&gt;С друзьями&lt;/div&gt;
+    &lt;div class="title"&gt;With friends&lt;/div&gt;
     &lt;img src="./images/friends.jpg"&gt;
   &lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
 
-<p><strong>Использование потомков</strong></p>
+<p><strong>Using descendants</strong></p>
 
-<p>Попробуем найти элемент с текстом &quot;Ходили купаться&quot;. Для решения этой задачи мы можем взять элемент, стоящий выше в иерархии нужного нам элемента, и написать следующий селектор:</p>
+<p>Let's try to find the element with the text &quot;Went swimming&quot;. To solve that task, we can take the element located above the needed element in the hierarchy. We can write the following selector:</p>
 
 <p><code>#post2 .title</code></p>
 
-<p>Здесь символ <code><strong>#</strong></code> означает, что надо искать элемент с id <code>post2</code>, пробел - что также нужно найти элемент-потомок, а <code><strong>.</strong></code>, что элемент-потомок должен иметь класс со значением <code>title</code>.</p>
+<p>Here, the <code><strong>#</strong></code> symbol means that we are looking for the element with the <code>post2</code> id; the space means that we also need to find the descendant element; and <code><strong>.</strong></code> signifies that the descendant element must be of the <code>title</code> class.</p>
 
-<p>Элемент <code>.title</code> называется <strong>потомком</strong> (англ. <strong>descendant</strong>) элемента <code>#post2</code>. Потомок может находиться на любом уровне вложенности, все элементы с селектором <code>.title</code> также являются и потомками элемента <code>#posts</code>, хотя и расположены от него на два уровня ниже. <code>#posts .title</code> найдет все 3 элемента с классом <code>title</code>.</p>
+<p>The <code>.title</code> element is called a <strong>descendant</strong> of the <code>#post2</code> element. A descendant may be located on any nesting level; all elements with the <code>.title</code> selector are also descendants of the element <code>#posts</code>, even though they are two levels below it. <code>#posts .title</code> will find all 3 elements with the class <code>title</code>.</p>
 
-<p><span style="color:#ff4363">!Внимание.</span> Символ пробела &quot; &quot; является значащим в CSS-селекторах. Это важный символ, который разделяет описание предка и потомка. Если бы мы записали селектор <code>#post2.title</code> без пробела, то в данном примере не было найдено ни одного элемента. Такая запись означала бы, что мы хотим найти элемент, который одновременно содержит id &quot;post2&quot; и класс &quot;title&quot;. Таким образом <code>#post2 .title</code> и <code>#post2.title</code> &mdash; это разные селекторы<strong>.</strong></p>
+<p><span style="color:#ff4363">!Important.</span> The space symbol (&quot; &quot;) is meaningful in CSS selectors. It is an important symbol that separates the descriptions of the ancestor and the descendant. If we wrote the selector <code>#post2.title</code> without a space, we wouldn't find any elements in the given example. It would mean that we want to find an element that contains both the &quot;post2&quot; id and the &quot;title&quot; class. Thus, <code>#post2 .title</code> and <code>#post2.title</code> are different selectors<strong>.</strong></p>
 
-<p><strong>Использование дочерних элементов</strong></p>
+<p><strong>Using child elements</strong></p>
 
-<p>Другой способ найти этот элемент:</p>
+<p>Here's another way to find that element:</p>
 
 <p><code>#post2 &gt; div.title</code></p>
 
-<p>Здесь мы указали еще тег элемента <code>div</code><strong> </strong>и уточнили, что нужно взять элемент с тегом и классом: <code>div.title</code>, который находится строго на один уровень иерархии ниже чем элемент <code>#post2</code>. Для этого используется символ <code>&gt;</code>.</p>
+<p>Here we mention the element's tag <code>div</code><strong> </strong>and specify that we need an element with a tag and a class <code>div.title</code> that is located exactly one hierarchy level lower than the element <code>#post2</code>. For that purpose, the <code>&gt;</code> symbol is used.</p>
 
-<p>Элемент <code>#post2</code> в этом случае называется <strong>родителем</strong> (англ. <strong>parent</strong>) для элемента<strong> </strong><code>div.title</code>, а элемент <code>div.title</code> называется <strong>дочерним элементом</strong> (англ. <strong>child</strong>) для элемента <code>#post2</code>. Если символа <code>&gt;</code> нет, то будет выполнен поиск всех элементов <code>div.title</code> на любом уровне ниже первого элемента.</p>
+<p>In this case, the element <code>#post2</code> is called the <strong>parent</strong> of the element <strong> </strong><code>div.title</code>, and the <code>div.title</code> element is called the <strong>child</strong> of the <code>#post2</code> element. If the <code>&gt;</code> symbol is absent, the search will look for all <code>div.title</code> elements at any level below the first element.</p>
 
-<p><span style="color:#ff4363">!Внимание. </span>В данном случае символы пробела вокруг символа &quot;&gt;&quot; не несут важного значения в отличие от предыдущего примера, и могут быть опущены. Запись <code>#post2&gt;div.title</code><strong> </strong>аналогична записи <code>#post2 &gt; div.title</code>.</p>
+<p><span style="color:#ff4363">!Important. </span>In this case, unlike the previous one, the spaces around the &quot;&gt;&quot; symbol do not have any particular significance and may be omitted. Thus, <code>#post2&gt;div.title</code><strong> </strong>does the same as <code>#post2 &gt; div.title</code>.</p>
 
-<p><strong>Использование порядкового номера дочернего элемента</strong></p>
+<p><strong>Using the number of the n-th child element</strong></p>
 
-<p>Еще один способ найти этот элемент:</p>
+<p>Here's yet another method to find that element:</p>
 
 <p><code>#posts &gt; .item:nth-child(2) &gt; .title</code></p>
 
-<p>Псевдо-класс <code>:nth-child(2)</code> &mdash; позволяет найти второй по порядку элемент среди дочерних элементов для <code>#posts</code>. Затем с помощью конструкции <code>&gt; .title</code> мы указываем, что нам нужен элемент <code>.title</code>, родителем которого является найденный ранее элемент <code>.item</code>.</p>
+<p>The pseudo-class <code>:nth-child(2)</code> allows finding the second child element for <code>#posts</code>. Then, with the help of the <code>&gt; .title</code> construction, we identify that we need the element <code>.title</code>, which has the previously found element <code>.item</code> as its parent.</p>
 
-<p><strong>Использование нескольких классов</strong></p>
+<p><strong>Using several classes</strong></p>
 
-<p>Также мы можем использовать сразу несколько классов элемента, чтобы его найти. Для этого классы записываются подряд через точку: <code>.title.second</code></p>
+<p>To find an element, we can also use several of its classes simultaneously. To do that, separate the classes with a dot: <code>.title.second</code>.</p>
 
-<p>Мы рассмотрели базовые селекторы, которых будет достаточно для написания простых UI-тестов. Если вы захотите разобраться подробнее в css-селекторах, то мы рекомендуем вам посмотреть следующие статьи:</p>
+<p>We have discussed the basic selectors, which will be enough to write simple UI tests. If you want to learn more about CSS selectors, we recommend checking out the following sources:</p>
 
 <p><a href="https://learn.javascript.ru/css-selectors" rel="nofollow noopener noreferrer">https://learn.javascript.ru/css-selectors</a></p>
 

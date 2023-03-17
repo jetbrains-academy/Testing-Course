@@ -1,47 +1,47 @@
-<h2>Уникальность селекторов: часть 1</h2>
+<h2>Unique selectors: part 1</h2>
 
-<p>Мы уже упоминали, что идеальный селектор&nbsp;&mdash; это такой селектор, который позволяет найти&nbsp;только один искомый элемент на странице. Благодаря уникальным селекторам наши тесты становятся стабильнее&nbsp;и меньше зависят от изменений в вёрстке&nbsp;страницы. Небольшие изменения разработчики делают достаточно часто, а мы бы не хотели постоянно исправлять наши тесты.</p>
+<p>We've already mentioned that an ideal selector is the one that allows us to find the single required element on a page. Thanks to unique selectors, our tests become more stable and less dependent on the modifications in the page coding. Developers frequently introduce minor changes, and we do not want to constantly fix our tests.</p>
 
-<p>Другое&nbsp;важное замечание: хороший тест проверяет только маленькую, атомарную часть функциональности. Простые тесты, которые проверяют небольшой сценарий, лучше, чем один большой тест, проверяющий сразу много сценариев. Благодаря простым тестам мы быстрее локализуем место в продукте, где появился баг, а также можем найти одновременно&nbsp;несколько новых багов. Упавший большой автотест укажет только на первую встреченную проблему, так как&nbsp;он заканчивает работу при первой же найденной ошибке. В этом их отличие от ручных тестов, в которых мы, проверяя функциональность продукта по тест-кейсу, можем гибко обойти встречающиеся&nbsp;проблемы и пройти тест-кейс до конца, найдя&nbsp;все баги.</p>
+<p>Another important comment: a good test checks only a small, atomic part of functionality. Simple tests working with one small scenario are better than a large test checking a huge number of scenarios. Thanks to simple tests we can faster localize part of the product where a bug occurred; besides, we can find several other bugs at the same time. A failed large automated test points at the first encountered problem only, as it quits after the first identified error. That's what makes it different from manual tests, in which we check the product functionality by a test case and can flexibly avoid problems, thus completing the test case and finding all the bugs.</p>
 
-<p>Рассмотрим следующий пример: у нас есть форма регистрации, в которой есть обязательные и необязательные поля для заполнения. Нужно проверить, что можно успешно зарегистрироваться на сайте.</p>
+<p>Let's consider the following example: we have a registration form, which has both mandatory and optional fields. We need to check if one can successfully get registered at the site.</p>
 
-<p><strong>Сценарий плохого автотеста:</strong></p>
+<p><strong>A bad automated test scenario:</strong></p>
 
 <p>1</p>
 
 <ul>
-	<li>Открыть страницу с формой</li>
-	<li>Заполнить все поля</li>
-	<li>Нажать кнопку &quot;Регистрация&quot;</li>
-	<li>Проверить, что есть сообщение об успешной регистрации</li>
+	<li>Open the page with the form</li>
+	<li>Fill in all the fields</li>
+	<li>Press the &quot;Registration&quot; button</li>
+	<li>Check that there's a message about successful registration</li>
 </ul>
 
-<p><strong>Лучше разбить предыдущий тест на набор более простых автотестов:</strong></p>
+<p><strong>It's better to split the above test into a set of simpler automated tests:</strong></p>
 
 <p>1</p>
 
 <ul>
-	<li>Открыть страницу с формой</li>
-	<li>Заполнить только обязательные поля</li>
-	<li>Нажать кнопку &quot;Регистрация&quot;</li>
-	<li>Проверить, что есть сообщение об успешной регистрации</li>
+	<li>Open the page with the form</li>
+	<li>Fill in the mandatory fields only</li>
+	<li>Press the &quot;Registration&quot; button</li>
+	<li>Check that there's a message about successful registration</li>
 </ul>
 
 <p>2</p>
 
 <ul>
-	<li>Открыть страницу с формой</li>
-	<li>Заполнить все обязательные поля</li>
-	<li>Заполнить все необязательные поля</li>
-	<li>Нажать кнопку &quot;Регистрация&quot;</li>
-	<li>Проверить, что есть сообщение об успешной регистрации</li>
+	<li>Open the page with the form</li>
+	<li>Fill in all the mandatory fields</li>
+	<li>Fill in all the optional fields</li>
+	<li>Press the &quot;Registration&quot; button</li>
+	<li>Check that there's a message about successful registration</li>
 </ul>
 
 <p>3</p>
 
 <ul>
-	<li>Открыть страницу с формой</li>
-	<li>Заполнить только необязательные поля</li>
-	<li>Проверить, что кнопка &quot;Регистрация&quot; неактивна</li>
+	<li>Open the page with the form</li>
+	<li>Fill in the optional fields only</li>
+	<li>Check that the &quot;Registration&quot; button is not active</li>
 </ul>

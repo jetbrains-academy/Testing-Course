@@ -1,7 +1,7 @@
-<h2>ID-селекторы</h2>
+<h2>ID selectors</h2>
 
-<p>CSS-селекторы используют&nbsp;фронтенд-разработчики, чтобы выбрать элементы на странице и применить к ним&nbsp;
-определенные стили, то есть правила для отрисовки. В автотестах&nbsp;мы пишем селекторы по тем же самым правилам, чтобы найти нужные нам элементы и произвести с ними какие-то действия с помощью Selenium WebDriver.</p>
+<p>CSS selectors are used by frontend developers to select page elements and apply certain styles, i.e., styling rules, to them.&nbsp;
+In autotests, we use the same rules to write selectors to find the necessary elements and work with them with Selenium WebDriver.</p>
 
-Откройте страницу index.html и подберите селектор для заголовка "Polite cat". 
-Используйте ID элемента. 
+Open the page index.html and choose a selector for the heading "Polite cat". 
+Use the element ID. 

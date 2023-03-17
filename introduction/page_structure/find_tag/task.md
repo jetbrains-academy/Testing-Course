@@ -1,13 +1,13 @@
-## Задание: подберите тег
+## Task: choose a tag
 
-Чтобы посмотреть, как описывается элемент в html-структуре любой веб-страницы:
+In order to see how an element is described in the HTML structure of a web page, do the following:
 
 <ul>
-<li> откройте веб-страницу в браузере </li>
-<li> нажмите правой кнопкой мыши на нужном элементе </li>
-<li> в контекстном меню выберите пункт меню "Inspect" </li>
+<li> open a web page in the browser </li>
+<li> right-click the necessary element </li>
+<li> in the context menu, choose "Inspect" </li>
 </ul>
-Справа или внизу окна браузера откроется консоль разработчика на вкладке Elements. Выбранный элемент будет подсвечен.
+On the right side or at the bottom of the browser window, the developer console will open with the Elements tab. The chosen element will be highlighted.
 
 
-Какой тег используется для задания кнопки "Google Search" на сайте https://www.google.com/?
+What tag is used to define the "Google Search" button at https://www.google.com/?

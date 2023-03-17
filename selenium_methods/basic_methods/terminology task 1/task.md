@@ -1,3 +1,3 @@
-<h2>Задание на терминологию 1</h2>
+<h2>Terminology task 1</h2>
 
-<p>Какой тип элемента, из тех что мы обсуждали в предыдущем шаге, используется в этом задании?</p>
+<p>What element type from the ones discussed in the previous step is used in this task?</p>

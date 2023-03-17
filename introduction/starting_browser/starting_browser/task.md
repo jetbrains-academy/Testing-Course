@@ -1,8 +1,8 @@
-## Запуск браузера и первый скрипт
+## Launching the browser and the first script
 
-В этом шаге попробуйте запустить скрипт из файла task.py. Это простой сценарий, 
-который откроет веб-страницу, заполнит форму с данными, 
-нажмет кнопку для отправки и в конце выполнения закроет все окна браузера.
-Попробуйте выполнить команды по одной в режиме интерпретатора, чтобы лучше понять, 
-что происходит в каждой строчке. Не пугайтесь, если не понимаете, что делают те или иные команды, 
-— подробнее мы их разберем в следующих уроках.
+In this step, try launching the script from the file task.py. It's a simple scenario, 
+which will open the web page, fill in the form with data, 
+press the submit button, and close all browser windows after the execution.
+Try running the commands one by one in the interpreter mode to better understand 
+what happens in each line. Don't get scared if you understand what some of the commands do –
+we will discuss them in more detail in the following lessons.
