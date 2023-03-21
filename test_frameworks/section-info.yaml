@@ -1,1 +1,7 @@
 custom_name: 'test frameworks '
+content:
+- test_frameworks
+- testing_pytest
+- using fixtures in pytest
+- marking test cases in pytest
+- pytest_configuration_params

@@ -1,0 +1,8 @@
+custom_name: pytest test runner
+content:
+- pytest_pros_cons
+- pytest_rules
+- test_run_task
+- reporting in pytest
+- pytest style of test cases
+- assertion in pytest

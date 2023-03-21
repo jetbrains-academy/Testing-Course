@@ -1,0 +1,7 @@
+content:
+- classic fixtures
+- fixtures returning value
+- finalizing fixtures
+- fixture scopes
+- fixtures autouse
+- fixtures_task

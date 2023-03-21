@@ -1,0 +1,16 @@
+type: edu
+files:
+- name: task.py
+  visible: true
+  placeholders:
+  - offset: 60
+    length: 1201
+    placeholder_text: '# TODO'
+- name: __init__.py
+  visible: false
+- name: answer.py
+  visible: true
+  placeholders:
+  - offset: 9
+    length: 19
+    placeholder_text: '# place report last line here'

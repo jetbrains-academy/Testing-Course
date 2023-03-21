@@ -1,0 +1,8 @@
+custom_name: "test configuration, parametrization, plugins"
+content:
+- test configuration
+- test parametrization
+- geckodriver installation
+- parameters from commandline
+- pytest plugins
+- running tests for different localizations
