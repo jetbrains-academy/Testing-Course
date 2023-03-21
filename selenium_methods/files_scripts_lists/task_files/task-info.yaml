@@ -1,12 +1,8 @@
 type: edu
-custom_name: "task: get attribute"
+custom_name: "task: working with files"
 files:
 - name: task.py
   visible: true
-  placeholders:
-  - offset: 210
-    length: 431
-    placeholder_text: '# TODO'
 - name: tests/test_task.py
   visible: false
 - name: __init__.py

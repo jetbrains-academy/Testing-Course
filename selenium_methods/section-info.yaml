@@ -1,3 +1,6 @@
 custom_name: selenium methods
 content:
 - basic_methods
+- files_scripts_lists
+- windows_working
+- waits_expected_conditions
