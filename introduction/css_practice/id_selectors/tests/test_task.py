@@ -9,7 +9,8 @@ class TestCase(unittest.TestCase):
         self.assertFalse("body" in id_selector)
         try:
             browser = webdriver.Chrome()
-            browser.get("http://localhost:63342/UI%20test%20automation%20with%20Selenium%20and%20Python/introduction/css_practice/id_selectors/index.html")
+            browser.implicitly_wait(4)
+            browser.get("https://suninjuly.github.io/css-tasks/practice-id")
             element = browser.find_element(By.CSS_SELECTOR, id_selector)
             self.assertTrue(element.text == "Polite cat")
         finally:

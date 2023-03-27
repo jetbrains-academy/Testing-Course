@@ -9,5 +9,3 @@ files:
   visible: false
 - name: tests/__init__.py
   visible: false
-- name: index.html
-  visible: true

@@ -3,11 +3,13 @@ custom_name: ID selectors
 files:
 - name: task.py
   visible: true
+  placeholders:
+  - offset: 42
+    length: 7
+    placeholder_text: '# TODO'
 - name: tests/test_task.py
   visible: false
 - name: __init__.py
   visible: false
 - name: tests/__init__.py
   visible: false
-- name: index.html
-  visible: true

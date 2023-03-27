@@ -4,10 +4,9 @@
 
 <p>В <strong>@pytest.mark.parametrize()</strong> нужно передать параметр, который должен изменяться, и список значений параметра. В самом тесте наш параметр тоже нужно передавать в качестве аргумента. Обратите внимание, что внутри декоратора имя параметра оборачивается в кавычки, а в списке аргументов теста кавычки не нужны.</p>
 
-<p><strong>test_fixture7.py:&nbsp;</strong></p>
+<p><strong>test_fixture7.py: </strong></p>
 
-<pre>
-<code class="language-python">import pytest
+<pre><code class="language-python">import pytest
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 
@@ -27,26 +26,23 @@ def test_guest_should_see_login_link(browser, language):
 
 <p>Запустите тест:</p>
 
-<pre>
-<code class="language-bash">pytest -s -v test_fixture7.py</code></pre>
+<pre><code class="language-bash">pytest -s -v test_fixture7.py</code></pre>
 
-<p>&nbsp;Вы увидите, что запустятся два теста.&nbsp; В названии каждого теста в квадратных скобках будет написан параметр, с которым он был запущен. Таким образом мы можем быстро и без дублирования кода увеличить количество проверок для похожих сценариев.</p>
+<p> Вы увидите, что запустятся два теста.  В названии каждого теста в квадратных скобках будет написан параметр, с которым он был запущен. Таким образом мы можем быстро и без дублирования кода увеличить количество проверок для похожих сценариев.</p>
 
-<p><img alt="" src="https://ucarecdn.com/9dd11f43-4180-4e16-850d-28095f139da3/" /></p>
+<p><img alt="" src="https://ucarecdn.com/9dd11f43-4180-4e16-850d-28095f139da3/"></p>
 
-<p>Можно задавать параметризацию также для всего тестового класса, чтобы все тесты в классе запустились с заданными параметрами. В таком случае отметка о параметризации должна быть перед объявлением класса:&nbsp;</p>
+<p>Можно задавать параметризацию также для всего тестового класса, чтобы все тесты в классе запустились с заданными параметрами. В таком случае отметка о параметризации должна быть перед объявлением класса: </p>
 
-<pre>
-<code>@pytest.mark.parametrize('language', ["ru", "en-gb"])
+<pre><code>@pytest.mark.parametrize('language', ["ru", "en-gb"])
 class TestLogin:
     def test_guest_should_see_login_link(self, browser, language):
         link = f"http://selenium1py.pythonanywhere.com/{language}/"
         browser.get(link)
         browser.find_element(By.CSS_SELECTOR, "#login_link")
-        # this test will be launched 2 times
+        # этот тест запустится 2 раза
 
     def test_guest_should_see_navbar_element(self, browser, language):
-        #this test will be launched 2 times
-</code></pre>
+        # этот тест тоже запустится дважды</code></pre>
 
-<p>Дополнительно, полезный туториал из документации:&nbsp;<a href="https://docs.pytest.org/en/latest/how-to/parametrize.html?highlight=parametrize" rel="noopener noreferrer nofollow">Parametrizing fixtures and test functions</a></p>
+<p>Дополнительно, полезный туториал из документации: <a href="https://docs.pytest.org/en/latest/how-to/parametrize.html?highlight=parametrize" rel="noopener noreferrer nofollow">Parametrizing fixtures and test functions</a></p>

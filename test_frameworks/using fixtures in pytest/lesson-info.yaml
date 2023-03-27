@@ -5,3 +5,4 @@ content:
 - fixture scopes
 - fixtures autouse
 - fixtures_task
+- test parametrization

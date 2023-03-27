@@ -61,6 +61,6 @@ def test_guest_should_see_login_link(browser):
 
 правильно!</code></pre>
 
-<p>Будьте внимательны и следите, чтобы не было разных conftest во вложенных друг в друга директориях, особенно, когда будете скачивать&nbsp;и проверять задания сокурсников.</p>
+<p>Будьте внимательны и следите, чтобы не было разных conftest во вложенных друг в друга директориях, особенно.</p>
 
 <p><a href="https://docs.pytest.org/en/7.1.x/how-to/fixtures.html?highlight=fixture%20folder#override-a-fixture-on-a-folder-conftest-level" rel="noopener noreferrer nofollow">Override a fixture on a folder (conftest) level</a></p>

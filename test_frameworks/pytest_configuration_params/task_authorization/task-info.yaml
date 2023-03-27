@@ -1,12 +1,8 @@
 type: edu
-custom_name: custom attribute selector
+custom_name: "task: authorization"
 files:
-- name: task.py
+- name: task_authorisation.py
   visible: true
-  placeholders:
-  - offset: 44
-    length: 26
-    placeholder_text: '# TODO'
 - name: tests/test_task.py
   visible: false
 - name: __init__.py

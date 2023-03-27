@@ -1,6 +1,6 @@
 type: theory
 files:
-- name: main.py
+- name: test_fixture7.py
   visible: true
 - name: __init__.py
   visible: false
