@@ -1,11 +1,11 @@
 type: edu
-custom_name: "task: executing script"
+custom_name: 'task: executing script'
 files:
 - name: task.py
   visible: true
-- name: tests/test_task.py
-  visible: false
 - name: __init__.py
+  visible: true
+- name: tests/test_task.py
   visible: false
 - name: tests/__init__.py
   visible: false
