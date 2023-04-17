@@ -1,10 +1,10 @@
-<h2>Фикстуры, возвращающие значение</h2>
+<h2>Fixtures returning a value</h2>
 
-<p>Мы рассмотрели базовый подход к созданию фикстур, когда тестовые данные задаются и очищаются в setup и teardown методах. PyTest предлагает продвинутый подход к фикстурам, когда фикстуры можно задавать глобально, передавать их в тестовые методы как параметры, а также имеет набор встроенных фикстур. Это более гибкий и удобный способ работы со вспомогательными функциями, и сейчас вы сами увидите почему. </p>
+<p>We've discussed the basic approach to creating fixtures, with test data being set up and cleaned up in the setup and teardown methods. PyTest offers an advanced approach to fixtures, within which fixtures may be defined globally and passed to test methods as parameters; besides, there is a set of built-in fixtures. It's a more flexible and convenient way of working with auxiliary functions, and now you will see why. </p>
 
-<p><strong>Возвращаемое значение</strong></p>
+<p><strong>Returned value</strong></p>
 
-<p>Фикстуры могут возвращать значение, которое затем можно использовать в тестах. Давайте перепишем наш предыдущий пример с использованием PyTest фикстур. Мы создадим фикстуру <strong>browser</strong>, которая будет создавать объект WebDriver. Этот объект мы сможем использовать в тестах для взаимодействия с браузером. Для этого мы напишем метод browser и укажем, что он является фикстурой с помощью декоратора <strong>@pytest.fixture</strong>. После этого мы можем вызывать фикстуру в тестах, передав ее как параметр. По умолчанию фикстура будет создаваться для каждого тестового метода, то есть для каждого теста запустится свой экземпляр браузера.</p>
+<p>Fixtures may return a value, which may be later used in tests. Let's rewrite our previous example with PyTest fixtures. We'll create a <strong>browser</strong> fixture, which will create a WebDriver object. We will be able to use that object in tests to interact with the browser. To do that, we'll write a browser method and will indicate that it is a fixture with the help of the <strong>@pytest.fixture</strong> decorator. After that, we'll be able to call the fixture in tests by passing it as a parameter.By default, the fixture will be created for each test method,i.e., for each test there will be a separate browser copy.</p>
 
 <pre><code class="language-python">pytest -s -v test_fixture2.py</code></pre>
 

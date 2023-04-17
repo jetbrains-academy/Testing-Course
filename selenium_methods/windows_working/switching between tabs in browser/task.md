@@ -1,15 +1,15 @@
-<h2>Переход на новую вкладку браузера</h2>
+<h2>Switching between browser tabs</h2>
 
-<p>При работе с веб-приложениями приходится переходить по ссылкам, которые открываются в новой вкладке браузера. WebDriver может работать только с одной вкладкой браузера. При открытии новой вкладки WebDriver продолжит работать со старой вкладкой. Для переключения на новую вкладку надо явно указать, на какую вкладку мы хотим перейти. Это делается с помощью команды switch_to.window:</p>
+<p>When working with web applications, we sometimes need to use links that open in a new browser tab. WebDriver can only work with one tab. When a new tab is opened, WebDriver continues working with the old tab. To switch to a new tab, we need to indicate which tab we want to use. You can do that with the switch_to.window command:</p>
 
 <pre><code class="language-python">browser.switch_to.window(window_name)</code></pre>
 
-<p>Чтобы узнать имя новой вкладки, нужно использовать метод window_handles, который возвращает массив имён всех вкладок. Зная, что в браузере теперь открыто две вкладки, выбираем вторую вкладку:</p>
+<p>To find out the name of the new tab, use the window_handles method, which returns an array of all tab names. As we know that the browser now has two open tabs, we can choose the second one:</p>
 
 <pre><code class="language-python">new_window = browser.window_handles[1]</code></pre>
 
-<p>Также мы можем запомнить имя текущей вкладки, чтобы иметь возможность потом к ней вернуться:</p>
+<p>We can also take notice of the first tab's name so that we can return to it later:</p>
 
 <pre><code class="language-python">first_window = browser.window_handles[0]</code></pre>
 
-<p>После переключения на новую вкладку поиск и взаимодействие с элементами будут происходить уже на новой странице.</p>
+<p>After we have switched to a new tab, the search and the interaction with elements will proceed on a new page.</p>

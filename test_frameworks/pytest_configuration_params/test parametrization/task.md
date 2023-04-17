@@ -1,8 +1,8 @@
-<h2>Параметризация тестов</h2>
+<h2>Test parametrization</h2>
 
-<p>PyTest позволяет запустить один и тот же тест с разными входными параметрами. Для этого используется декоратор <strong>@pytest.mark.parametrize()</strong>. Наш сайт доступен для разных языков. Напишем тест, который проверит, что для сайта с русским и английским языком будет отображаться ссылка на форму логина. Передадим в наш тест ссылки на русскую и английскую версию главной страницы сайта.</p>
+<p>PyTest allows running the same test with different input parameters. To do that, use the <strong>@pytest.mark.parametrize()</strong> decorator. Our site is available in various languages. Let's write a test that checks that the Russian- and English-language site displays a link to the log-in form. We'll pass the links to the Russian and English versions of our site's front page to our tests.</p>
 
-<p>В <strong>@pytest.mark.parametrize()</strong> нужно передать параметр, который должен изменяться, и список значений параметра. В самом тесте наш параметр тоже нужно передавать в качестве аргумента. Обратите внимание, что внутри декоратора имя параметра оборачивается в кавычки, а в списке аргументов теста кавычки не нужны.</p>
+<p>We need to pass the parameter that may change and the list of parameter values to <strong>@pytest.mark.parametrize()</strong>. In the test itself, the parameter should also be passed as an argument. Notice that inside the decorator, the name of the parameter is put in quotes, while the list of test arguments does not require quotes.</p>
 
 <p><strong>test_fixture7.py: </strong></p>
 
@@ -24,15 +24,15 @@ def test_guest_should_see_login_link(browser, language):
     browser.get(link)
     browser.find_element(By.CSS_SELECTOR, "#login_link")</code></pre>
 
-<p>Запустите тест:</p>
+<p>Let's run the test:</p>
 
 <pre><code class="language-bash">pytest -s -v test_fixture7.py</code></pre>
 
-<p> Вы увидите, что запустятся два теста.  В названии каждого теста в квадратных скобках будет написан параметр, с которым он был запущен. Таким образом мы можем быстро и без дублирования кода увеличить количество проверок для похожих сценариев.</p>
+<p>You'll see that two tests have been started. The name of each test contains the used parameter in square brackets. Thus, we can quickly and without code duplication increase the number of checks for similar scenarios.</p>
 
 <p><img alt="" src="https://ucarecdn.com/9dd11f43-4180-4e16-850d-28095f139da3/"></p>
 
-<p>Можно задавать параметризацию также для всего тестового класса, чтобы все тесты в классе запустились с заданными параметрами. В таком случае отметка о параметризации должна быть перед объявлением класса: </p>
+<p>We can also use parametrization for the whole test class so that all the tests in the class would run with the set parameters. In that case, the parametrization mark must precede the declaration of the class: </p>
 
 <pre><code>@pytest.mark.parametrize('language', ["ru", "en-gb"])
 class TestLogin:
@@ -45,4 +45,4 @@ class TestLogin:
     def test_guest_should_see_navbar_element(self, browser, language):
         # этот тест тоже запустится дважды</code></pre>
 
-<p>Дополнительно, полезный туториал из документации: <a href="https://docs.pytest.org/en/latest/how-to/parametrize.html?highlight=parametrize" rel="noopener noreferrer nofollow">Parametrizing fixtures and test functions</a></p>
+<p>Here's a helpful additional tutorial from the documentation: <a href="https://docs.pytest.org/en/latest/how-to/parametrize.html?highlight=parametrize" rel="noopener noreferrer nofollow">Parametrizing fixtures and test functions</a>.</p>

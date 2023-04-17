@@ -1,8 +1,8 @@
-<h2>PyTest — как пишут тесты</h2>
+<h2>PyTest — how to write tests</h2>
 
-<p>PyTest не требует написания дополнительных специфических конструкций в тестах, как того требует unittest.</p>
+<p>Unlike unittest, PyTest does not require writing additional specific constructs in tests.</p>
 
-<p>Мы уже увидели, что PyTest может запускать тесты, написанные в unittest-стиле. Перепишем наши тесты из <strong>test_abs_project.py</strong> в более простом формате, который также понимает PyTest. Назовём новый файл test_abs.py:</p>
+<p>We've already seen that PyTest can run tests written in the unittest style. Let's rewrite our tests from <strong>test_abs_project.py</strong> in a simpler format, which is also understood by PyTest. Let's name the new file test_abs.py:</p>
 
 <pre><code class="language-python">def test_abs1():
     assert abs(-42) == 42, "Should be absolute value of a number"
@@ -12,8 +12,8 @@ def test_abs2():
 
 </code></pre>
 
-<p>Запустим тесты в этом файле:</p>
+<p>Let's run the tests in the file:</p>
 
 <pre><code class="language-python">pytest test_abs.py</code></pre>
 
-<p>Код тестов стал короче и читабельнее.</p>
+<p>Test code has become more concise and readable.</p>

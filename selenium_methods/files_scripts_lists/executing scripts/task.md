@@ -1,24 +1,24 @@
-<h2>Метод execute_script</h2>
+<h2>The execute_script method</h2>
 
-<p>Рассмотрим еще один очень полезный и мощный метод, но он требует хотя бы минимальных знаний JavaScript. С помощью метода execute_script можно выполнить программу, написанную на языке JavaScript, как часть сценария автотеста в запущенном браузере. Зачем это может понадобиться, если в автотестах мы стараемся взаимодействовать с интерфейсом сайта как обычный пользователь, нажимая кнопки, выбирая пункты меню и вводя текст в текстовые поля?</p>
+<p>Let's talk about one more helpful and powerful method, which requires at least basic understanding of JavaScript. With the help of the execute_script method, you can run a program written in JavaScript as part of the automated test scenario in your browser. You may wonder why we need that, as in automated tests we try to interact with the site interface as a common user – clicking buttons, selecting menu items, and entering text in text fields.</p>
 
-<p>Дело в том, что стандартные методы, доступные в Selenium, не могут покрыть всех возможных ситуаций работы с веб-приложением. Сайты в интернете могут решать самые разные задачи, начиная от простого блога до сложных финансовых или графических приложений. Разработчики имеют доступ к огромному количеству различных библиотек для решения бизнес-сценариев, что приводит к появлению на веб-странице нестандартных редакторов текстов, уникальных меню, оригинальных видео-плееров и т.д. Порой это приводит к тому, что для нажатия вроде бы обычной кнопки тестировщику понадобится писать настоящий JavaScript-сценарий. Если вы столкнулись с такой ситуацией, то в первую очередь обратитесь за помощью к вашим фронтенд-разработчикам, чтобы они подсказали  пример нужного скрипта. Прежде чем использовать данный скрипт в тестах, вы можете проверить, как он работает прямо в браузере, выполнив код в консоли браузера. Затем можете добавить его в ваш автотест с помощью execute_script(javascript_code).</p>
+<p>The reason is that standard methods available in Selenium cannot cover all possible situations in the work of a web application. Internet sites may solve a range of tasks – from a simple blog to complex financial or graphical applications. Implementing business scenarios, developers have access to a great number of libraries, which results in web pages with non-standard text editors, unique menus, original video players, etc. Consequently, in order to press a seemingly common button, testers need to write a real JavaScript scenario. If you find yourself in such a situation, first address your frontend developers, who may suggest a sample of the required script. Before using the script in your tests, you can check its work right in your browser – run the code in the browser console. Then, you can add it to your automated test: execute_script(javascript_code).</p>
 
-<p>Давайте попробуем вызвать alert в браузере с помощью WebDriver. Пример сценария:</p>
+<p>Let's try to trigger an alert in the browser with the help of WebDriver. Here's a sample scenario:</p>
 
 <pre><code class="language-python">from selenium import webdriver
 browser = webdriver.Chrome()
 browser.execute_script("alert('Robots at work');")
 </code></pre>
 
-<p>Обратите внимание, что исполняемый JavaScript нужно заключать в кавычки (двойные или одинарные). Если внутри скрипта вам также понадобится использовать кавычки, а для выделения скрипта вы уже используете двойные кавычки, то в скрипте следует поставить одинарные:</p>
+<p>Notice that the executable JavaScript should be put in quotes (single or double). If you also need to use quotes within the script and you have already used double quotes to mark the script, use single quotes inside the script:</p>
 
 <pre><code class="language-python">browser.execute_script("document.title='Script executing';")</code></pre>
 
-<p>Такой формат записи тоже будет работать:</p>
+<p>The following format will also work:</p>
 
 <pre><code class="language-python">browser.execute_script('document.title="Script executing";')</code></pre>
 
-<p>Можно с помощью этого метода выполнить сразу несколько инструкций, перечислив их через точку с запятой. Изменим сначала заголовок страницы, а затем вызовем alert:</p>
+<p>With this method, we can execute multiple instructions at a time – list them separated by semicolons. Let's first change the page title and then trigger an alert:</p>
 
 <pre><code class="language-python">browser.execute_script("document.title='Script executing';alert('Robots at work');")</code></pre>

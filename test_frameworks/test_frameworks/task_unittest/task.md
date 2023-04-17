@@ -1,25 +1,25 @@
-<h2>Задание: оформляем тесты в стиле unittest </h2>
+<h2>Task: writing tests in the unittest style</h2>
 
-<p>Попробуйте оформить тесты из первого модуля в стиле unittest.</p>
+<p>Try to rewrite the tests from the first module in the unittest style.</p>
 
-Take [step](course://introduction/finding_elements_selenium/task10)  from the first 
-section and re-write your tests in unittest style.
+Take the [step](course://introduction/finding_elements_selenium/task10)  from the first 
+section and rewrite your tests in the unittest style.
 
 
 
 <ul>
-	<li>Создайте в test.py класс с тестами, который должен наследоваться от <strong>unittest.TestCase</strong> по аналогии с предыдущим шагом</li>
-	<li>Перепишите в стиле unittest тест для страницы <a href="http://suninjuly.github.io/registration1.html" rel="noopener noreferrer nofollow" target="_blank" title="Link: http://suninjuly.github.io/registration1.html">http://suninjuly.github.io/registration1.html</a></li>
-	<li>Перепишите в стиле unittest второй тест для страницы <a href="http://suninjuly.github.io/registration2.html" rel="noopener noreferrer nofollow" target="_blank" title="Link: http://suninjuly.github.io/registration1.html">http://suninjuly.github.io/registration2.html</a></li>
-	<li>Оформите финальные проверки в тестах в стиле unittest, например, используя проверочный метод <a href="https://docs.python.org/3/library/unittest.html#assert-methods" rel="noopener noreferrer nofollow">assertEqual</a></li>
-	<li>Запустите получившиеся тесты  </li> 
-	<li>Просмотрите отчёт о запуске и найдите последнюю строчку  </li> 
+	<li>In test.py, create a class with tests which will inherit from <strong>unittest.TestCase</strong> like in the previous step.</li>
+	<li>Rewrite the test for the page <a href="http://suninjuly.github.io/registration1.html" rel="noopener noreferrer nofollow" target="_blank" title="Link: http://suninjuly.github.io/registration1.html">http://suninjuly.github.io/registration1.html</a> in the unittest style.</li>
+	<li>Rewrite the second test for the page <a href="http://suninjuly.github.io/registration2.html" rel="noopener noreferrer nofollow" target="_blank" title="Link: http://suninjuly.github.io/registration1.html">http://suninjuly.github.io/registration2.html</a> in the unittest style.</li>
+	<li>Format the final checks in the tests in the unittest style: for example, use the <a href="https://docs.python.org/3/library/unittest.html#assert-methods" rel="noopener noreferrer nofollow">assertEqual</a> method.</li>
+	<li>Run the tests.</li> 
+	<li>Look through the test report and find the last line.</li> 
 </ul>
 
-Вставьте строчку в [answer.txt](file://test_frameworks/test_frameworks/task_unittest/answer.txt) 
+Insert the line into [answer.txt](file://test_frameworks/test_frameworks/task_unittest/answer.txt). 
 
-<p>Обратите внимание, что по задумке должно выбрасываться исключение NoSuchElementException во втором тесте. Если вы использовали конструкцию try/except, здесь нужно запустить тест без неё. Ловить исключения не надо (во всяком случае, здесь)!</p>
+<p>Notice that the second test is supposed to throw NoSuchElementException. If you use the try/except construct, you need to run the test without it here. You don't need to catch exceptions (at least, in this case)!</p>
 
-<p>Это всё для иллюстрации того, что unittest выполнит тесты и обобщит результаты даже при наличии неожиданного исключения. </p>
+<p>All that is supposed to illustrate that unittest will execute tests and summarize the results even if an unexpected exception is thrown. </p>
 
-<p>Не удаляйте код после прохождения этого задания, он пригодится в следующем уроке. </p>
+<p>Do not delete your code after completing the task – you will need it in the following lesson. </p>

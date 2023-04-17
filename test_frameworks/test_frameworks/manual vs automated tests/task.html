@@ -1,45 +1,45 @@
-<h2>Автоматизированное и ручное тестирование</h2>
+<h2>Testing: automated vs. manual</h2>
 
-<p>Чтобы начать писать хорошие автотесты, нужно ﻿разобраться,&nbsp;в чем плюсы и минусы ручного и автоматизированного тестирования.</p>
+<p>To start writing good automated tests, you need to clearly understand the pros and cons of both automated and manual testing.</p>
 
 <table border="1" cellpadding="1" cellspacing="1" style="width:700px">
 	<thead>
 		<tr>
-			<td>Ручные тесты</td>
-			<td>Автотесты</td>
+			<td>Manual tests</td>
+			<td>Automated tests</td>
 		</tr>
 	</thead>
 	<tbody>
 		<tr>
 			<td>
-			Шаги могут быть описаны достаточно абстрактно,
-			В ручном тесте может содержаться&nbsp;шаг &quot;
-              Зарегистрировать нового пользователя&quot; без пояснений,
-              как это делать, в автотесте должны&nbsp;быть строго описаны данные
-              поэтому тестировщик может&nbsp;увидеть новые проблемы, следуя сценарию теста.
-              для теста и сценарий регистрации. </td>
-			<td> Строгий порядок шагов и их чёткая детализация.
-              Проверяют только то, что было заложено изначально в сценарий теста,
-              поэтому могут быть пропущены новые ошибки в продукте. </td>
+			Steps may be described in relatively abstract terms,
+			A manual test may contain a step &quot;
+              Register a new user&quot; without explanations
+              how to do it; automated tests must clearly describe data,
+              so the tester will be able to see new problems while following the test scenario
+              and the registration scenario. </td>
+			<td> Strict order and elaboration of steps.
+              Only what has been included in the initial test scenario gets checked,
+              so new errors in the product may be overlooked. </td>
 		</tr>
 		<tr>
-			<td>- Из-за абстрактности описания шагов ручные тесты иногда могут приводить к ложноположительным результатам, когда ожидаемый результат достигнут, но в реальности тестировщик выполнил сценарий неправильно, пропустив баг.&nbsp;</td>
-			<td>+ Запуск автотестов обычно приводит к одним и тем же результатам, т.к. сценарий описан точно.</td>
+			<td>- Because of abstract descriptions of test steps, manual tests may sometimes give false-positive results: the expected result has been received but the tester has executed the scenario incorrectly and missed the bug.&nbsp;</td>
+			<td>+ Automated test runs usually give the same results, as the scenario is defined accurately.</td>
 		</tr>
 		<tr>
-			<td>- Требуется много времени для проверки регрессии, что приводит к усталости тестировщика и ошибкам в проверках из-за человеческого фактора (человеку сложно долго выполнять монотонную работу).</td>
-			<td>+ Можно запускать на каждый коммит в тестируемом приложении, что позволяет раньше обнаруживать ошибки в продукте.</td>
+			<td>- Checking regression takes a long time, which results in the tester's tiredness and consequent errors due to lengthy monotonous work.</td>
+			<td>+ May be run on each commit of the application, which allows early error catching.</td>
 		</tr>
 	</tbody>
 </table>
 
-<p>Отдельно стоит описать отрицательные стороны автоматизированного тестирования:</p>
+<p>We also need to say a few words about the disadvantages of automated testing:</p>
 
 <ul>
-	<li>возможная нестабильность теста, которая не связана с качеством самого теста, а вызывается внешними проблемами: нестабильное сетевое соединение, проблемы с серверами, обновление кода продукта в момент запуска тестов;</li>
-	<li>требуется достаточно много времени на разработку и поддержку набора автотестов.</li>
+	<li>Possible test instability, which is not connected with the quality of the test itself but is rather triggered by external problems: unstable network connection, server problems, product code updates at the time of test running;</li>
+	<li>Automated tests require considerable time for developing and supporting.</li>
 </ul>
 
-<p>Несмотря на наличие минусов автотестов,&nbsp;в большинстве случаев их использование на проекте помогает быстрее находить ошибки в коде приложения и поддерживать качество продукта на достаточном уровне. Автотесты помогают отделу тестирования оптимизировать свою работу, чтобы сделать счастливее пользователей, которые быстрее получают новые фичи и меньше страдают от ошибок в продукте, так как разработчики раньше узнают о багах и могут&nbsp;заранее принять меры для их устранения, не откладывая релиз продукта.&nbsp;Таким образом, благодаря автотестам налаживается бизнес, который может увеличить скорость внедрения&nbsp;фич, приносящих&nbsp;прибыль.</p>
+<p>Despite their disadvantages, in most cases, automated tests help to find errors faster and ensure the level of product quality. Automated tests allow optimizing testers' work and help to make users happy and – they can get new features in a shorter time and don't suffer from the errors in the product: developers quickly identify bugs and take measures to handle those without postponing the release of the product. Thus, automated tests help develop business by increasing the rate of implementing feature that bring profit.</p>
 
-<p>Ручные тесты в идеальном случае остаются только на этапе&nbsp;проверки новых фич&nbsp;и в виде исследовательского тестирования, которое позволяет найти проблемы в сложных пользовательских&nbsp;сценариях.</p>
+<p>In the ideal case, manual tests are run only at the stage of checking new features – it's a research kind of testing, which allows finding problems in complex user scenarios.</p>

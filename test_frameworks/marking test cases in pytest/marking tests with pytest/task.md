@@ -1,8 +1,8 @@
-<h2>Маркировка тестов часть 1</h2>
+<h2>Test marking: part 1</h2>
 
-<p>Когда тестов становится много, хорошо иметь способ разделять тесты не только по названиям, но также по каким-нибудь заданным нами категориям. Например, мы можем выбрать небольшое количество критичных тестов (smoke), которые нужно запускать на каждый коммит разработчиков, а остальные тесты обозначить как регрессионные (regression) и запускать их только перед релизом. Или у нас могут быть тесты, специфичные для конкретного браузера (internet explorer 11), и мы хотим запускать эти тесты только под данный браузер. Для выборочного запуска таких тестов в PyTest используется маркировка тестов или <strong>метки (marks)</strong>. Для маркировки теста нужно написать декоратор вида <strong>@pytest.mark.mark_name</strong>, где mark_name — произвольная строка.</p>
+<p>When the number of tests becomes large, it's a good idea to identify them not only by names but also by some other defined categories. For example, we can select a small number of smoke tests, which need to be run after each new commit from the developers, and define the rest as regression tests, which should be run only before the release. Or, we can have tests specific to a certain browser (e.g., Internet Explorer 11), and we want to run them only on that browser. To selectively launch such tests, PyTest uses test <strong>marks</strong>. To mark tests, you need to write a decorator like <strong>@pytest.mark.mark_name</strong>, where mark_name  is an arbitrary string.</p>
 
-<p>Давайте разделим тесты в одном из предыдущих примеров на smoke и regression.</p>
+<p>Let's divide the tests from one of our previous examples into smoke and regression ones.</p>
 
 <p><strong>test_fixture8.py:</strong></p>
 
@@ -36,36 +36,36 @@ class TestMainPage1():
 
 </code></pre>
 
-<p>Чтобы запустить тест с нужной маркировкой, нужно передать в командной строке параметр <strong>-m</strong> и нужную метку:</p>
+<p>To run a test with a given mark, we need to pass the <strong>-m</strong> parameter and the required mark in the command line:</p>
 
 <pre><code class="language-python">pytest -s -v -m smoke test_fixture8.py</code></pre>
 
-<p>Если всё сделано правильно, то должен запуститься только тест с маркировкой smoke.</p>
+<p>If everything is correct, only the test with the smoke mark will be launched.</p>
 
-<p>При этом вы увидите warning, то есть предупреждение:</p>
+<p>You will also see a warning:</p>
 
 <pre><code class="language-bash">PytestUnknownMarkWarning: Unknown pytest.mark.smoke - is this a typo?  You can register custom marks to avoid this warning - for details, see https://docs.pytest.org/en/latest/mark.html
     PytestUnknownMarkWarning,</code></pre>
 
-<p>Это предупреждение появилось потому, что в последних версиях PyTest настоятельно рекомендуется регистрировать метки явно перед использованием. Это, например, позволяет избегать опечаток, когда вы можете ошибочно пометить ваш тест несуществующей меткой, и он будет пропускаться при прогоне тестов.</p>
+<p>The warning is displayed because the latest versions of PyTest insistently recommend to explicitly register marks before use. That allows avoiding typos – situations where you erroneously used a non-existent test mark and the test ends up being skipped.</p>
 
-<h3>Как же регистрировать метки?</h3>
+<h3>Hpw are marks registered?</h3>
 
-<p>Создайте файл pytest.ini в корневой директории вашего тестового проекта и добавьте в файл следующие строки:</p>
+<p>Create a file pytest.ini in the root directory of your test project and add the following lines to the file:</p>
 
 <pre><code class="language-no-highlight">[pytest]
 markers =
     smoke: marker for smoke tests
     regression: marker for regression tests</code></pre>
 
-<p>Текст после знака ":" является поясняющим — его можно не писать.</p>
+<p>The text following the ":" sign is a commentary and may be skipped.</p>
 
-<p>Снова запустите тесты:</p>
+<p>Run the tests again:</p>
 
 <pre><code class="language-python">pytest -s -v -m smoke test_fixture8.py</code></pre>
 
-<p>Теперь предупреждений быть не должно.</p>
+<p>Now, there should be no warnings.</p>
 
 <p> </p>
 
-<p>Так же можно маркировать целый тестовый класс. В этом случае маркировка будет применена ко всем тестовым методам, входящим в класс.</p>
+<p>You can also mark a whole test class. In that case, marking will be applied to all test methods included in the class.</p>

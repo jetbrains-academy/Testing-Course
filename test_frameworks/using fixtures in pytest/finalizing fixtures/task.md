@@ -1,6 +1,6 @@
-<h2>Финализаторы — закрываем браузер</h2>
+<h2>Finalizers — closing the browser</h2>
 
-<p>Вероятно, вы заметили, что мы не использовали в этом примере команду <strong>browser.quit()</strong>. Это привело к тому, что несколько окон браузера оставались открыты после окончания тестов, а закрылись только после завершения всех тестов. Закрытие браузеров произошло благодаря встроенной фикстуре — сборщику мусора. Но если бы количество тестов насчитывало больше нескольких десятков, то открытые окна браузеров могли привести к тому, что оперативная память закончилась бы очень быстро. Поэтому надо явно закрывать браузеры после каждого теста. Для этого мы можем воспользоваться <strong>финализаторами</strong>. Один из вариантов финализатора — использование ключевого слова Python: <strong>yield</strong>. После завершения теста, который вызывал фикстуру, выполнение фикстуры продолжится со строки, следующей за строкой со словом <strong>yield</strong>:</p>
+<p>You may have noticed that in our example we didn't use the <strong>browser.quit()</strong> command. As a result, several browser windows remained open after the test was over and closed only after the completion of all tests. The browsers were closed thanks to a built-in fixture – garbage collector. However, if we had several dozens of tests, the open browser windows could have eaten all RAM. That's why it's important to explicitly close browsers after each test. To do that, we can use <strong>finalizers</strong>. One of possible finalizers is the use of Python's key word <strong>yield</strong>. After the test that called the fixture is complete, the fixture will be executed starting with the line that follows the line with the <strong>yield</strong> word:</p>
 
 <p>test_fixture3.py</p>
 
@@ -16,13 +16,13 @@ def browser():
     print("\nstart browser for test..")
     browser = webdriver.Chrome()
     yield browser
-    # этот код выполнится после завершения теста
+    # this code will run after the test is completed
     print("\nquit browser..")
     browser.quit()
 
 
 class TestMainPage1():
-    # вызываем фикстуру в тесте, передав ее как параметр
+    # calling the fixture in the test by passing it as a parameter
     def test_guest_should_see_login_link(self, browser):
         browser.get(link)
         browser.find_element(By.CSS_SELECTOR, "#login_link")
@@ -32,6 +32,6 @@ class TestMainPage1():
         browser.find_element(By.CSS_SELECTOR, ".basket-mini .btn-group &gt; a")
 </code></pre>
 
-<p>Есть альтернативный способ вызова teardown кода с помощью встроенной фикстуры <strong>request</strong> и ее метода <strong>addfinalizer</strong>. Можете изучить его сами по документации <a href="https://docs.pytest.org/en/latest/how-to/fixtures.html#adding-finalizers-directly" rel="nofollow noopener noreferrer">PyTest</a>. </p>
+<p>There's an alternative way to call the teardown code – with the built-in <strong>request</strong> fixture and its method <strong>addfinalizer</strong>. You can study it on your own in the PyTest <a href="https://docs.pytest.org/en/latest/how-to/fixtures.html#adding-finalizers-directly" rel="nofollow noopener noreferrer">documentation</a>. </p>
 
-<p>Рекомендуем также выносить очистку данных и памяти в фикстуру, вместо того чтобы писать это в шагах теста: финализатор выполнится даже в ситуации, когда тест упал с ошибкой. </p>
+<p>We also recommend leaving data and memory cleaning up to the fixture instead of writing it in test steps: the finalizer will be executed even when the test fails with an error. </p>

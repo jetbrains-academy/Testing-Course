@@ -1,10 +1,10 @@
-<h2>PyTest — отчёты</h2>
+<h2>PyTest — reports</h2>
 
-<p>Вы могли заметить, что PyTest позволяет генерировать подробный отчёт с поддержкой цветовых схем и форматированием прямо из коробки.</p>
+<p>You might have noticed that PyTest allows generating a detailed report supporting color schemes and formatting right out of the box.</p>
 
-<p>Давайте еще раз запустим наши тесты с помощью unittest и PyTest, чтобы сравнить выводимый результат.</p>
+<p>Let's run our tests with unittest and PyTest once again and compare the outputted result.</p>
 
-<p>Мы видим, что в PyTest-отчёте упавший тест выделен красным шрифтом, что делает разбор логов более приятным занятием.</p>
+<p>We can see that in the PyTest report, the failed test is highlighted with a red font, which facilitates the process of log analysis.</p>
 
 <p><strong>unittest:</strong></p>
 
@@ -14,8 +14,8 @@
 
 <p><img alt="" src="https://ucarecdn.com/81ceab3c-0d25-4beb-ab87-09d110294d63/"></p>
 
-<p>Если запустить PyTest с параметром <strong>-v</strong> (<strong>verbose</strong>, то есть подробный), то в отчёт добавится дополнительная информация со списком тестов и статусом их прохождения: </p>
+<p>If we run PyTest with the parameter <strong>-v</strong> (<strong>verbose</strong>), the report will be supplemented with additional information – the list of tests and their execution statuses: </p>
 
 <p><img alt="" src="https://ucarecdn.com/6a53144b-e083-410f-92ef-404511fc6c07/"></p>
 
-<p>Другие полезные команды для манипуляции выводом тестов PyTest можно найти по ссылке: <a href="https://gist.github.com/amatellanes/12136508b816469678c2" rel="noopener noreferrer nofollow">Useful py.test commands.</a></p>
+<p>You can find other commands for manipulating the output of PyTest tests here: <a href="https://gist.github.com/amatellanes/12136508b816469678c2" rel="noopener noreferrer nofollow">Useful py.test commands.</a></p>

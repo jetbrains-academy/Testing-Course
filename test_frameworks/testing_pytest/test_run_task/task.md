@@ -1,10 +1,10 @@
-<h2>Задание: запуск тестов</h2>
+<h2>Task: running tests</h2>
 
-<p>Соискатель прислал тестовый проект в качестве тестового задания на вакансию в вашу компанию: </p>
+<p>An applicant sent a testing project as a test task for a vacancy in your company: </p>
 
 <p><img alt="" src="https://ucarecdn.com/c115593c-155f-4cb4-a8f3-f58cdb9bcda7/"></p>
 
-<p>Содержимое самих файлов выглядит примерно так: </p>
+<p>The content of the files looks like this: </p>
 
 <p><strong>tests_for_pytest/test_main_page: </strong></p>
 
@@ -24,7 +24,7 @@ class TestLogin(object):
     def test_guest_should_see_login_link(self, browser, language):
 </code></pre>
 
-<p><strong>(корневая директория проекта) test_regression.py:</strong></p>
+<p><strong>(the root directory of the project) test_regression.py:</strong></p>
 
 <pre><code>class TestLessonCreate():
     # номер 5
@@ -41,9 +41,9 @@ class CourseCreate():
 # номер 8
 def test_guest_can_open_new_course(browser):</code></pre>
 
-<p>Вы пытаетесь запустить тесты из директории, в которой содержится проект test_project, с помощью PyTest командой: </p>
+<p>You are trying to run the tests from the directory with the test_project using a PyTest command: </p>
 
 <pre><code class="language-bash">pytest test_project
 </code></pre>
 
-<p>Отметьте ниже только те тестовые методы, которые будут найдены и выполнены PyTest: </p>
+<p>Mark only those test methods that PyTest will find and execute: </p>

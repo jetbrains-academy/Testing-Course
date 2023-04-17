@@ -1,24 +1,24 @@
-<h2>Есть способы получше: Selenium Waits (Implicit Waits)</h2>
+<h2>Better solutions: Selenium Waits (Implicit Waits)</h2>
 
-<p>Надеемся, вы поняли, что решение с<strong> time.sleep() </strong>плохое: 
-оно не масштабируемое и трудно поддерживаемое.</p>
+<p>Hopefully, you've figured out that the solution involving <strong> time.sleep() </strong>isn't a good one: 
+it is not scalable and is hard to support.</p>
 
-<p>Идеальное решение могло бы быть таким: нам всё равно надо 
-избежать ложного падения тестов из-за асинхронной работы скриптов или задержек от сервера,
-поэтому мы будем ждать появление элемента на странице в течение заданного количества времени 
-(например, 5 секунд).
-Проверять наличие элемента будем каждые 500 мс.
-Как только элемент будет найден, мы сразу перейдем к следующему шагу в тесте.
-Таким образом, мы сможем получить нужный элемент в идеальном случае сразу, в худшем случае за 5 секунд.</p>
+<p>An ideal solution might be as follows: we need to avoid
+false test crashes due to the asynchronous work of scripts or server delays,
+so we will wait for the element's appearance on the page for a set time period
+(e.g., 5 seconds).
+We will check for the presence of the element every 500 ms.
+As soon as the element has been located, we immediately proceed to the following test step.
+Thus, in the ideal-case scenario, we will get the required element immediately, and in the worst-case scenario within 5 seconds.</p>
 
-<p>В Selenium WebDriver есть специальный способ организации такого ожидания, 
-который позволяет задать ожидание при инициализации драйвера, 
-чтобы применить его ко всем тестам. Ожидание называется <strong>неявным</strong>
-(<strong>Implicit wait</strong>), так как его не надо явно указывать каждый раз, когда мы выполняем поиск элементов, оно автоматически будет применяться при вызове каждой последующей команды.</p>
+<p>Selenium WebDriver offers a way to set up such waits.
+It allows setting up a wait for driver initialization
+and applying it to all tests. It is called an
+<strong>Implicit wait</strong>, as we don't need to explicitly indicate it each time we search for an element – it will be applied automatically at the call of each subsequent command.</p>
 
-<p>Улучшим наш тест с помощью неявных ожиданий.
-Для этого нам нужно будет убрать time.sleep() 
-и добавить одну строчку с методом <strong>implicitly wait</strong>:</p>
+<p>Let's improve our test with the help of implicit waits.
+To do that, we need to remove time.sleep() 
+and add a line with the <strong>implicitly_wait</strong> method:</p>
 
 <pre><code class="language-python">
 from selenium import webdriver
@@ -37,8 +37,8 @@ finally:
 
 </code></pre>
 
-<p>Теперь мы можем быть уверены,
-что при небольших задержках в работе сайта наши тесты продолжат работать стабильно. 
-На каждый вызов команды <strong>find_element</strong> 
-WebDriver будет ждать 5 секунд до появления элемента на странице прежде, 
-чем выбросить исключение <strong>NoSuchElementException</strong>.</p>
+<p>Now, we can be sure that small
+delays in the site's work won't affect the stability of our tests.
+With each call of the <strong>find_element</strong> command,
+WebDriver will wait for the element's appearance for 5 seconds before throwing
+<strong>NoSuchElementException</strong>.</p>

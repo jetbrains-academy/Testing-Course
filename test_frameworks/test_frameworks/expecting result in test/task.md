@@ -1,19 +1,19 @@
-<h2>Проверка ожидаемого результата</h2>
+<h2>Checking for expected result</h2>
 
-<p>Как можно проверить ожидаемый результат? Для этого используется встроенная в Python инструкция <strong>assert</strong>, которая проверяет истинность утверждений. <strong>assert True</strong> не приводит к выводу дополнительных сообщений, а вот <strong>assert False</strong> вызовет исключение <strong>AssertionError</strong>.</p>
+<p>How can we check for the expected result? We can use Python's built-in <strong>assert</strong> instruction, which checks the validity of statements. <strong>assert True</strong> does not result in the output of additional messages, while <strong>assert False</strong> will throw an exception: <strong>AssertionError</strong>.</p>
 
-<p>Рассмотрим работу assert на примере встроенной функции <strong>abs</strong>(), которая возвращает абсолютное значение числа по модулю. Для этого активируйте созданное ранее виртуальное окружение и запустите интерпретатор Python. </p>
+<p>Let's discuss the functioning of assert using an example with the built-in function <strong>abs</strong>(), which returns the absolute value of a number. First, activate the previously created virtual environment and run the Python interpreter. </p>
 
 
-<p>Теперь будем вводить приведенные ниже команды и смотреть на результат их выполнения.</p>
+<p>Now, we'll be entering the below commands and looking at the results of execution.</p>
 
-<p>Если значение выражения истинно, то в консоли не должно появиться дополнительных сообщений. Выполним:</p>
+<p>If the expression value is true, there won't be any additional messages in the console. Let's try:</p>
 
 <pre><code>&gt;&gt;&gt; assert abs(-42) == 42
 
 </code></pre>
 
-<p>Если условие не выполнено, то в консоли выводится лог ошибки с названием файла и номером строчки, в которой произошла ошибка, а также тип ошибки <strong>AssertionError</strong>:</p>
+<p>If the condition has not been met, you'll see the error log in the console – with the name of the file, the number of the line where the error occurred, and the error type <strong>AssertionError</strong>:</p>
 
 <pre><code>
 &gt;&gt;&gt; assert abs(-42) == -42
@@ -25,7 +25,7 @@ Traceback (most recent call last):
 AssertionError
 </code></pre>
 
-<p>Простое сообщение <strong>AssertionError</strong> не очень информативно. Когда тестов становится много, бывает сложно вспомнить, что именно мы проверяем в данном тесте. Для добавления дополнительного сообщения можно при вызове assert через запятую написать нужное сообщение, которое будет выведено в случае ошибки проверки результата:</p>
+<p>The plain message <strong>AssertionError</strong> is not very informative. When there are lots of tests, it may be difficult to remember what exactly we are checking in a given test. To add an additional message, you can call assert with the necessary message text after a comma; the message will be displayed if there's an error in the result checking:</p>
 
 <pre><code>
 &gt;&gt;&gt; assert abs(-42) == -42, "Should be absolute value of a number"

@@ -1,8 +1,8 @@
-<h2>Conftest.py&nbsp;&mdash; конфигурация тестов</h2>
+<h2>Conftest.py&nbsp;&mdash; test configuration</h2>
 
-<p>Ранее мы добавили&nbsp;фикстуру browser, которая создает нам экземпляр браузера для тестов в данном файле. Когда файлов с тестами становится больше одного, приходится в каждом файле с тестами описывать данную фикстуру. Это очень неудобно. Для хранения часто употребимых фикстур и хранения глобальных настроек нужно использовать файл<strong> conftest.py,</strong> который должен лежать в директории верхнего уровня в вашем проекте с тестами. Можно создавать дополнительные файлы conftest.py в других директориях, но тогда настройки в этих файлах будут применяться только к тестам в под-директориях.</p>
+<p>We've previously added the browser fixture, which creates a copy of the browser for tests in a given file. When we have more than one test file, we need to describe the fixture in each file. That's very inconvenient. Frequently used fixtures as well as global settings should be stored in the <strong> conftest.py</strong> file, which must be located in the upper-level directory of your project with the tests. We can also create additional conftest.py files in other directories, but then the settings in those files will be applied only to the tests in subdirectories.</p>
 
-<p>Создадим файл <strong>conftest.py</strong> в корневом каталоге нашего тестового проекта&nbsp;и перенесем туда фикстуру <strong>browser</strong>. Заметьте, насколько лаконичнее стал выглядеть файл с тестами.</p>
+<p>Let's create a <strong>conftest.py</strong> file in the root directory of our test project and move the <strong>browser</strong> fixture there. See how much more concise the file with tests looks now.</p>
 
 <p><strong>conftest.py:</strong></p>
 
@@ -19,7 +19,7 @@ def browser():
     print("\nquit browser..")
     browser.quit()</code></pre>
 
-<p>Теперь, сколько бы файлов с тестами мы ни&nbsp;создали, у тестов будет доступ к фикстуре browser. Фикстура передается в тестовый метод в качестве аргумента. Таким образом&nbsp;можно удобно переиспользовать одни и те же вспомогательные функции в разных частях проекта.</p>
+<p>Now, no matter how many files with tests we create, the tests will have access to the browser fixture. The fixture is passed to the test method as an argument. Thus, you can conveniently reuse the same auxiliary functions in different project parts.</p>
 
 <p><br />
 <strong>test_conftest.py:</strong></p>
@@ -33,9 +33,9 @@ def test_guest_should_see_login_link(browser):
     browser.get(link)
     browser.find_element(By.CSS_SELECTOR, "#login_link")</code></pre>
 
-<h3><span style="color:#ff4363"><strong>ОЧЕНЬ&nbsp;ВАЖНО!&nbsp;</strong></span></h3>
+<h3><span style="color:#ff4363"><strong>VERY&nbsp;IMPORTANT!&nbsp;</strong></span></h3>
 
-<p>Есть одна важная особенность поведения конфигурационных файлов, о которой вы обязательно должны знать. PyTest автоматически находит и подгружает файлы conftest.py, которые находятся в директории с тестами. Если вы храните все свои скрипты для курса в одной директории, будьте аккуратны и следите,&nbsp;чтобы не возникало ситуации, когда вы запускаете тесты из папки tests:</p>
+<p>You need to be aware of one important feature of configuration files' behavior. PyTest automatically finds and loads conftest.py files that are located in the directory with the tests. If you keep all your course scripts in one directory, be cautious and make sure to avoid the situation where you run the tests from the tests folder:</p>
 
 <pre>
 <code class="language-no-highlight">tests/
@@ -44,11 +44,11 @@ def test_guest_should_see_login_link(browser):
 │   └── conftest.py
 │   └── test_abs.py
 
-следует избегать!</code></pre>
+Avoid that!</code></pre>
 
-<p>В таком случае применяются ОБА файла&nbsp;conftest.py, что может вести к непредсказуемым ошибкам и конфликтам.&nbsp;&nbsp;</p>
+<p>In such a case, BOTH&nbsp;conftest.py files are applied, which might result in unpredictable errors and conflicts.&nbsp;&nbsp;</p>
 
-<p>Таким образом можно переопределять разные фикстуры, но мы в рамках курса рекомендуем придерживаться одного файла на проект/задачу&nbsp;и держать их горизонтально, как-нибудь так:&nbsp;</p>
+<p>This way we can redefine different fixtures, but within our course, we recommend sticking to one file per project/task and storing them horizontally, like this::&nbsp;</p>
 
 <pre>
 <code class="language-no-highlight">selenium_course_solutions/
@@ -59,8 +59,8 @@ def test_guest_should_see_login_link(browser):
 │   └── conftest.py
 │   └── test_main_page.py
 
-правильно!</code></pre>
+Correct!</code></pre>
 
-<p>Будьте внимательны и следите, чтобы не было разных conftest во вложенных друг в друга директориях, особенно, когда будете скачивать&nbsp;и проверять задания сокурсников.</p>
+<p>Be cautious and make sure not to have different conftest in nested directories, especially when you download and check your group mates' tasks.</p>
 
 <p><a href="https://docs.pytest.org/en/7.1.x/how-to/fixtures.html?highlight=fixture%20folder#override-a-fixture-on-a-folder-conftest-level" rel="noopener noreferrer nofollow">Override a fixture on a folder (conftest) level</a></p>

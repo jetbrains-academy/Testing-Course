@@ -1,14 +1,14 @@
-<h2>Задание: переход на новую вкладку</h2>
+<h2>Task: switching to a new tab</h2>
 
-<p>В этом задании после нажатия кнопки страница откроется в новой вкладке, нужно переключить WebDriver на новую вкладку и решить в ней задачу.</p>
+<p>In this task, after you click the button, a page will open in a new tab. You need to switch WebDriver to the new tab and solve a problem there.</p>
 
-<p>Сценарий для реализации выглядит так:</p>
+<p>The implementation scenario is as follows:</p>
 
 <ol>
-	<li>Открыть страницу <a href="http://suninjuly.github.io/redirect_accept.html" rel="nofollow noopener noreferrer" title="Link: http://suninjuly.github.io/redirect_accept.html">http://suninjuly.github.io/redirect_accept.html</a></li>
-	<li>Нажать на кнопку</li>
-	<li>Переключиться на новую вкладку</li>
-	<li>Пройти капчу для робота и получить число-ответ</li>
+	<li>Open the page <a href="http://suninjuly.github.io/redirect_accept.html" rel="nofollow noopener noreferrer" title="Link: http://suninjuly.github.io/redirect_accept.html">http://suninjuly.github.io/redirect_accept.html</a>.</li>
+	<li>Click the button.</li>
+	<li>Switch to the new tab.</li>
+	<li>Solve the captcha test and get the answer number.</li>
 </ol>
 
-<p>Если все сделано правильно и достаточно быстро (в этой задаче тоже есть ограничение по времени), вы увидите окно с числом. Отправьте полученное число в качестве ответа на это задание.</p>
+<p>If you do everything correctly and fast enough (there's a time limit in this task, too), you will see a window with a number. Submit this number as an answer for the task.</p>

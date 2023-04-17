@@ -1,6 +1,6 @@
-<h2>Задание: область видимости фикстур</h2>
+<h2>Task: fixture scope</h2>
 
-<p>У нас есть набор тестов, который использует несколько фикстур. Посчитайте, сколько смайликов будет напечатано при выполнении этого тестового класса? </p>
+<p>We have a set of tests that uses several fixtures. Calculate how many smileys will be printed after executing this test class. </p>
 
 <pre><code>import pytest
 
