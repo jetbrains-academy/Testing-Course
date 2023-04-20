@@ -1,6 +1,7 @@
 custom_name: finding elements
 content:
 - finding elements with css selectors
+- find_elements_tag
 - finding elements with complex css selectors
 - find_child_element
 - find_selectors

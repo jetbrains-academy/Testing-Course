@@ -1,5 +1,5 @@
 type: edu
-custom_name: '(todo) task: web page layout'
+custom_name: 'task: web page layout'
 files:
 - name: task.py
   visible: true

@@ -5,5 +5,7 @@ content:
 - find_tag
 - visual attributes
 - about data attributes
+- task_attributes
+- task_attributes_2
 - finding attributes task
-- task7
+- page_layout

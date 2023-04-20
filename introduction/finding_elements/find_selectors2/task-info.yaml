@@ -1,5 +1,17 @@
-type: edu
+type: choice
+is_multiple_choice: true
 custom_name: "task: finding correct selectors 2"
+options:
+  - text: ".card-text.lenin-cat"
+    is_correct: true
+  - text: ".lenin_cat"
+    is_correct: false
+  - text: ".lenin-cat"
+    is_correct: true
+  - text: ".card-text"
+    is_correct: false
+  - text: "[text=\"Lenin cat\"]"
+    is_correct: false
 files:
 - name: task.py
   visible: true

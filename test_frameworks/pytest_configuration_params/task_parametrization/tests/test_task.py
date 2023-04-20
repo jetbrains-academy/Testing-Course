@@ -6,4 +6,5 @@ from test_frameworks.pytest_configuration_params.task_parametrization.answer imp
 # todo: replace this with an actual test
 class TestCase(unittest.TestCase):
     def test_answer(self):
-        self.assertEqual(answer, "The owls are not what they seem! OvO", msg="wrong answer")
+        res = answer == "The owls are not what they seem! OvO"
+        self.assertTrue(res, msg="wrong answer")
