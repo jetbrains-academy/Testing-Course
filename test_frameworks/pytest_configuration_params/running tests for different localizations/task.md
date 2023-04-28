@@ -1,12 +1,12 @@
-<h2>Запуск автотестов для разных языков интерфейса</h2>
+<h2>Running automated tests for different interface languages</h2>
 
-<p>Цель: научиться запускать автотесты для разных локалей, т.е. для разных языков интерфейсов.</p>
+<p>Our goal is to learn to run automated tests for different local settings, i.e., different interface languages.</p>
 
-<p>Мы уже запускали автотесты для разных языков в одном из предыдущих <a href="/lesson/237240/step/2" rel="noopener noreferrer nofollow">шагов</a>, используя параметризацию с помощью разных ссылок, но такой подход сложно масштабировать на большое количество тестов. Давайте сделаем так, чтобы сервер сам решал, какой язык интерфейса нужно отобразить, основываясь на данных браузера. Браузер передает данные о языке пользователя через запросы к серверу, указывая в Headers (заголовке запроса) параметр <strong>accept-language</strong>. Если сервер получит запрос с заголовком {accept-language: ru, en}, то он отобразит пользователю русскоязычный интерфейс сайта. Если русский язык не поддерживается, то будет показан следующий язык из списка, в данном случае пользователь увидит англоязычный интерфейс. Это, кстати, примерно то же самое, что и выставить предпочтительный язык в настройках своего браузера: </p>
+<p>In one of our previous <a href="/lesson/237240/step/2" rel="noopener noreferrer nofollow">steps</a>, we've already run automated tests for various languages. We used parametrization with different links, but such an approach is hard to scale up onto a large number of tests. Let's make the server decide what interface language to use depending on the browser data. The browser sends the information about the user's language via requests to the server, indicating the <strong>accept-language</strong> parameter in the header. If the server receives a request with the header {accept-language: ru, en}, it will display the Russian-language site interface. If Russian is not supported, the next language in the list will be used – in our case, English. That is actually similar to defining the preferable language in your browser's settings: </p>
 
 <p><img alt="" height="254" src="https://ucarecdn.com/03bd7599-7838-4f35-8e4f-19656a4ea049/" width="612"></p>
 
-<p>Чтобы указать язык браузера с помощью WebDriver, используйте класс Options и метод <strong>add_experimental_option</strong>, как указано в примере ниже:</p>
+<p>To choose the browser's language with WebDriver, use the Options class and the <strong>add_experimental_option</strong> method, like in the example below:</p>
 
 <pre><code class="language-language-python language-python">from selenium.webdriver.chrome.options import Options
 
@@ -15,11 +15,11 @@ options.add_experimental_option('prefs', {'intl.accept_languages': user_language
 browser = webdriver.Chrome(options=options)
 </code></pre>
 
-<p>Для Firefox объявление нужного языка будет выглядеть немного иначе:</p>
+<p>In the case of Firefox, language selection will look slightly different:</p>
 
 <pre><code class="language-language-python language-python">fp = webdriver.FirefoxProfile()
 fp.set_preference("intl.accept_languages", user_language)
 browser = webdriver.Firefox(firefox_profile=fp)
 </code></pre>
 
-<p><em>В конструктор webdriver.Chrome или webdriver.Firefox вы можете добавлять разные аргументы, расширяя возможности тестирования ваших веб-приложений: можно указывать прокси-сервер для контроля сетевого трафика или запускать разные версии браузера, указывая локальный путь к файлу браузера. Предполагаем, что эти возможности вам понадобятся позже и вы сами сможете найти настройки для этих задач.</em></p>
+<p><em>You can add different arguments to the webdriver.Chrome or webdriver.Firefox constructor, which expands the opportunities for testing your web applications: tou can define a proxy server for network traffic control or start different browser versions, indicating the local path to the browser file. We expect that later you will need these options and that you will be able to find the respective settings.</em></p>

@@ -1,16 +1,16 @@
-<h2>Explicit Waits (WebDriverWait и expected_conditions)</h2>
+<h2>Explicit Waits (WebDriverWait and expected_conditions)</h2>
 
-<p>В предыдущем шаге мы решили проблему с ожиданием элементов на странице. Однако методы <strong>find_element</strong> проверяют только то, что элемент появился на странице. В то же время элемент может иметь дополнительные свойства, которые могут быть важны для наших тестов. Рассмотрим пример с кнопкой, которая отправляет данные:</p>
+<p>In the previous step, we've figured out the problem of element waits on a page. However, the <strong>find_element</strong> methods check only the fact that the page element has been displayed. Meanwhile, the element might have additional properties that may be relevant to our tests. Let's consider the example with the button that sends data:</p>
 
 <ul>
-	<li>Кнопка может быть неактивной, то есть её нельзя кликнуть;</li>
-	<li>Кнопка может содержать текст, который меняется в зависимости от действий пользователя. Например, текст "Отправить" после нажатия кнопки поменяется на "Отправлено";</li>
-	<li>Кнопка может быть перекрыта каким-то другим элементом или быть невидимой.</li>
+	<li>The button may be inactive, i.e., unclickable.</li>
+	<li>The button may contain text that changes according to the user's actions. For example, the text "Send" may turn into "Sent" after the button has been clicked.</li>
+	<li>The button may be overlapped by some other element or just be invisible.</li>
 </ul>
 
-<p>Если мы хотим в тесте кликнуть на кнопку, а она в этот момент неактивна, то WebDriver все равно проэмулирует действие нажатия на кнопку, но данные не будут отправлены.</p>
+<p>If we want to click a button in our test and the button is inactive at the moment, WebDriver will still emulate the click but no data will be sent.</p>
 
-<p>Давайте попробуем запустить следующий тест:</p>
+<p>Let's try running the following test:</p>
 
 <pre><code class="language-python">from selenium import webdriver
 from selenium.webdriver.common.by import By
@@ -27,13 +27,13 @@ try:
 finally:
     browser.quit()</code></pre>
 
-<p>Мы видим, что WebDriver смог найти кнопку с<strong> id="verify" </strong>и кликнуть по ней, но тест упал на поиске элемента "<strong>verify_message</strong>" с итоговым сообщением:</p>
+<p>We can see that WebDriver did find the button with <strong> id="verify" </strong>and did click it, but the test crashed while searching for the element "<strong>verify_message</strong>" with the resulting message:</p>
 
 <pre><code>no such element: Unable to locate element: {"method":"id","selector":"verify_message"}</code></pre>
 
-<p>Это произошло из-за того, что WebDriver быстро нашел кнопку и кликнул по ней, хотя кнопка была еще неактивной. На странице мы специально задали программно паузу в 1 секунду после загрузки сайта перед активированием кнопки, но неактивная кнопка в момент загрузки — обычное дело для реального сайта.</p>
+<p>That happened because WebDriver quickly found the button and clicked it even though the button was inactive yet. In our web page, we intentionally set up a 1-second pause between the site loading and the button activation, but an inactive button at the moment of loading is a common thing in real websites.</p>
 
-<p>Чтобы тест был надежным, нам нужно не только найти кнопку на странице, но и дождаться, когда кнопка станет кликабельной. Для реализации подобных ожиданий в Selenium WebDriver существует понятие <strong>явных</strong> ожиданий (<strong>Explicit Waits</strong>), которые позволяют задать специальное ожидание для конкретного элемента. Задание явных ожиданий реализуется с помощью инструментов WebDriverWait и <strong>expected_conditions</strong>. Улучшим наш тест:</p>
+<p>To get a reliable test, we need to make it not only find the button on the page but also wait till it becomes clickable. To implement such waits, Selenium WebDriver uses the concept of <strong>Explicit Waits</strong>, which allows assigning a specific wait for a specific element. Explicit waits are set with the help of WebDriverWait tools and <strong>expected_conditions</strong>. Let's improve our test:</p>
 
 <pre><code class="language-python">
 from selenium import webdriver
@@ -56,9 +56,9 @@ finally:
     browser.quit()
 </code></pre>
 
-<p><strong>element_to_be_clickable </strong>вернет элемент, когда он станет кликабельным, или вернет <strong>False </strong>в ином случае.</p>
+<p><strong>element_to_be_clickable </strong>will return the element when the latter becomes clickable; otherwise, it will return <strong>False </strong>.</p>
 
-<p>Обратите внимание, что в объекте WebDriverWait используется функция <strong>until</strong>, в которую передается правило ожидания, элемент, а также значение, по которому мы будем искать элемент. В модуле <strong>expected_conditions</strong> есть много других правил, которые позволяют реализовать необходимые ожидания:</p>
+<p>Notice that the WebDriverWait implements the <strong>until</strong> function, which receives the wait rule, the element, and the value we will use in our element search. The <strong>expected_conditions</strong> module has many other rules, which allow implementing necessary waits:</p>
 
 <ul>
 	<li>title_is</li>
@@ -80,11 +80,11 @@ finally:
 	<li>alert_is_present</li>
 </ul>
 
-<p>Описание каждого правила можно найти на <a href="https://selenium-python.readthedocs.io/api.html#module-selenium.webdriver.support.expected_conditions" rel="noopener noreferrer nofollow">сайте</a>.</p>
+<p>You can find rule descriptions <a href="https://selenium-python.readthedocs.io/api.html#module-selenium.webdriver.support.expected_conditions" rel="noopener noreferrer nofollow">here</a>.</p>
 
-<p>Если мы захотим проверять, что кнопка становится неактивной после отправки данных, то можно задать негативное правило с помощью метода <strong>until_not</strong>:</p>
+<p>If we want to check that the button becomes inactive after sending data, we can use a negative rule with the help of the <strong>until_not</strong> method:</p>
 
-<pre><code class="language-python"># говорим Selenium проверять в течение 5 секунд пока кнопка станет неактивной
+<pre><code class="language-python"># asking Selenium to proceed with checks for 5 seconds until the button becomes inactive
 button = WebDriverWait(browser, 5).until_not(
         EC.element_to_be_clickable((By.ID, "verify"))
     )</code></pre>

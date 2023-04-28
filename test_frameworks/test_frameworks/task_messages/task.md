@@ -1,14 +1,14 @@
-<h2>Задание: составные сообщения об ошибках</h2>
+<h2>Task: compound error messages</h2>
 
-<p>Для закрепления материала реализуйте проверку самостоятельно.&nbsp;</p>
+<p>To solidify what you have learned, implement a check by yourself.&nbsp;</p>
 
-<p>Вам дана функция&nbsp;<samp><code><strong>test_input_text</strong></code></samp>,&nbsp; которая принимает два значения:&nbsp;<strong>expected_result</strong>&nbsp;&mdash; ожидаемый результат, и&nbsp;<strong>actual_result</strong>&nbsp;&mdash; фактический результат. Обратите внимание, <em>input</em> использовать <strong>не нужно</strong>!</p>
+<p>You are given a function&nbsp;<samp><code><strong>test_input_text</strong></code></samp>,&nbsp;which takes two values:&nbsp;<strong>expected_result</strong>&nbsp;&mdash; the expected result, and&nbsp;<strong>actual_result</strong>&nbsp;&mdash; the actual result. Notice that you <strong>don't</strong> need to use <em>input</em>!</p>
 
-<p>Функция должна проверить совпадение значений с помощью оператора&nbsp;<strong>assert</strong>&nbsp;и, в случае несовпадения, предоставить исчерпывающее сообщение об ошибке.&nbsp;</p>
+<p>The function needs to check that the values match with the help of the&nbsp;<strong>assert</strong>&nbsp;operator and, in the case of a mismatch, provide a comprehensive error message.&nbsp;</p>
 
-<p><strong>Важно!</strong> Формат ошибки должен точно совпадать с приведенным в примере, чтобы его засчитала проверяющая система!&nbsp;</p>
+<p><strong>Important!</strong> The format of the error should exactly match that in the example so that the checking system accepts it!&nbsp;</p>
 
-<p> Обрабатывать ситуацию с пустым или невалидным вводом не нужно.&nbsp;</p>
+<p> You don't need to handle the situation with empty or invalid input.&nbsp;</p>
 
 Sample Input 1:
 

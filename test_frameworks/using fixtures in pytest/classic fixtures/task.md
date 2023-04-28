@@ -1,16 +1,16 @@
-<h2>Классические фикстуры (fixtures)</h2>
+<h2>Classic fixtures</h2>
 
-<p>Важной составляющей в использовании PyTest является концепция фикстур. Фикстуры в контексте PyTest — это вспомогательные функции для наших тестов, которые не являются частью тестового сценария.</p>
+<p>An important aspect of working with PyTest is the concept of fixture. In the context pf PyTest, fixtures are auxiliary functions that are not part of the test scenario..</p>
 
-<p>Назначение фикстур может быть самым разным. Одно из распространенных применений фикстур — это подготовка тестового окружения и очистка тестового окружения и данных после завершения теста. Но, вообще говоря, фикстуры можно использовать для самых разных целей: для подключения к базе данных, с которой работают тесты, создания тестовых файлов или подготовки данных в текущем окружении с помощью API-методов. Более подробно про фикстуры в широком смысле вы можете прочитать в <a href="https://en.wikipedia.org/wiki/Test_fixture#Software" rel="nofollow noopener noreferrer">Википедии</a>.</p>
+<p>The purposes of fixtures may be different. One of the most popular uses of fixtures is preparing the test environment and cleaning up the test environment and data after test completion. However, fixtures may be used for a wide range of purposes: connecting to a database the tests work with, creating test files, or preparing data in the current environment with the help of API methods. You can read about fixtures in the general sense in more detail in <a href="https://en.wikipedia.org/wiki/Test_fixture#Software" rel="nofollow noopener noreferrer">Wikipedia</a>.</p>
 
-<p>Классический способ работы с фикстурами — создание setup- и teardown-методов в файле с тестами (<a href="https://docs.pytest.org/en/latest/how-to/xunit_setup.html?highlight=teardown" rel="nofollow noopener noreferrer">документация в PyTest</a>).</p>
+<p>A classic way of working with fixtures is creating setup and teardown methods in a file with tests (<a href="https://docs.pytest.org/en/latest/how-to/xunit_setup.html?highlight=teardown" rel="nofollow noopener noreferrer">PyTest documentation</a>).</p>
 
-<p>Можно создавать фикстуры для модулей, классов и отдельных функций. Давайте попробуем написать фикстуру для инициализации браузера, который мы затем сможем использовать в наших тестах. После окончания тестов мы будем автоматически закрывать браузер с помощью команды<strong> browser.quit()</strong>, чтобы в нашей системе не оказалось множество открытых окон браузера. Вынесем инициализацию и закрытие браузера в фикстуры, чтобы не писать этот код для каждого теста.</p>
+<p>We can create fixtures for modules, classes, and separate functions. Let's try to write a fixture for browser initialization, which we can later use in our tests. After test completion, we will automatically close the browser with the <strong> browser.quit()</strong> command to avoid having a number of open browser windows in our system. We'll leave browser initializing and closing to fixtures so that we don't need to write that code for each test.</p>
 
-<p>Будем сразу объединять наши тесты в тест-сьюты, роль тест-сьюта будут играть классы, в которых мы будем хранить наши тесты.</p>
+<p>We'll start combining our tests into test suites; classes will function as suites in which we store our tests.</p>
 
-<p>Рассмотрим два примера: создание экземпляра браузера и его закрытие только один раз для всех тестов первого тест-сьюта и создание браузера для каждого теста во втором тест-сьюте. Сохраните следующий код в файл<strong> test_fixture1.py </strong> и запустите его с помощью PyTest. Не забудьте указать параметр <strong>-s</strong>, чтобы увидеть текст, который выводится командой print().</p>
+<p>Let's consider two examples: creating a copy of a browser and closing it once for all the tests of the first test suite, and creating a browser for each test of the second test suite. Save the below code in the file <strong> test_fixture1.py </strong> and run it with PyTest. Don't forget to indicate the parameter <strong>-s</strong> to see the text displayed by the print() command.</p>
 
 <pre><code class="language-python">pytest -s test_fixture1.py</code></pre>
 
@@ -64,14 +64,14 @@ class TestMainPage2():
 
 </code></pre>
 
-<p>В консоли видим:  </p>
+<p>In the console, we see:  </p>
 
 <p><img alt="" src="https://ucarecdn.com/e4d862f8-8d75-4a59-9387-f967790f8d09/"></p>
 
-<p>Мы видим, что в первом тест-сьюте браузер запустился один раз, а во втором — два раза.</p>
+<p>We see that in the first test suite, the browser was launched once, while in the second one – twice.</p>
 
-<p>Данные и кэш, оставшиеся от запуска предыдущего теста, могут влиять на результаты выполнения следующего теста, поэтому лучше всего запускать отдельный браузер для каждого теста, чтобы тесты были стабильнее. К тому же если вдруг браузер зависнет в одном тесте, то другие тесты не пострадают, если они запускаются каждый в собственном браузере.</p>
+<p>The data and the cash left from the previous test run may affect the results of subsequent tests, so it's a good idea to launch a separate browser for each test to ensure test stability. Besides, if the browser suddenly hangs in one of the tests, the rest of the tests won't be affected if they are run in a separate browser each.</p>
 
-<p>Минусы запуска браузера на каждый тест: каждый запуск и закрытие браузера занимают время, поэтому тесты будут идти дольше. Возможно, вы захотите оптимизировать время прогона тестов, но лучше это делать с помощью других инструментов, которые мы разберём в дальнейшем.</p>
+<p>The disadvantages of launching a browser for each test are the following: opening and closing the browser takes time, so your tests will be longer. You may want to optimize the time of the test run, but it's better to do that with other tools, which we will discuss later.</p>
 
-<p>Обычно такие фикстуры переезжают вместе с тестами, написанными с помощью unittest, и приходится их поддерживать, но сейчас все пишут более гибкие фикстуры <strong>@pytest.fixture</strong>, которые мы рассмотрим в следующем шаге. </p>
+<p>Usually, such fixtures migrate together with tests written with unittest, and we need to support them. However, everybody now writes more flexible fixtures <strong>@pytest.fixture</strong>, which we will discuss in the next step. </p>

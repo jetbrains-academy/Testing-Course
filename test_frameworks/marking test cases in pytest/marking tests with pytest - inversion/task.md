@@ -1,20 +1,20 @@
-<h2>Маркировка тестов часть 2</h2>
+<h2>Test marking: part 2</h2>
 
-<h3><strong>Инверсия</strong></h3>
+<h3><strong>Inversion</strong></h3>
 
-<p>Чтобы запустить все тесты, не имеющие заданную маркировку, можно использовать инверсию. Для запуска всех тестов, не отмеченных как smoke, нужно выполнить команду:</p>
+<p>To launch all the tests that do not have a given mark, you can use inversion. To run all the tests that are not marked as smoke ones, execute the following command:</p>
 
 <pre><code class="language-bash">pytest -s -v -m "not smoke" test_fixture8.py</code></pre>
 
-<h3><strong>Объединение тестов с разными маркировками</strong></h3>
+<h3><strong>Combining tests with different marks</strong></h3>
 
-<p>Для запуска тестов с разными метками можно использовать логическое ИЛИ. Запустим smoke и regression-тесты:</p>
+<p>To run tests with different marks, you can use the logical OR operator. Let's launch smoke and regression tests:</p>
 
 <pre><code class="language-bash">pytest -s -v -m "smoke or regression" test_fixture8.py</code></pre>
 
-<h3><strong>Выбор тестов, имеющих несколько маркировок</strong></h3>
+<h3><strong>Choosing tests with several marks</strong></h3>
 
-<p>Предположим, у нас есть smoke-тесты, которые нужно запускать только для определенной операционной системы, например, для Windows 10. Зарегистрируем метку win10 в файле pytest.ini, а также добавим к одному из тестов эту метку.</p>
+<p>Let's say we have smoke tests that need to be run only for a specific operating system, for example, Windows 10. We'll register the mark win10 in the file pytest.ini and add that mark to one of the tests.</p>
 
 <p><strong>pytest.ini:</strong></p>
 
@@ -57,8 +57,8 @@ class TestMainPage1:
 
 </code></pre>
 
-<p>Чтобы запустить только smoke-тесты для Windows 10, нужно использовать логическое И:</p>
+<p>To launch only the smoke tests for Windows 10, we need to use the logical AND operator:</p>
 
 <pre><code class="language-bash">pytest -s -v -m "smoke and win10" test_fixture81.py</code></pre>
 
-<p>Должен выполнится тест test_guest_should_see_basket_link_on_the_main_page. </p>
+<p>The test_guest_should_see_basket_link_on_the_main_page test will be launched. </p>

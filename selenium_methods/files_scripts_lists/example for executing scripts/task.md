@@ -1,15 +1,15 @@
-<h2>Пример задачи для execute_script</h2>
+<h2>Sample execute_script task</h2>
 
-<p>Давайте теперь рассмотрим реальную ситуацию, когда пользователь должен кликнуть на элемент, который внезапно оказывается перекрыт другим элементом на странице.</p>
+<p>Let's consider a real-life situation where the user needs to click a page element that suddenly appears to be overlapped by another element.</p>
 
-<p>Для клика в WebDriver мы используем метод click(). Если элемент оказывается перекрыт другим элементом, то наша программа вызовет следующую ошибку:</p>
+<p>In WebDriver, we use the click() method for a click. If the element is overlapped by another element, the program throws the following error:</p>
 
 <pre><code>selenium.common.exceptions.WebDriverException: Message: unknown error: Element &lt;button type="submit" class="btn btn-default" style="margin-bottom: 1000px;"&gt;...&lt;/button&gt; is not clickable at point (87, 420). Other element would receive the click: &lt;p&gt;...&lt;/p&gt;
 </code></pre>
 
-<p>Из описания ошибки можно понять, что указанный нами элемент нельзя кликнуть в данной точке, т.к. клик произойдёт на другом элементе с тегом &lt;p&gt;.</p>
+<p>The error description tells us that the element cannot be clicked at the given point, as the click would be performed on a different element with the &lt;p&gt; tag.</p>
 
-<p>Чтобы увидеть пример данной ошибки, запустите следующий скрипт:</p>
+<p>To see an example of such an error, run the following script:</p>
 
 <pre><code class="language-python">from selenium import webdriver
 from selenium.webdriver.common.by import By
@@ -20,39 +20,39 @@ browser.get(link)
 button = browser.find_element(By.TAG_NAME, "button")
 button.click()</code></pre>
 
-<p>Теперь вы можете сами посмотреть на эту <a href="https://SunInJuly.github.io/execute_script.html" rel="nofollow noopener noreferrer">страницу</a> и увидеть, что огромный футер действительно перекрывает нужную нам кнопку. Футером (footer) называется нижний блок, который обычно одинаков для всех страниц сайта. Чтобы понять, как решить эту проблему, нужно разобраться, как работает метод <strong>click()</strong>.</p>
+<p>Now you can open the following <a href="https://SunInJuly.github.io/execute_script.html" rel="nofollow noopener noreferrer">page</a> and see that the button we need is really overlapped by a huge footer. A footer is the bottom section of a page, which is usually the same for all site pages. In order to figure out how to solve this issue, we need to understand how the <strong>click()</strong> method works.</p>
 
-<p>В первую очередь WebDriver проверит, что ширина и высота элемента больше 0, чтобы по нему можно было кликнуть.</p>
+<p>First, WebDriver checks that the element's width and height are larger than 0, so that it might be clicked.</p>
 
-<p>Затем, если элемент находится за границей окна браузера, WebDriver автоматически проскроллит страницу, чтобы элемент попал в область видимости, то есть не находился за границей экрана. Но это не гарантирует того, что элемент не перекрыт другим элементом, который тоже находится в области видимости.</p>
+<p>Next, if the element lies beyond the limits of the browser window, WebDriver automatically scrolls the page to bring the element into the visibility range, i.e., within the limits of the screen. However, that does not guarantee that the element won't be overlapped by another element, which is also located within the visibility range.</p>
 
-<p>А в какую точку элемента будет происходить клик? Selenium рассчитывает координаты центра элемента и производит клик в вычисленную точку. Это тоже приведёт к ошибке, если часть элемента всё-таки видна, но элемент перекрыт больше чем на половину своей высоты или ширины.</p>
+<p>Now, what point of the element will be clicked? Selenium calculates the coordinates of the element's center and clicks that very point. That will also result in an error if a part of the element is visible but more than half of the element's height or width is overlapped.</p>
 
-<p>Если мы столкнулись с такой ситуацией, мы можем заставить браузер дополнительно проскроллить нужный элемент, чтобы он точно стал видимым.<br>
-Делается это с помощью следующего скрипта:</p>
+<p>If we face such a situation, we can make the browser additionally scroll the required element to make it clearly visible.<br>
+You can do it with the following script:</p>
 
 <pre><code>"return arguments[0].scrollIntoView(true);"</code></pre>
 
-<p>Мы дополнительно передали в метод scrollIntoView аргумент <code>true</code>, чтобы элемент после скролла оказался в области видимости. Другие возможные параметры метода можно посмотреть здесь: <a href="https://developer.mozilla.org/ru/docs/Web/API/Element/scrollIntoView" rel="noopener noreferrer nofollow">https://developer.mozilla.org/ru/docs/Web/API/Element/scrollIntoView</a></p>
+<p>We passed an additional argument <code>true</code> to the scrollIntoView method so that after scrolling, the element would be within the visibility range. You can find additional parameters of the method here: <a href="https://developer.mozilla.org/ru/docs/Web/API/Element/scrollIntoView" rel="noopener noreferrer nofollow">https://developer.mozilla.org/ru/docs/Web/API/Element/scrollIntoView</a></p>
 
-<p>В итоге, чтобы кликнуть на перекрытую кнопку, нам нужно выполнить следующие команды в коде:</p>
+<p>Thus, in order to click an overlapped button, we need to execute the following commands in our code:</p>
 
 <pre><code class="language-python">button = browser.find_element_by_tag_name("button")
 browser.execute_script("return arguments[0].scrollIntoView(true);", button)
 button.click()</code></pre>
 
-<p>В метод execute_script мы передали текст js-скрипта и найденный элемент button, к которому нужно будет проскроллить страницу. После выполнения кода элемент button должен оказаться в верхней части страницы. Подробнее о методе см <a href="https://developer.mozilla.org/ru/docs/Web/API/Element/scrollIntoView" rel="noopener noreferrer nofollow">https://developer.mozilla.org/ru/docs/Web/API/Element/scrollIntoView</a> .</p>
+<p>We passed a JavaScript text to the execute_script method together with the found button element, which we need to scroll the page to. After code execution, the button element must be at the top of the page. You can find more details about the method here: <a href="https://developer.mozilla.org/ru/docs/Web/API/Element/scrollIntoView" rel="noopener noreferrer nofollow">https://developer.mozilla.org/ru/docs/Web/API/Element/scrollIntoView</a> .</p>
 
-<p>Также можно проскроллить всю страницу целиком на строго заданное количество пикселей. Эта команда проскроллит страницу на 100 пикселей вниз:</p>
+<p>We also need to scroll the whole page by a given number of pixels. The following command will scroll the page down by 100 pixels:</p>
 
 <pre><code class="language-python">browser.execute_script("window.scrollBy(0, 100);")</code></pre>
 
-<p><span style="color: #ff4363;">!Важно.</span> Мы не будем в этом курсе изучать, как работает JavaScript, и обойдемся только приведенным выше примером скрипта с прокруткой страницы. Для сравнения приведем скрипт на этом языке, который делает то же, что приведенный выше пример для WebDriver:</p>
+<p><span style="color: #ff4363;">!Important.</span> In this course, we will not analyze the work of JavaScript and will confine ourselves to the above example of the page scrolling script. For the sake of comparison, let's consider another JavaScript code, which does the same as the above code for WebDriver:</p>
 
 <pre><code class="language-javascript">// javascript
 button = document.getElementsByTagName("button")[0];
 button.scrollIntoView(true);</code></pre>
 
-<p>Можете попробовать исполнить его в консоли браузера на странице <a href="http://suninjuly.github.io/execute_script.html" rel="noopener noreferrer nofollow">http://suninjuly.github.io/execute_script.html</a>. Для этого откройте инструменты разработчика в браузере, перейдите на вкладку <strong>консоль (console)</strong>, скопируйте туда этот код и нажмите Enter. Таким образом можно протестировать кусочки js кода прежде чем внедрять его в свои тесты на python. </p>
+<p>You can execute it in the browser console at <a href="http://suninjuly.github.io/execute_script.html" rel="noopener noreferrer nofollow">http://suninjuly.github.io/execute_script.html</a>. To do that, open developer tools in your browser, go to the <strong>console</strong> tab, paste the code and press Enter. This way you can test parts of JS code before implementing them in your Python tests.</p>
 
-<p>Обратите внимание, что в коде в WebDriver нужно использовать ключевое слово <strong>return</strong>. Также его нужно будет использовать, когда вы захотите получить какие-то данные после выполнения скрипта. При этом при тестировании скрипта в консоли браузера слово <strong>return</strong> использовать не надо.</p>
+<p>Notice that in WebDriver you need to use the key word <strong>return</strong> in your code. You also need to use it when you want to get the data after script execution. Meanwhile, when testing the script in the browser console, you don't need to use the <strong>return</strong> word.</p>

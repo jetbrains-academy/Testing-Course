@@ -1,27 +1,27 @@
-<h2>Загрузка файлов</h2>
+<h2>Uploading files</h2>
 
-<p>﻿Если нам понадобится загрузить файл на веб-странице, мы можем использовать уже знакомый нам метод send_keys. Только теперь нам нужно в качестве аргумента передать путь к нужному файлу на диске вместо простого текста.</p>
+<p>﻿In case we need to upload a file on a web page, we can use the already familiar send_keys method. However, instead of plain text, we now need to pass the file path as an argument.</p>
 
-<p>Чтобы указать путь к файлу, можно использовать стандартный модуль Python для работы с операционной системой — <strong>os</strong>. В этом случае ваш код не будет зависеть от операционной системы, которую вы используете. Добавление файла будет работать и на Windows, и на Linux, и даже на MaсOS.</p>
+<p>To indicate the file path, we can use the standard Python module for working with an operating system — <strong>os</strong>. In such a case, your code won't depend on the operating system you are using. It will work with Windows, Linux, and even with MaсOS.</p>
 
-<p>Пример кода, который позволяет указать путь к файлу<strong> 'file.txt</strong>', находящемуся в той же папке, что и скрипт, который вы запускаете:</p>
+<p>Here is a sample code that allows defining the path to the <strong> 'file.txt</strong>' file located in the same folder as the script you are launching:</p>
 
 <pre><code class="language-python">import os 
 
-current_dir = os.path.abspath(os.path.dirname(__file__))    # получаем путь к директории текущего исполняемого файла 
-file_path = os.path.join(current_dir, 'file.txt')           # добавляем к этому пути имя файла 
+current_dir = os.path.abspath(os.path.dirname(__file__))    # getting the path to the directory of the current executable file 
+file_path = os.path.join(current_dir, 'file.txt')           # adding the file name to the path 
 element.send_keys(file_path)</code></pre>
 
-<p>Попробуйте добавить в файл отдельно команды <code><samp><strong>print(os.path.abspath(__file__))</strong> </samp></code>и <code><samp><strong>print(os.path.abspath(os.path.dirname(__file__)))</strong></samp></code> и посмотрите на разницу. Подробнее о методах модуля <strong>os</strong> можете почитать самостоятельно в документации: <a href="https://docs.python.org/3/library/os.path.html" rel="noopener noreferrer nofollow">https://docs.python.org/3/library/os.path.html</a>. Обратите внимание, что это будет работать только при запуске кода из файла, в интерпретаторе не сработает.</p>
+<p>Now try adding the separate commands <code><samp><strong>print(os.path.abspath(__file__))</strong> </samp></code> and <code><samp><strong>print(os.path.abspath(os.path.dirname(__file__)))</strong></samp></code> to the file and see the difference. You can read about the <strong>os</strong> module methods on your own in the documentation: <a href="https://docs.python.org/3/library/os.path.html" rel="noopener noreferrer nofollow">https://docs.python.org/3/library/os.path.html</a>. Notice that that will only work when you launch the code from a file; it won't work in an interpreter.</p>
 
-<p>Если совсем непонятно что происходит, пример: </p>
+<p>In case you totally fail to understand what's going on, here's an example: </p>
 
-<p>Допустим, мы написали код скрипта и сохранили код в <em>lesson2_step7.py</em> в своей локальной папке <em>D:\stepik_homework. </em>Активируем виртуальное окружение и запускаем его <strong>python lesson2_step7.py. </strong>В таком случае конструкция <strong>os.path.abspath(os.path.dirname(__file__)) </strong>вернет нам путь до директории файла с кодом, то есть <em>D:\stepik_homework</em><strong>. </strong>В эту же папку кладем файл, который хотим прикрепить, то есть <em>file.txt</em>. Тогда, после выполнения команды:</p>
+<p>Let's say we've written a script and saved it in <em>lesson2_step7.py</em> in our local folder <em>D:\stepik_homework. </em>Let's activate the virtual environment and launch  <strong>python lesson2_step7.py. </strong>Now, the  <strong>os.path.abspath(os.path.dirname(__file__)) </strong>command will return the path to the directory of the file with the code, i.e.,  <em>D:\stepik_homework</em><strong>. </strong>Let's put the file we want to attach (<em>file.txt</em>) to the same folder.</p>
 
 <p><code>file_path = os.path.join(current_dir, 'file.txt')</code></p>
 
-<p>В переменной <em>file_path</em> будет полный путь к файлу '<strong>D:\stepik_homework\file.txt'</strong>. Фишка в том, что если мы файлы <em>lesson2_step7.py </em>вместе с<em> file.txt </em>перенесем в другую папку, или на компьютер с другой ОС, то такой код без правок заработает и там. </p>
+<p>If we run the above command, the <em>file_path</em>  variable will contain the full path to the file '<strong>D:\stepik_homework\file.txt'</strong>. An interesting thing is that if we move the files of  <em>lesson2_step7.py </em>together with <em> file.txt </em>to a different folder or even to a computer with a different OS, the code will still work without any alterations.</p>
 
 <p> </p>
 
-<p>Элемент в форме, который выглядит, как кнопка добавления файла, имеет атрибут<strong> type="file"</strong>. Мы должны сначала найти этот элемент с помощью селектора, а затем применить к нему метод <strong>send_keys(file_path)</strong>.</p>
+<p>The form element that looks like a file upload button has an attribute <strong> type="file"</strong>. We must first find that element with the help of a selector and then apply the method <strong>send_keys(file_path)</strong> to it.</p>
