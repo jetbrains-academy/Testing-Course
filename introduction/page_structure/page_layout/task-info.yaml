@@ -2,7 +2,7 @@ type: edu
 custom_name: 'task: web page layout'
 files:
 - name: task.py
-  visible: true
+  visible: false
 - name: tests/test_task.py
   visible: false
 - name: __init__.py

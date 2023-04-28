@@ -7,11 +7,11 @@ options:
   is_correct: true
 - text: "[name=\"Vladimir\"]"
   is_correct: false
-- text: p:nth-child(3)
+- text: "p:nth-child(3)"
   is_correct: false
-- text: .col-sm-4:nth-child(3) p
+- text: ".col-sm-4:nth-child(3) p"
   is_correct: false
-- text: '#politic'
+- text: "#politic"
   is_correct: true
 custom_name: "task: finding correct selectors"
 local_check: true

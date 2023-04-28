@@ -1,10 +1,8 @@
-type: edu
+type: theory
 files:
 - name: task.py
-  visible: true
-- name: tests/test_task.py
   visible: false
 - name: __init__.py
   visible: false
-- name: tests/__init__.py
-  visible: false
+- name: index.html
+  visible: true
