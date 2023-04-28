@@ -1,9 +1,9 @@
-<h2>Давайте быстрее это починим: time.sleep()</h2>
+<h2>Let's fix it quickly: time.sleep()</h2>
 
-<p>Теперь, когда мы уже знаем, что кнопка появляется с задержкой,
-мы можем добавить паузу до начала поиска элемента.
-Мы уже использовали библиотеку <strong>time</strong> ранее. 
-Давайте применим ее и сейчас:</p>
+<p>Now that we know that the button is displayed with a delay,
+we can add a wait before the element search starts.
+We have already used the <strong>time</strong> library before. 
+Let's apply it again:</p>
 
 <pre><code class="language-python">import time
 
@@ -21,13 +21,13 @@ try:
 finally:
     browser.quit()</code></pre>
 
-<p>Теперь тест проходит.
-Но что если элемент с сообщением тоже будет появляться с задержкой?
-Добавить еще один <strong>time.sleep()</strong> перед поиском сообщения? 
-А если изменится время задержки при появлении кнопки? 
-Увеличим длительность паузы? 
-А еще на разных машинах с разной скоростью интернета
-кнопка может появляться через разные промежутки времени.
-Можно перед каждым действием добавить задержку, 
-но тогда значительную часть времени прогона тестов будут занимать бесполезные ожидания, 
-при этом с увеличением количества тестов эта проблема будет только расти. </p>
+<p>Now the test passes.
+However, what if the message element also has a delay?
+Shall we add another <strong>time.sleep()</strong> before the message search? 
+And what if the delay time of the button display changes? 
+Shall we increase the wait?
+Besides, different computers with different internet speed may display
+the button with different time lag.
+Of course, we can add a wait before each step, 
+but then a considerable part of the testing time will be consumed by fruitless waiting,
+and with the increasing number of tests this problem will just get worse. </p>

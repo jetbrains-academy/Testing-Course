@@ -1,21 +1,21 @@
-<h2>Задание: Про Exceptions</h2>
+<h2>Task: exceptions</h2>
 
-<p>Теперь мы знаем, как настроить ожидание поиска элемента. 
-Во время поиска WebDriver каждые 0.5 секунды проверяет, 
-появился ли нужный элемент в DOM-модели браузера 
-(Document Object Model — «объектная модель документа», интерфейс для доступа к HTML-содержимому сайта).
-Если произойдет ошибка, то WebDriver выбросит одно из следующих исключений 
-(<strong>exceptions</strong>):</p>
+<p>Now we know how to set up waits in element search. 
+While searching, WebDriver checks every 0.5 second whether
+the required element has appeared in the browser's DOM model
+(Document Object Model  is an "object model of a document", an interface for accessing the HTML content of the site).
+If an error occurs, WebDriver will throw one of the following
+<strong>exceptions</strong>:</p>
 
 <ul>
-	<li>Если элемент не был найден за отведенное время, то мы получим <strong>NoSuchElementException.</strong></li>
-	<li>Если элемент был найден в момент поиска, но при последующем обращении к элементу DOM изменился, то получим <strong>StaleElementReferenceException</strong>. Например, мы нашли элемент <strong>Кнопка</strong> и через какое-то время решили выполнить с ним уже известный нам метод click. Если кнопка за это время была скрыта скриптом, то метод применять уже бесполезно — элемент "устарел" (stale) и мы увидим исключение.</li>
-	<li>Если элемент был найден в момент поиска, но сам элемент невидим (например, имеет нулевые размеры), и реальный пользователь не смог бы с ним взаимодействовать, то получим <strong>ElementNotVisibleException</strong>.</li>
+	<li>If the element has not been found within the allocated time, we will receive <strong>NoSuchElementException.</strong></li>
+	<li>If the element was found during the search but the DOM was changed at a later access attempt, we'll receive <strong>StaleElementReferenceException</strong>. For example, we found the <strong>Button</strong> element and in a while decided to apply the familiar click method to it. If the button got overlapped by the script over that time, there's no use applying the method — the element became "stale", and we'll see an exception.</li>
+	<li>If the element was found during the search but the element itself is invisible (e.g., it has zero dimensions) and a real user wouldn't be able to interact with it, we'll receive  <strong>ElementNotVisibleException</strong>.</li>
 </ul>
 
-<p>Знание причин появления исключений помогает отлаживать тесты и понимать,
-где находится баг в случае его возникновения.</p>
+<p>Understanding the reasons behind the exceptions will help you in tweaking tests
+and locating bugs in programs.</p>
 
-<p><strong>Задание:</strong></p>
+<p><strong>Task:</strong></p>
 
-<p>Какую ошибку вы увидите в консоли, если попытаетесь выполнить команду<strong> browser.find_element(By.ID,</strong> <strong>"button")</strong> после открытия страницы <a href="http://suninjuly.github.io/cats.html" rel="noopener noreferrer nofollow">http://suninjuly.github.io/cats.html</a>?</p>
+<p>What error will you see in the console if you try executing the <strong> browser.find_element(By.ID,</strong> <strong>"button")</strong> command after opening the page <a href="http://suninjuly.github.io/cats.html" rel="noopener noreferrer nofollow">http://suninjuly.github.io/cats.html</a>?</p>

@@ -1,6 +1,6 @@
-<h2>Автоиспользование фикстур</h2>
+<h2>Fixture autouse</h2>
 
-<p>При описании фикстуры можно указать дополнительный параметр <strong>autouse=True,</strong> который укажет, что фикстуру нужно запустить для каждого теста даже без явного вызова: </p>
+<p>While describing a fixture, we can indicate an additional parameter <strong>autouse=True,</strong> which shows that the fixture should be run for each test even without an explicit call: </p>
 
 <p>test_fixture_autouse.py</p>
 
@@ -27,7 +27,7 @@ def prepare_data():
 
 class TestMainPage1():
     def test_guest_should_see_login_link(self, browser):
-        # не передаём как параметр фикстуру prepare_data, но она все равно выполняется
+        # the prepare_data fixture is not passed as a parameter but it's executed anyway
         browser.get(link)
         browser.find_element(By.CSS_SELECTOR, "#login_link")
 
@@ -38,13 +38,13 @@ class TestMainPage1():
 
 <p><img alt="" src="https://ucarecdn.com/0b70e723-548a-4b94-b01c-f5ff19ae3bfb/"></p>
 
-<p>Попробуйте запустить этот код и увидите, что для каждого теста фикстура подготовки данных выполнилась без явного вызова. Нужно быть аккуратнее с этим параметром, потому что фикстура выполняется для всех тестов. Без явной необходимости автоиспользованием фикстур лучше не пользоваться. </p>
+<p>Try running that code, and you will see that the data preparation fixture is executed for each test without an explicit call. You need to be careful with this parameter because the fixture is run for all tests. Without an obvious necessity, fixture autouse should be avoided. </p>
 
-<p><strong>Итог</strong></p>
+<p><strong>Conclusion</strong></p>
 
-<p>Вспомогательные функции — это очень мощная штука, которая решает много проблем при работе с автотестами. Основной плюс в том, что их удобно использовать в любых тестах без дублирования лишнего кода. </p>
+<p>An auxiliary function is a powerful tool that solves numerous problems when working with automated tests. The major advantage is that they can be used in any tests without code duplication. </p>
 
-<p>Дополнительные материалы про фикстуры, которые мы настоятельно советуем почитать, приведены ниже:</p>
+<p>We strongly recommend reading additional material on fixtures:</p>
 
 <p><a href="https://habr.com/ru/company/yandex/blog/242795/" rel="noopener noreferrer nofollow">https://habr.com/ru/company/yandex/blog/242795/</a></p>
 

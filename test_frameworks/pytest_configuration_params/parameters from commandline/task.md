@@ -1,10 +1,10 @@
-<h2>Conftest.py и передача параметров в командной строке</h2>
+<h2>Conftest.py and passing parameters in command line</h2>
 
-<p>Встроенная фикстура <strong>request</strong> может получать данные о текущем запущенном тесте, что позволяет, например, сохранять дополнительные данные в отчёт, а также делать многие другие интересные вещи. В этом шаге мы хотим показать, как можно настраивать тестовые окружения с помощью передачи параметров через командную строку.</p>
+<p>The built-in <strong>request</strong> fixture can receive data about currently running tests, which allows saving additional data in reports as well as doing many other interesting things. In this step, we want to show how you can set up test environments by passing parameters in the command line.</p>
 
-<p>Это делается с помощью встроенной функции pytest_addoption и фикстуры request. Сначала добавляем в файле conftest обработчик опции в функции pytest_addoption, затем напишем фикстуру, которая будет обрабатывать переданные в опции данные. Подробнее можно ознакомиться здесь: <a href="https://docs.pytest.org/en/latest/example/simple.html?highlight=addoption" rel="nofollow noopener noreferrer" target="_blank">https://docs.pytest.org/en/latest/example/simple.html?highlight=addoption</a></p>
+<p>You can do that with the help of the built-in pytest_addoption function and the request fixture. First, in the conftest file, we'll add an option handler in the pytest_addoption function; then we'll write a fixture that will process the data passed in the option. You can find details here: <a href="https://docs.pytest.org/en/latest/example/simple.html?highlight=addoption" rel="nofollow noopener noreferrer" target="_blank">https://docs.pytest.org/en/latest/example/simple.html?highlight=addoption</a>.</p>
 
-<p>Добавим логику обработки командной строки в conftest.py. Для запроса значения параметра мы можем вызвать команду:</p>
+<p>Let's add the logic of command line handling to conftest.py. To request a parameter value, we can call the command:</p>
 
 <pre><code>browser_name = request.config.getoption("browser_name")</code></pre>
 
@@ -45,23 +45,23 @@ def test_guest_should_see_login_link(browser):
     browser.get(link)
     browser.find_element(By.CSS_SELECTOR, "#login_link")</code></pre>
 
-<p>Если вы теперь запустите тесты без параметра, то получите ошибку:</p>
+<p>If you launch your tests without a parameter now, you'll get an error:</p>
 
 <pre><code>pytest -s -v test_parser.py</code></pre>
 
 <pre><code class="language-no-highlight">_pytest.config.UsageError: --browser_name should be chrome or firefox</code></pre>
 
-<p>Можно задать значение параметра по умолчанию, чтобы в командной строке не обязательно было указывать параметр <em>--browser_name</em>, например, так:</p>
+<p>The parameter value may be set by default so that you don't need to indicate the <em>--browser_name</em> parameter in the command line. You can do it, for example, this way:</p>
 
 <pre><code class="language-python">parser.addoption('--browser_name', action='store', default="chrome",
                  help="Choose browser: chrome or firefox")</code></pre>
 
-<p>Давайте укажем параметр:</p>
+<p>Let's define the parameter:</p>
 
 <pre><code class="language-python">pytest -s -v --browser_name=chrome test_parser.py</code></pre>
 
-<p>А теперь запустим тесты на Firefox:</p>
+<p>Now, let's launch the tests in Firefox:</p>
 
 <pre><code class="language-python">pytest -s -v --browser_name=firefox test_parser.py</code></pre>
 
-<p>Вы должны увидеть, как сначала тесты запустятся в браузере Chrome, а затем — в Firefox.</p>
+<p>You should see the tests starting first in Chrome and then in в Firefox.</p>

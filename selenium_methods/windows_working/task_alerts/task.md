@@ -1,12 +1,12 @@
-<h2>Задание: принимаем alert</h2>
+<h2>Task: accepting an alert</h2>
 
-<p>В этой задаче вам нужно написать программу, которая будет выполнять следующий сценарий:</p>
+<p>In this task, you need to write a program that executes the following scenario:</p>
 
 <ol>
-	<li>Открыть страницу <a href="http://suninjuly.github.io/alert_accept.html" rel="nofollow noopener noreferrer">http://suninjuly.github.io/alert_accept.html</a></li>
-	<li>Нажать на кнопку</li>
-	<li>Принять confirm</li>
-	<li>На новой странице решить капчу для роботов, чтобы получить число с ответом</li>
+	<li>Open the page <a href="http://suninjuly.github.io/alert_accept.html" rel="nofollow noopener noreferrer">http://suninjuly.github.io/alert_accept.html</a>.</li>
+	<li>Click the button.</li>
+	<li>Confirm your agreement.</li>
+	<li>In a new page, solve the captcha test for robots to receive the number answer.</li>
 </ol>
 
-<p>Если все сделано правильно и достаточно быстро (в этой задаче тоже есть ограничение по времени), вы увидите окно с числом. Отправьте полученное число в качестве ответа на это задание.</p>
+<p>If you do everything correctly and fast enough (there's a time limit in this task, too), you will see a window with a number. Submit this number as an answer for the task.</p>

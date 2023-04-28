@@ -1,18 +1,18 @@
-<h2>Задание на execute_script</h2>
+<h2>Task: execute_script</h2>
 
-<p>В данной задаче вам нужно будет снова преодолеть капчу для роботов и справиться с ужасным и огромным футером, который дизайнер всё никак не успевает переделать. Вам потребуется написать код, чтобы:</p>
+<p>In this task, you will once again need to pass the captcha test and handle the huge horrible footer, which the designer hasn't fixed yet. You'll need to write code to:</p>
 
 <ol>
-	<li>Открыть страницу <a href="http://SunInJuly.github.io/execute_script.html" rel="nofollow noopener noreferrer">http://SunInJuly.github.io/execute_script.html</a>.</li>
-	<li>Считать значение для переменной x.</li>
+	<li>Open the page <a href="http://SunInJuly.github.io/execute_script.html" rel="nofollow noopener noreferrer">http://SunInJuly.github.io/execute_script.html</a>.</li>
+	<li>Read the value for the variable x.</li>
 	<li>Посчитать математическую функцию от x.</li>
-	<li>Проскроллить страницу вниз.</li>
-	<li>Ввести ответ в текстовое поле.</li>
-	<li>Выбрать checkbox "I'm the robot".</li>
-	<li>Переключить radiobutton "Robots rule!".</li>
-	<li>Нажать на кнопку "Submit".</li>
+	<li>Scroll the page down.</li>
+	<li>Enter the answer into the text field.</li>
+	<li>Select the checkbox "I'm a robot".</li>
+	<li>Switch the radio button "Robots rule!".</li>
+	<li>Click the "Submit" button.</li>
 </ol>
 
-<p>Если все сделано правильно и достаточно быстро (в этой задаче тоже есть ограничение по времени), вы увидите окно с числом. Отправьте полученное число в качестве ответа для этого задания.</p>
+<p>If you do everything correctly and fast enough (there's a time limit in this task, too), you will see a window with a number. Submit this number as an answer for the task.</p>
 
-<p>Для этой задачи вам понадобится использовать метод execute_script, чтобы сделать прокрутку в область видимости элементов, перекрытых футером.</p>
+<p>In this task, you will need to use the execute_script method in order to scroll the page to the visibility area of the elements overlapped by the footer.</p>

@@ -1,6 +1,6 @@
-<h2>Задание: запуск тестов</h2>
+<h2>Task: running tests</h2>
 
-<p>В этом задании нам нужно разобраться в хитросплетениях маркировок. Мы имеем файл с тестами, которые уже размечены маркерами для разных ситуаций запуска.</p>
+<p>In this task, you need to figure out the intricacies of test marking. We have a file with tests that have been marked for different launching situations.</p>
 
 <p><strong>test_task_run_1.py:</strong></p>
 
@@ -53,6 +53,6 @@ def test_guest_can_open_gadget_catalogue(browser):
     assert True
 </code></pre>
 
-<p>Отметьте ниже только те тестовые методы, которые будут найдены и выполнены PyTest при запуске следующей команды: </p>
+<p>Below, identify the test methods that will be found and executed by PyTest if we run the following command: </p>
 
 <pre><code class="language-python">pytest -v -m "smoke and not beta_users" test_task_run_1.py</code></pre>

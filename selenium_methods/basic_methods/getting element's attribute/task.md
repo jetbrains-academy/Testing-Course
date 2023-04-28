@@ -1,4 +1,4 @@
-<h2>get_attribute method</h2>
+<h2>The get_attribute method</h2>
 
 <p>We already know how to find the necessary element on a page and how to get a text visible to the reader. For more detailed tests, we may need to learn the value of the element attribute. Attributes may be standard properties understood and used by the browser to display and format elements and keep the technical data, for example, name, width, height, color, and <a href="https://www.w3schools.com/tags/ref_attributes.asp" rel="nofollow noopener noreferrer">other</a>. Besides, attributes may be created by project developers to set their own styles and rules.</p>
 

@@ -10,7 +10,7 @@
 	<li>Get the value of the <strong>valuex</strong> attribute of this element, which is the x value for the task.</li>
 	<li>Calculate the mathematical function of x (the function itself does not change).</li>
 	<li>Enter the answer in the text field.</li>
-	<li>Mark the checkbox "I'm the robot".</li>
+	<li>Mark the checkbox "I'm a robot".</li>
 	<li>Select the radiobutton "Robots rule!".</li>
 	<li>Press the "Submit" button.</li>
 </ol>

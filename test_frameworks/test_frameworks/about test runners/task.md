@@ -1,6 +1,6 @@
-<h2>Выбор test runner</h2>
+<h2>Choosing a test runner</h2>
 
-<p>В предыдущих шагах мы научились писать простые тесты и запускать их с помощью Python. Приведём здесь код тестов и результаты запуска из предыдущего шага еще раз.</p>
+<p>In the previous steps, we've learned to write simple tests and run them with Python. Let's remember the test code and the results of test running from the previous step.</p>
 
 <p><strong>test_abs_project.py:</strong></p>
 
@@ -17,7 +17,7 @@ if __name__ == "__main__":
 
 </code></pre>
 
-<p>Консоль:</p>
+<p>Console:</p>
 
 <pre><code>
 $ python test_abs_project.py
@@ -35,12 +35,12 @@ Traceback (most recent call last):
 AssertionError: Should be absolute value of a number
 </code></pre>
 
-<p>Рассмотрим минусы такого подхода к запуску автотестов:</p>
+<p>Let's look at the drawbacks of such an approach to test running:</p>
 
 <ul>
-	<li>Когда тестов становится много, сложно становится запускать только тесты из нужных тест-сьютов.</li>
-	<li>Для каждого теста нужно создавать тестовые данные и окружение отдельно. Например, если мы захотим для каждого теста запускать браузер, а после завершения теста браузер закрывать, то логику работы с браузером придется дублировать в коде каждого теста.</li>
-	<li>Если один из тестов завершится с ошибкой, например, тест упадёт с ошибкой AssertionError, то последующие тесты не запустятся. Мы не узнаем, были ли проблемы в этих тестах, пока не починим упавший тест или пока не запустим эти тесты по отдельности.</li>
+	<li>When the number of tests gets large, it becomes difficult to run the tests only from the necessary test suites.</li>
+	<li>For each test, we need to create separate test data and an environment. For example, if we want to start the browser for each test and then close it after completing the test, we'll need to duplicate that logic in the code of each test.</li>
+	<li>If one of the tests finishes with an error (for example, a test will fail with AssertionError), the subsequent tests won't run. We can't know if there were problems in those tests until we fix the failed test or run the remaining tests separately.</li>
 </ul>
 
-<p>Для решения этих проблем и упрощения написания и запуска тестов существуют специальные фреймворки, которые называются test runners (тест-раннеры). Можно выделить три основных тестовых фреймворка для Python: <strong>unittest</strong>, <strong>PyTest</strong> и <strong>nose</strong>. Модуль <strong>unittest</strong> является встроенным инструментом Python — и это его большой плюс. <strong>PyTest</strong> и <strong>nose</strong> устанавливаются дополнительно, они позволяют получить расширенные возможности по сравнению с <strong>unittest</strong>. Мы кратко рассмотрим, как используется <strong>unittest</strong>, а затем изучим возможности <strong>PyTest</strong>, который позволяет писать более простой код тестов по сравнению с <strong>unittest</strong> и гибко настраивать запуск тестов. Еще один плюс использования <strong>PyTest</strong> в том, что для него существует большое количество плагинов, которые позволяют решить практически любую проблему, связанную с запуском автотестов.</p>
+<p>To solve these problems and to facilitate test writing and running, there are special frameworks called test runners. We can mention three major test frameworks for Python: <strong>unittest</strong>, <strong>PyTest</strong>, and <strong>nose</strong>. The <strong>unittest</strong> module is a built-in Python tool — and that is its great advantage. <strong>PyTest</strong> and <strong>nose</strong> are installed separately, and compared with <strong>unittest</strong>, they allow more opportunities. We'll take a brief look at the use of <strong>unittest</strong> and then study the features of <strong>PyTest</strong>, which allows writing simpler test code compared with <strong>unittest</strong> and flexibly setting up test running. Another advantage of <strong>PyTest</strong> is that there are more plugins written for it – they allow solving practically any problem connected with running automated tests.</p>

@@ -1,18 +1,18 @@
-<h2>Как работают методы get и find_element</h2>
+<h2>How get and find_element methods work</h2>
 
-<p>Разберем еще один простой тест на WebDriver, проверяющий работу кнопки.</p>
+<p>Let's consider one more WebDriver test – the one that checks the functioning of a button.</p>
 
-<p>Тестовый сценарий выглядит так:</p>
+<p>The test scenario is as follows:</p>
 
 <ol>
-	<li>Открыть страницу <a href="http://suninjuly.github.io/wait1.html" rel="noopener noreferrer nofollow">http://suninjuly.github.io/wait1.html</a></li>
-	<li>Нажать на кнопку "Verify"</li>
-	<li>Проверить, что появилась надпись "Verification was successful!"</li>
+	<li>Open the page <a href="http://suninjuly.github.io/wait1.html" rel="noopener noreferrer nofollow">http://suninjuly.github.io/wait1.html</a>.</li>
+	<li>Click the "Verify" button.</li>
+	<li>Check that the text "Verification was successful!" appears.</li>
 </ol>
 
-<p>Для открытия страницы мы используем метод get, затем находим нужную кнопку с помощью одного из методов find_element_by_ и нажимаем на нее с помощью метода click. Далее находим новый элемент с текстом и проверяем соответствие текста на странице ожидаемому тексту.</p>
+<p>To open a page, we use the get method; then we find the required button using one of the find_element_by_ methods and press it using the click method. Then, we find the new text element and check that the text corresponds to what we expected.</p>
 
-<p>Вот как выглядит код автотеста:</p>
+<p>Here's the automated test code:</p>
 
 <pre><code class="language-python">
 from selenium import webdriver
@@ -30,24 +30,24 @@ finally:
     
 </code></pre>
 
-<p>Попробуйте запустить автотест.
-Aвтотест упадет с сообщением NoSuchElementException для элемента 
-c <strong>id="verify"</strong>. Почему так происходит?</p>
-<p>Команды в Python выполняются синхронно, то есть, строго последовательно. Пока не завершится команда get, не начнется поиск кнопки. Пока кнопка не найдена, не будет сделан клик по кнопке и так далее.</p>
+<p>Try launching the automated test.
+The test will crash with the message NoSuchElementException for the element 
+with <strong>id="verify"</strong>. Why does it happen?</p>
+<p>Python commands are executed synchronously, i.e., in strict succession. The button search won't start until the get command completes. The button click won't happen until the button is found, etc.</p>
 
-<p>Но тест будет работать абсолютно стабильно,
-только если в данной веб-странице не используется JavaScript
-(что маловероятно для современного веба). 
+<p>However, tests will work smoothly
+only if the given web page does not use JavaScript
+(which is highly unlikely with modern web pages). 
 <br>
-Метод get дожидается информации от браузера о том, что страница загружена,
-и только после этого наш тест переходит к поиску кнопки. 
-Если страница интерактивная, то браузер будет считать, что страница загружена, 
-при этом продолжат выполняться загруженные браузером скрипты. 
-Скрипт может управлять появлением кнопки на странице и показывать ее, 
-например, с задержкой, чтобы кнопка красиво и медленно возникала на странице. 
-В этом случае наш тест упадет с уже известной нам ошибкой NoSuchElementException, 
-так как в момент выполнения команды
-<code>button = browser.find_element(By.ID, "verify")</code> элемент с <strong>id="verify"</strong> еще не отображается на странице. 
-На данной странице пауза перед появлением кнопки установлена на 1 секунду, 
-метод <strong>find_element()</strong> сделает только одну попытку найти элемент и в
-случае неудачи уронит наш тест.</p>
+The get method waits till it receives the information from the browser that the page has been downloaded,
+and only then does our test start searching for the button.
+If the page is interactive, the browser will consider it downloaded,
+while the scripts downloaded by the browser will continue running. 
+A script might control the appearance of the button on the page and, for example, display it
+with a time lag so that the button would emerge slowly and beautifully. 
+In such a case, the test will crash with the already familiar error NoSuchElementException, 
+as at the time of executing the command
+<code>button = browser.find_element(By.ID, "verify")</code>, the element with <strong>id="verify"</strong> won't be displayed yet.
+On that page, the pause before showing the button is set to 1 second, 
+the <strong>find_element()</strong> method will make only one attempt to find the element and,
+in the case of a failure, will crash our test.</p>

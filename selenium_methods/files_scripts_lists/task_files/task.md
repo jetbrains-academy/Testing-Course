@@ -1,14 +1,14 @@
-<h2>Задание: загрузка файла</h2>
+<h2>Task: uploading a file</h2>
 
-<p>В этом задании в форме регистрации требуется загрузить текстовый файл.</p>
+<p>In this task, you will need to upload a text file in a registration form.</p>
 
-<p>Напишите скрипт, который будет выполнять следующий сценарий:</p>
+<p>Write a script that will execute the following scenario:</p>
 
 <ol>
-	<li>Открыть страницу <a href="http://suninjuly.github.io/file_input.html" rel="noopener noreferrer nofollow">http://suninjuly.github.io/file_input.html</a></li>
-	<li>Заполнить текстовые поля: имя, фамилия, email</li>
-	<li>Загрузить файл. Файл должен иметь расширение .txt и может быть пустым</li>
-	<li>Нажать кнопку "Submit"</li>
+	<li>Open the page <a href="http://suninjuly.github.io/file_input.html" rel="noopener noreferrer nofollow">http://suninjuly.github.io/file_input.html</a>.</li>
+	<li>Fill in the text fields: first name, last name, email.</li>
+	<li>Upload the file. The file must have the .txt extension and may be empty.</li>
+	<li>Click the "Submit" button.</li>
 </ol>
 
-<p>Если все сделано правильно и быстро, вы увидите окно с числом. Отправьте полученное число в качестве ответа для этого задания.</p>
+<p>If you do everything correctly and fast enough, you will see a window with a number. Submit this number as an answer for the task.</p>

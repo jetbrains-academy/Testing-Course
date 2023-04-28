@@ -1,6 +1,6 @@
-<h2>Задание: составные сообщения об ошибках и поиск подстроки</h2>
+<h2>Task: compound error messages and substring search</h2>
 
-<p>Иногда при работе с текстами не нужны жёсткие проверки на полное совпадение, и требуется проверить, что некий текст является подстрокой другого текста. Это можно сделать либо с помощью ключевого слова <strong>in</strong>, либо с помощью функции <strong>find</strong>:</p>
+<p>Sometimes when working with texts, we do not need strict checks for exact matching – instead, we just need to check that a certain text is a substring of another text. We can do that either with the <strong>in</strong> key word or with the <strong>find</strong> function:</p>
 
 <pre><code>s = 'My Name is Julia'
 
@@ -12,20 +12,20 @@ if index != -1:
     print(f'Substring found at index {index}')
 </code></pre>
 
-<p>Попробуйте запустить этот код в интерпретаторе, чтобы понять разницу в подходах.</p>
+<p>Try running that code in the interpreter to see the difference in the two approaches.</p>
 
-<p>Конструкция <code><samp><strong>'Name' in s</strong></samp></code> возвращает просто <strong>True</strong> или <strong>False</strong>, a <strong>find()</strong> возвращает индекс первого вхождения подстроки в строку и -1, если подстрока не найдена. Обычно в автотестах достаточно использовать <strong>in</strong>, потому что это более читабельный вариант.</p>
+<p>The <code><samp><strong>'Name' in s</strong></samp></code> construct returns just <strong>True</strong> or <strong>False</strong>, while <strong>find()</strong> returns the index of the first occurrence of the substring in the string; otherwise, if the substring has not been found, it returns -1. In most cases, it's sufficient to use <strong>in</strong> in automated tests because of better readability.</p>
 
-<p>Например, для проверки того, что в текущем url содержится строка login: </p>
+<p>For example, we can check that the current URL contains the string login: </p>
 
-<pre><code>assert "login" in browser.current_url, # сообщение об ошибке</code></pre>
+<pre><code>assert "login" in browser.current_url, # error message</code></pre>
 
-<p>Реализуйте подобную проверку самостоятельно. </p>
+<p>Implement such a check yourself. </p>
 
-<p>Вам дан шаблон для функции <samp><code><strong>test_substring</strong></code></samp>, которая принимает два значения: <strong>full_string</strong> и <strong>substring</strong>. </p>
+<p>You are given a template for the <samp><code><strong>test_substring</strong></code></samp> function, which receives two values: <strong>full_string</strong> and <strong>substring</strong>. </p>
 
-<p>Функция должна проверить вхождение строки <strong>substring</strong> в строку <strong>full_string </strong>с помощью оператора <strong>assert</strong> и, в случае несовпадения, предоставить исчерпывающее сообщение об ошибке. </p>
+<p>The function needs to check for the occurrence of the <strong>substring</strong> in the <strong>full_string </strong>with the help of the <strong>assert</strong> operator and, in the case of a mismatch, provide a comprehensive error message. </p>
 
-<p><strong>Важно!</strong> Формат ошибки должен точно совпадать с приведенным в примере, чтобы его засчитала проверяющая система! </p>
+<p><strong>Important!</strong> The format of the error should exactly match that in the example so that the checking system accepts it! </p>
 
-<p>Обрабатывать ситуацию с пустым или невалидным вводом не нужно. </p>
+<p>You don't need to handle the situation with empty or invalid input. </p>
