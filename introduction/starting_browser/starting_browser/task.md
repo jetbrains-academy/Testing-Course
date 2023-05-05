@@ -1,5 +1,6 @@
 ## Launching the browser and the first script
 
+Create a <a href = ""> virtual environment </a> and <a href = "https://www.jetbrains.com/help/pycharm/installing-uninstalling-and-upgrading-packages.html"> install </a> selenium package. 
 In this step, try launching the script from the file task.py. It's a simple scenario, 
 which will open the web page, fill in the form with data, 
 press the submit button, and close all browser windows after the execution.

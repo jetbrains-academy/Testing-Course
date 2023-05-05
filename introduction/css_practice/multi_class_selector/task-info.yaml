@@ -3,6 +3,10 @@ custom_name: multi class selector
 files:
 - name: task.py
   visible: true
+  placeholders:
+  - offset: 51
+    length: 25
+    placeholder_text: '# TODO'
 - name: tests/test_task.py
   visible: false
 - name: __init__.py
