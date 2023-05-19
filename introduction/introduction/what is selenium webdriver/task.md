@@ -45,7 +45,7 @@ browser developers create their own drivers –
 programs that allow the Selenium interface manipulate buttons,
 texts, elements, etc. 
 
-В этом курсе мы будем работать со следующим набором инструментов: 
+In this course we will use this set of tools: 
 
 ![img_1.png](img_1.png)
 

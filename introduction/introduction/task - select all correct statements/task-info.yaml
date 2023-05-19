@@ -1,7 +1,7 @@
 type: choice
 is_multiple_choice: true
 options:
-- text: ChromeDriver is maintaines by Chromium team
+- text: ChromeDriver is maintained by Chromium team
   is_correct: true
 - text: ChromeDriver allows manipulating Firefox browser
   is_correct: false

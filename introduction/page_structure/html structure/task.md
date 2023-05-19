@@ -71,7 +71,7 @@ that you follow a simple rule:
 if you see an unintelligible value of an attribute or if the attribute value changes each time the page is reloaded,
 do not use it in element searches.
 
-### 3. Иерархия в HTML-документах
+### 3. Hierarchy in HTML Documents
 
 An HTML document is often compared with a family tree with parents,
 children, siblings, ancestors, and descendants. 
@@ -82,11 +82,12 @@ element nesting may be unlimited.
 
 Let's figure out the terminology of such a tree:
 
-descendant of element X – an element of any nesting level inside element X;
-child element — a direct descendant (i.e., an element at the first level of nesting);
-ancestor of element Y – any element X that contains element Y;
-parent — a direct ancestor (i.e., an element at exactly one level above);
-sibling, or neighbor element – element X located at the same hierarchy level as element Y. Elements X and Y have the same parent.
+- descendant of element X – an element of any nesting level inside element X;
+- child element — a direct descendant (i.e., an element at the first level of nesting);
+- ancestor of element Y – any element X that contains element Y;
+- parent — a direct ancestor (i.e., an element at exactly one level above);
+- sibling, or neighbor element – element X located at the same hierarchy level as element Y. Elements X and Y have the same parent.
+
 Now, let's practice the terminology with an example. Let's take such HTML code:
 
 ```

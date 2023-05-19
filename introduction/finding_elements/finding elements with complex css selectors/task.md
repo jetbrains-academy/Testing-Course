@@ -7,11 +7,12 @@
 <pre>
 <code class="language-html">&lt;div id="posts" class="post-list"&gt;
   &lt;div id="post1" class="item"&gt;
-    &lt;div class="title"&gt;How I spent my summer&lt;/div&gt;
+    &lt;div class="title"&gt;My summer vacations&lt;/div&gt;
     &lt;img src="./images/summer.png"&gt;
   &lt;/div&gt;
   &lt;div id="post2" class="item"&gt;
-    &lt;div class="title second"&gt;Went swimming&lt;/div&gt;
+    &lt;div class="title second"&gt;After bathing
+&lt;/div&gt;
     &lt;img src="./images/bad_dog.jpg"&gt;
   &lt;/div&gt;
   &lt;div id="post3" class="item"&gt;
@@ -23,7 +24,7 @@
 
 <p><strong>Using descendants</strong></p>
 
-<p>Let's try to find the element with the text &quot;Went swimming&quot;. To solve that task, we can take the element located above the needed element in the hierarchy. We can write the following selector:</p>
+<p>Let's try to find the element with the text &quot;After bathing&quot;. To solve that task, we can take the element located above the needed element in the hierarchy. We can write the following selector:</p>
 
 <p><code>#post2 .title</code></p>
 
@@ -58,8 +59,6 @@
 <p>To find an element, we can also use several of its classes simultaneously. To do that, separate the classes with a dot: <code>.title.second</code>.</p>
 
 <p>We have discussed the basic selectors, which will be enough to write simple UI tests. If you want to learn more about CSS selectors, we recommend checking out the following sources:</p>
-
-<p><a href="https://learn.javascript.ru/css-selectors" rel="nofollow noopener noreferrer">https://learn.javascript.ru/css-selectors</a></p>
 
 <p><a href="https://www.w3schools.com/cssref/css_selectors.asp" rel="nofollow noopener noreferrer">https://www.w3schools.com/cssref/css_selectors.asp</a></p>
 

@@ -13,7 +13,7 @@ Here you will learn:
 <li> Writing simple scripts to interact with the browser. </li>
 <li> Finding all kinds of elements in web pages. </li>
 <li> Working with warnings and various autotest windows. </li>
-<li> Setting expectations for for various element searches. </li>
+<li> Setting expectations for various element searches. </li>
 <li> Working with the version control system Git (on a basic level). </li>
 <li> Using different testing frameworks. </li>
 <li> Organize your autotest code so that it could be easily read and supported. </li>

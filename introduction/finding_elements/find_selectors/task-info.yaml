@@ -1,7 +1,7 @@
 type: choice
 is_multiple_choice: true
 options:
-- text: .card-body:nth-child(3) p
+- text: ".card-body:nth-child(3) p"
   is_correct: true
 - text: "[data-name=\"Vladimir\"]"
   is_correct: true
@@ -14,4 +14,10 @@ options:
 - text: "#politic"
   is_correct: true
 custom_name: "task: finding correct selectors"
+files:
+- name: main.py
+  visible: true
+- name: __init__.py
+  visible: false
 local_check: true
+

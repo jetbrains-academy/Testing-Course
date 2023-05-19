@@ -10,4 +10,4 @@ In order to see how an element is described in the HTML structure of a web page,
 On the right side or at the bottom of the browser window, the developer console will open with the Elements tab. The chosen element will be highlighted.
 
 
-What tag is used to define the "Google Search" button at https://www.google.com/?
+What tag is used to define the "Join this course" button at https://stepik.org/course/575/promo?
