@@ -1,4 +1,5 @@
 type: choice
+custom_name: "task: running tests"
 is_multiple_choice: true
 options:
 - text: number 1

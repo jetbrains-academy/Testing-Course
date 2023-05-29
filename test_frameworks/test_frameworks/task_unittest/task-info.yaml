@@ -1,4 +1,5 @@
 type: edu
+custom_name: "task: unittest"
 files:
 - name: task.py
   visible: true

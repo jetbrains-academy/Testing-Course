@@ -1,21 +1,21 @@
-<h2>Задание: параметризация тестов</h2>
+<h2>Task: test parametrization</h2>
 
-<p>Инопланетяне оставляют загадочные сообщения на Stepik в фидбеке задач на правильное решение. Мы смогли локализовать несколько url-адресов задач, где появляются кусочки сообщений. Ваша задача — реализовать автотест со следующим сценарием действий: </p>
+<p>Aliens leave mysterious messages on Stepik as feedback for correctly solved tasks. We managed to localize several task URLs where fragments of these messages appear. Your task is to implement an automated test with the following steps:</p>
 
 <ul>
-	<li>открыть страницу </li>
-	<li>авторизоваться на странице со своим логином и паролем (см. предыдущий шаг)</li>
-	<li>ввести правильный ответ (поле перед вводом должно быть пустым)</li>
-	<li>нажать кнопку "Отправить" </li>
-	<li>дождаться фидбека о том, что ответ правильный </li>
-	<li>проверить, что текст в опциональном фидбеке полностью совпадает с <strong>"Correct!"</strong></li>
+	<li>open page </li>
+	<li>authorise with your credentials (use code from previous step) </li>
+	<li>enter correct answer to the task</li>
+	<li>press 'Submit' button </li>
+	<li>wait until correct feedback is presented </li>
+	<li>check that text in feedback is <strong>"Correct!"</strong></li>
 </ul>
 
-<p>Опциональный фидбек — это текст в черном поле, как показано на скриншоте: </p>
+<p>Feedback is this text on dark background </p>
 
 ![img.png](img.png)
 
-<p>Правильным ответом на задачу в заданных шагах является число:</p>
+<p>Correct anser to the task is the number:</p>
 
 <pre><code>
 import time
@@ -24,7 +24,7 @@ import math
 answer = math.log(int(time.time()))
 </code></pre>
 
-<p>Используйте маркировку <strong>pytest</strong> для параметризации и передайте в тест список ссылок в качестве параметров: </p>
+<p>Use <strong>pytest</strong> parametrisation and pass this links as parameters to your test case: </p>
 
 <p>https://stepik.org/lesson/236895/step/1<br>
 https://stepik.org/lesson/236896/step/1<br>
@@ -35,8 +35,10 @@ https://stepik.org/lesson/236903/step/1<br>
 https://stepik.org/lesson/236904/step/1<br>
 https://stepik.org/lesson/236905/step/1</p>
 
-<p>Используйте осмысленное сообщение об ошибке в проверке текста, а также настройте нужные ожидания, чтобы тесты работали стабильно. </p>
+<p>Use correct error messages in assertions and configure waits. </p>
 
-<p>В упавших тестах найдите кусочки послания. Тест должен падать, если текст в опциональном фидбеке не совпадает со строкой <strong>"Correct!"</strong> Соберите кусочки текста в одно предложение и отправьте в качестве ответа на это задание. </p>
+<p>In the failed tests, find fragments of the aliens message. The test should fail if the text in the optional feedback does not match the string "Correct!".
+Collect the fragments of text into one sentence and submit it as the string in answer.py file. </p>
 
-<p><strong>Важно! </strong>Чтобы пройти это задание, дополнительно убедитесь в том, что у вас установлено правильное локальное время (<a href="https://time.is/ru/" rel="noopener noreferrer nofollow">https://time.is/ru/</a>). Ответ для каждой задачи нужно пересчитывать отдельно, иначе они устаревают. </p>
+<p><strong>Important! </strong>
+To complete this task, make sure you have the correct local time set (<a href="https://time.is/" rel="noopener noreferrer nofollow">https://time.is/</a>). Additionally, each task's answer needs to be recalculated separately, as they become outdated otherwise. </p>

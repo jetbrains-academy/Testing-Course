@@ -1,8 +1,10 @@
 content:
 - classic fixtures
 - fixtures returning value
+- fixtures_value_task
 - finalizing fixtures
+- task_finalizing_fixtures
 - fixture scopes
+- task_scopes
 - fixtures autouse
 - fixtures_task
-- test parametrization

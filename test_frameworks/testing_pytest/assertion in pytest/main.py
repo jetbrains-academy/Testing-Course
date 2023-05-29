@@ -15,6 +15,7 @@ def test_exception1():
     finally:
         browser.quit()
 
+
 def test_exception2():
     try:
         browser = webdriver.Chrome()

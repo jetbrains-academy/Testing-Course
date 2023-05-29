@@ -3,6 +3,7 @@ from selenium.webdriver.common.by import By
 lesson_link = "https://stepik.org/lesson/236895/step/1"
 
 def test_authorisation(browser):
+    browser.get(lesson_link)
     # Логинимся
     email = browser.find_element(By.ID, "id_login_email")
     email.send_keys("chesika968@mail.ru")

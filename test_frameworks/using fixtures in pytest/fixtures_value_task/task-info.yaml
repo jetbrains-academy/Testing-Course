@@ -1,12 +1,8 @@
 type: edu
-custom_name: "task: authorization"
+custom_name: "TODO: fixtures returning value"
 files:
-- name: task_authorisation.py
+- name: task.py
   visible: true
-  placeholders:
-  - offset: 164
-    length: 306
-    placeholder_text: '# TODO'
 - name: tests/test_task.py
   visible: false
 - name: __init__.py

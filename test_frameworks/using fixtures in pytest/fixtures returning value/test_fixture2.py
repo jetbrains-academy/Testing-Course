@@ -13,7 +13,7 @@ def browser():
 
 
 class TestMainPage1():
-    # вызываем фикстуру в тесте, передав ее как параметр
+    # calling fixture, using its name as an argument
     def test_guest_should_see_login_link(self, browser):
         browser.get(link)
         browser.find_element(By.CSS_SELECTOR, "#login_link")
