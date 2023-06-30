@@ -1,9 +1,10 @@
+custom_name: using fixtures in pytest
 content:
 - classic fixtures
 - fixtures returning value
-- fixtures_value_task
 - finalizing fixtures
-- task_finalizing_fixtures
+- fixtures_value_task
+- fixtures_finalizing_task
 - fixture scopes
 - task_scopes
 - fixtures autouse

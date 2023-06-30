@@ -18,5 +18,5 @@ def math_test(browser):
     input1.send_keys(y)
     checkbox = browser.find_element(By.ID, "robotCheckbox").click()
     robot_radio = browser.find_element(By.ID, "robotsRule").click()
-    button = browser.find_element(By.ID, "button.btn")
+    button = browser.find_element(By.CSS_SELECTOR, "button.btn")
     button.click()

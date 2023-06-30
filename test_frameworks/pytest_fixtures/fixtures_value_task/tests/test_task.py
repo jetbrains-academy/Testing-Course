@@ -1,9 +1,9 @@
+import os
 import unittest
-from selenium import webdriver
+
+import pytest
 import time
 import math
-
-from selenium_methods.basic_methods.clicking_elements_task.task import math_test
 
 
 def check(reply):
@@ -11,13 +11,13 @@ def check(reply):
     minutes_to_delay = 5
 
     ts_now = int(time.time())
-    ts_past = ts_now - 60*minutes_to_delay
+    ts_past = ts_now - 60 * minutes_to_delay
 
-    hashcode_now = math.log(ts_now*problem_number)
-    hashcode_past = math.log(ts_past*problem_number)
+    hashcode_now = math.log(ts_now * problem_number)
+    hashcode_past = math.log(ts_past * problem_number)
     try:
         replys = float(reply)
-        if  (replys < hashcode_now and replys > hashcode_past):
+        if (replys < hashcode_now and replys > hashcode_past):
             return True
         elif replys <= hashcode_past:
             return 0, "Срок действия кода истек, попробуйте еще раз"
@@ -28,12 +28,20 @@ def check(reply):
         return 0, "Неверный формат строки, должно быть число"
 
 
+filename = "answer.txt"
+newname = "answer1.txt"
+
 class TestCase(unittest.TestCase):
     def test_script(self):
         try:
-            browser = webdriver.Chrome()
-            math_test(browser)
-            reply = browser.switch_to.alert.text.split(": ", 1)[1]
+            pytest.main(["task.py"])
+            os.rename(filename, newname)
+            os.rename(newname, filename)
+            # Raise error if the file has opened
+
+            f = open(filename)
+            reply = float(f.readline())
             self.assertTrue(check(reply))
+
         finally:
-            browser.quit()
+            f.close()

@@ -1,0 +1,21 @@
+type: edu
+custom_name: "task: fixtures returning value"
+files:
+- name: task.py
+  visible: true
+  placeholders:
+  - offset: 474
+    length: 149
+    placeholder_text: "# add fixture answer_file, returning file object"
+  - offset: 663
+    length: 502
+    placeholder_text: '# TODO'
+  - offset: 252
+    length: 219
+    placeholder_text: '# add browser fixture'
+- name: tests/test_task.py
+  visible: false
+- name: __init__.py
+  visible: false
+- name: tests/__init__.py
+  visible: false

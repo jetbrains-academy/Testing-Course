@@ -9,14 +9,11 @@ link = "http://selenium1py.pythonanywhere.com/"
 def browser():
     print("\nstart browser for test..")
     browser = webdriver.Chrome()
-    yield browser
-    # этот код выполнится после завершения теста
-    print("\nquit browser..")
-    browser.quit()
+    return browser
 
 
-class TestMainPage1():
-    # вызываем фикстуру в тесте, передав ее как параметр
+class TestMainPage1:
+    # calling fixture, using its name as an argument
     def test_guest_should_see_login_link(self, browser):
         browser.get(link)
         browser.find_element(By.CSS_SELECTOR, "#login_link")
