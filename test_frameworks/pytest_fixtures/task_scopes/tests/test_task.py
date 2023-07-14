@@ -1,9 +1,13 @@
 import unittest
+import pytest
 
-from task import sum
 
-
-# todo: replace this with an actual test
 class TestCase(unittest.TestCase):
-    def test_add(self):
-        self.assertEqual(sum(1, 2), 3, msg="adds 1 + 2 to equal 3")
+    def test_answer(self):
+        pytest.main(["-s", "test_task.py"])
+        f = open("answer.txt")
+        reply = f.readline()
+        try:
+            assert reply == "penguins bake cookies, penguins eagerly feasting together "
+        finally:
+            f.close()
