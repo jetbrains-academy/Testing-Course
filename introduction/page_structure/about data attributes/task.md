@@ -30,4 +30,4 @@ It will help you quickly choose the right selectors, and looking at the HTML cod
 will immediately see that `<a>` is a link,
 `<p>` is text, and `<ul>` is unordered (bulleted) list. 
 However, it's a big topic, which deserves a separate course (you can take such a course on your own,
-for example, at https://stepik.org/course/38218/).
+for example, at https://www.w3schools.com/html/).

@@ -6,3 +6,4 @@ content:
 - reporting in pytest
 - pytest style of test cases
 - assertion in pytest
+- assert_task

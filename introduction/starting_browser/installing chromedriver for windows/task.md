@@ -13,4 +13,4 @@ Add the `C:\chromedriver`folder to the system variable PATH.
 The ways of doing that in different Windows versions
 are described here: https://www.computerhope.com/issues/ch000549.htm. 
 
-After the installation, proceed to step (step link).
+After the installation, proceed to `[step](course://introduction/starting_browser/starting_browser)`.

@@ -7,6 +7,6 @@ content:
 - finding multiple elements
 - finding_multiple_elements
 - find_by_xpath
-- selectors - the good, the bad, the ugly
-- task - unique selectors
+- "selectors - the good, the bad, the ugly"
+- unique_selectors
 - task10

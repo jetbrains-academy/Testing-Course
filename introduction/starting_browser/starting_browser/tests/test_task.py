@@ -1,7 +1,8 @@
 import unittest
 
-from starting_browser.starting_browser.task import *
+from introduction.starting_browser.starting_browser.task import first_script
+
 
 class TestCase(unittest.TestCase):
     def test_add(self):
-        self.assertTrue(True)
+        first_script()

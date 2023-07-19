@@ -28,5 +28,3 @@ y = calc(x)</code></pre>
 
 def calc(x):
   return str(math.log(abs(12*math.sin(int(x)))))</code></pre>
-
-<p>If you've done everything right and quickly enough (this task has a time limit), you'll see a window with a number. Copy it to the field below.</p>

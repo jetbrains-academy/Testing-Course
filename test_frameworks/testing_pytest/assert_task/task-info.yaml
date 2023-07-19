@@ -1,0 +1,18 @@
+type: edu
+custom_name: "task: assertion in pytest"
+files:
+- name: task.py
+  visible: true
+  placeholders:
+  - offset: 234
+    length: 405
+    placeholder_text: '# TODO'
+  - offset: 702
+    length: 487
+    placeholder_text: '# TODO'
+- name: tests/test_task.py
+  visible: false
+- name: __init__.py
+  visible: false
+- name: tests/__init__.py
+  visible: false

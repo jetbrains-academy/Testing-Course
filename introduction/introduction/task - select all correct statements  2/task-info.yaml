@@ -1,17 +1,13 @@
 type: choice
 is_multiple_choice: true
 options:
-- text: Selenium Webdriver - это язык программирования для написания автотестов
+- text: Selenium Webdriver is a programming language to develop UI tests
   is_correct: false
-- text: Selenium - проект с открытым исходным кодом
+- text: Selenium is an open source project
   is_correct: true
-- text: Selenium Webdriver позволяет многим языкам программирования взаимодействовать с многими браузерами
-  is_correct: true
-- text: Selenium Webdriver работает только с браузером Firefox
+- text: Selenium Webdriver works only with Firefox browser
   is_correct: false
-- text: С помощью Selenium можно писать автотесты на языке C#
-  is_correct: true
-- text: В большинстве случаев одни и те же тесты можно запускать на разных браузерах
+- text: In most cases you can run same UI tests on various browsers
   is_correct: true
 files:
 - name: main.py

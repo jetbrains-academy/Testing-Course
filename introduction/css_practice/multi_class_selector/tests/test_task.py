@@ -9,7 +9,8 @@ class TestCase(unittest.TestCase):
         self.assertFalse("body" in multi_class_selector, "Selector shouldn't contain 'body'")
         try:
             browser = webdriver.Chrome()
-            browser.get("http://localhost:63342/UI%20test%20automation%20with%20Selenium%20and%20Python/introduction/css_practice/multi_class_selector/index.html?_ijt=dloj4gje1871ele4do3hc6i31a")
+            browser.implicitly_wait(5)
+            browser.get("https://suninjuly.github.io/css-tasks/multi-class")
             element = browser.find_element(By.CSS_SELECTOR, multi_class_selector)
             elements = browser.find_elements(By.CSS_SELECTOR, multi_class_selector)
             self.assertTrue(len(elements) == 1, "Should be only one element found with the selector")

@@ -1,5 +1,0 @@
-content:
-- marking tests with pytest
-- marking tests with pytest - inversion
-- xfail - expecting test to fail
-- task_running_test

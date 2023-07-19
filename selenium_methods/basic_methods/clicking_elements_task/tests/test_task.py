@@ -8,7 +8,7 @@ from selenium_methods.basic_methods.clicking_elements_task.task import math_test
 
 def check(reply):
     problem_number = 2105
-    minutes_to_delay= 5
+    minutes_to_delay = 5
 
     ts_now = int(time.time())
     ts_past = ts_now - 60*minutes_to_delay
@@ -33,7 +33,7 @@ class TestCase(unittest.TestCase):
         try:
             browser = webdriver.Chrome()
             math_test(browser)
-            reply = browser.switch_to.alert.text
+            reply = browser.switch_to.alert.text.split(": ", 1)[1]
             self.assertTrue(check(reply))
         finally:
             browser.quit()

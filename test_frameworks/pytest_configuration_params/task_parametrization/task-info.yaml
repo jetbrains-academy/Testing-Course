@@ -1,0 +1,23 @@
+type: edu
+custom_name: "task: parametrization"
+files:
+- name: task_parametrization.py
+  visible: true
+  placeholders:
+  - offset: 0
+    length: 956
+    placeholder_text: '# TODO'
+- name: tests/test_task.py
+  visible: false
+- name: __init__.py
+  visible: false
+- name: tests/__init__.py
+  visible: false
+- name: img.png
+  visible: true
+- name: answer.py
+  visible: true
+  placeholders:
+  - offset: 10
+    length: 32
+    placeholder_text: '# TODO'

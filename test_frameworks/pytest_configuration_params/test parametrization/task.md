@@ -34,15 +34,17 @@ def test_guest_should_see_login_link(browser, language):
 
 <p>We can also use parametrization for the whole test class so that all the tests in the class would run with the set parameters. In that case, the parametrization mark must precede the declaration of the class: </p>
 
-<pre><code>@pytest.mark.parametrize('language', ["ru", "en-gb"])
+<pre>
+<code>@pytest.mark.parametrize('language', ["ru", "en-gb"])
 class TestLogin:
     def test_guest_should_see_login_link(self, browser, language):
         link = f"http://selenium1py.pythonanywhere.com/{language}/"
         browser.get(link)
         browser.find_element(By.CSS_SELECTOR, "#login_link")
-        # этот тест запустится 2 раза
+        # this test will be launched 2 times
 
     def test_guest_should_see_navbar_element(self, browser, language):
-        # этот тест тоже запустится дважды</code></pre>
+        #this test will be launched 2 times
+</code></pre>
 
 <p>Here's a helpful additional tutorial from the documentation: <a href="https://docs.pytest.org/en/latest/how-to/parametrize.html?highlight=parametrize" rel="noopener noreferrer nofollow">Parametrizing fixtures and test functions</a>.</p>
