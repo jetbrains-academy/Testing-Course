@@ -6,6 +6,8 @@ import math
 link = "https://suninjuly.github.io/explicit_wait2.html"
 
 
+
+
 def wait_test(browser):
     def solve_quiz(browser):
         random_value = browser.find_element(By.ID, "input_value").text

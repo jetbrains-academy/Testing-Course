@@ -12,3 +12,4 @@ content:
 - introduction
 - selenium_methods
 - test_frameworks
+- page_object

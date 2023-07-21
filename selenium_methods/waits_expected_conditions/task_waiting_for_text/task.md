@@ -8,7 +8,7 @@
 	<li>Open the page <a href="http://suninjuly.github.io/explicit_wait2.html" rel="noopener noreferrer nofollow">http://suninjuly.github.io/explicit_wait2.html</a>.</li>
 	<li>Wait till the cabin rent goes down to $100 (set the wait no lower than 12 seconds).</li>
 	<li>Click the "Book" button.</li>
-	<li>Solve a familiar arithmetical problem (use the previously written code) and submit the solution.</li>
+	<li>Solve a familiar arithmetical problem (use the previously written code)</li>
 </ol>
 
 <p>To find the moment when the rent drops to $100, use the <strong>text_to_be_present_in_element</strong> method from the <strong>expected_conditions</strong> library.</p>
