@@ -1,0 +1,26 @@
+type: edu
+files:
+- name: test_items.py
+  visible: true
+  placeholders:
+  - offset: 223
+    length: 144
+    placeholder_text: '# TODO'
+- name: tests/test_task.py
+  visible: false
+- name: __init__.py
+  visible: false
+- name: tests/__init__.py
+  visible: false
+- name: conftest.py
+  visible: false
+  placeholders:
+  - offset: 101
+    length: 287
+    placeholder_text: '# TODO - add parameters for command-line'
+  - offset: 391
+    length: 890
+    placeholder_text: "# TODO - add browser fixture, that starts browser with options\
+      \ got from command-line"
+- name: test_items_hidden.py
+  visible: false

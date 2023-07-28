@@ -34,7 +34,7 @@ newname = "answer1.txt"
 class TestCase(unittest.TestCase):
     def test_script(self):
         try:
-            pytest.main(["task.py"])
+            pytest.main(["test_items.py"])
             os.rename(filename, newname)
             os.rename(newname, filename)
             # Raise error if the file has opened

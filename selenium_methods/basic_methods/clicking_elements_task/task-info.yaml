@@ -5,7 +5,7 @@ files:
   visible: true
   placeholders:
   - offset: 198
-    length: 414
+    length: 424
     placeholder_text: '# TODO'
 - name: tests/test_task.py
   visible: false
