@@ -19,7 +19,7 @@ Its advantage is its versatility: with a very few exceptions,
 all the tests we write may be run for different browsers.
 
 There's another side to its versatility, too: the browser will perform the same actions,
-no matter what programming language was used invoke these methods.
+no matter what programming language was used to invoke these methods.
 Actually, Selenium WebDriver supports a lot of programming languages,
 though most popular in the industry are Java and Python.
 
@@ -42,7 +42,7 @@ It's a "many-to-many" relation.
 What's important here? 
 As all browsers work slightly differently,
 browser developers create their own drivers – 
-programs that allow the Selenium interface manipulate buttons,
+programs that allow the Selenium interface to manipulate buttons,
 texts, elements, etc. 
 
 In this course we will use this set of tools: 
