@@ -9,7 +9,7 @@ In the top line, you'll see the information on your browser version.
 
 Unarchive the downloaded file.
 On disc C:, create a folder `chromedriver` and put the unarchived file chromedriver.exe in the folder `C:\chromedriver`.
-Add the `C:\chromedriver`folder to the system variable PATH. 
+Add the `C:\chromedriver` folder to the system variable PATH. 
 The ways of doing that in different Windows versions
 are described here: https://www.computerhope.com/issues/ch000549.htm. 
 
