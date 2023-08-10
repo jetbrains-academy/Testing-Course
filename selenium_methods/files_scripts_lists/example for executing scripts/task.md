@@ -24,7 +24,7 @@ button.click()</code></pre>
 
 <p>First, WebDriver checks that the element's width and height are larger than 0, so that it might be clicked.</p>
 
-<p>Next, if the element lies beyond the limits of the browser window, WebDriver automatically scrolls the page to bring the element into the visibility range, i.e., within the limits of the screen. However, that does not guarantee that the element won't be overlapped by another element, which is also located within the visibility range.</p>
+<p>Next, if the element lies beyond the limits of the browser window, WebDriver automatically scrolls the page to bring the element into the visibility range, i.e., within the limits of the screen. However, that does not guarantee that the element won't be overlapped by another element that is also located within the visibility range.</p>
 
 <p>Now, what point of the element will be clicked? Selenium calculates the coordinates of the element's center and clicks that very point. That will also result in an error if a part of the element is visible but more than half of the element's height or width is overlapped.</p>
 
@@ -33,7 +33,7 @@ You can do it with the following script:</p>
 
 <pre><code>"return arguments[0].scrollIntoView(true);"</code></pre>
 
-<p>We passed an additional argument <code>true</code> to the scrollIntoView method so that after scrolling, the element would be within the visibility range. You can find additional parameters of the method here: <a href="https://developer.mozilla.org/ru/docs/Web/API/Element/scrollIntoView" rel="noopener noreferrer nofollow">https://developer.mozilla.org/ru/docs/Web/API/Element/scrollIntoView</a></p>
+<p>We passed an additional argument <code>true</code> to the scrollIntoView method so that after scrolling, the element would be within the visibility range. You can find additional parameters of the method here: <a href="https://developer.mozilla.org/ru/docs/Web/API/Element/scrollIntoView" rel="noopener noreferrer nofollow">https://developer.mozilla.org/ru/docs/Web/API/Element/scrollIntoView</a>.</p>
 
 <p>Thus, in order to click an overlapped button, we need to execute the following commands in our code:</p>
 
