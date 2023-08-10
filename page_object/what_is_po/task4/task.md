@@ -1,25 +1,25 @@
-<h2>Что такое Page Object Model?</h2>
+<h2>What is Page Object Model?</h2>
 
-<p><strong>Page Object Model</strong> или кратко Page Object — это паттерн программирования, который очень популярен в автоматизации тестирования и является одним из стандартов при автоматизации тестирования веб-продуктов. Это также один из удобных способов структурировать свой код таким образом, чтобы его было удобно поддерживать, менять и работать с ним.</p>
+<p><strong>Page Object Model</strong> or just Page Object is a programming pattern that is very popular in test automation and is one of the standards of web product test automation. Besides, it is one of handy methods of structuring your code to make it easier to maintain, modify, and work with.</p>
 
-<p>Основная идея состоит в том, что каждую страницу веб-приложения можно описать в виде объекта класса. Способы взаимодействия пользователя со страницей можно описать с помощью методов класса. В идеале тест, который будет использовать Page Object, должен описывать бизнес-логику тестового сценария и скрывать Selenium-методы взаимодействия с браузером и страницей. При изменениях в верстке страницы не придется исправлять тесты, связанные с этой страницей. Вместо этого нужно будет поправить только класс, описывающий страницу.</p>
+<p>The main point is that each page of a web application may be described as a class object. The user's interactions with the page may be described with class methods. In the ideal case, the test using a Page Object needs to describe the business logic of the test scenario and hide Selenium's methods of interaction with the browser and the page. If the page coding changes, we won't need to fix the tests connected with the page. Instead, we'll only need to fix the class describing the page.</p>
 
-<p>То есть здесь применяются те же принципы, что и в разработке: мы хотим повысить читаемость кода и вынести в абстрактные методы все детали. Тесты должны быть просто и понятно написаны, а повторяющиеся куски кода выделены в отдельные функции. В Page Object мы отделяем логику действий, например, авторизовать пользователя, от конкретной реализации (найти поле почты, ввести туда данные, найти поле пароля, ввести туда данные, найти кнопку и т.д.). </p>
+<p>Thus, we use the same principles as in development: we want to improve code readability and move all details to abstract methods. Tests need to be written in a simple and understandable way, and recurring pieces of code need to go to separate functions. In the Page Object, we separate the logic of actions (e.g., authorizing the user) from the specific realization (find the email field, insert the data, find the password field, insert the data, find the button, etc.). </p>
 
-<p>Рассмотрим такой простой тест-кейс:</p>
+<p>Let's consider a simple test case:</p>
 
 <ol>
-	<li>Открыть главную страницу</li>
-	<li>Перейти на страницу логина</li>
+	<li>Open the main page</li>
+	<li>Go to the log-in page</li>
 </ol>
 
-<p>Ожидаемый результат:</p>
+<p>The expected result:</p>
 
-<p>Открыта страница логина</p>
+<p>The log-in page is opened</p>
 
 <p> </p>
 
-<p>Давайте посмотрим на кусочек кода теста из предыдущего модуля, который реализует первую часть этого теста:</p>
+<p>Let's look at a piece of code from the test from the previous module, which implements the first part of our test:</p>
 
 <p><em>test_main_page.py:</em></p>
 
@@ -32,31 +32,31 @@ def test_guest_can_go_to_login_page(browser):
     login_link.click()
 </code></pre>
 
-<p>Что здесь происходит?</p>
+<p>What happens here?</p>
 
-<p>Мы открываем ссылку, находим элемент с определенным селектором и нажимаем на этот элемент.</p>
+<p>We open the link, find the element with a certain selector, and click the element.</p>
 
-<p>Что мы на самом деле имеем в виду семантически?</p>
+<p>What do we actually mean in terms of semantics?</p>
 
-<p>Мы хотим открыть страницу логина. 
-Давайте выделим это действие в отдельную функцию с понятным названием, пока все в том же файле <em>test_main_page</em>.py :</p>
+<p>We want to open the log-in page. 
+Let's isolate this action into a separate function with a meaningful name, in the same file <em>test_main_page.py</em> for now:</p>
 
 <pre><code class="language-python">def go_to_login_page(browser):
     login_link = browser.find_element(By.CSS_SELECTOR, "#login_link")
     login_link.click()</code></pre>
 
-<p>и наш тест упрощается:</p>
+<p>Our test becomes simpler:</p>
 
 <pre><code>def test_guest_can_go_to_login_page(browser): 
    browser.get(link) 
    go_to_login_page(browser) </code></pre>
 
-<p>При написании следующих тестов, когда нам понадобится перейти к странице логина с главной страницы, нам не нужно будет копировать этот кусочек кода или писать заново — мы сможем переиспользовать уже написанный метод.</p>
+<p>In subsequent tests, when we will need to go from the main page to the log-in page, we won't need to copy this piece of code again – we can use the already written method.</p>
 
-<p> Пока что мы только выделили в абстрактный метод логическое действие пользователя, которое можно переиспользовать.
-В следующих шагах мы разберем как создать из этого Page Object. </p>
+<p> At the moment, we have just isolated the logical action of the user that may be reused into an abstract method.
+In the following steps, we'll see how to create a Page Object from that. </p>
 
-<p>Дополнительно про Page Object вы можете почитать здесь:</p>
+<p>You can find additional information about Page Object here:</p>
 
 <p><a href="https://github.com/SeleniumHQ/selenium/wiki/PageObjects" rel="noopener noreferrer nofollow">https://github.com/SeleniumHQ/selenium/wiki/PageObjects</a></p>
 
