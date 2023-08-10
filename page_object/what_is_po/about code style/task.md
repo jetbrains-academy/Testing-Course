@@ -1,22 +1,22 @@
-<h2>Немного о Code Style</h2>
+<h2>A few words about Code Style</h2>
 
-<p>Среди тех, кто регулярно пишет код,
-существует определенное соглашение о &quot;стиле кода&quot;.
-Стиль кода &mdash;&nbsp;это всё то, что не относится к его функциональности:
-форматирование, имена переменных, функций, констант и так далее.
-Python прекрасен тем, что&nbsp;его очень легко читать,
-но даже такой простой для понимания язык в своём коде можно превратить
-в нечитаемую кашу. Нечитаемая каша опасна тем, что вы не разберетесь 
-в своем коде уже через пару недель, а другой человек не разберется никогда.
-Хорошо написанный код экономит время при починке тестов,
-при внедрении нового человека в команду, да и при написании нового кода тоже.
-В общем, это очень важная тема, и следует всегда помнить о читабельности кода.</p>
+<p>Among those who frequently write code,
+there is a certain agreement about the &quot;code style&quot;.
+Code style is what does not refer to code functionality:
+it is about formatting, the names of variables, functions, constants, etc.
+A good thing about Python is that it is easy to read. However,
+even such an easily understandable language may be turned
+into a mess. As a result, you won't be able to figure out
+your own code within a couple of weeks, and others will never be able to read it.
+Well written code saves time when you need to fix tests,
+introduce a new team member, and also when you write new code.
+All in all, style is a vital issue, and you always need to mind code readability.</p>
 
-<p>Мы совсем немного затронули эту тему в предыдущих модулях, а теперь, раз уж мы потихоньку идём в сторону большей абстракции, настало время поговорить об этом чуть более подробно.</p>
+<p>We've briefly touched upon this issue in our previous modules. Now, as we're gradually heading for a bigger abstraction, it's about time we discussed it in more detail.</p>
+ 
+<h3>&nbsp;Indentation</h3>
 
-<h3>&nbsp;Отступы</h3>
-
-<p>Отступы являются частью синтаксиса в Python и означают вложенность блока, будь то тело&nbsp;функции условного выражения, цикла, и так далее. Самое важное для нас в будущих шагах, что все функции внутри класса так же должны быть отделены отступом:</p>
+<p>Indents are part of the Python syntax. They indicate code block nesting – whether it's the body of a function, a conditional statement, a cycle, etc. What's important for our further steps is that all functions within a class must also be indented:</p>
 
 <pre>
 <code>@pytest.mark.regression
