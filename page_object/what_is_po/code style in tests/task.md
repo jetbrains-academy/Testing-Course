@@ -1,26 +1,26 @@
-<h2>Code Style в автотестах</h2>
+<h2>Code Style in autotests</h2>
 
-<p>Здесь мы попытались собрать важные принципы написания автотестов: </p>
+<p>Here we tried to summarize the important principles of autotest writing: </p>
 
 <ul>
-	<li>Стремитесь к максимальной линейности кода тестов: избегайте ветвления и циклов в тест-кейсах. Если хочется добавить в тесте if, значит, нужно разбить этот тест на два теста или подготовить тестовое окружение так, чтобы не было необходимости использовать ветвление.</li>
-	<li>Избегайте зависимых тестов, которые нужно запускать строго в определенном порядке. 
-При росте количества автотестов вы захотите запускать их в несколько потоков параллельно, 
-что будет невозможно при наличии зависимых тестов. 
-А еще зависимые тесты очень не надежны.</li>
-	<li>Стремитесь к тому, чтобы тест не полагался на контент, а готовил данные самостоятельно (и удалял после завершения). Используйте чистые браузеры и новых пользователей для лучшей воспроизводимости.</li>
-	<li>Абсолютная линейность проверок. Когда вы пишете assert-утверждения в функциях, не следует использовать ветвления и циклы. Логика проверок должна быть линейна, иначе разбор багов и починка автотестов будут стоить очень дорого.</li>
-	<li>Именуйте проверки в одинаковом стиле, чтобы по первому взгляду можно было понять, что это именно проверка. Например, можно именовать функции по шаблону should_be_smth:
+	<li>Aim at maximum linearity of test code: avoid branches and cycles in test cases. If you feel like adding an "if" statement, better divide the test into two or arrange the test environment so that you won't need branching.</li>
+	<li>Avoid dependent tests, which need to be run in a specific order. 
+As the number of autotests grows, you will want to run them in parallel,
+which is impossible if you have dependent tests.
+Besides, dependent tests are quite unreliable.</li>
+	<li>Try to write tests that do not rely on a content but rather prepare data on their own (and delete it after execution). Use clear browsers and new users for better reproducibility.</li>
+	<li>Mind absolute linearity in tests. When you write an assert statement in a function, do not use branches or cycles. Test logic must be linear; otherwise, bug analysis and autotest fixing will be quite expensive.</li>
+	<li>Use a consistent style in naming your checks so that it would be immediately clear that a check is a check. For example, you can use the should_be_smth pattern in function naming:
 	<pre><code>def should_be_reply_comment()</code></pre>
 	</li>
-	<li>Тесты именуются в одинаковом стиле. Имена тестов должны хорошо отражать различия в похожих сценариях. Можно использовать те же подходы, что и при добавлении имен к тест-кейсам в тестовой документации. Например, <code>test_guest_can_see_teach_button()</code> — обратите внимание на явное указание на роль пользователя.</li>
-	<li>Одинаковые тесты, которые отличаются только каким-то контентом (например, языком интерфейса), следует не копировать, а параметризовать.</li>
-	<li>Пишите максимально атомарные и неделимые тесты. Не нужно писать один мега-тест, который проверяет вообще всё, напишите лучше десяток маленьких — проще будет локализовать проблему, когда она возникнет.</li>
+	<li>Tests should be named in a similar style. Test names need to clearly reflect differences in similar scenarios. You can use the same approach you do when adding names to test cases in test documentation. For example, <code>test_guest_can_see_teach_button()</code> — notice the explicitly indicated user role.</li>
+	<li>Similar tests differing only in some content (for example, the interface language) should be parametrized rather than copied.</li>
+	<li>Write maximally indivisible and atomic tests. Don't try to write a single mega-test, which checks absolutely everything. Better write a dozen of small ones – it will be easier to localize the problem when it occurs.</li>
 </ul>
 
-<p>Если у вас нет большого опыта в написании кода, в статьях по ссылкам вы можете найти дополнительные рекомендации по оформлению кода.</p>
+<p>In case you do not have sufficient experience in code writing, you can use the links below to find articles with additional code style recommendations.</p>
 
-<p>Английский язык:</p>
+<p>In English:</p>
 
 <p><a href="https://docs.python-guide.org/writing/style/" rel="noopener noreferrer nofollow">https://docs.python-guide.org/writing/style/</a></p>
 
