@@ -1,26 +1,26 @@
-<h2>Почему именно Page Object?</h2>
+<h2>Why exactly Page Object?</h2>
 
-<p>Можно, конечно, хранить всю логику наших тестов в одном файле под каким-нибудь условным названием steps.py, и для начала это уже неплохо. Но если мы тестируем большой веб-продукт с множеством разных состояний и переходов, этот файл может разрастись до огромных размеров, и найти в нем нужный метод будет непросто. Еще бывают ситуации, когда на разных страницах логически один и тот же метод имеет разную реализацию. Например, у нашего интернет-магазина может быть метод "добавить в корзину". Но пользователь может добавлять товар в корзину как со страницы каталога, так и со страницы самого товара. </p>
+<p>We can, of course, save all the logic of our tests in a single file named, for example, steps.py, and for starters, that's not too bad. However, if we are testing a large web product with numerous states and transitions, that file may grow to an enormous size and it will be hard to find the needed method in it. Besides, there are situations when logically the same method has different realizations in different pages. For example, our web store may have a method "add to the cart", and the user can add merchandise to the cart both from the catalogue page and from the specific merchandise page.</p>
 
-<p>Было бы удобно выделить все методы, которые логически относятся к одной веб-странице в нашем продукте, в отдельный класс в нашем коде. Отсюда и название Page Object — это абстрактный объект, который содержит в себе методы для работы с конкретной веб-страницей. </p>
+<p>It might be convenient to separate the methods logically related to one web page of our product into a specific class in our code. Hence the name — Page Object. It is an abstract object containing the methods of working with a certain web page.</p>
 
-<p><strong>Важно! </strong>Обычно методы у Page Object бывают двух типов: <em>сделать что-то</em> и <em>проверить что-то.</em></p>
+<p><strong>Important! </strong>Usually, Page Object methods are of two kinds: <em>do something</em> and <em>check something.</em></p>
 
-<p>Рассмотрим страницу товара в интернет магазине <a href="http://selenium1py.pythonanywhere.com/catalogue/the-shellcoders-handbook_209/" rel="noopener noreferrer nofollow">http://selenium1py.pythonanywhere.com/catalogue/the-shellcoders-handbook_209/</a>.</p>
+<p>Let's consider a merchandise page in a web store: <a href="http://selenium1py.pythonanywhere.com/catalogue/the-shellcoders-handbook_209/" rel="noopener noreferrer nofollow">http://selenium1py.pythonanywhere.com/catalogue/the-shellcoders-handbook_209/</a>.</p>
 
-<p>Какие могут быть методы у Page Object, ассоциированного с такой страницей? Запишем основные сценарии: </p>
+<p>What methods could a Page Object associated with such a page have? Let's list the main scenarios: </p>
 
 <ul>
-	<li>добавить в корзину;</li>
-	<li>проверить, что есть сообщение об успешном добавлении в корзину;</li>
-	<li>перейти к написанию отзыва;</li>
-	<li>проверить, что есть название, цена, описание товара;</li>
-	<li>вернуться на главную.</li>
+	<li>add an item to the cart;</li>
+	<li>check if there is a message about successfully adding it to the cart;</li>
+	<li>proceed to writing feedback;</li>
+	<li>check the presence of the item's name, price, and description;</li>
+	<li>return to the main page.</li>
 </ul>
 
-<p>Обратите внимание, что все проверки у нас тоже становятся отдельными методами. В самом тест-кейсе не остается никаких вспомогательных слов типа assert, только описание шагов. Прямо как в нашей тестовой документации.  </p>
+<p>Notice that all the checks also turn into separate methods. The test case itself doesn't have any supplemental words, like assert, any more; only the description of steps is left. Just like in our test documentation. </p>
 
-<p>Тесты будут выглядеть примерно так:</p>
+<p>The tests will look more or less as follows:</p>
 
 <pre><code class="language-python">def test_add_to_cart(browser):
     page = ProductPage(url="", browser)   # initializing page object
@@ -30,4 +30,4 @@
     page.should_be_success_message()      # asserting message with text is on the page
 </code></pre>
 
-Таким образом, тесты становятся более абстрактными и понятными. А все детали реализации абстрактных методов скрыты внутри методов Page Object, и при необходимости могут быть переиспользованы в разных тестах.
+Thus, tests become more abstract and straightforward. All the details of abstract method realization are hidden inside the Page Object methods and, if necessary, may be reused in different tests.
