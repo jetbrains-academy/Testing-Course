@@ -5,7 +5,7 @@
 <ol>
 	<li>Open the page <a href="http://SunInJuly.github.io/execute_script.html" rel="nofollow noopener noreferrer">http://SunInJuly.github.io/execute_script.html</a>.</li>
 	<li>Read the value for the variable x.</li>
-	<li>Посчитать математическую функцию от x.</li>
+	<li>Execute a mathematical function of x.</li>
 	<li>Scroll the page down.</li>
 	<li>Enter the answer into the text field.</li>
 	<li>Select the checkbox "I'm a robot".</li>
