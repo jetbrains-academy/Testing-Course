@@ -6,7 +6,7 @@ with the transitions between pages being almost unnoticeable.
 Site pages are interactive and instantly respond to the user's actions.
 In most cases, in order to implement such comfortable user experience, the
 <a href="https://developer.mozilla.org/en-US/docs/Glossary/SPA" rel="noopener noreferrer nofollow">Single-Page Application</a>
-, which generally implies the existence of a single page on the site.
+is used, which generally implies the existence of a single page on the site.
 Meanwhile, the content of the page is dynamically renewed by JavaScript,
 which quietly exchanges information with the server – for example, by means of REST API.</p>
 
