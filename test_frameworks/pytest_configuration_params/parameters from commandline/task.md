@@ -64,4 +64,4 @@ def test_guest_should_see_login_link(browser):
 
 <pre><code class="language-python">pytest -s -v --browser_name=firefox test_parser.py</code></pre>
 
-<p>You should see the tests starting first in Chrome and then in в Firefox.</p>
+<p>You should see the tests starting first in Chrome and then in Firefox.</p>
