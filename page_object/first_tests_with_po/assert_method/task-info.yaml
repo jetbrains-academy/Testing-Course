@@ -1,5 +1,5 @@
 type: edu
-custom_name: "check element presence on the page"
+custom_name: check element presence on the page
 files:
 - name: test_main_page.py
   visible: true
@@ -8,8 +8,8 @@ files:
 - name: base_page.py
   visible: true
   placeholders:
-  - offset: 16
-    length: 147
+  - offset: 69
+    length: 398
     placeholder_text: '# TODO'
     dependency:
       section: page_object
@@ -21,7 +21,10 @@ files:
 - name: main_page.py
   visible: true
   placeholders:
-  - offset: 177
+  - offset: 181
+    length: 110
+    placeholder_text: '# TODO'
+  - offset: 324
     length: 106
     placeholder_text: '# TODO'
     dependency:
@@ -35,3 +38,9 @@ files:
   visible: false
 - name: tests/__init__.py
   visible: false
+- name: conftest.py
+  visible: true
+  placeholders:
+  - offset: 101
+    length: 1180
+    placeholder_text: '# TODO'

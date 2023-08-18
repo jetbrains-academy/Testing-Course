@@ -1,8 +1,12 @@
 type: edu
-custom_name: "first test using page object"
+custom_name: first test using page object
 files:
 - name: test_main_page.py
   visible: true
+  placeholders:
+  - offset: 129
+    length: 192
+    placeholder_text: '# TODO'
 - name: __init__.py
   visible: false
 - name: base_page.py
@@ -35,3 +39,9 @@ files:
   visible: false
 - name: tests/__init__.py
   visible: false
+- name: conftest.py
+  visible: true
+  placeholders:
+  - offset: 101
+    length: 1181
+    placeholder_text: '# TODO'

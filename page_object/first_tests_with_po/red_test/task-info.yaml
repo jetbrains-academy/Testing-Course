@@ -1,8 +1,15 @@
 type: edu
-custom_name: "assertion methods in page object"
+custom_name: assertion methods in page object
 files:
 - name: test_main_page.py
   visible: true
+  placeholders:
+  - offset: 129
+    length: 192
+    placeholder_text: '# TODO'
+  - offset: 370
+    length: 82
+    placeholder_text: '# TODO'
 - name: __init__.py
   visible: false
 - name: base_page.py
@@ -21,8 +28,8 @@ files:
 - name: main_page.py
   visible: true
   placeholders:
-  - offset: 177
-    length: 106
+  - offset: 288
+    length: 105
     placeholder_text: '# TODO'
     dependency:
       section: page_object
@@ -35,3 +42,9 @@ files:
   visible: false
 - name: tests/__init__.py
   visible: false
+- name: conftest.py
+  visible: true
+  placeholders:
+  - offset: 101
+    length: 1181
+    placeholder_text: '# TODO'

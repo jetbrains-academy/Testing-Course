@@ -15,3 +15,11 @@ files:
   - offset: 16
     length: 147
     placeholder_text: '# TODO'
+- name: conftest.py
+  visible: true
+  placeholders:
+  - offset: 154
+    length: 1242
+    placeholder_text: '# TODO'
+- name: test_env.py
+  visible: false

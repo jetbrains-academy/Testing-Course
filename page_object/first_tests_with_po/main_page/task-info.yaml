@@ -1,5 +1,5 @@
 type: edu
-custom_name: 'task: page object for main page'
+custom_name: "task: page object for main page"
 files:
 - name: task.py
   visible: true
@@ -28,3 +28,11 @@ files:
   - offset: 177
     length: 106
     placeholder_text: '# TODO'
+- name: conftest.py
+  visible: true
+  placeholders:
+  - offset: 101
+    length: 1181
+    placeholder_text: '# TODO'
+- name: test_env.py
+  visible: false
