@@ -1,5 +1,5 @@
 type: edu
-custom_name: 'task: working with files'
+custom_name: "task: working with files"
 files:
 - name: task.py
   visible: true
@@ -13,3 +13,5 @@ files:
   visible: false
 - name: tests/__init__.py
   visible: false
+- name: file.txt
+  visible: true

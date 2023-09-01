@@ -19,5 +19,5 @@ files:
   visible: true
   placeholders:
   - offset: 10
-    length: 32
+    length: 36
     placeholder_text: '# TODO'

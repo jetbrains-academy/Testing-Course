@@ -1,4 +1,4 @@
-<h2>Задание: авторизация на сайте</h2>
+<h2>Task: authorization</h2>
 
 <p>Next task requires account on teaching platform <a href="https://stepik.org/" rel="noopener noreferrer nofollow"> https://stepik.org/ </a> .
 
