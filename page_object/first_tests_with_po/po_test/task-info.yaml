@@ -1,0 +1,47 @@
+type: edu
+custom_name: first test using page object
+files:
+- name: test_main_page.py
+  visible: true
+  placeholders:
+  - offset: 129
+    length: 192
+    placeholder_text: '# TODO'
+- name: __init__.py
+  visible: false
+- name: base_page.py
+  visible: true
+  placeholders:
+  - offset: 16
+    length: 147
+    placeholder_text: '# TODO'
+    dependency:
+      section: page_object
+      lesson: first_tests_with_po
+      task: main_page
+      file: base_page.py
+      placeholder: 1
+      is_visible: false
+- name: main_page.py
+  visible: true
+  placeholders:
+  - offset: 177
+    length: 106
+    placeholder_text: '# TODO'
+    dependency:
+      section: page_object
+      lesson: first_tests_with_po
+      task: main_page
+      file: main_page.py
+      placeholder: 1
+      is_visible: false
+- name: tests/test_task.py
+  visible: false
+- name: tests/__init__.py
+  visible: false
+- name: conftest.py
+  visible: true
+  placeholders:
+  - offset: 101
+    length: 1181
+    placeholder_text: '# TODO'

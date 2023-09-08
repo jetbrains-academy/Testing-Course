@@ -16,6 +16,15 @@ files:
 - name: steps.py
   visible: true
   placeholders:
+  - offset: 207
+    length: 275
+    placeholder_text: '# TODO'
+  - offset: 521
+    length: 124
+    placeholder_text: '# TODO'
   - offset: 681
     length: 84
+    placeholder_text: '# TODO'
+  - offset: 786
+    length: 67
     placeholder_text: '# TODO'

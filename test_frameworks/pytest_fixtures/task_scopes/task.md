@@ -1,9 +1,9 @@
 
 
-Fixture function `answer_file()` should open file by `'filename'` and return file object. 
-Fixture must close the file after test passes.
+The fixture function `answer_file()` should open a file by `'filename'` and return a file object. 
+The fixture must close the file after the test passes.
 
-We have this set of tests:
+We have the following set of tests:
 <pre><code>
 class TestCookies:
     def test1(self):
@@ -12,5 +12,5 @@ class TestCookies:
         pass
 </code> </pre>
 
-Mark existing fixtures in task.py with according scopes and autouse instruction,
-so that resulting output in file make sentence `penguins bake cookies, penguins eagerly feasting together`
+Mark the existing fixtures in task.py with proper scopes and the autouse instruction
+so that the resulting output in the file makes the sentence `penguins bake cookies, penguins eagerly feasting together`.

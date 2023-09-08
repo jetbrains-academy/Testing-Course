@@ -36,7 +36,7 @@ pytest scripts/drafts.py::test_register_new_user_parametrized
 		<p>all the tests with names starting with <strong>test</strong> that are located outside classes</p>
 		</li>
 		<li>
-		<p>all the tests with names starting with <strong>test</strong> inside classes классов with names starting with <strong>Test</strong> (and without the __init__ method within the class)</p>
+		<p>all the tests with names starting with <strong>test</strong> inside classes with names starting with <strong>Test</strong> (and without the __init__ method within the class)</p>
 		</li>
 	</ul>
 	</li>

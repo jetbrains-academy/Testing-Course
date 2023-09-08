@@ -38,6 +38,8 @@ finally:
 <pre><code class="language-python">
 from selenium import webdriver
 from selenium.webdriver.common.by import By
+from selenium.webdriver.support.expected_conditions import element_to_be_clickable
+from selenium.webdriver.support.wait import WebDriverWait
 
 browser = webdriver.Chrome()
 try:
@@ -46,7 +48,7 @@ try:
     button = browser.find_element(By.ID, "verify")  
     # waiting for 5 seconds until button will be enabled
     button = WebDriverWait(browser, 5).until(
-        EC.element_to_be_clickable((By.ID, "verify"))
+        element_to_be_clickable((By.ID, "verify"))
     )
     button.click()
     message = browser.find_element(By.ID, "verify_message")

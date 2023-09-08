@@ -1,6 +1,6 @@
 <h2>Test marking: part 1</h2>
 
-<p>When the number of tests becomes large, it's a good idea to identify them not only by names but also by some other defined categories. For example, we can select a small number of smoke tests, which need to be run after each new commit from the developers, and define the rest as regression tests, which should be run only before the release. Or, we can have tests specific to a certain browser (e.g., Internet Explorer 11), and we want to run them only on that browser. To selectively launch such tests, PyTest uses test <strong>marks</strong>. To mark tests, you need to write a decorator like <strong>@pytest.mark.mark_name</strong>, where mark_name  is an arbitrary string.</p>
+<p>When the number of tests becomes large, it's a good idea to identify them not only by names but also by some other defined categories. For example, we can select a small number of smoke tests, which need to be run after each new commit from the developers, and define the rest as regression tests, which should be run only before the release. Or, we can have tests specific to a certain browser (e.g., Internet Explorer 11), and we want to run them only on that browser. To selectively launch such tests, PyTest uses test <strong>marks</strong>. To mark tests, you need to write a decorator like <strong>@pytest.mark.mark_name</strong>, where mark_name is an arbitrary string.</p>
 
 <p>Let's divide the tests from one of our previous examples into smoke and regression ones.</p>
 
@@ -49,7 +49,7 @@ class TestMainPage1():
 
 <p>The warning is displayed because the latest versions of PyTest insistently recommend to explicitly register marks before use. That allows avoiding typos – situations where you erroneously used a non-existent test mark and the test ends up being skipped.</p>
 
-<h3>Hpw are marks registered?</h3>
+<h3>How are marks registered?</h3>
 
 <p>Create a file pytest.ini in the root directory of your test project and add the following lines to the file:</p>
 

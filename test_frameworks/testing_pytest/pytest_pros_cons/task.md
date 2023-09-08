@@ -31,13 +31,13 @@ https://www.guru99.com/pytest-tutorial.html
 
 <p>4) Python's standard assert is used in checks.</p>
 
-<p>5) It's possible to create dynamic fixtures (special functions setting up test environments and prepare test data).</p>
+<p>5) It's possible to create dynamic fixtures (special functions setting up test environments and preparing test data).</p>
 
 <p>6) Additional features in setting up fixtures.</p>
 
 <p>7) Test parametrization – you can set up different parameters for the same test (the test will be run several times with different test data).</p>
 
-<p>8) Availability of marks, which marking tests for selective launching.</p>
+<p>8) Availability of marks, which mark tests for selective launching.</p>
 
 <p>9) Possibility to pass additional parameters in the command line to set up test environments.</p>
 
