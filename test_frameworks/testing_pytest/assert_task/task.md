@@ -1,29 +1,29 @@
 <h2>Task: PyTest — checking the expected result (assert)</h2>
 
-Реализуйте два тест-кейса с помощью pytest. 
+Using pytest, implement two test cases. 
 
-Первый тест-кейс `test_valid_input` принимает на вход валидное число от 1 до 1000, и он должен реализовать следующий сценарий: 
+The first test case `test_valid_input` takes a valid number from 1 to 1000 as input and realizes the following scenario: 
 
-1. открыть страницу по ссылке 
-2. ввести валидное число (передается в функцию как параметр) 
-3. нажать чекбокс I'm the robot 
-4. нажать кнопку Submit
+1. Open the link page.
+2. Insert a valid number (it will be passed to the function as a parameter).
+3. Click the checkbox "I'm a robot".
+4. Click the Submit button.
 
-ожидаемый результат: 
+The expected result: 
 
-в появившемся всплывающем окне верный результат математической функции 
+The correct result of the mathematical function in the pop-up window.
 
-Используйте pytest assert для этой проверки. 
+For this check, use pytest assert. 
 
-Второй тест кейс `test_invalid_input` получает на вход число вне промежутка от 1 до 1000 и должен реализовать следующий сценарий:
+The second test case `test_invalid_input` takes a number beyond the 1–1000 range as input and realizes the following scenarioп:
 
-1. открыть страницу по ссылке 
-2. ввести валидное число (передается в функцию как параметр) 
-3. нажать чекбокс I'm the robot 
-4. нажать кнопку Submit
+1. Open the link page. 
+2. Insert a valid number (it will be passed to the function as a parameter).
+3. Click the checkbox "I'm a robot".
+4. Click the Submit button.
 
-ожидаемый результат: 
+The expected result: 
 
-всплывающего окна не появилось 
+No pop-up window.
 
-Используйте конструкцию `pytest.raises` для этой проверки.
+For this check, use the `pytest.raises` construct.
