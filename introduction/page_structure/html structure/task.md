@@ -96,12 +96,12 @@ Now, let's practice the terminology with an example. Let's take such HTML code:
     <p class="title_text">Selenium 4alpha is out now</p>
   </div>
   <div class="text_block">
-    <p class="first">3 years after it’s major release, now Selenium has put out its first alpha version of Selenium 4 on Apr 24, 2019.</p>
+    <p class="first">3 years after its major release, now Selenium has put out its first alpha version of Selenium 4 on Apr 24, 2019.</p>
     <p class="second">If you want, you can get your hands dirty with Selenium 4 and its features by downloading the dependencies from Maven Repository.</p>
   </div>
 </div>
 ```
-Now, let's draw a flowchart of that HTML code, where each block will correspond to one HTML element.
+Now, let's draw a flowchart of that HTML code where each block will correspond to one HTML element.
 
 ![img.png](img.png)
 
