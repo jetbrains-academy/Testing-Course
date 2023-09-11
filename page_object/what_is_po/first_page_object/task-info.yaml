@@ -1,0 +1,30 @@
+type: edu
+custom_name: "task: writing abstract methods"
+files:
+- name: task.py
+  visible: true
+  placeholders:
+  - offset: 127
+    length: 114
+    placeholder_text: '# TODO'
+- name: tests/test_task.py
+  visible: false
+- name: __init__.py
+  visible: false
+- name: tests/__init__.py
+  visible: false
+- name: steps.py
+  visible: true
+  placeholders:
+  - offset: 207
+    length: 275
+    placeholder_text: '# TODO'
+  - offset: 521
+    length: 124
+    placeholder_text: '# TODO'
+  - offset: 681
+    length: 84
+    placeholder_text: '# TODO'
+  - offset: 786
+    length: 67
+    placeholder_text: '# TODO'

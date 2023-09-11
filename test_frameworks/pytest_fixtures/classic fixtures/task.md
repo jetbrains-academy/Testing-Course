@@ -1,6 +1,6 @@
 <h2>Classic fixtures</h2>
 
-<p>An important aspect of working with PyTest is the concept of fixture. In the context pf PyTest, fixtures are auxiliary functions that are not part of the test scenario..</p>
+<p>An important aspect of working with PyTest is the concept of fixture. In the context of PyTest, fixtures are auxiliary functions that are not part of the test scenario.</p>
 
 <p>The purposes of fixtures may be different. One of the most popular uses of fixtures is preparing the test environment and cleaning up the test environment and data after test completion. However, fixtures may be used for a wide range of purposes: connecting to a database the tests work with, creating test files, or preparing data in the current environment with the help of API methods. You can read about fixtures in the general sense in more detail in <a href="https://en.wikipedia.org/wiki/Test_fixture#Software" rel="nofollow noopener noreferrer">Wikipedia</a>.</p>
 
@@ -10,7 +10,7 @@
 
 <p>We'll start combining our tests into test suites; classes will function as suites in which we store our tests.</p>
 
-<p>Let's consider two examples: creating a copy of a browser and closing it once for all the tests of the first test suite, and creating a browser for each test of the second test suite. Save the below code in the file <strong> test_fixture1.py </strong> and run it with PyTest. Don't forget to indicate the parameter <strong>-s</strong> to see the text displayed by the print() command.</p>
+<p>Let's consider two examples: creating a copy of a browser and closing it once for all the tests of the first test suite, and creating a browser for each test of the second test suite. Save the below code in the file <strong> test_fixture1.py</strong> and run it with PyTest. Don't forget to indicate the parameter <strong>-s</strong> to see the text displayed by the print() command.</p>
 
 <pre><code class="language-python">pytest -s test_fixture1.py</code></pre>
 
@@ -70,8 +70,8 @@ class TestMainPage2():
 
 <p>We see that in the first test suite, the browser was launched once, while in the second one – twice.</p>
 
-<p>The data and the cash left from the previous test run may affect the results of subsequent tests, so it's a good idea to launch a separate browser for each test to ensure test stability. Besides, if the browser suddenly hangs in one of the tests, the rest of the tests won't be affected if they are run in a separate browser each.</p>
+<p>The data and the cache left from the previous test run may affect the results of subsequent tests, so it's a good idea to launch a separate browser for each test to ensure test stability. Besides, if the browser suddenly hangs in one of the tests, the rest of the tests won't be affected if they are run in a separate browser each.</p>
 
 <p>The disadvantages of launching a browser for each test are the following: opening and closing the browser takes time, so your tests will be longer. You may want to optimize the time of the test run, but it's better to do that with other tools, which we will discuss later.</p>
 
-<p>Usually, such fixtures migrate together with tests written with unittest, and we need to support them. However, everybody now writes more flexible fixtures <strong>@pytest.fixture</strong>, which we will discuss in the next step. </p>
+<p>Usually, such fixtures migrate together with tests written with unittest, and we need to support them. However, everybody now writes more flexible fixtures with <strong>@pytest.fixture</strong>, which we will discuss in the next step. </p>

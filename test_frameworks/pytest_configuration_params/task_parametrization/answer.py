@@ -1,1 +1,1 @@
-answer = "The owls are not  they seem! OvO"
+answer = "The owls are not what they seem! OvO"

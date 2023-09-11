@@ -8,4 +8,4 @@ content:
 - parameters from commandline
 - pytest plugins
 - running tests for different localizations
-- task_localizations
+- task_localization

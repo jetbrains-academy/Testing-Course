@@ -1,0 +1,46 @@
+type: edu
+custom_name: check element presence on the page
+files:
+- name: test_main_page.py
+  visible: true
+- name: __init__.py
+  visible: false
+- name: base_page.py
+  visible: true
+  placeholders:
+  - offset: 69
+    length: 398
+    placeholder_text: '# TODO'
+    dependency:
+      section: page_object
+      lesson: first_tests_with_po
+      task: red_test
+      file: base_page.py
+      placeholder: 1
+      is_visible: false
+- name: main_page.py
+  visible: true
+  placeholders:
+  - offset: 181
+    length: 110
+    placeholder_text: '# TODO'
+  - offset: 324
+    length: 106
+    placeholder_text: '# TODO'
+    dependency:
+      section: page_object
+      lesson: first_tests_with_po
+      task: red_test
+      file: main_page.py
+      placeholder: 1
+      is_visible: false
+- name: tests/test_task.py
+  visible: false
+- name: tests/__init__.py
+  visible: false
+- name: conftest.py
+  visible: true
+  placeholders:
+  - offset: 101
+    length: 1180
+    placeholder_text: '# TODO'

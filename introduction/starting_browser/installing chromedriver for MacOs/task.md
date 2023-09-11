@@ -15,16 +15,18 @@ Unarchive the downloaded file and move it to the `/usr/local/bin` folder, so tha
 unzip chromedriver_mac64.zip
 sudo mv chromedriver /usr/local/bin
 ```
-Let's check that the required version of chromedriver has been installed.
+Let's check that the required version of ChromeDriver has been installed.
 
 `chromedriver --version`
 
 The system response should be the following:
 
 `ChromeDriver 76.0.3809.68 (420c9498db8ce8fcd190a954d51297672c1515d5-refs/branch-heads/3809@{#864})`
+
 If you see that, everything is fine and you can proceed to the next step.
 
 However, if you see something like this:
 
 `-bash: chromedriver: command not found`
+
 you need to check if the file chromedriver is in the folder `/usr/local/bin`. If it's not there, run the above commands again. 

@@ -1,0 +1,8 @@
+type: framework
+custom_name: writing first test with page object
+content:
+- base_page
+- main_page
+- po_test
+- red_test
+- assert_method

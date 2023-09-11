@@ -15,3 +15,7 @@ files:
   - offset: 9
     length: 19
     placeholder_text: '# place report last line here'
+- name: tests/test_task.py
+  visible: false
+- name: tests/__init__.py
+  visible: false

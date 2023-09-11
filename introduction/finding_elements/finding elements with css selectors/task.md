@@ -1,6 +1,6 @@
 ## Finding elements with CSS selectors
 
-<p> Below you can see parts of an HTML page elements we can use to find an element with the help of the CSS syntax:</p>
+<p> Below you can see the parts of an HTML page we can use to find an element with the help of the CSS syntax:</p>
 
 <ul>
     <li>tag</li>
@@ -23,7 +23,7 @@ Below you can see a simplified fragment of the page's HTML code:
 ```
 
 First, we'll try manual search with the browser console,
-and in the following lesson we'll learn how to write code that performs the same search task. 
+and in the following lesson, we'll learn how to write code that performs the same search task. 
 
 ### Search by id
 
@@ -39,7 +39,7 @@ We can check whether we've chosen the proper selector right in your browser's de
 Open the developer console and go to the Elements tab. 
 Press ctrl+F and enter the selector in the opened search field at the bottom.
 If the selector was written correctly, you will see a highlighted element in the web page
-and yellow-marked element in the HTML code. 
+and a yellow-marked element in the HTML code. 
 Besides, you will see the number of found elements in the search field.
 It's preferable to write accurate selectors, which allow finding exactly one element.
 We'll practice writing such selectors in one of the following tasks.
@@ -62,7 +62,7 @@ It's better to use the format with square brackets in the attribute value search
 
 ### Search by name
 
-This is a variety of attribute value search, and it's written in the same way: [name="bullet-cat"]. We discuss it separately because it is frequently used and also considered as a separate kind of element search in Selenium WebDriver.
+This is a variety of attribute value search, and it's written in the same way: [name="bullet-cat"]. We discuss it separately because it is frequently used and also considered a separate kind of element search in Selenium WebDriver.
 
 ### Search by class
 
@@ -74,7 +74,7 @@ there is also a short version of search for them:
 That is, we write the name of the class preceded by a dot.
 
 Now, let's look into the important difference between the two class searches.
-Let's say the element "article" has more than one class, like in the page
+Let's say the element "article" has more than one class,
 like in the page http://suninjuly.github.io/cats.html:
 
 ``` 

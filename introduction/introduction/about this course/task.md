@@ -16,7 +16,7 @@ Here you will learn:
 <li> Setting expectations for various element searches. </li>
 <li> Working with the version control system Git (on a basic level). </li>
 <li> Using different testing frameworks. </li>
-<li> Organize your autotest code so that it could be easily read and supported. </li>
+<li> Organizing your autotest code so that it could be easily read and supported. </li>
 <li> ... and many other things – tips and tricks, as well as practices that we try to follow ourselves! </li>
 </ul>
 

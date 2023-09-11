@@ -1,10 +1,10 @@
 <h2>Task: find an element by the link text</h2>
 
-<p>In this task, we'll try to find elements by link text, and to do that, well use the find_element_by_link_text method:</p>
+<p>In this task, we'll try to find elements by link text, and to do that, we'll use the find_element_by_link_text method:</p>
 
 <pre><code>link = browser.find_element(By.LINK_TEXT, text)</code></pre>
 
-<p>As an argument, the method receives the text that we want to find in a link, that is, the very text between the opening and closing tags, like &lt;a&gt; this one &lt;/a&gt;</p>
+<p>As an argument, the method receives the text that we want to find in a link, that is, the very text between the opening and closing tags, like &lt;a&gt; this one &lt;/a&gt;.</p>
 
 <p>Let's say we have a page <a href="https://www.degreesymbol.net/" rel="noopener noreferrer nofollow">https://www.degreesymbol.net/</a> and we want to find a link with the text "Degree symbol in Math" and follow the link. If we want to find an exact match, we can use the following code: </p>
 
@@ -27,7 +27,7 @@ link.click()</code></pre>
 
 <ol>
 	<li>At the top of your code, add "import math".</li>
-	<li>Add a command that opens the page: <a href="http://suninjuly.github.io/find_link_text" rel="noopener noreferrer nofollow">http://suninjuly.github.io/find_link_text</a></li>
+	<li>Add a command that opens the page: <a href="http://suninjuly.github.io/find_link_text" rel="noopener noreferrer nofollow">http://suninjuly.github.io/find_link_text</a>.</li>
 	<li>Add a command that finds the link with a text. The text in the link you need to find has been encoded with the following formula: 
 	<pre><code>str(math.ceil(math.pow(math.pi, math.e)*10000))</code></pre>
 	<p>(you can either insert it into your code or execute it in the interpreter, copy the result, and use it in your code). </p>

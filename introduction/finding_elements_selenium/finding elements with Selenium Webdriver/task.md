@@ -25,7 +25,7 @@ button = browser.find_element(By.ID, "submit")</code></pre>
 
 <p>Notice that we imported the By class, which contains all possible locators.</p>
 
-<p>If the page opened but nothing happens, return to the console where you ran the script. Most probably, you will see the <strong>NoSuchElementException</strong> error. It will look like this::</p>
+<p>If the page opened but nothing happens, return to the console where you ran the script. Most probably, you will see the <strong>NoSuchElementException</strong> error. It will look like this:</p>
 
 <pre>
 <code class="language-no-highlight">selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"id","selector":"submit"}</code></pre>

@@ -24,7 +24,7 @@ Besides, the project contains a number of specific browser drivers and client li
 
 In most cases, it's clear from the context what part of Selenium is referred to.
 In this course, we'll talk about Selenium WebDriver, and each time we mention Selenium,
-we will mean that particular part of the project. What it is about, we'll discuss in more detail the next section. 
+we will mean that particular part of the project. What it is about, we'll discuss in more detail in the next section. 
 
 https://www.selenium.dev/
 https://github.com/seleniumhq/selenium

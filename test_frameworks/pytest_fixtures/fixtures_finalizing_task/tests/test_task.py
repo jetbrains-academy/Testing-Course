@@ -33,7 +33,7 @@ newname = "answer1.txt"
 
 class TestCase(unittest.TestCase):
     def test_script(self):
-        pytest.main(["task.py"])
+        pytest.main(["test_items.py"])
         assert not os.path.isfile(filename)
 
 

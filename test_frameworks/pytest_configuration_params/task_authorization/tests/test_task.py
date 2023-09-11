@@ -8,6 +8,7 @@ class TestCase(unittest.TestCase):
     def test_script(self):
         try:
             browser = webdriver.Chrome()
+            browser.implicitly_wait(10)
             test_authorisation(browser)
         finally:
             browser.quit()
