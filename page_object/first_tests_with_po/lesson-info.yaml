@@ -1,5 +1,5 @@
 type: framework
-custom_name: writing first test with page object
+custom_name: "writing first test with page object"
 content:
 - base_page
 - main_page
@@ -12,3 +12,4 @@ content:
 - logic_encapsulation
 - task10
 - task11
+

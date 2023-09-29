@@ -62,4 +62,6 @@ In the following steps, we'll see how to create a Page Object from that. </p>
 
 <p><a href="https://martinfowler.com/bliki/PageObject.html" rel="noopener noreferrer nofollow">https://martinfowler.com/bliki/PageObject.html</a></p>
 
+
 <p><a href="https://medium.com/tech-tajawal/page-object-model-pom-design-pattern-f9588630800b" rel="nofollow noopener noreferrer">https://medium.com/tech-tajawal/page-object-model-pom-design-pattern-f9588630800b</a></p>
+
