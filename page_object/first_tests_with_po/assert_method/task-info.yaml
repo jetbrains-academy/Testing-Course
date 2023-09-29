@@ -5,7 +5,7 @@ files:
   visible: true
 - name: __init__.py
   visible: false
-- name: base_page.py
+- name: pages/base_page.py
   visible: true
   placeholders:
   - offset: 69
@@ -18,13 +18,13 @@ files:
       file: base_page.py
       placeholder: 1
       is_visible: false
-- name: main_page.py
+- name: pages/main_page.py
   visible: true
   placeholders:
-  - offset: 181
+  - offset: 191
     length: 110
     placeholder_text: '# TODO'
-  - offset: 324
+  - offset: 334
     length: 106
     placeholder_text: '# TODO'
     dependency:
@@ -44,3 +44,5 @@ files:
   - offset: 101
     length: 1180
     placeholder_text: '# TODO'
+- name: pages/__init__.py
+  visible: true

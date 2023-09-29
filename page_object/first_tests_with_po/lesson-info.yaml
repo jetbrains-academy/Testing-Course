@@ -6,3 +6,9 @@ content:
 - po_test
 - red_test
 - assert_method
+- elements
+- login_page
+- page_switching
+- logic_encapsulation
+- task10
+- task11

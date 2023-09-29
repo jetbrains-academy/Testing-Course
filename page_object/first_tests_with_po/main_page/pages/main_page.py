@@ -1,4 +1,4 @@
-from page_object.first_tests_with_po.base_page.base_page import BasePage
+from page_object.first_tests_with_po.base_page.pages.base_page import BasePage
 from selenium.webdriver.common.by import By
 
 

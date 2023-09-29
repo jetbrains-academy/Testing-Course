@@ -1,0 +1,72 @@
+type: choice
+is_multiple_choice: true
+options:
+- text: Методы класса Page Object представляют собой только проверки состояния страницы
+  is_correct: false
+- text: Page Object уменьшает временные затраты на поддержку автотестов
+  is_correct: true
+- text: Без Page Object невозможно писать автотесты
+  is_correct: false
+- text: Page Object классы нельзя наследовать друг от друга
+  is_correct: false
+- text: "Page Object это специальный класс, встроенный в стандартную библиотеку Python"
+  is_correct: false
+- text: "Паттерн Page Object позволяет хранить селекторы в одном месте, отдельно о\
+    т логики, что упрощает поддержку автотестов"
+  is_correct: true
+files:
+- name: test_main_page.py
+  visible: true
+- name: __init__.py
+  visible: false
+- name: base_page.py
+  visible: true
+  placeholders:
+  - offset: 69
+    length: 398
+    placeholder_text: '# TODO'
+    dependency:
+      section: page_object
+      lesson: first_tests_with_po
+      task: task10
+      file: base_page.py
+      placeholder: 1
+      is_visible: false
+- name: main_page.py
+  visible: true
+  placeholders:
+  - offset: 187
+    length: 110
+    placeholder_text: '# TODO'
+    dependency:
+      section: page_object
+      lesson: first_tests_with_po
+      task: task10
+      file: main_page.py
+      placeholder: 1
+      is_visible: false
+  - offset: 330
+    length: 106
+    placeholder_text: '# TODO'
+    dependency:
+      section: page_object
+      lesson: first_tests_with_po
+      task: task10
+      file: main_page.py
+      placeholder: 2
+      is_visible: false
+- name: conftest.py
+  visible: true
+  placeholders:
+  - offset: 101
+    length: 1180
+    placeholder_text: '# TODO'
+    dependency:
+      section: page_object
+      lesson: first_tests_with_po
+      task: task10
+      file: conftest.py
+      placeholder: 1
+      is_visible: false
+custom_name: "task: page object"
+local_check: true

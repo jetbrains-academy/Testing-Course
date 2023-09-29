@@ -1,11 +1,9 @@
 type: edu
 custom_name: "task: page object for main page"
 files:
-- name: task.py
-  visible: true
 - name: __init__.py
   visible: false
-- name: base_page.py
+- name: pages/base_page.py
   visible: true
   placeholders:
   - offset: 16
@@ -22,10 +20,10 @@ files:
   visible: false
 - name: tests/__init__.py
   visible: false
-- name: main_page.py
+- name: pages/main_page.py
   visible: true
   placeholders:
-  - offset: 177
+  - offset: 183
     length: 106
     placeholder_text: '# TODO'
 - name: conftest.py
@@ -36,3 +34,5 @@ files:
     placeholder_text: '# TODO'
 - name: test_env.py
   visible: false
+- name: pages/__init__.py
+  visible: true

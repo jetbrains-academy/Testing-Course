@@ -1,0 +1,69 @@
+type: choice
+is_multiple_choice: true
+options:
+- text: Page Object - это библиотека для запуска авто-тестов
+  is_correct: false
+- text: Page Object - это паттерн для организации кода авто-тестов
+  is_correct: true
+- text: 'Page Object содержит в себе только элементы '
+  is_correct: false
+- text: 'Page Object содержит в себе методы для работы с веб-страницей '
+  is_correct: true
+- text: 'Page Object не помогает улучшить читабельность кода '
+  is_correct: false
+files:
+- name: test_main_page.py
+  visible: true
+- name: __init__.py
+  visible: false
+- name: base_page.py
+  visible: true
+  placeholders:
+  - offset: 69
+    length: 398
+    placeholder_text: '# TODO'
+    dependency:
+      section: page_object
+      lesson: first_tests_with_po
+      task: logic_encapsulation
+      file: base_page.py
+      placeholder: 1
+      is_visible: false
+- name: main_page.py
+  visible: true
+  placeholders:
+  - offset: 187
+    length: 110
+    placeholder_text: '# TODO'
+    dependency:
+      section: page_object
+      lesson: first_tests_with_po
+      task: logic_encapsulation
+      file: main_page.py
+      placeholder: 1
+      is_visible: false
+  - offset: 330
+    length: 106
+    placeholder_text: '# TODO'
+    dependency:
+      section: page_object
+      lesson: first_tests_with_po
+      task: logic_encapsulation
+      file: main_page.py
+      placeholder: 2
+      is_visible: false
+- name: conftest.py
+  visible: true
+  placeholders:
+  - offset: 101
+    length: 1180
+    placeholder_text: '# TODO'
+    dependency:
+      section: page_object
+      lesson: first_tests_with_po
+      task: logic_encapsulation
+      file: conftest.py
+      placeholder: 1
+      is_visible: false
+custom_name: "task: page object"
+local_check: true
