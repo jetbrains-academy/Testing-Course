@@ -1,0 +1,83 @@
+type: edu
+custom_name: logic encapsulation
+files:
+- name: test_main_page.py
+  visible: true
+- name: __init__.py
+  visible: false
+- name: pages/base_page.py
+  visible: true
+  placeholders:
+  - offset: 69
+    length: 398
+    placeholder_text: '# TODO'
+    dependency:
+      section: page_object
+      lesson: first_tests_with_po
+      task: page_switching
+      file: base_page.py
+      placeholder: 1
+      is_visible: false
+- name: pages/main_page.py
+  visible: true
+  placeholders:
+  - offset: 250
+    length: 99
+    placeholder_text: '# TODO'
+    dependency:
+      section: page_object
+      lesson: first_tests_with_po
+      task: page_switching
+      file: main_page.py
+      placeholder: 1
+      is_visible: false
+  - offset: 382
+    length: 106
+    placeholder_text: '# TODO'
+    dependency:
+      section: page_object
+      lesson: first_tests_with_po
+      task: page_switching
+      file: main_page.py
+      placeholder: 2
+      is_visible: false
+- name: conftest.py
+  visible: true
+  placeholders:
+  - offset: 101
+    length: 1180
+    placeholder_text: '# TODO'
+    dependency:
+      section: page_object
+      lesson: first_tests_with_po
+      task: page_switching
+      file: conftest.py
+      placeholder: 1
+      is_visible: false
+- name: tests/test_task.py
+  visible: false
+- name: tests/__init__.py
+  visible: false
+- name: pages/__init__.py
+  visible: true
+- name: pages/locators.py
+  visible: true
+  placeholders:
+  - offset: 70
+    length: 49
+    placeholder_text: '# TODO'
+  - offset: 147
+    length: 106
+    placeholder_text: '# TODO'
+- name: pages/login_page.py
+  visible: true
+  placeholders:
+  - offset: 251
+    length: 91
+    placeholder_text: '# TODO'
+  - offset: 380
+    length: 100
+    placeholder_text: '# TODO'
+  - offset: 521
+    length: 106
+    placeholder_text: '# TODO'

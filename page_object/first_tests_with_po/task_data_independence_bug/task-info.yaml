@@ -1,0 +1,119 @@
+type: edu
+custom_name: "task: localizing bug"
+files:
+- name: test_main_page.py
+  visible: true
+- name: __init__.py
+  visible: false
+- name: conftest.py
+  visible: true
+  placeholders:
+  - offset: 101
+    length: 1180
+    placeholder_text: '# TODO'
+    dependency:
+      section: page_object
+      lesson: first_tests_with_po
+      task: task_data_independence
+      file: conftest.py
+      placeholder: 1
+      is_visible: false
+- name: pages/__init__.py
+  visible: true
+- name: pages/base_page.py
+  visible: true
+- name: pages/locators.py
+  visible: true
+  placeholders:
+  - offset: 87
+    length: 32
+    placeholder_text: '# TODO'
+    dependency:
+      section: page_object
+      lesson: first_tests_with_po
+      task: task_data_independence
+      file: pages/locators.py
+      placeholder: 1
+      is_visible: false
+  - offset: 147
+    length: 105
+    placeholder_text: '# TODO'
+    dependency:
+      section: page_object
+      lesson: first_tests_with_po
+      task: task_data_independence
+      file: pages/locators.py
+      placeholder: 2
+      is_visible: false
+- name: pages/login_page.py
+  visible: true
+  placeholders:
+  - offset: 251
+    length: 91
+    placeholder_text: '# TODO'
+    dependency:
+      section: page_object
+      lesson: first_tests_with_po
+      task: task_data_independence
+      file: pages/login_page.py
+      placeholder: 1
+      is_visible: false
+  - offset: 380
+    length: 101
+    placeholder_text: '# TODO'
+    dependency:
+      section: page_object
+      lesson: first_tests_with_po
+      task: task_data_independence
+      file: pages/login_page.py
+      placeholder: 2
+      is_visible: false
+  - offset: 521
+    length: 106
+    placeholder_text: '# TODO'
+    dependency:
+      section: page_object
+      lesson: first_tests_with_po
+      task: task_data_independence
+      file: pages/login_page.py
+      placeholder: 3
+      is_visible: false
+- name: pages/main_page.py
+  visible: true
+  placeholders:
+  - offset: 250
+    length: 99
+    placeholder_text: '# TODO'
+    dependency:
+      section: page_object
+      lesson: first_tests_with_po
+      task: task_data_independence
+      file: pages/main_page.py
+      placeholder: 1
+      is_visible: false
+  - offset: 383
+    length: 103
+    placeholder_text: '# TODO'
+    dependency:
+      section: page_object
+      lesson: first_tests_with_po
+      task: task_data_independence
+      file: pages/main_page.py
+      placeholder: 2
+      is_visible: false
+- name: tests/test_task.py
+  visible: false
+- name: tests/__init__.py
+  visible: false
+- name: test_product_page.py
+  visible: true
+  placeholders:
+  - offset: 1344
+    length: 275
+    placeholder_text: '# TODO'
+- name: bugreport.txt
+  visible: true
+  placeholders:
+  - offset: 0
+    length: 80
+    placeholder_text: '# TODO'

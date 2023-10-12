@@ -1,5 +1,5 @@
 type: framework
-custom_name: "writing first test with page object"
+custom_name: writing test with page object model
 content:
 - base_page
 - main_page
@@ -12,4 +12,14 @@ content:
 - logic_encapsulation
 - task10
 - task11
-
+- task_add_item
+- task_data_independence
+- task_data_independence_bug
+- task_data_independence_bug_fix
+- checking_element_absence
+- task_check_element_absence
+- benefits_inheritance
+- task_inheritance
+- task_negative_inheritance
+- task_test_grouping
+- task_test_grouping_setup

@@ -1,0 +1,108 @@
+type: edu
+custom_name: "task: data independence"
+files:
+- name: test_main_page.py
+  visible: true
+- name: __init__.py
+  visible: false
+- name: conftest.py
+  visible: true
+  placeholders:
+  - offset: 101
+    length: 1180
+    placeholder_text: '# TODO'
+    dependency:
+      section: page_object
+      lesson: first_tests_with_po
+      task: task_add_item
+      file: conftest.py
+      placeholder: 1
+      is_visible: false
+- name: pages/__init__.py
+  visible: true
+- name: pages/base_page.py
+  visible: true
+- name: pages/locators.py
+  visible: true
+  placeholders:
+  - offset: 78
+    length: 111
+    placeholder_text: '# TODO'
+  - offset: 225
+    length: 410
+    placeholder_text: '# TODO'
+  - offset: 673
+    length: 186
+    placeholder_text: '# TODO'
+- name: pages/login_page.py
+  visible: true
+  placeholders:
+  - offset: 251
+    length: 91
+    placeholder_text: '# TODO'
+    dependency:
+      section: page_object
+      lesson: first_tests_with_po
+      task: task_add_item
+      file: pages/login_page.py
+      placeholder: 1
+      is_visible: false
+  - offset: 380
+    length: 101
+    placeholder_text: '# TODO'
+    dependency:
+      section: page_object
+      lesson: first_tests_with_po
+      task: task_add_item
+      file: pages/login_page.py
+      placeholder: 2
+      is_visible: false
+  - offset: 521
+    length: 106
+    placeholder_text: '# TODO'
+    dependency:
+      section: page_object
+      lesson: first_tests_with_po
+      task: task_add_item
+      file: pages/login_page.py
+      placeholder: 3
+      is_visible: false
+- name: pages/main_page.py
+  visible: true
+  placeholders:
+  - offset: 250
+    length: 99
+    placeholder_text: '# TODO'
+    dependency:
+      section: page_object
+      lesson: first_tests_with_po
+      task: task_add_item
+      file: pages/main_page.py
+      placeholder: 1
+      is_visible: false
+  - offset: 383
+    length: 103
+    placeholder_text: '# TODO'
+    dependency:
+      section: page_object
+      lesson: first_tests_with_po
+      task: task_add_item
+      file: pages/main_page.py
+      placeholder: 2
+      is_visible: false
+- name: tests/test_task.py
+  visible: false
+- name: tests/__init__.py
+  visible: false
+- name: test_product_page.py
+  visible: true
+  placeholders:
+  - offset: 320
+    length: 275
+    placeholder_text: '# TODO'
+- name: pages/product_page.py
+  visible: true
+  placeholders:
+  - offset: 105
+    length: 958
+    placeholder_text: '# TODO'
