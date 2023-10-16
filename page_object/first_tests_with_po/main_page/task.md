@@ -1,25 +1,25 @@
-<h2>Page Object для главной страницы сайта</h2>
+<h2>Page Object for the main page of the website</h2>
 
-<p>Теперь реализуем Page Object, который будет связан с главной страницей интернет-магазина. </p>
+<p>Now let's implement a Page Object that will be associated with the main page of the online store. </p>
 
-<p>1. Откройте файл <code>main_page.py</code> </p>
+<p>1. Open the file <code>main_page.py</code> </p>
 
-<p>2. В нем создайте класс  <code>MainPage</code>. Его нужно сделать наследником класса <code>BasePage</code>. Класс-предок в Python указывается в скобках: </p>
+<p>2. In it, create a class <code>MainPage</code>. It needs to inherit from the <code>BasePage</code> class. The parent class in Python is specified in parentheses: </p>
 
 <pre><code>class MainPage(BasePage): </code></pre>
 
-<p>таким образом, класс MainPage будет иметь доступ ко всем атрибутам и методам своего класса-предка. </p>
+<p>This way, the MainPage class will have access to all the attributes and methods of its parent class. </p>
 
-<p>3. Перенесите метод из предыдущего урока в класс <code>MainPage</code>:</p>
+<p>3. Copy the method from the previous lesson into the <code>MainPage</code> class:</p>
 
 <pre><code>def go_to_login_page(browser):
    login_link = browser.find_element(By.CSS_SELECTOR, "#login_link")
    login_link.click() </code></pre>
 
-<p>Чтобы все работало, надо слегка видоизменить его. В аргументы больше не надо передавать экземпляр браузера, мы его передаем и сохраняем на этапе создания Page Object. Вместо него нужно указать аргумент <code>self</code> , чтобы иметь доступ к атрибутам и методам класса: </p>
+<p>To make everything work, we need to modify it slightly. There is no need to pass the browser instance as an argument anymore; we pass and save it during the creation of the Page Object. Instead, we need to specify the <code>self</code> argument to have access to the attributes and methods of the class: </p>
 
 <p><code>def go_to_login_page(self):</code></p>
 
-<p>Так как браузер у нас хранится как аргумент класса <code>BasePage</code>, обращаться к нему нужно соответствующим образом с помощью <code>self</code>: </p>
+<p>Since our browser is stored as an argument of the <code>BasePage</code> class, you should access it appropriately using <code>self</code>: </p>
 
 <pre><code class="language-python">self.browser.find_element(By.CSS_SELECTOR, "#login_link")</code></pre>
