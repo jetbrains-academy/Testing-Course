@@ -29,8 +29,8 @@ files:
 - name: pages/locators.py
   visible: true
   placeholders:
-  - offset: 87
-    length: 32
+  - offset: 0
+    length: 1211
     placeholder_text: '# TODO'
     dependency:
       section: page_object
@@ -39,8 +39,8 @@ files:
       file: pages/locators.py
       placeholder: 1
       is_visible: false
-  - offset: 147
-    length: 105
+  - offset: 0
+    length: 1211
     placeholder_text: '# TODO'
     dependency:
       section: page_object
@@ -121,3 +121,5 @@ files:
   - offset: 0
     length: 80
     placeholder_text: '# TODO'
+- name: pages/product_page.py
+  visible: true

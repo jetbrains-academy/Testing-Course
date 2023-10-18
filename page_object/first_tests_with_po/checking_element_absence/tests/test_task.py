@@ -1,9 +1,9 @@
 import unittest
 
-from task import sum
+import pytest
+from _pytest.config import ExitCode
 
 
-# todo: replace this with an actual test
 class TestCase(unittest.TestCase):
-    def test_add(self):
-        self.assertEqual(sum(1, 2), 3, msg="adds 1 + 2 to equal 3")
+    def test_product_page(self):
+        assert pytest.main(["test_absence_methods.py"]) == ExitCode.OK

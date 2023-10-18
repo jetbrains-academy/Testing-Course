@@ -1,6 +1,6 @@
 import pytest
 
-from page_object.first_tests_with_po.task_add_item.pages.product_page import ProductPage
+from page_object.first_tests_with_po.task_data_independence_bug.pages.product_page import ProductPage
 
 
 @pytest.mark.parametrize('link', ["http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/?promo=offer0",

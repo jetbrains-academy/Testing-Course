@@ -6,7 +6,7 @@
 
 <p>Давайте например объединим в группу два теста в файле <em>test_main_page.py</em> и пометим его меткой <strong>login_guest</strong>:</p>
 
-<pre><code class="language-python">@pytest.mark.login_guest
+<pre><code class="language-python">
 class TestLoginFromMainPage():
     # не забываем передать первым аргументом self                       
     def test_guest_can_go_to_login_page(self, browser):     
@@ -15,13 +15,13 @@ class TestLoginFromMainPage():
     def test_guest_should_see_login_link(self, browser):
          # реализация теста</code></pre>
 
-<p>Попробуйте запустить тесты в этом файле с меткой (нужно добавить "<strong>-m</strong> <strong>login_guest</strong>"). Вы увидите, что запустились оба теста, хотя метка всего одна. </p>
+<p>Попробуйте запустить тесты в этом файле с указанием класса <code>pytest test_main_page.py::TestLoginFromMainPage</code> ( подробнее - <a href="https://docs.pytest.org/en/7.1.x/how-to/usage.html">PyTest - usage </a> ). Вы увидите, что запустились оба теста, хотя метка всего одна. </p>
 
 <p><strong>Во-вторых,</strong> для разных тест-кейсов можно выделять общие функции, чтобы не повторять код. Эти функции называются <strong>setup —</strong> функция, которая выполнится перед запуском каждого теста из класса, обычно туда входит подготовка данных, и <strong>teardown —</strong> функция, которая выполняется ПОСЛЕ каждого теста из класса, обычно там происходит удаление тех данных, которые мы создали во время теста. Хороший автотест должен сработать даже на чистой базе данных и удалить за собой сгенерированные в тесте данные. Такие функции реализуются с помощью фикстур, которые мы изучили в предыдущем модуле. Чтобы функция запускалась автоматически перед каждым тест-кейсом, нужно пометить её как <strong>@pytest.fixture</strong> с параметрами <strong>scope="function"</strong>,<strong> </strong>что значит запускать на каждую функцию, и <strong>autouse=True</strong>,<strong> </strong>что значит запускать автоматически без явного вызова фикстуры.</p>
 
 <p>Мы уже немного говорили про независимость от контента в предыдущих шагах — идеальным решением было бы везде, где мы работаем со страницей продукта, создавать новый товар в нашем интернет-магазине перед тестом и удалять по завершении теста. К сожалению, наш интернет-магазин пока не имеет возможности создавать объекты по API, но в идеальном мире мы бы написали вот такой тест-класс в файле <em>test_product_page.py:</em></p>
 
-<pre><code class="language-python">@pytest.mark.login
+<pre><code class="language-python">
 class TestLoginFromProductPage():
     @pytest.fixture(scope="function", autouse=True)
     def setup(self):
