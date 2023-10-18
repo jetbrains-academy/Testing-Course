@@ -1,33 +1,33 @@
-<p><strong>Важно! </strong>В этом уроке мы напишем самостоятельно простую реализацию паттерна Page Object.
-А в следующих уроках уже рассмотрим существующие фреймворки и то, 
-как они могут облегчить нам жизнь. Сейчас самая главная задача &mdash; 
-осознать принципы работы.&nbsp;</p>
+<p><strong>Important! </strong>In this lesson, we will write a simple implementation of the Page Object pattern.
+In the following lessons, we will explore existing frameworks and the ways
+they can make our lives easier. Right now, the most crucial task
+is to understand the principles of their work.&nbsp;</p>
 
 
-<p>Для начала сделаем базовую страницу, от которой будут унаследованы все остальные классы. 
-В ней мы опишем&nbsp;вспомогательные методы для работы с вебдрайвером.</p>
+<p>To start, let's create a base page from which all other classes will be inherited. 
+In it, we will describe auxiliary methods for working with the web driver.</p>
 
-<p>1. В файле <code>base_page.py</code> создайте класс с названием <code>BasePage</code>.&nbsp;</p>
+<p>1. In the <code>base_page.py</code> file, create a class named <code>BasePage</code>.&nbsp;</p>
 
-<p>В Python такие вещи делаются с помощью следующей конструкции:&nbsp;</p>
+<p>In Python, such things are done using the following construct:&nbsp;</p>
 
 <pre>
 <code>class BasePage:</code></pre>
 
-<p>2. Теперь в наш класс нужно добавить методы.
-Первым делом добавим <em>конструктор &mdash;&nbsp;</em>метод, который вызывается, когда мы создаем объект. Конструктор объявляется ключевым словом <code>__init__</code>. В него в качестве параметров мы передаем экземпляр драйвера и url адрес. Внутри конструктора сохраняем эти данные как аттрибуты нашего класса. Получается примерно так:&nbsp;</p>
+<p>2. Now we need to add methods to our class.
+First of all, let's add a <em>constructor &mdash;&nbsp;</em>a method that is called when we create an object. A constructor is declared with the keyword <code>__init__</code>. As parameters, we pass an instance of the driver and the URL address. Inside the constructor, we save this data as attributes of our class. It looks like this:&nbsp;</p>
 
 <pre>
 <code class="language-python">def __init__(self, browser, url):
     self.browser = browser
     self.url = url</code></pre>
 
-<p>3. Теперь добавим еще один&nbsp;метод open. Он должен открывать нужную страницу в браузере, используя метод get().</p>
+<p>3. Now let's add another method, open. It should open the required page in the browser using the get() method.</p>
 
-<p>Объявите ниже в том же классе:</p>
+<p>Declare the following in the same class:</p>
 
 <pre>
 <code class="language-python">def open(self):</code></pre>
 
-<p>и реализуйте этот метод: нужна всего одна строка. 
+<p>And implement this method: it only needs one line.
 &nbsp;</p>
