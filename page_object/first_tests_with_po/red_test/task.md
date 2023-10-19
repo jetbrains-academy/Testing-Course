@@ -1,26 +1,26 @@
-<h2>Методы-проверки в Page Object</h2>
+<h2>Verification methods in Page Object</h2>
 
-<p>Давайте теперь автоматизируем другой тест-кейс и посмотрим на его примере, как делать методы-проверки. </p>
+<p>Let's now automate another test case and see, through an example, how to create verification methods. </p>
 
-<p>Допустим, нам нужно проверять такой сценарий: </p>
+<p>Suppose we need to check the following scenario: </p>
 
 <ol>
-	<li>Открыть главную страницу </li>
-	<li>Проверить, что есть ссылка, которая ведет на логин </li>
+	<li>Open the main page. </li>
+	<li>Check if there is a link leading to login. </li>
 </ol>
 
-<p>Для этого в классе MainPage нужно реализовать метод, который будет проверять наличие ссылки. Обычно все такие методы-проверки называются похожим образом, мы будем называть их should_be_(название элемента). </p>
+<p>For this, in the MainPage class, we need to implement a method that will check the presence of the link. Typically, all such verification methods are named similarly; we will call them should_be_(element name). </p>
 
-<p>Итак, в классе MainPage создайте метод <code>should_be_login_link</code>. </p>
+<p>So, in the MainPage class, create the method <code>should_be_login_link</code>. </p>
 
-<p>Для первой пробы можно реализовать его самым примитивным образом: </p>
+<p>For the first attempt, you can implement it in the simplest way: </p>
 
 <pre><code>def should_be_login_link(self):
     self.browser.find_element(By.CSS_SELECTOR, "#login_link_invalid")</code></pre>
 
-<p>Сейчас мы намеренно сделали селектор неправильным, чтобы посмотреть, что именно выдаст тест, если поймает баг. Это хорошая практика: писать сначала красные тесты и только потом делать их зелеными.  </p>
+<p>Currently, we intentionally made the selector incorrect to see what the test will report when it catches a bug. This is a good practice: writing red tests first and only then making them green. </p>
 
-<p>Добавляем в файл с тест-кейсами новый тест: </p>
+<p>Let's add a new test to the test case file: </p>
 
 <pre><code class="language-python">def test_guest_should_see_login_link(browser):
     link = "http://selenium1py.pythonanywhere.com/"
@@ -28,8 +28,8 @@
     page.open()
     page.should_be_login_link()</code></pre>
 
-<p>Запустите получившийся тест: </p>
+<p>Run the resulting test: </p>
 
 <pre><code>pytest -v --tb=line --language=en test_main_page.py</code></pre>
 
-<p>Вывод об ошибке не очень понятный, правда? Разобраться, что именно пошло не так, довольно тяжело. Поэтому в следующем шаге нам нужно будет обработать исключение, которое выбрасывает WebDriver. </p>
+<p>The error output is not very clear, right? It's quite challenging to understand what went wrong exactly. Therefore, in the next step, we will need to handle the exception thrown by the WebDriver. </p>
