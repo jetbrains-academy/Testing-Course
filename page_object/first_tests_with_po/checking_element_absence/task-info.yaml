@@ -111,3 +111,5 @@ files:
   visible: true
 - name: test_absence_methods.py
   visible: true
+- name: pages/basket_page.py
+  visible: false

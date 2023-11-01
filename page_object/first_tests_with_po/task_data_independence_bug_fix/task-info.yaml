@@ -123,3 +123,5 @@ files:
     placeholder_text: '# TODO'
 - name: pages/product_page.py
   visible: true
+- name: pages/basket_page.py
+  visible: false

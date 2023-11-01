@@ -106,3 +106,5 @@ files:
   - offset: 105
     length: 958
     placeholder_text: '# TODO'
+- name: pages/basket_page.py
+  visible: false

@@ -46,3 +46,13 @@ files:
     placeholder_text: '# TODO'
 - name: pages/__init__.py
   visible: true
+- name: test_product_page.py
+  visible: false
+- name: pages/basket_page.py
+  visible: false
+- name: pages/login_page.py
+  visible: false
+- name: pages/product_page.py
+  visible: false
+- name: pages/locators.py
+  visible: false

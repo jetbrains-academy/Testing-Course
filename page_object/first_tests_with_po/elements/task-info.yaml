@@ -66,3 +66,11 @@ files:
   - offset: 46
     length: 73
     placeholder_text: '# TODO'
+- name: test_product_page.py
+  visible: false
+- name: pages/basket_page.py
+  visible: false
+- name: pages/login_page.py
+  visible: false
+- name: pages/product_page.py
+  visible: false
