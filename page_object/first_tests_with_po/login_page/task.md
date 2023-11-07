@@ -1,23 +1,22 @@
-<h2>Реализация LoginPage</h2>
+<h2>Implementation of LoginPage</h2>
 
-<p>Если вы хорошо ориентируетесь в тест-дизайне,
-вы заметили что в тесте с переходом к логину нет никаких проверок.&nbsp;Давайте&nbsp;проверим,&nbsp;что мы действительно перешли на страницу логина. Для этого нам&nbsp;будет нужен&nbsp;новый Page Object. Заодно разберемся, как между ними переключаться в ходе теста.&nbsp;</p>
+<p>If you're well-versed in test design, you may have noticed that there are no checks in the test for navigating to the login page. Let's verify that we have indeed navigated to the login page. For this, we'll need a new Page Object. At the same time, we'll understand how to switch between those during the test.&nbsp;</p>
 
-<p> Откройте файл LoginPage в папке pages.  Внутри есть методы проверок:&nbsp;</p>
+<p> Open the LoginPage file in the pages folder. Inside, there are verification methods:&nbsp;</p>
 
 <pre>
 <code>should_be_login_url
 should_be_login_form
 should_be_register_form</code></pre>
 
-<p>Реализуйте их самостоятельно:&nbsp;</p>
+<p>Implement them yourself:&nbsp;</p>
 
-<p>1. В файле locators.py создайте класс&nbsp;LoginPageLocators&nbsp;</p>
+<p>1. In the locators.py file, create the LoginPageLocators class.</p>
 
-<p>2. Подберите селекторы к формам регистрации и логина, добавьте их в класс&nbsp;LoginPageLocators</p>
+<p>2. Choose selectors for the registration and login forms and add them to the LoginPageLocators class.</p>
 
-<p>3. Напишите проверки, используя эти селекторы. Не забудьте через запятую указать адекватное сообщение об ошибке. Напишите сначала красный тест, чтобы убедиться в понятности вывода.&nbsp;</p>
+<p>3. Write checks using these selectors. Don't forget to provide a meaningful error message separated by a comma. Write a failing test first to ensure the clarity of the output.&nbsp;</p>
 
-<p>4. В методе should_be_login_url реализуйте проверку, что подстрока &quot;login&quot; есть в текущем url&nbsp;браузера. Для этого используйте соответствующее&nbsp;<a href="https://selenium-python.readthedocs.io/api.html#selenium.webdriver.remote.webdriver.WebDriver.current_url" rel="noopener noreferrer nofollow">свойство Webdriver</a>.</p>
+<p>4. In the should_be_login_url method, implement a check that the substring &quot;login&quot; is present in the current browser URL. Use the appropriate&nbsp;<a href="https://selenium-python.readthedocs.io/api.html#selenium.webdriver.remote.webdriver.WebDriver.current_url" rel="noopener noreferrer nofollow">WebDriver property</a> for that.</p>
 
-<p>Теперь посмотрим,&nbsp;как можно осуществлять переход между страницами.&nbsp;</p>
+<p>Now let's see how we can navigate between pages.&nbsp;</p>
