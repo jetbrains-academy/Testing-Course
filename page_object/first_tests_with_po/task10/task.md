@@ -1,5 +1,5 @@
-<h2>Задание: PageObject </h2>
+<h2>Task: PageObject </h2>
 
-<p>Давайте подведем небольшие итоги про Page Object. </p>
+<p>Let's briefly summarize what we've learned about the Page Object. </p>
 
-<p>Выберите все верные утверждения: </p>
+<p>Choose the correct statements: </p>
