@@ -1,33 +1,33 @@
-<h2>Задание: группировка тестов и setup</h2>
+<h2>Task: test grouping and setup</h2>
 
-<p><span style="color: #ff4363;"><strong>ВАЖНО! </strong></span>Вообще говоря манипулировать браузером в сетапе и уж тем более что-то там проверять — это плохая практика, лучше так не делать без особой необходимости. Здесь этот пример исключительно в учебных целях, чтобы вы попробовали писать сетапы для тестов. В реальной жизни мы реализовали бы все эти манипуляции с помощью API или напрямую через базу данных.</p>
+<p><span style="color: #ff4363;"><strong>Important! </strong></span>Generally, manipulating the browser in the setup, especially performing checks, is bad practice. It's better not to do this without special necessity. Here, this example is purely for educational purposes, for you to try writing setups for tests. In real life, we would implement all these manipulations using an API or directly through the database.</p>
 
-<p>В этом задании мы хотим добавить тестовые сценарии не только для гостей сайта, но и для зарегистрированных пользователей. Для этого:</p>
+<p>In this task, we want to add test scenarios not only for website visitors but also for registered users. To achieve this:</p>
 
 <ol>
-	<li>В файле <em>test_product_page.py</em> добавьте новый класс для тестов <strong>TestUserAddToBasketFromProductPage.</strong></li>
-	<li>Добавьте туда уже написанные тесты <strong>test_guest_cant_see_success_message</strong> и <strong>test_guest_can_add_product_to_basket</strong> и переименуйте, заменив <strong>guest</strong> на <strong>user</strong>. Шаги тестов не изменятся, добавится лишь регистрация перед тестами. Параметризация здесь уже не нужна, не добавляйте её. </li>
-	<li>Добавьте в <strong>LoginPage</strong> метод <strong>register_new_user(email, password),</strong> который принимает две строки и регистрирует пользователя. Реализуйте его, описав соответствующие элементы страницы.</li>
-	<li>Добавьте в <strong>BasePage</strong> проверку того, что пользователь залогинен:
+	<li>In the <em>test_product_page.py</em> file, add a new class for tests named <strong>TestUserAddToBasketFromProductPage.</strong></li>
+	<li>Add the already written tests <strong>test_guest_cant_see_success_message</strong> and <strong>test_guest_can_add_product_to_basket</strong> to this class and rename them, replacing <strong>guest</strong> with <strong>user</strong>. The test steps will remain the same; only registration will be added before the tests. Parameterization is not needed here; do not add it. </li>
+	<li>Add a method <strong>register_new_user(email, password),</strong> to the <strong>LoginPage</strong>, which takes two strings and registers a user. Implement it by describing the corresponding page elements.</li>
+	<li>In <strong>BasePage</strong>, add a check that the user is logged in:
 	<pre><code>def should_be_authorized_user(self)</code>	</li>
-	<li>Селектор соответственно в <strong>BasePageLocators</strong>:
+	<li>Add a selector, accordingly, to <strong>BasePageLocators</strong>:
 	<pre><code class="language-python">USER_ICON = (By.CSS_SELECTOR, "your selector")</code></pre>
 	</li>
-	<li>Добавьте в класс фикстуру setup. В этой функции нужно:
+	<li>Add the setup fixture to the class. In this function, you need to:
 	<ul>
-		<li>открыть страницу регистрации;</li>
-		<li>зарегистрировать нового пользователя;</li>
-		<li>проверить, что пользователь залогинен.</li>
+		<li>Open the registration page.</li>
+		<li>Register a new user.</li>
+		<li>Check that the user is logged in.</li>
 	</ul>
 	</li>
-	<li>Запустите оба теста и убедитесь, что они проходят и действительно регистрируют новых пользователей</li>
+	<li>Run both tests and make sure they pass and indeed register new users.</li>
 </ol>
 
-<p><strong>Примечание: </strong></p>
+<p><strong>Note: </strong></p>
 
-<p><strong>yield</strong> писать не нужно — пользователей удалять мы не умеем. Генерировать email адреса для пользователей можно по-разному, один из вариантов, чтобы избежать повторения, использовать текущее время с помощью модуля <strong>time</strong>:</p>
+<p>You don't need to write <strong>yield</strong> — we don't know how to delete users. You can generate email addresses for users in different ways. One option, to avoid repetition, is to use the current time with the help of the <strong>time</strong> module:</p>
 
-<pre><code class="language-python">import time # в начале файла
+<pre><code class="language-python">import time # at the top of the file
 
 email = str(time.time()) + "@fakemail.org"</code></pre>
 
