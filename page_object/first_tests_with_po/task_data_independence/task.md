@@ -1,18 +1,18 @@
-<h2>Задание: независимость от данных</h2>
+<h2>Task: Data Independence Задание: независимость от данных</h2>
 
-<p>Хорошие автотесты должны быть максимально&nbsp;независимы от данных. Худшее, что можно сделать в тесте это &quot;захардкодить&quot;&nbsp;проверки для объектов, которые существуют только на вашем конкретном инстансе. Почему? Потому что данные будут постоянно меняться, и при каждом таком изменении придется чинить автотесты. Еще это ухудшает переиспользование метода: допустим,&nbsp;мы хотим прогнать тест для множества товаров, тогда придется писать большое количество проверок: по одной для каждого товара. В конечном итоге, это сказывается на качестве продукта,&nbsp;так как такие&nbsp;тесты работают на узкой выборке страниц.</p>
+<p>Good automated tests should be as independent of data as possible. The worst thing you can do in a test is to "hardcode" checks for objects that exist only in your specific instance. Why? Because the data will constantly change, and with each such change, you'll have to fix the automated tests. It also hinders method reuse; for example, if you want to run a test for multiple products, you'll have to write a large number of checks: one for each product. Ultimately, this affects the product's quality, as such tests operate on a narrow selection of pages.</p>
 
-<p>Общая рекомендация: ваши тесты не должны зависеть от того, что вы&nbsp;не можете контролировать. Это может быть информация, уже хранящаяся в базе данных,&nbsp;или сторонние сервисы, которые использует ваше приложение. Вы можете проверять конкретные данные только в случае, когда используете специально подготовленную&nbsp;тестовую базу, инициируемую перед каждым запуском тестов,&nbsp;или добавляете нужные&nbsp;данные в базу данных напрямую&nbsp;или через API приложения.&nbsp;</p>
+<p>General recommendation: your tests should not depend on things you cannot control. This could be information already stored in the database or third-party services used by your application. You can check specific data only when using a specially prepared test database initiated before each test run, or when adding the necessary data directly to the database or through the application's API.&nbsp;</p>
 
-<p>Попробуйте запустить автотест, который мы написали на предыдущем шаге, на странице&nbsp;<a href="http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/?promo=newYear2019" rel="noopener noreferrer nofollow" style="font-size: inherit; font-weight: inherit;">http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/?promo=newYear2019</a>.</p>
+<p>Try running the automated test we wrote in the previous step on the page&nbsp;<a href="http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/?promo=newYear2019" rel="noopener noreferrer nofollow" style="font-size: inherit; font-weight: inherit;">http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/?promo=newYear2019</a>.</p>
 
-<p>Если&nbsp;в предыдущем тесте после добавления товара в корзину вы&nbsp;проверяли в сообщении сайта фиксированную строку &quot;The shellcoder&#39;s handbook&quot;,&nbsp;то тест упадет, так как теперь мы добавили другой товар. Если тест прошел, то вы молодец и можете просто вставить новый проверочный код в этом задании.&nbsp;</p>
+<p>If in the previous test, after adding the product to the cart, you checked for a fixed string &quot;The shellcoder&#39;s handbook&quot; in the site's message, the test will fail because we've now added a different product. If the test passes, you've done well, and you can simply insert the new validation code into this task..&nbsp;</p>
 
-<p>Чтобы тест был независимым от контента:&nbsp;</p>
+<p>To make the test independent of content:&nbsp;</p>
 
 <ul>
-	<li>Измените методы проверки таким образом, чтобы они принимали как аргумент название товара и цену товара.</li>
-	<li>Сделайте метод, который вытаскивает из элемента текст-название товара и возвращает его.</li>
-	<li>Сделайте такой же метод для цены.</li>
-	<li>Теперь проверяйте, что название товара в сообщении совпадает с заголовком товара.</li>
+	<li>Modify the verification methods to accept the product name and price as arguments.</li>
+	<li>Create a method that extracts the text—the product name—from an element and returns it.</li>
+	<li>Create a similar method for the price.</li>
+	<li>Now, check that the product name in the message matches the product header.</li>
 </ul>
