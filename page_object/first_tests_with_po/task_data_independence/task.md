@@ -1,4 +1,4 @@
-<h2>Task: Data Independence Задание: независимость от данных</h2>
+<h2>Task: Data Independence</h2>
 
 <p>Good automated tests should be as independent of data as possible. The worst thing you can do in a test is to "hardcode" checks for objects that exist only in your specific instance. Why? Because the data will constantly change, and with each such change, you'll have to fix the automated tests. It also hinders method reuse; for example, if you want to run a test for multiple products, you'll have to write a large number of checks: one for each product. Ultimately, this affects the product's quality, as such tests operate on a narrow selection of pages.</p>
 
