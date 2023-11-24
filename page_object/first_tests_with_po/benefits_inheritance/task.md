@@ -13,6 +13,6 @@
 
 <p>In general, we can build any hierarchy of our classes to interact with the web application if it helps avoid code duplication. For instance, if there's a set of pages with common methods, we can organize them through inheritance with an additional "layer".</p>
 
-<p>For example, when testing a lesson page in Hyperskill, we use LessonPage as the base class, containing common elements and methods for all types of steps (header, sidebar schedule) and a superclass for each type of task. Such an approach helps avoid code duplication and the need to maintain a file with over 1000 lines of code.</p>
+<p>For example, when testing a lesson page in Hyperskill, we use LessonPage as the base class, containing common elements and methods for all types of steps (header, sidebar schedule) and a subclass for each type of task. Such an approach helps avoid code duplication and the need to maintain a file with over 1000 lines of code.</p>
 
 ![pages2 (1).svg](pages2%20%281%29.svg)
