@@ -8,7 +8,7 @@
     LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
     LOGIN_LINK_INVALID = (By.CSS_SELECTOR, "#login_link_inc")</code></pre>
 
-<p>Move the corresponding methods to the <em>base_page.py</em> file, пreplacing the locator class with BasePageLocators:  </p>
+<p>Move the corresponding methods to the <em>base_page.py</em> file, replacing the locator class with BasePageLocators:  </p>
 
 <pre><code>from .locators import BasePageLocators
 
