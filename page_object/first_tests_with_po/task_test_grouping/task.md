@@ -26,7 +26,7 @@ class TestLoginFromProductPage():
     @pytest.fixture(scope="function", autouse=True)
     def setup(self):
         self.product = ProductFactory(title = "Best book created by robot")
-        # create API
+        # create a product with HTTP API
         self.link = self.product.link
         yield
         # after this keyword, teardown starts
