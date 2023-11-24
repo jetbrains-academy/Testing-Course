@@ -1,23 +1,23 @@
-<h2>Переходы между страницами</h2>
+<h2>Switching between pages</h2>
 
-<p>Переход можно реализовать двумя разными способами. </p>
+<p>Switching can be implemented in two different ways. </p>
 
-<p>Первый способ: возвращать нужный Page Object.</p>
+<p>The first way is to return the required Page Object.</p>
 
-<p>Для этого в файле main_page.py нужно сделать импорт страницы с логином: </p>
+<p>To do this, you need to import the login page in the main_page.py file: </p>
 
 <pre><code class="language-python">from .login_page import LoginPage</code></pre>
 
-<p>Затем в методе, который осуществляет переход к странице логина, проинициализировать новый объект Page и вернуть его: </p>
+<p>Then, in the method that navigates to the login page, initialize a new Page object and return it: </p>
 
 <pre><code class="language-python">def go_to_login_page(self):
     link = self.browser.find_element(*MainPageLocators.LOGIN_LINK)
     link.click()
     return LoginPage(browser=self.browser, url=self.browser.current_url) </code></pre>
 
-<p>Обратите внимание! При создании объекта мы обязательно передаем ему тот же самый объект драйвера для работы с браузером, а в качестве url передаем текущий адрес.</p>
+<p>Pay attention! When creating the object, we must pass the same driver object for interacting with the browser, and as the URL, we pass the current address.</p>
 
-<p>Теперь в тесте нам не нужно думать про инициализацию страницы: она уже создана. Сохранив возвращаемое значение в переменную, мы можем использовать методы новой страницы в тесте:</p>
+<p>Now, in the test, we don't need to worry about page initialization; it's already created. By saving the returned value in a variable, we can use the methods of the new page in the test:</p>
 
 <pre><code>def test_guest_can_go_to_login_page(browser):
     link = "http://selenium1py.pythonanywhere.com"
@@ -26,33 +26,33 @@
     login_page = page.go_to_login_page()
     login_page.should_be_login_page()</code></pre>
 
-<p>Плюсы такого подхода: </p>
+<p>Pros of this approach: </p>
 
 <ul>
-	<li>тест выглядит аккуратнее — не нужно инициализировать страницу в теле теста;</li>
-	<li>явно возвращаем страницу — тип страницы ассоциирован с методом;</li>
-	<li>не нужно каждый раз думать в разных тестах про инициализацию страницы — уменьшаем дублирование кода;</li>
+	<li>The test looks neater—no need to initialize the page in the test body.</li>
+	<li>We explicitly return the page—the page type is associated with the method.</li>
+	<li>No need to think about page initialization in different tests—code duplication is reduced.</li>
 </ul>
 
-<p>минусы: </p>
+<p>Cons: </p>
 
 <ul>
-	<li>если у нас копится большое количество страниц и переходов — образуется много перекрестных импортов;</li>
-	<li>большая связность кода — при изменении логики придется менять возвращаемое значение;</li>
-	<li>сложнее понимать код, так как страница инициализируется неявно;</li>
-	<li>образуются циклические зависимости, что часто приводит к ошибкам.</li>
+	<li>If there is a large number of pages and transitions, there will be many cross-imports.</li>
+	<li>Higher code cohesion—changing the logic requires changing the returned value.</li>
+	<li>Harder to understand the code since the page is initialized implicitly.</li>
+	<li>Circular dependencies are formed, often leading to errors.</li>
 </ul>
 
-<p>Второй подход: переход происходит неявно, страницу инициализируем в теле теста: </p>
+<p>The second approach is implicit transition; the page is initialized in the test body: </p>
 
-<p>1. Закомментируйте строку с возвращаемым значением </p>
+<p>1. Comment out the line with the returned value </p>
 
 <pre><code class="language-python">def go_to_login_page(self):
     link = self.browser.find_element(*MainPageLocators.LOGIN_LINK)
     link.click()
     # return LoginPage(browser=self.browser, url=self.browser.current_url) </code></pre>
 
-<p>2. Инициализируем LoginPage в теле теста (не забудьте импортировать в файл нужный класс): </p>
+<p>2. Initialize LoginPage in the test body (don't forget to import the required class): </p>
 
 <pre><code>from .pages.login_page import LoginPage
 
@@ -64,21 +64,21 @@ def test_guest_can_go_to_login_page(browser):
     login_page = LoginPage(browser, browser.current_url)
     login_page.should_be_login_page()</code></pre>
 
-<p>Плюсы:</p>
+<p>Pros:</p>
 
 <ul>
-	<li>меньше связность кода;</li>
-	<li>меньше импортов, нет перекрестных импортов;</li>
-	<li>больше гибкость;</li>
-	<li>в тесте понятнее что происходит, т.к. явно инициализируем страницу.</li>
+	<li>Less code cohesion.</li>
+	<li>Fewer imports, no cross-imports.</li>
+	<li>More flexibility.</li>
+	<li>Clearer understanding of what is happening in the test, as we explicitly initialize the page.</li>
 </ul>
 
-<p>Минусы:</p>
+<p>Cons:</p>
 
 <ul>
-	<li>появляется лишний шаг в тест-кейсе;</li>
-	<li>каждый раз при написании теста нужно думать про корректные переходы;</li>
-	<li>дублируется код.</li>
+	<li>An extra step is added to the test case.</li>
+	<li>Every time a test is written, you need to think about correct transitions.</li>
+	<li>Code duplication.</li>
 </ul>
 
-<p>И тот и другой подход можно успешно применять в своих проектах, главное делать это с умом. Сейчас оставьте второй вариант с явной инициализацией страниц в теле теста, чтобы избежать лишних сложностей с циклическими зависимостями. </p>
+<p>Both approaches can be successfully applied in your projects; the key is to do it wisely. For now, let's stick with the second option with explicit page initialization in the test body to avoid unnecessary complexities with circular dependencies. </p>
