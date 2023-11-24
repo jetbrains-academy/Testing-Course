@@ -4,9 +4,9 @@
 
 <p>Now, with the help of a short and instructive story, let's see why it's <strong>almost&nbsp;</strong>the case.</p>
 
-<p>We already have two test cases that, in one way or another, interact with the login link. Let's imagine a situation where we have a trendy agile process: developers are constantly making changes to the product. At some beautiful moment, the changes also affect the website header. A developer comes to you with a new link and asks you to test it.</p>
+<p>We already have two test cases that, in one way or another, interact with the login link. Let's imagine a situation where we have a trendy agile process: developers are constantly making changes to the product. At some moment, the changes also affect the website header. A developer comes to you with a new link and asks you to test it.</p>
 
-<p>Chenge the link where tests are executed for <a href="http://selenium1py.pythonanywhere.com/catalogue/the-shellcoders-handbook_209?promo=midsummer" rel="noopener noreferrer nofollow">http://selenium1py.pythonanywhere.com/catalogue/the-shellcoders-handbook_209?promo=midsummer</a>.&nbsp;</p>
+<p>Change the link where tests are executed for <a href="http://selenium1py.pythonanywhere.com/catalogue/the-shellcoders-handbook_209?promo=midsummer" rel="noopener noreferrer nofollow">http://selenium1py.pythonanywhere.com/catalogue/the-shellcoders-handbook_209?promo=midsummer</a>.&nbsp;</p>
 
 <p>Run the tests with the command:</p>
 
