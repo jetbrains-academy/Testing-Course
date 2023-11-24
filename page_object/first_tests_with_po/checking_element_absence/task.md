@@ -1,30 +1,30 @@
-<h2>Отрицательные проверки: как проверить отсутствие элемента</h2>
+<h2>Negative checks: how to verify the absence of an element</h2>
 
-<p>Иногда в ходе написания авто-тестов возникает ситуация, когда нам нужно проверить не только присутствие элемента на странице, но и то, что элемента на странице нет. Здесь стоит разделять две принципиально разные ситуации, в зависимости от того как ведет себя веб-приложение: </p>
+<p>Sometimes, during the process of writing automated tests, a situation arises where we need to check not only the presence of an element on a page but also that an element is absent. Here, it's essential to distinguish between two fundamentally different cases, depending on how the web application behaves: </p>
 
-<p> <strong>1. Элемент потенциально может появиться на странице</strong> (но вообще-то не должен). Например, мы открываем страницу товара, и ожидаем, что там нет сообщения об успешном добавлении в корзину. Мы проверяем, что элемента нет, но при позитивном сценарии, когда мы добавляем товар в корзину, сообщение тоже появляется не сразу. Если при негативной проверке мы не добавим ожидание, а сразу выдадим результат: <span style="color: #66cc66;">"True, элемента действительно нет, все хорошо"</span>, мы рискуем нарваться на ложно-зеленый тест. То есть, можем пропустить баг. </p>
+<p> <strong>1. The element might potentially appear on the page (but ideally shouldn't). For example, when we open a product page and expect there to be no message about a successful addition to the cart. We check that the element is not present. However, in a positive scenario, when we add a product to the cart, the message also doesn't appear immediately. If, during negative checking, we don't include a wait and immediately provide the result as "True, the element is indeed not there, everything is good," we risk encountering a falsely green test. In other words, we might overlook a bug. </p>
 
-<p><strong>2. Элемент присутствует на странице и должен исчезнуть</strong> со временем или в результате действий пользователя. Это может быть, например, удаление товара из корзины, или исчезновение лоадера с загрузкой. </p>
+<p><strong>2. The element is present on the page and should disappear over time or as a result of user actions. This could be, for instance, the removal of a product from the cart or the disappearance of a loader during loading. </p>
 
-<h3>Почему нужно писать такие проверки с осторожностью? </h3>
+<h3>Why should we write such checks cautiously? </h3>
 
-<p><em>Во-первых</em>, нам приходится всегда гарантированно ждать. В первом примере нам всегда нужно ждать несколько секунд, чтобы убедиться, что элемент не появился. Если мы используем нашу написанную функцию is_element_present, то тест с такой проверкой будет ждать полные и честные 10 секунд:</p>
+<p><em>Firstly</em>, we absolutely always have to wait. In the first example, we always need to wait for a few seconds to ensure that the element has not appeared. If we use our is_element_present function, the test with such a check will wait the full and honest 10 seconds:</p>
 
 <pre><code>def should_not_be_success_message(self):
     assert not self.is_element_present(*ProductPageLocators.SUCCESS_MESSAGE),\
         "Success message is presented"</code></pre>
 
-<p>Что очень много для зелёного теста. То есть implicit_wait уже в такой ситуации не подходит, придется использовать явное ожидание и аккуратно подбирать условия. Время ожидания тоже придется подбирать эмпирически, путем проб, ошибок, ложноположительных и ложноотрицательных результатов. </p>
+<p>Which is quite a lot for a green test. That is, implicit_wait is no longer suitable in such a situation; explicit waiting will have to be used, and conditions will need to be carefully selected. The wait time will also need to be empirically determined through trial and error, false positives, and false negatives. </p>
 
-<p><em>Во-вторых</em>, еще одна загвоздка с отрицательными проверками в том, что они могут давать ложноположительные срабатывания, если селектор устарел. Проверяем, что элемента с таким селектором нет, — проверка проходит, так как у элемента уже другой селектор. Элемент есть на экране — это баг, а тест зеленый. Это плохо! </p>
+<p><em>Secondly</em>, another challenge with negative checks is that they can yield false positives if the selector is outdated. We check that there is no element with this selector—the check passes because the element already has a different selector. The element is on the screen—this is a bug, while the test is green. This is not good! </p>
 
-<p>Поэтому на каждый негативный тест обязательно должен приходиться положительный тест. В одном тесте проверяем, что элемента нет, в соседнем тесте, что элемент есть. Тогда мы сможем отслеживать актуальность селектора и не пропустим такой баг. </p>
+<p>Therefore, each negative test must be accompanied by a positive test. In one test, we check that the element is absent; in the adjacent test, we check that the element is present. This way, we can track the relevance of the selector and avoid missing such a bug. </p>
 
-<h3>Как же тогда реализовывать такие проверки? </h3>
+<h3>How then should we implement such checks? </h3>
 
-<p>Нужно ориентироваться на конкретную ситуацию, но общий совет — использовать явные ожидания и <a href="https://selenium-python.readthedocs.io/waits.html" rel="noopener noreferrer nofollow">Expected Conditions</a>, о которых мы говорили в предыдущих модулях. </p>
+<p>It is necessary to rely on the specific situation, but a general piece of advice is to use explicit waits and Expected Conditions, which we discussed in previous modules. </p>
 
-<p>Можно добавить в BasePage абстрактный метод, который проверяет, что элемент не появляется на странице в течение заданного времени: </p>
+<p>You can add an abstract method to the BasePage that verifies that the element does not appear on the page for a specified period: </p>
 
 <pre><code>def is_not_element_present(self, how, what, timeout=4):
     try:
@@ -34,13 +34,13 @@
 
     return False</code></pre>
 
-<p>Тогда его использование Page Object для страницы товара будет выглядеть так: </p>
+<p>Then its use in the Page Object for the product page will look like this: </p>
 
 <pre><code>def should_not_be_success_message(self):
     assert self.is_not_element_present(*ProductPageLocators.SUCCESS_MESSAGE), \
        "Success message is presented, but should not be"</code></pre>
 
-<p>Если же мы хотим проверить, что какой-то элемент исчезает, то следует воспользоваться явным ожиданием вместе с функцией until_not, в зависимости от того, какой результат мы ожидаем: </p>
+<p>If we want to check that a certain element disappears, we should use explicit waiting along with the until_not function, depending on the result we expect:</p>
 
 <pre><code>def is_disappeared(self, how, what, timeout=4):
     try:
@@ -51,19 +51,19 @@
 
     return True</code></pre>
 
-<p>Метод-проверка в классе про страницу товара будет выглядеть аналогично <strong>should_not_be_success_message</strong>, напишите его самостоятельно.</p>
+<p>The validation method in the product page class will look similar to <strong>should_not_be_success_message</strong>; write it yourself.</p>
 
 <p> </p>
 
-<p>Обратите внимание на разницу между методами <strong>is_not_element_present</strong> и <strong>is_disappeared</strong>. </p>
+<p>Pay attention to the difference between the methods <strong>is_not_element_present</strong> and <strong>is_disappeared</strong>. </p>
 
-<p><strong>is_not_element_present</strong>: упадет, как только увидит искомый элемент. Не появился: успех, тест зеленый. </p>
+<p><strong>is_not_element_present</strong>: it will fail as soon as it sees the sought element. If it does not appear, it's a success, and the test is green. </p>
 
-<p><strong>is_disappeared</strong>: будет ждать до тех пор, пока элемент не исчезнет. </p>
+<p><strong>is_disappeared</strong>: it will wait until the element disappears. </p>
 
 <p> </p>
 
-<p>Добавьте оба метода в Base Page для дальнейшего использования, а также метод 
-<code>should_not_be_success_message</code> в класс ProductPage.</p>
+<p>Add both methods to the Base Page for future use, as well as the method 
+<code>should_not_be_success_message</code> to the ProductPage class.</p>
 
-<p>Резюмируя, можно сказать, что разрабатывать такие проверки нужно очень аккуратно, использовать явные ожидания для сокращения времени прогона теста и всегда добавлять позитивную проверку на элемент в другом тесте. Без явной необходимости таких проверок лучше избегать. </p>
+<p>In summary, it can be said that developing such checks should be done very carefully, using explicit waits to reduce test runtime and always adding a positive check for the element in another test. Without explicit need, it's better to avoid such checks. </p>
