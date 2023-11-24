@@ -1,35 +1,35 @@
 
-<p>Давайте,&nbsp;прежде чем двигаться дальше, закрепим знания на практике.&nbsp;</p>
+<p>Let's practice before moving on.&nbsp;</p>
 
-<p>Представьте, что вы работаете тестировщиком-автоматизатором в IT-отделе интернет-магазина. QA Lead&nbsp;поручил вам&nbsp;задание автоматизировать следующий тестовый сценарий:&nbsp;</p>
-
-<ol>
-	<li>Открываем страницу товара (<a href="http://selenium1py.pythonanywhere.com/catalogue/the-shellcoders-handbook_209/?promo=newYear" rel="noopener noreferrer nofollow">http://selenium1py.pythonanywhere.com/catalogue/the-shellcoders-handbook_209/?promo=newYear</a>). Обратите внимание, что в ссылке есть параметр &quot;?promo=newYear&quot;. Не теряйте его в авто-тесте, чтобы получить проверочный код.</li>
-	<li>Нажимаем на кнопку &quot;Добавить в корзину&quot;.</li>
-	<li>*Посчитать результат математического выражения и ввести ответ. Используйте для этого метод <strong>solve_quiz_and_get_code()</strong>, который приведен ниже. Например, можете добавить его в класс <strong>BasePage</strong>, чтобы использовать его на любой странице. Этот метод&nbsp;нужен только для проверки того, что вы написали тест на Selenium.&nbsp;После этого вы получите код, который нужно ввести в качестве ответа на данное задание. Код будет выведен в консоли интерпретатора, в котором вы запускаете тест. Не забудьте в конце теста добавить проверки на ожидаемый результат.</li>
-</ol>
-
-<p>Ожидаемый результат:&nbsp;</p>
+<p>Imagine you are an automated tester in the IT department of an online store. The QA Lead assigned you the task of automating the following test scenario:&nbsp;</p>
 
 <ol>
-	<li>Сообщение о том, что товар добавлен в корзину. Название товара в сообщении должно совпадать с тем товаром, который вы действительно добавили.</li>
-	<li>Сообщение со стоимостью корзины. Стоимость корзины совпадает с ценой товара.&nbsp;</li>
+	<li>Open the product page (<a href="http://selenium1py.pythonanywhere.com/catalogue/the-shellcoders-handbook_209/?promo=newYear" rel="noopener noreferrer nofollow">http://selenium1py.pythonanywhere.com/catalogue/the-shellcoders-handbook_209/?promo=newYear</a>). Note that the link contains the parameter &quot;?promo=newYear&quot;. Don't lose it in the automated test to get the verification code.</li>
+	<li>Click the &quot;Add to Basket&quot; button.</li>
+	<li>*Calculate the result of the mathematical expression and enter the answer. Use the method <strong>solve_quiz_and_get_code()</strong>, which is provided below. For example, you can add it to the <strong>BasePage</strong> class to use it on any page. This method is only needed to check that you have written a Selenium test. After that, you will get a code that needs to be entered as the answer to this task. The code will be displayed in the interpreter console where you run the test. Don't forget to add checks for the expected result at the end of the test.</li>
 </ol>
 
-<p>Тест нужно написать, используя паттерн&nbsp;Page Object. Для этого вам нужно:&nbsp;</p>
+<p>Expected result:&nbsp;</p>
 
 <ol>
-	<li>Откройте новый файл с тестами<em> test_product_page.py.</em></li>
-	<li>Создать класс Page Object для страницы товара. Опишите его в файле <em>product_page.py</em> в папке <em>pages.</em></li>
-	<li>Описать в нем метод для добавления в корзину.</li>
-	<li>Дописать&nbsp;методы-проверки.</li>
-	<li>Описать необходимые локаторы к элементам страницы.</li>
-	<li>Написать сам тест-кейс в файле  <em>test_product_page.py</em>, используя все вышеописанное. Назовите тест <strong>test_guest_can_add_product_to_basket.</strong></li>
+	<li>A message stating that the item has been added to the basket. The name of the item in the message should match the item you actually added.</li>
+	<li>A message with the basket's total cost. The basket's cost should match the price of the item.&nbsp;</li>
 </ol>
 
-<p>Можете начинать работу с любого пункта, но хорошей практикой считается написать сначала шаги и структуру теста, а потом описывать конкретную реализацию.&nbsp;</p>
+<p>Write the test using the Page Object pattern. To do this, you need to:&nbsp;</p>
 
-<p>*Используйте этот метод в тесте для получения проверочного кода:&nbsp;</p>
+<ol>
+	<li>Open a new test file named <em>test_product_page.py.</em></li>
+	<li>Create a Page Object class for the product page. Describe it in the <em>product_page.py</em> file, in the <em>pages</em> folder.</li>
+	<li>Describe a method for adding to the basket.</li>
+	<li>Complete the verification methods.</li>
+	<li>Describe the necessary locators for page elements.</li>
+	<li>Write the actual test case in the <em>test_product_page.py</em> file, using all the steps described above. Name the test <strong>test_guest_can_add_product_to_basket.</strong></li>
+</ol>
+
+<p>You can start working on any point, but it is considered good practice to first outline the steps and structure of the test and then describe the specific implementation.&nbsp;</p>
+
+<p>*Use this method in the test to get the verification code:&nbsp;</p>
 
 <pre>
 <code class="language-python">from selenium.common.exceptions import NoAlertPresentException # в начале файла
@@ -48,7 +48,7 @@ def solve_quiz_and_get_code(self):
     except NoAlertPresentException:
         print("No second alert presented")</code></pre>
 
-<p>Чтобы увидеть проверочный код в консоли, запускайте PyTest с параметром <strong>-s</strong>:</p>
+<p>To see the verification code in the console, run PyTest with the <strong>-s</strong> parameter:</p>
 
 <pre>
 <code>pytest -s test_product_page.py</code></pre>
