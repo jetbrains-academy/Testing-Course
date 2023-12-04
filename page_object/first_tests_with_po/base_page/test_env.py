@@ -1,6 +1,6 @@
 from selenium.webdriver.common.by import By
 
-from page_object.first_tests_with_po.base_page.pages.base_page import BasePage
+from .pages.base_page import BasePage
 
 
 class MainPage(BasePage):

@@ -1,7 +1,7 @@
 import math
 from selenium.common.exceptions import NoAlertPresentException
 
-from page_object.first_tests_with_po.task_add_item.pages.product_page import ProductPage
+from .pages.product_page import ProductPage
 
 link = "http://selenium1py.pythonanywhere.com/catalogue/the-shellcoders-handbook_209/?promo=newYear"
 
