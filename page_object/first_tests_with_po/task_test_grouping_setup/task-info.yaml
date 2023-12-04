@@ -5,17 +5,6 @@ files:
   visible: false
 - name: conftest.py
   visible: true
-  placeholders:
-  - offset: 101
-    length: 1180
-    placeholder_text: '# TODO'
-    dependency:
-      section: page_object
-      lesson: first_tests_with_po
-      task: task_test_grouping
-      file: conftest.py
-      placeholder: 1
-      is_visible: false
 - name: pages/__init__.py
   visible: true
 - name: tests/test_task.py

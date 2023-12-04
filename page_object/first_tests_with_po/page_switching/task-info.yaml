@@ -3,61 +3,14 @@ custom_name: switching between pages
 files:
 - name: test_main_page.py
   visible: true
-  placeholders:
-  - offset: 367
-    length: 94
-    placeholder_text: '# TODO'
 - name: __init__.py
   visible: false
 - name: pages/base_page.py
   visible: true
-  placeholders:
-  - offset: 69
-    length: 398
-    placeholder_text: '# TODO'
-    dependency:
-      section: page_object
-      lesson: first_tests_with_po
-      task: login_page
-      file: base_page.py
-      placeholder: 1
-      is_visible: false
 - name: pages/main_page.py
   visible: true
-  placeholders:
-  - offset: 224
-    length: 100
-    placeholder_text: '# TODO'
-    dependency:
-      section: page_object
-      lesson: first_tests_with_po
-      task: login_page
-      file: main_page.py
-      placeholder: 1
-      is_visible: false
-  - offset: 357
-    length: 104
-    placeholder_text: '# TODO'
-    dependency:
-      section: page_object
-      lesson: first_tests_with_po
-      task: login_page
-      file: main_page.py
-      placeholder: 2
-      is_visible: false
 - name: conftest.py
   visible: true
-  placeholders:
-  - offset: 101
-    length: 1180
-    placeholder_text: '# TODO'
-    dependency:
-      section: page_object
-      lesson: first_tests_with_po
-      task: login_page
-      file: conftest.py
-      placeholder: 1
-      is_visible: false
 - name: tests/test_task.py
   visible: false
 - name: tests/__init__.py
@@ -66,16 +19,6 @@ files:
   visible: true
 - name: pages/login_page.py
   visible: true
-  placeholders:
-  - offset: 293
-    length: 83
-    placeholder_text: '# TODO'
-  - offset: 422
-    length: 92
-    placeholder_text: '# TODO'
-  - offset: 563
-    length: 98
-    placeholder_text: '# TODO'
 - name: pages/locators.py
   visible: true
 - name: test_product_page.py

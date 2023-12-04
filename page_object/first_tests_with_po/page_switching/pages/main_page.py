@@ -1,5 +1,5 @@
-from page_object.first_tests_with_po.page_switching.pages.base_page import BasePage
-from page_object.first_tests_with_po.page_switching.pages.locators import *
+from .base_page import BasePage
+from .locators import *
 
 
 class MainPage(BasePage):

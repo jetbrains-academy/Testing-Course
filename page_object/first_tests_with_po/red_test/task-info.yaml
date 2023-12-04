@@ -3,51 +3,18 @@ custom_name: assertion methods in page object
 files:
   - name: test_main_page.py
     visible: true
-    placeholders:
-      - offset: 135
-        length: 192
-        placeholder_text: '# TODO'
-      - offset: 376
-        length: 82
-        placeholder_text: '# TODO'
   - name: __init__.py
     visible: false
   - name: pages/base_page.py
     visible: true
-    placeholders:
-      - offset: 16
-        length: 147
-        placeholder_text: '# TODO'
-        dependency:
-          section: page_object
-          lesson: first_tests_with_po
-          task: po_test
-          file: base_page.py
-          placeholder: 1
-          is_visible: false
   - name: pages/main_page.py
     visible: true
-    placeholders:
-      - offset: 247
-        length: 105
-        placeholder_text: '# TODO'
-        dependency:
-          section: page_object
-          lesson: first_tests_with_po
-          task: po_test
-          file: main_page.py
-          placeholder: 1
-          is_visible: false
   - name: tests/test_task.py
     visible: false
   - name: tests/__init__.py
     visible: false
   - name: conftest.py
     visible: true
-    placeholders:
-      - offset: 101
-        length: 1181
-        placeholder_text: '# TODO'
   - name: pages/__init__.py
     visible: true
   - name: test_product_page.py
@@ -59,4 +26,6 @@ files:
   - name: pages/login_page.py
     visible: false
   - name: pages/product_page.py
+    visible: false
+  - name: test_main_page_sub.py
     visible: false

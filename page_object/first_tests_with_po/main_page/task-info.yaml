@@ -5,17 +5,6 @@ files:
     visible: false
   - name: pages/base_page.py
     visible: true
-    placeholders:
-      - offset: 16
-        length: 147
-        placeholder_text: '# TODO'
-        dependency:
-          section: page_object
-          lesson: first_tests_with_po
-          task: base_page
-          file: base_page.py
-          placeholder: 1
-          is_visible: false
   - name: tests/test_task.py
     visible: false
   - name: tests/__init__.py

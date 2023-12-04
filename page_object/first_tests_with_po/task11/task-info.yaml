@@ -1,18 +1,17 @@
 type: choice
 is_multiple_choice: true
 options:
-- text: Методы класса Page Object представляют собой только проверки состояния страницы
+- text: The methods of the Page Object class consist only of checks for the page state
   is_correct: false
-- text: Page Object уменьшает временные затраты на поддержку автотестов
+- text: Page Object reduces the time and effort spent on maintaining automated tests
   is_correct: true
-- text: Без Page Object невозможно писать автотесты
+- text: Without Page Object, it is impossible to write automated tests
   is_correct: false
-- text: Page Object классы нельзя наследовать друг от друга
+- text: Page Object classes cannot inherit from each other
   is_correct: false
-- text: "Page Object это специальный класс, встроенный в стандартную библиотеку Python"
+- text: "Page Object is a special class built into the standard Python library"
   is_correct: false
-- text: "Паттерн Page Object позволяет хранить селекторы в одном месте, отдельно о\
-    т логики, что упрощает поддержку автотестов"
+- text: "The Page Object pattern allows storing selectors in one place, separate from the logic, which simplifies the maintenance of automated tests"
   is_correct: true
 files:
 - name: test_main_page.py

@@ -1,6 +1,6 @@
 
-from page_object.first_tests_with_po.logic_encapsulation.pages.base_page import BasePage
-from page_object.first_tests_with_po.logic_encapsulation.pages.locators import LoginPageLocators
+from .base_page import BasePage
+from .locators import LoginPageLocators
 
 
 class LoginPage(BasePage):

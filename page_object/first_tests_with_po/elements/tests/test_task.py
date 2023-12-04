@@ -2,7 +2,7 @@ import unittest
 
 import pytest
 from _pytest.config import ExitCode
-from page_object.first_tests_with_po.elements.pages.locators import *
+from ..pages.locators import *
 
 
 class TestCase(unittest.TestCase):

@@ -1,15 +1,15 @@
 type: choice
 is_multiple_choice: true
 options:
-- text: Page Object - это библиотека для запуска авто-тестов
+- text: Page Object is a library for running automated tests
   is_correct: false
-- text: Page Object - это паттерн для организации кода авто-тестов
+- text: Page Object is a pattern for organizing the code of automated tests
   is_correct: true
-- text: 'Page Object содержит в себе только элементы '
+- text: 'Page Object contains only elements'
   is_correct: false
-- text: 'Page Object содержит в себе методы для работы с веб-страницей '
+- text: 'Page Object contains methods for working with a web page'
   is_correct: true
-- text: 'Page Object не помогает улучшить читабельность кода '
+- text: 'Page Object does not help improve code readability'
   is_correct: false
 files:
 - name: test_main_page.py
