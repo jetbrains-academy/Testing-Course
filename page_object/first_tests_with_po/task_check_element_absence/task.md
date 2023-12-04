@@ -1,13 +1,13 @@
-<h2>Задание: отрицательные проверки</h2>
+<h2>Task: negative checks</h2>
 
-<p>Добавьте к себе в проект функции из предыдущего шага и реализуйте несколько простых тестов: </p>
+<p>Add functions from the previous step to your project and implement several simple tests: </p>
 
 <pre><strong>test_guest_cant_see_success_message_after_adding_product_to_basket: </strong></pre>
 
 <ol>
-	<li>Открываем страницу товара </li>
-	<li>Добавляем товар в корзину </li>
-	<li>Проверяем, что нет сообщения об успехе с помощью<strong> is_not_element_present</strong></li>
+	<li>Open the product page. </li>
+	<li>Add the product to the cart. </li>
+	<li>Check that there is no success message using <strong>is_not_element_present</strong>.</li>
 </ol>
 
 <p> </p>
@@ -15,8 +15,8 @@
 <pre><strong>test_guest_cant_see_success_message</strong><strong>: </strong></pre>
 
 <ol>
-	<li>Открываем страницу товара </li>
-	<li>Проверяем, что нет сообщения об успехе с помощью <strong>is_not_element_present</strong></li>
+	<li>Open the product page. </li>
+	<li>Check that there is no success message using <strong>is_not_element_present</strong>.</li>
 </ol>
 
 <p> </p>
@@ -24,12 +24,12 @@
 <pre><strong>test_message_disappeared_after_adding_product_to_basket: </strong></pre>
 
 <ol>
-	<li>Открываем страницу товара</li>
-	<li>Добавляем товар в корзину</li>
-	<li>Проверяем, что нет сообщения об успехе с помощью <strong>is_disappeared</strong></li>
+	<li>Open the product page.</li>
+	<li>Add the product to the cart.</li>
+	<li>Check that there is no success message using <strong>is_disappeared</strong></li>
 </ol>
 
 <p> </p>
 
-<p><strong>Запустите все три теста, 
-и обратите внимание на то, сколько времени занимает ожидание в каждом тесте.</strong></p>
+<p><strong>Run all three tests and 
+pay attention to the time it takes for each test.</strong></p>

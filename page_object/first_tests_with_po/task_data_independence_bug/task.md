@@ -1,12 +1,11 @@
-<h2>Задание: независимость контента, ищем баг</h2>
+<h2>Task: Content independence, finding a bug</h2>
+This task is for true testing ninjas. Not because it's difficult, but because now we'll be catching a real bug with our automated tests. Several new promotions were launched for our online store, one of which led to the appearance of a bug. The promotion is activated by adding the parameter ?promo=offerN to the product link.</p>
 
-<p>Эта задача для настоящих ниндзя автотестинга. Не потому что она сложная, а потому что сейчас мы будем ловить с вами настоящий баг с помощью наших автотестов.&nbsp;Для нашего интернет-магазина было запущено несколько новых промо-акций, одна из которых привела к появлению&nbsp;бага. Промо-акция включается путем добавления параметра ?promo=offerN к ссылке на товар.</p>
+<p>Fortunately, we don't have to change our test to check the code changes. We'll simply run the same test on the page&nbsp;<a href="http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/" rel="noopener noreferrer nofollow">http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/</a>&nbsp;with parameterization. You need to determine at which value of the promo parameter the automated test will fail. To do this, check the PyTest result and find the URL where the error occurred. The parameter value can range from offer0 to offer9.</p>
 
-<p>К счастью, нам не придется менять наш тест, чтобы проверить изменения в коде. Мы просто&nbsp;запустим&nbsp;всё тот же тест на странице&nbsp;<a href="http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/" rel="noopener noreferrer nofollow">http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/</a>&nbsp;с параметризацией. Вам нужно определить,&nbsp;при каком значении параметра promo автотест&nbsp;упадет. Для этого проверьте результат работы PyTest и найдите url, на котором произошла ошибка. Значение параметра может изменяться от offer0 до offer9.</p>
+<p>Example link:&nbsp;<a href="http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/?promo=offer0" rel="noopener noreferrer nofollow">http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/?promo=offer0</a>. If the bug is found on this page, enter <a href="http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/?promo=offer0" rel="noopener noreferrer nofollow">http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/?promo=offer0</a> as your answer.</p>
 
-<p>Пример ссылки:&nbsp;<a href="http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/?promo=offer0" rel="noopener noreferrer nofollow">http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/?promo=offer0</a>. Если баг будет найден на этой странице, то введите в качестве ответа <a href="http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/?promo=offer0" rel="noopener noreferrer nofollow">http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/?promo=offer0</a>.</p>
-
-<p>Запустить сразу несколько тестов вы можете, используя <strong>@pytest.mark.parametrize</strong>. Мы уже сделали для вас шаблон теста:</p>
+<p>You can run multiple tests at once using <strong>@pytest.mark.parametrize</strong>. We've already provided a test template for you:</p>
 
 <pre>
 <code>@pytest.mark.parametrize('link', ["http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/?promo=offer0",
@@ -20,17 +19,17 @@
                                   "http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/?promo=offer8",
                                   "http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/?promo=offer9"])
 def test_guest_can_add_product_to_basket(browser, link):
-    # ваша реализация теста</code></pre>
+    # your test implementation</code></pre>
 
-<p>Подсказка: баг должен быть найден методом проверки.</p>
+<p>Hint: The bug should be found using the check method.</p>
 
-<p> После того как вы обнаружили баг вставьте ссылку на проблемный URL в файл bugreport.txt</проблемы> </p>
+<p> After you've discovered the bug, paste the link to the problematic URL into the bugreport.txt file </problems> </p>
 
-<p>После того как вы обнаружили баг,
-учитывая что чинить его не собираются,
-лучше всего пометить падающий тест как <strong>xfail</strong>&nbsp;или <strong>skip.&nbsp;</strong>Помните, как мы такое проворачивали в третьем модуле?&nbsp;Освежить память: <a href="/lesson/236918/step/5?unit=209305" rel="noopener noreferrer nofollow">XFail: помечать тест как ожидаемо падающий</a>.</p>
+<p>Once you've found the bug,
+considering that it won't be fixed,
+it's best to mark the failing test as <strong>xfail</strong>&nbsp;or <strong>skip.&nbsp;</strong>Remember how we did it in Module 3?&nbsp;Refresh your memory: <a href="/lesson/236918/step/5?unit=209305" rel="noopener noreferrer nofollow">XFail: mark the test as expected to fail</a>.</p>
 
-<p>С параметризацией делается это примерно так:&nbsp;&nbsp;</p>
+<p>With parameterization, it's done like this:&nbsp;&nbsp;</p>
 
 <pre>
 <code class="language-python">@pytest.mark.parametrize('link', ["okay_link",

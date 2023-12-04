@@ -1,6 +1,6 @@
-<h2>Удобство поддержки тестов &mdash; инкапсуляция бизнес-логики в методах</h2>
+<h2>Convenience of test maintenance—encapsulation of business logic in methods</h2>
 
-<p>Что делать, если изменилась логика взаимодействия со страницей, которая используется у нас в нескольких тестах? Например, нам нужно проверить возможность перехода на страницу логина по ссылке в навбаре для каждой из страниц сайта. Предположим, что таких страниц 20, и, значит, у нас есть 20 тестов, использующих&nbsp;метод&nbsp;<strong>go_to_login_page</strong>&nbsp;класса MainPage. Затем разработчики&nbsp;добавили alert, который вызывается при клике на нужную нам ссылку. Мы увидим, что все 20 тестов упали, так как в методе go_to_login_page&nbsp;нет шага с обработкой alert, следовательно,&nbsp;метод should_be_login_page не сработает.&nbsp;Добавив обработку alert в метод <strong>go_to_login_page</strong>, мы восстановим работоспособность всех тестов, не меняя самих тестов:</p>
+<p>What should you do if the logic of interaction with a page used in several of our tests changes? For instance, suppose we need to verify the ability to navigate to the login page through the navbar link for each page on the site. Let's assume there are 20 such pages, and consequently, we have 20 tests using the <strong>go_to_login_page</strong> methods in the MainPage class. Then, developers added an alert triggered by clicking the link we're interested in. We'll notice that all 20 tests fail because the go_to_login_page method lacks a step to handle the alert, meaning the should_be_login_page method won't work. By adding alert handling to the <strong>go_to_login_page</strong> method, we can restore the functionality of all tests without modifying the tests themselves:</p>
 
 <pre>
 <code class="language-python">def go_to_login_page(self):
@@ -9,4 +9,4 @@
    alert = self.browser.switch_to.alert
    alert.accept()</code></pre>
 
-<p>Это еще одно преимущество&nbsp;использования паттерна Page Object&nbsp;&mdash; мы разделяем сам тест и логику взаимодействия со страницей. Тест становится более читабельным, и его легче поддерживать при изменениях в коде приложения.</p>
+<p>This is another advantage of using the Page Object pattern—it separates the test itself from the page interaction logic. The test becomes more readable and is easier to maintain in case of changes in the application code.</p>
