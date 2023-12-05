@@ -7,53 +7,10 @@ files:
     visible: false
   - name: pages/base_page.py
     visible: true
-    placeholders:
-      - offset: 69
-        length: 398
-        placeholder_text: '# TODO'
-        dependency:
-          section: page_object
-          lesson: first_tests_with_po
-          task: elements
-          file: base_page.py
-          placeholder: 1
-          is_visible: false
   - name: pages/main_page.py
     visible: true
-    placeholders:
-      - offset: 188
-        length: 110
-        placeholder_text: '# TODO'
-        dependency:
-          section: page_object
-          lesson: first_tests_with_po
-          task: elements
-          file: main_page.py
-          placeholder: 1
-          is_visible: false
-      - offset: 331
-        length: 106
-        placeholder_text: '# TODO'
-        dependency:
-          section: page_object
-          lesson: first_tests_with_po
-          task: elements
-          file: main_page.py
-          placeholder: 2
-          is_visible: false
   - name: conftest.py
     visible: true
-    placeholders:
-      - offset: 101
-        length: 1180
-        placeholder_text: '# TODO'
-        dependency:
-          section: page_object
-          lesson: first_tests_with_po
-          task: elements
-          file: conftest.py
-          placeholder: 1
-          is_visible: false
   - name: tests/test_task.py
     visible: false
   - name: tests/__init__.py
@@ -74,13 +31,6 @@ files:
         placeholder_text: '# TODO'
   - name: pages/locators.py
     visible: true
-    placeholders:
-      - offset: 164
-        length: 32
-        placeholder_text: '# TODO'
-      - offset: 217
-        length: 35
-        placeholder_text: '# TODO'
   - name: test_login_page.py
     visible: false
   - name: test_product_page.py
