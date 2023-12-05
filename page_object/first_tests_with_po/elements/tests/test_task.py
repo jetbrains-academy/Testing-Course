@@ -2,7 +2,9 @@ import unittest
 
 import pytest
 from _pytest.config import ExitCode
-from ..pages.locators import *
+from selenium.webdriver.common.by import By
+
+from page_object.first_tests_with_po.elements.pages.locators import MainPageLocators
 
 
 class TestCase(unittest.TestCase):
