@@ -1,51 +1,58 @@
 type: choice
 is_multiple_choice: true
 options:
-- text: The methods of the Page Object class consist only of checks for the page state
-  is_correct: false
-- text: Page Object reduces the time and effort spent on maintaining automated tests
-  is_correct: true
-- text: Without Page Object, it is impossible to write automated tests
-  is_correct: false
-- text: Page Object classes cannot inherit from each other
-  is_correct: false
-- text: "Page Object is a special class built into the standard Python library"
-  is_correct: false
-- text: "The Page Object pattern allows storing selectors in one place, separate from the logic, which simplifies the maintenance of automated tests"
-  is_correct: true
+  - text: The methods of the Page Object class consist only of checks for the page state
+    is_correct: false
+  - text: Page Object reduces the time and effort spent on maintaining automated tests
+    is_correct: true
+  - text: "Without Page Object, it is impossible to write automated tests"
+    is_correct: false
+  - text: Page Object classes cannot inherit from each other
+    is_correct: false
+  - text: Page Object is a special class built into the standard Python library
+    is_correct: false
+  - text: "The Page Object pattern allows storing selectors in one place, separate from\
+    \ the logic, which simplifies the maintenance of automated tests"
+    is_correct: true
 files:
-- name: test_main_page.py
-  visible: true
-- name: __init__.py
-  visible: false
-- name: conftest.py
-  visible: true
-  placeholders:
-  - offset: 101
-    length: 1180
-    placeholder_text: '# TODO'
-    dependency:
-      section: page_object
-      lesson: first_tests_with_po
-      task: task10
-      file: conftest.py
-      placeholder: 1
-      is_visible: false
-- name: test_product_page.py
-  visible: false
-- name: pages/__init__.py
-  visible: true
-- name: pages/locators.py
-  visible: false
-- name: pages/base_page.py
-  visible: true
-- name: pages/main_page.py
-  visible: true
-- name: pages/login_page.py
-  visible: false
-- name: pages/basket_page.py
-  visible: false
-- name: pages/product_page.py
-  visible: false
+  - name: test_main_page.py
+    visible: true
+  - name: __init__.py
+    visible: false
+  - name: conftest.py
+    visible: true
+    placeholders:
+      - offset: 101
+        length: 1180
+        placeholder_text: '# TODO'
+        dependency:
+          section: page_object
+          lesson: first_tests_with_po
+          task: task10
+          file: conftest.py
+          placeholder: 1
+          is_visible: false
+  - name: test_product_page.py
+    visible: false
+  - name: pages/__init__.py
+    visible: true
+  - name: pages/locators.py
+    visible: false
+  - name: pages/base_page.py
+    visible: true
+  - name: pages/main_page.py
+    visible: true
+  - name: pages/login_page.py
+    visible: false
+  - name: pages/basket_page.py
+    visible: false
+  - name: pages/product_page.py
+    visible: false
+  - name: bugreport.txt
+    visible: false
+  - name: pages (1).svg
+    visible: false
+  - name: pages2 (1).svg
+    visible: false
 custom_name: "task: page object"
 local_check: true

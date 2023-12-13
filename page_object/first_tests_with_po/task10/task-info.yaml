@@ -1,49 +1,55 @@
 type: choice
 is_multiple_choice: true
 options:
-- text: Page Object is a library for running automated tests
-  is_correct: false
-- text: Page Object is a pattern for organizing the code of automated tests
-  is_correct: true
-- text: 'Page Object contains only elements'
-  is_correct: false
-- text: 'Page Object contains methods for working with a web page'
-  is_correct: true
-- text: 'Page Object does not help improve code readability'
-  is_correct: false
+  - text: Page Object is a library for running automated tests
+    is_correct: false
+  - text: Page Object is a pattern for organizing the code of automated tests
+    is_correct: true
+  - text: Page Object contains only elements
+    is_correct: false
+  - text: Page Object contains methods for working with a web page
+    is_correct: true
+  - text: Page Object does not help improve code readability
+    is_correct: false
 files:
-- name: test_main_page.py
-  visible: true
-- name: __init__.py
-  visible: false
-- name: conftest.py
-  visible: true
-  placeholders:
-  - offset: 101
-    length: 1180
-    placeholder_text: '# TODO'
-    dependency:
-      section: page_object
-      lesson: first_tests_with_po
-      task: logic_encapsulation
-      file: conftest.py
-      placeholder: 1
-      is_visible: false
-- name: pages/__init__.py
-  visible: true
-- name: pages/locators.py
-  visible: true
-- name: pages/base_page.py
-  visible: true
-- name: pages/main_page.py
-  visible: true
-- name: pages/login_page.py
-  visible: true
-- name: pages/basket_page.py
-  visible: true
-- name: pages/product_page.py
-  visible: true
-- name: test_product_page.py
-  visible: false
+  - name: test_main_page.py
+    visible: true
+  - name: __init__.py
+    visible: false
+  - name: conftest.py
+    visible: true
+    placeholders:
+      - offset: 101
+        length: 1180
+        placeholder_text: '# TODO'
+        dependency:
+          section: page_object
+          lesson: first_tests_with_po
+          task: logic_encapsulation
+          file: conftest.py
+          placeholder: 1
+          is_visible: false
+  - name: pages/__init__.py
+    visible: true
+  - name: pages/locators.py
+    visible: true
+  - name: pages/base_page.py
+    visible: true
+  - name: pages/main_page.py
+    visible: true
+  - name: pages/login_page.py
+    visible: true
+  - name: pages/basket_page.py
+    visible: true
+  - name: pages/product_page.py
+    visible: true
+  - name: test_product_page.py
+    visible: false
+  - name: bugreport.txt
+    visible: false
+  - name: pages (1).svg
+    visible: false
+  - name: pages2 (1).svg
+    visible: false
 custom_name: "task: page object"
 local_check: true

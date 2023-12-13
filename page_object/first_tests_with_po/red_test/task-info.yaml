@@ -29,3 +29,9 @@ files:
     visible: false
   - name: test_main_page_sub.py
     visible: false
+  - name: bugreport.txt
+    visible: false
+  - name: pages (1).svg
+    visible: false
+  - name: pages2 (1).svg
+    visible: false

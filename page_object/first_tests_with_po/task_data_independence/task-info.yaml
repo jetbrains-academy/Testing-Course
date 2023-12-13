@@ -27,3 +27,9 @@ files:
     visible: true
   - name: pages/basket_page.py
     visible: false
+  - name: bugreport.txt
+    visible: false
+  - name: pages (1).svg
+    visible: false
+  - name: pages2 (1).svg
+    visible: false

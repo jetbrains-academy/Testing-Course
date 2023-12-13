@@ -1,3 +1,3 @@
 <h2>Задание: PageObject </h2>
 
-<p>Выберите все верные утверждения: </p>
+<p>Select all correct statements: </p>
