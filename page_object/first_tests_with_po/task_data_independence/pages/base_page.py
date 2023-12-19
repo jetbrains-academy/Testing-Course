@@ -51,9 +51,9 @@ class BasePage(object):
         answer = str(math.log(abs((12 * math.sin(float(x))))))
         alert.send_keys(answer)
         alert.accept()
-        #alert = self.browser.switch_to.alert
-        #print("Your code: {}".format(alert.text))
-        #alert.accept()
+        alert = self.browser.switch_to.alert
+        print("Your code: {}".format(alert.text))
+        alert.accept()
 
     def should_be_authorized_user(self):
         assert self.is_element_present(*BasePageLocators.USER_ICON), "User icon is not presented," \

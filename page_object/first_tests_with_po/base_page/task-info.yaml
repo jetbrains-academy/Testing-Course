@@ -1,18 +1,8 @@
 type: edu
 custom_name: "task: base page for our project"
 files:
-  - name: tests/test_task.py
-    visible: false
   - name: __init__.py
     visible: false
-  - name: tests/__init__.py
-    visible: false
-  - name: pages/base_page.py
-    visible: true
-    placeholders:
-      - offset: 16
-        length: 147
-        placeholder_text: '# TODO'
   - name: conftest.py
     visible: true
     placeholders:
@@ -39,7 +29,17 @@ files:
     visible: false
   - name: bugreport.txt
     visible: false
-  - name: pages (1).svg
+  - name: pages.svg
     visible: false
-  - name: pages2 (1).svg
+  - name: pages2.svg
+    visible: false
+  - name: tests/test_task.py
+    visible: false
+  - name: pages/base_page.py
+    visible: true
+    placeholders:
+      - offset: 16
+        length: 147
+        placeholder_text: '# TODO'
+  - name: tests/__init__.py
     visible: false
