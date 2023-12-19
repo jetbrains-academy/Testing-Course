@@ -1,0 +1,4 @@
+selenium==4.11.2
+pytest==7.4.0
+bs4==0.0.1
+html5lib==1.1

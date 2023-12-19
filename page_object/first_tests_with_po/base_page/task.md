@@ -24,8 +24,9 @@ First of all, let's add a <em>constructor &mdash;&nbsp;</em>a method that is cal
 
 <p>3. Now let's add another method, open. It should open the required page in the browser using the get() method.</p>
 
-<p>Declare the following in the same class:</p>
 
+<p>4. In conftest.py move browser fixture that we implemented in previous steps.</p>
+<p>Declare the following in the same class:</p>
 <pre>
 <code class="language-python">def open(self):</code></pre>
 

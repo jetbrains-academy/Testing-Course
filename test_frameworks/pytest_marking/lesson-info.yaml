@@ -1,6 +1,6 @@
-custom_name: "marking tests with pytest"
+custom_name: marking tests with pytest
 content:
 - marking tests with pytest
 - marking tests with pytest - inversion
-- xfail - expecting test to fail
+- xfail
 - task_running_test

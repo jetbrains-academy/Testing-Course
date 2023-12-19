@@ -1,0 +1,47 @@
+type: edu
+custom_name: login page implementation
+files:
+  - name: test_main_page.py
+    visible: true
+  - name: __init__.py
+    visible: false
+  - name: pages/base_page.py
+    visible: true
+  - name: pages/main_page.py
+    visible: true
+  - name: conftest.py
+    visible: true
+  - name: tests/test_task.py
+    visible: false
+  - name: tests/__init__.py
+    visible: false
+  - name: pages/__init__.py
+    visible: true
+  - name: pages/login_page.py
+    visible: true
+    placeholders:
+      - offset: 189
+        length: 83
+        placeholder_text: '# TODO'
+      - offset: 318
+        length: 92
+        placeholder_text: '# TODO'
+      - offset: 459
+        length: 98
+        placeholder_text: '# TODO'
+  - name: pages/locators.py
+    visible: true
+  - name: test_login_page.py
+    visible: false
+  - name: test_product_page.py
+    visible: false
+  - name: pages/basket_page.py
+    visible: false
+  - name: pages/product_page.py
+    visible: false
+  - name: bugreport.txt
+    visible: false
+  - name: pages.svg
+    visible: false
+  - name: pages2.svg
+    visible: false

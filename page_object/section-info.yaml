@@ -1,4 +1,5 @@
-custom_name: "Page Object Model pattern"
+custom_name: Page Object Model pattern
 content:
-- what_is_po
-- first_tests_with_po
+  - what_is_po
+  - first_tests_with_po
+  - In conclusion

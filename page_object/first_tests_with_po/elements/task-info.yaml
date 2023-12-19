@@ -1,0 +1,39 @@
+type: edu
+custom_name: page element in page object
+files:
+  - name: __init__.py
+    visible: false
+  - name: pages/__init__.py
+    visible: true
+  - name: test_product_page.py
+    visible: false
+  - name: pages/basket_page.py
+    visible: false
+  - name: pages/login_page.py
+    visible: false
+  - name: pages/product_page.py
+    visible: false
+  - name: tests/test_task.py
+    visible: false
+  - name: pages/base_page.py
+    visible: true
+  - name: tests/__init__.py
+    visible: false
+  - name: pages/locators.py
+    visible: true
+    placeholders:
+      - offset: 46
+        length: 73
+        placeholder_text: '# TODO'
+  - name: test_main_page.py
+    visible: true
+  - name: conftest.py
+    visible: true
+  - name: pages/main_page.py
+    visible: true
+  - name: bugreport.txt
+    visible: false
+  - name: pages.svg
+    visible: false
+  - name: pages2.svg
+    visible: false
