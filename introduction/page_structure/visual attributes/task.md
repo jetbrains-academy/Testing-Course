@@ -14,3 +14,5 @@ Here are examples of attributes that affect rendering and the element's behavior
 
 <button disabled> The button with the attribute disabled will be blocked </button>
 ```
+
+Try opening `index.html` in your browser. Now add the visual attributes and try opening this file again. 
