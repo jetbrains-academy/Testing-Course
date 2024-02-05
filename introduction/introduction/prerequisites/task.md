@@ -7,6 +7,6 @@ You will need knowledge of
 - syntax and basic features of Python.
 - basic object-oriented programming (OOP) concepts for the fourth section of the course
 
-Please note libraries this course uses in requirements.txt. 
-You can install them in your virtual environment bu executing 
+Please note libraries this course uses in requirements.txt.
+You can install them in your virtual environment by executing
 `pip install -r requirements.txt`
