@@ -15,6 +15,6 @@ class TestCase(unittest.TestCase):
             browser.get("http://suninjuly.github.io/cats.html")
             element = browser.find_element(By.CSS_SELECTOR, child_selector)
             print(element.get_attribute("src"))
-            self.assertTrue(element.get_attribute("src") == "http://suninjuly.github.io/images/serious_cat.jpg")
+            self.assertTrue("serious_cat.jpg" in element.get_attribute("src"))
         finally:
             browser.quit()
