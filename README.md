@@ -8,5 +8,8 @@ This is a basic course about automated UI tests written in Python and Selenium. 
 
   <p>Have fun and good luck!</p>
 
-  P.S. Want to contribute? Feel free to send a pull request to this course’s
-  [git repo](https://github.com/jetbrains-academy/Testing-Course).
+## Want to know more?
+If you have questions about the course or the tasks, or if you find any errors, feel free to ask questions and participate in discussions within the repository [issues](https://github.com/jetbrains-academy/Testing-Course/issues).
+
+## Contribution
+Please be sure to review the [project's contributing guidelines](https://github.com/jetbrains-academy/.github/blob/main/contributing_guidelines.md) to learn how to help the project.
