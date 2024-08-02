@@ -29,4 +29,4 @@ If you see that, everything is fine and you can proceed to the next step.
 1. If you try to launch `chromedriver` and get a message like this:  
   `-bash: chromedriver: command not found`  
   you need to check if the file `chromedriver` is in the folder `/usr/local/bin`. If it's not there, run the above `mv` commands again. 
-2. If you get the message like "Apple cannot check app for malicious software...", use [this Apple guide](https://support.apple.com/en-am/guide/mac-help/mchleab3a043/mac) to add the `chromedriver` to the exceptions.
+2. If you get a message like "Apple cannot check app for malicious software...", use [this Apple guide](https://support.apple.com/en-am/guide/mac-help/mchleab3a043/mac) to add `chromedriver` to the exceptions.
