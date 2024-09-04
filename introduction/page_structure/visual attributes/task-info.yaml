@@ -1,12 +1,25 @@
 type: edu
 files:
-- name: task.py
-  visible: false
-- name: tests/test_task.py
-  visible: false
-- name: __init__.py
-  visible: false
-- name: tests/__init__.py
-  visible: false
-- name: index.html
-  visible: true
+  - name: index.html
+    visible: true
+    placeholders:
+      - offset: 3
+        length: 21
+        placeholder_text: ""
+        is_visible: false
+      - offset: 108
+        length: 7
+        placeholder_text: ""
+        is_visible: false
+      - offset: 204
+        length: 9
+        placeholder_text: ""
+        is_visible: false
+  - name: task.py
+    visible: false
+  - name: tests/test_task.py
+    visible: false
+  - name: __init__.py
+    visible: false
+  - name: tests/__init__.py
+    visible: false
