@@ -1,5 +1,5 @@
 type: marketplace
-title: UI test automation with Selenium and Python
+title: UI Test Automation with Selenium and Python
 language: English
 summary: |-
   This is a basic course about automated UI tests written in Python and Selenium. You will learn:
@@ -19,3 +19,14 @@ content:
   - selenium_methods
   - test_frameworks
   - page_object
+additional_files:
+  - name: LICENSE
+  - name: README.md
+  - name: page_object/__init__.py
+  - name: page_object/first_tests_with_po/__init__.py
+  - name: test_frameworks/__init__.py
+  - name: test_frameworks/pytest_fixtures/__init__.py
+  - name: test_frameworks/pytest_configuration_params/__init__.py
+  - name: requirements.txt
+  - name: courseIcon.svg
+yaml_version: 2
