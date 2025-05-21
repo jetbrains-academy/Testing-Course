@@ -28,7 +28,7 @@ files:
     placeholders:
       - offset: 0
         length: 80
-        placeholder_text: '# TODO'
+        placeholder_text: "# TODO"
   - name: pages/product_page.py
     visible: true
   - name: pages/basket_page.py

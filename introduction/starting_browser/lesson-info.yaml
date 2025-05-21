@@ -1,7 +1,7 @@
-custom_name: "starting browser with selenium webdriver"
+custom_name: starting browser with selenium webdriver
 content:
-- installing chrome webdriver
-- installing chromedriver for windows
-- installing chromedriver for linux
-- installing chromedriver for MacOs
-- starting_browser
+  - installing chrome webdriver
+  - installing chromedriver for windows
+  - installing chromedriver for linux
+  - installing chromedriver for MacOs
+  - starting_browser

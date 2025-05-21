@@ -1,11 +1,11 @@
 custom_name: "test configuration, parametrization, plugins"
 content:
-- test configuration
-- test parametrization
-- task_authorization
-- task_parametrization
-- geckodriver installation
-- parameters from commandline
-- pytest plugins
-- running tests for different localizations
-- task_localization
+  - test configuration
+  - test parametrization
+  - task_authorization
+  - task_parametrization
+  - geckodriver installation
+  - parameters from commandline
+  - pytest plugins
+  - running tests for different localizations
+  - task_localization

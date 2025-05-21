@@ -24,14 +24,14 @@ files:
     placeholders:
       - offset: 101
         length: 1180
-        placeholder_text: '# TODO'
+        placeholder_text: "# TODO"
         dependency:
           section: page_object
           lesson: first_tests_with_po
           task: task10
           file: conftest.py
           placeholder: 1
-          is_visible: false
+        is_visible: false
   - name: test_product_page.py
     visible: false
   - name: pages/__init__.py

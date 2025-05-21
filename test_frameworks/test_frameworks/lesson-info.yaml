@@ -1,13 +1,13 @@
 custom_name: web application testing and test frameworks
 content:
-- manual vs automated tests
-- testing pyramid
-- test structure
-- expecting result in test
-- correct error messages
-- task_messages
-- task_message_errors_substring
-- how to run test cases
-- about test runners
-- about unittest
-- task_unittest
+  - manual vs automated tests
+  - testing pyramid
+  - test structure
+  - expecting result in test
+  - correct error messages
+  - task_messages
+  - task_message_errors_substring
+  - how to run test cases
+  - about test runners
+  - about unittest
+  - task_unittest

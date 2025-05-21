@@ -1,22 +1,22 @@
 type: choice
 is_multiple_choice: true
 options:
-- text: .card-body:nth-child(3) p
-  is_correct: true
-- text: "[data-name=\"Vladimir\"]"
-  is_correct: true
-- text: "[name=\"Vladimir\"]"
-  is_correct: false
-- text: p:nth-child(3)
-  is_correct: false
-- text: .col-sm-4:nth-child(3) p
-  is_correct: false
-- text: '#politic'
-  is_correct: true
+  - text: .card-body:nth-child(3) p
+    is_correct: true
+  - text: "[data-name=\"Vladimir\"]"
+    is_correct: true
+  - text: "[name=\"Vladimir\"]"
+    is_correct: false
+  - text: p:nth-child(3)
+    is_correct: false
+  - text: .col-sm-4:nth-child(3) p
+    is_correct: false
+  - text: "#politic"
+    is_correct: true
 files:
-- name: __init__.py
-  visible: true
-- name: task.py
-  visible: true
+  - name: __init__.py
+    visible: true
+  - name: task.py
+    visible: true
 custom_name: "task: finding correct selectors"
 local_check: true

@@ -20,7 +20,7 @@ files:
     placeholders:
       - offset: 170
         length: 959
-        placeholder_text: '# TODO'
+        placeholder_text: "# TODO"
   - name: pages/basket_page.py
     visible: false
   - name: tests/test_task.py
@@ -32,7 +32,7 @@ files:
     placeholders:
       - offset: 275
         length: 276
-        placeholder_text: '# TODO'
+        placeholder_text: "# TODO"
   - name: test_main_page.py
     visible: true
   - name: bugreport.txt

@@ -1,7 +1,7 @@
 custom_name: 'Test frameworks '
 content:
-- test_frameworks
-- testing_pytest
-- pytest_fixtures
-- pytest_marking
-- pytest_configuration_params
+  - test_frameworks
+  - testing_pytest
+  - pytest_fixtures
+  - pytest_marking
+  - pytest_configuration_params
