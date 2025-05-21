@@ -1,6 +1,6 @@
 custom_name: working with windows
 content:
-- alerts
-- task_alerts
-- switching between tabs in browser
-- task_switching_windows
+  - alerts
+  - task_alerts
+  - switching between tabs in browser
+  - task_switching_windows

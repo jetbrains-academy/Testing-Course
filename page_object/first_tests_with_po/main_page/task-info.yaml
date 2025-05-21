@@ -14,13 +14,13 @@ files:
     placeholders:
       - offset: 136
         length: 106
-        placeholder_text: '# TODO'
+        placeholder_text: "# TODO"
   - name: conftest.py
     visible: true
     placeholders:
       - offset: 101
         length: 1181
-        placeholder_text: '# TODO'
+        placeholder_text: "# TODO"
   - name: test_env.py
     visible: false
   - name: pages/__init__.py

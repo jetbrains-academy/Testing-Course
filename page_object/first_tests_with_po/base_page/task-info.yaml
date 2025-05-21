@@ -8,7 +8,7 @@ files:
     placeholders:
       - offset: 154
         length: 1242
-        placeholder_text: '# TODO'
+        placeholder_text: "# TODO"
   - name: test_env.py
     visible: false
   - name: pages/__init__.py
@@ -40,6 +40,6 @@ files:
     placeholders:
       - offset: 16
         length: 147
-        placeholder_text: '# TODO'
+        placeholder_text: "# TODO"
   - name: tests/__init__.py
     visible: false

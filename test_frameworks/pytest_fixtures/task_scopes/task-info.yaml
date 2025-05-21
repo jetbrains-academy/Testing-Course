@@ -1,28 +1,28 @@
 type: edu
 custom_name: "task: fixture scopes"
 files:
-- name: task.py
-  visible: true
-  placeholders:
-  - offset: 422
-    length: 24
-    placeholder_text: '# TODO'
-  - offset: 489
-    length: 26
-    placeholder_text: '#TODO'
-  - offset: 611
-    length: 40
-    placeholder_text: '# TODO'
-  - offset: 302
-    length: 23
-    placeholder_text: '# TODO'
-- name: tests/test_task.py
-  visible: false
-- name: __init__.py
-  visible: false
-- name: tests/__init__.py
-  visible: false
-- name: test_task.py
-  visible: false
-- name: answer.txt
-  visible: true
+  - name: task.py
+    visible: true
+    placeholders:
+      - offset: 302
+        length: 23
+        placeholder_text: "# TODO"
+      - offset: 422
+        length: 24
+        placeholder_text: "# TODO"
+      - offset: 489
+        length: 26
+        placeholder_text: "#TODO"
+      - offset: 611
+        length: 40
+        placeholder_text: "# TODO"
+  - name: tests/test_task.py
+    visible: false
+  - name: __init__.py
+    visible: false
+  - name: tests/__init__.py
+    visible: false
+  - name: test_task.py
+    visible: false
+  - name: answer.txt
+    visible: true

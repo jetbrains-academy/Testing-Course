@@ -1,17 +1,17 @@
 type: edu
 custom_name: "task: working with files"
 files:
-- name: task.py
-  visible: true
-  placeholders:
-  - offset: 134
-    length: 540
-    placeholder_text: '# TODO'
-- name: tests/test_task.py
-  visible: false
-- name: __init__.py
-  visible: false
-- name: tests/__init__.py
-  visible: false
-- name: file.txt
-  visible: true
+  - name: task.py
+    visible: true
+    placeholders:
+      - offset: 134
+        length: 540
+        placeholder_text: "# TODO"
+  - name: tests/test_task.py
+    visible: false
+  - name: __init__.py
+    visible: false
+  - name: tests/__init__.py
+    visible: false
+  - name: file.txt
+    visible: true

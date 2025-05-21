@@ -1,7 +1,7 @@
 type: theory
-custom_name: "running test cases with pytest"
+custom_name: running test cases with pytest
 files:
-- name: main.py
-  visible: true
-- name: __init__.py
-  visible: false
+  - name: main.py
+    visible: true
+  - name: __init__.py
+    visible: false

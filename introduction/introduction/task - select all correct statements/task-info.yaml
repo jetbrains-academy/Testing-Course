@@ -1,19 +1,20 @@
 type: choice
 is_multiple_choice: true
 options:
-- text: ChromeDriver is maintained by Chromium team
-  is_correct: true
-- text: ChromeDriver allows manipulating Firefox browser
-  is_correct: false
-- text: Selenium Webdriver can be used in Java project
-  is_correct: true
-- text: UI tests can be automated only in Python
-  is_correct: false
-- text: You can copy UI tests from project in Java and paste in Python project and they will work, since Selenium is universal
-  is_correct: false
+  - text: ChromeDriver is maintained by Chromium team
+    is_correct: true
+  - text: ChromeDriver allows manipulating Firefox browser
+    is_correct: false
+  - text: Selenium Webdriver can be used in Java project
+    is_correct: true
+  - text: UI tests can be automated only in Python
+    is_correct: false
+  - text: "You can copy UI tests from project in Java and paste in Python project and\
+    \ they will work, since Selenium is universal"
+    is_correct: false
 files:
-- name: main.py
-  visible: true
-- name: __init__.py
-  visible: false
+  - name: main.py
+    visible: true
+  - name: __init__.py
+    visible: false
 local_check: true

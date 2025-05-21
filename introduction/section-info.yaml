@@ -1,8 +1,8 @@
-custom_name: "Introduction"
+custom_name: Introduction
 content:
-- introduction
-- starting_browser
-- page_structure
-- finding_elements
-- css_practice
-- finding_elements_selenium
+  - introduction
+  - starting_browser
+  - page_structure
+  - finding_elements
+  - css_practice
+  - finding_elements_selenium

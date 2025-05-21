@@ -22,13 +22,13 @@ files:
     placeholders:
       - offset: 189
         length: 83
-        placeholder_text: '# TODO'
+        placeholder_text: "# TODO"
       - offset: 318
         length: 92
-        placeholder_text: '# TODO'
+        placeholder_text: "# TODO"
       - offset: 459
         length: 98
-        placeholder_text: '# TODO'
+        placeholder_text: "# TODO"
   - name: pages/locators.py
     visible: true
   - name: test_login_page.py
