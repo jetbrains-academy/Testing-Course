@@ -1,4 +1,4 @@
-# UI test automation with Selenium and Python [![official JetBrains project](http://jb.gg/badges/official.svg)](https://confluence.jetbrains.com/display/ALL/JetBrains+on+GitHub)
+# UI Test Automation with Selenium and Python [![official JetBrains project](http://jb.gg/badges/official.svg)](https://confluence.jetbrains.com/display/ALL/JetBrains+on+GitHub)
 
 
 This is a basic course about automated UI tests written in Python and Selenium. You will learn:
