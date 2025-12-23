@@ -1,10 +1,12 @@
 type: theory
 files:
-- name: main.py
-  visible: true
-- name: __init__.py
-  visible: false
-- name: img_1.png
-  visible: true
-- name: img_2.png
-  visible: true
+  - name: main.py
+    visible: true
+  - name: __init__.py
+    visible: false
+  - name: img_1.png
+    visible: true
+    is_binary: true
+  - name: img_2.png
+    visible: true
+    is_binary: true

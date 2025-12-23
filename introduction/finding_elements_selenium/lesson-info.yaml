@@ -1,12 +1,12 @@
 custom_name: finding elements with Selenium Webdriver
 content:
-- finding elements with Selenium Webdriver
-- working with browser
-- task_first_script
-- find_by_text
-- finding multiple elements
-- finding_multiple_elements
-- find_by_xpath
-- "selectors - the good, the bad, the ugly"
-- unique_selectors
-- task10
+  - finding elements with Selenium Webdriver
+  - working with browser
+  - task_first_script
+  - find_by_text
+  - finding multiple elements
+  - finding_multiple_elements
+  - find_by_xpath
+  - "selectors - the good, the bad, the ugly"
+  - unique_selectors
+  - task10

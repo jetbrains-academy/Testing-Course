@@ -1,23 +1,24 @@
 type: choice
 is_multiple_choice: true
-custom_name: "task: finding correct selectors 2"
 options:
-  - text: ".card-text.lenin-cat"
+  - text: .card-text.lenin-cat
     is_correct: true
-  - text: ".lenin_cat"
+  - text: .lenin_cat
     is_correct: false
-  - text: ".lenin-cat"
+  - text: .lenin-cat
     is_correct: true
-  - text: ".card-text"
+  - text: .card-text
     is_correct: false
   - text: "[text=\"Lenin cat\"]"
     is_correct: false
 files:
-- name: task.py
-  visible: true
-- name: tests/test_task.py
-  visible: false
-- name: __init__.py
-  visible: false
-- name: tests/__init__.py
-  visible: false
+  - name: task.py
+    visible: true
+  - name: tests/test_task.py
+    visible: false
+  - name: __init__.py
+    visible: false
+  - name: tests/__init__.py
+    visible: false
+custom_name: "task: finding correct selectors 2"
+local_check: true

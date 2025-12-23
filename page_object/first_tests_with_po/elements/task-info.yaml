@@ -24,7 +24,7 @@ files:
     placeholders:
       - offset: 46
         length: 73
-        placeholder_text: '# TODO'
+        placeholder_text: "# TODO"
   - name: test_main_page.py
     visible: true
   - name: conftest.py

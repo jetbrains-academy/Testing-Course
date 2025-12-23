@@ -1,8 +1,8 @@
 custom_name: practice writing css selectors
 content:
-- id_selectors
-- data_type
-- class_selector
-- multi_class_selector
-- complex_selector
-- hierarchical_selector
+  - id_selectors
+  - data_type
+  - class_selector
+  - multi_class_selector
+  - complex_selector
+  - hierarchical_selector

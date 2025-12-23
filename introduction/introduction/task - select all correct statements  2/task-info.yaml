@@ -1,17 +1,17 @@
 type: choice
 is_multiple_choice: true
 options:
-- text: Selenium Webdriver is a programming language to develop UI tests
-  is_correct: false
-- text: Selenium is an open source project
-  is_correct: true
-- text: Selenium Webdriver works only with Firefox browser
-  is_correct: false
-- text: In most cases you can run same UI tests on various browsers
-  is_correct: true
+  - text: Selenium Webdriver is a programming language to develop UI tests
+    is_correct: false
+  - text: Selenium is an open source project
+    is_correct: true
+  - text: Selenium Webdriver works only with Firefox browser
+    is_correct: false
+  - text: In most cases you can run same UI tests on various browsers
+    is_correct: true
 files:
-- name: main.py
-  visible: true
-- name: __init__.py
-  visible: false
+  - name: main.py
+    visible: true
+  - name: __init__.py
+    visible: false
 local_check: true

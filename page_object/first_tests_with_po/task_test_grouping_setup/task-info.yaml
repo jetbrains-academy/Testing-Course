@@ -1,31 +1,31 @@
 type: edu
 custom_name: "task: test grouping and setup"
 files:
-- name: __init__.py
-  visible: false
-- name: conftest.py
-  visible: true
-- name: pages/__init__.py
-  visible: true
-- name: tests/test_task.py
-  visible: false
-- name: tests/__init__.py
-  visible: false
-- name: test_main_page.py
-  visible: true
-- name: test_product_page.py
-  visible: true
-- name: pages/base_page.py
-  visible: true
-- name: pages/basket_page.py
-  visible: true
-- name: pages/locators.py
-  visible: true
-- name: pages/login_page.py
-  visible: true
-- name: pages/main_page.py
-  visible: true
-- name: pages/product_page.py
-  visible: true
-- name: test_util.py
-  visible: false
+  - name: __init__.py
+    visible: false
+  - name: conftest.py
+    visible: true
+  - name: pages/__init__.py
+    visible: true
+  - name: tests/test_task.py
+    visible: false
+  - name: tests/__init__.py
+    visible: false
+  - name: test_main_page.py
+    visible: true
+  - name: test_product_page.py
+    visible: true
+  - name: pages/base_page.py
+    visible: true
+  - name: pages/basket_page.py
+    visible: true
+  - name: pages/locators.py
+    visible: true
+  - name: pages/login_page.py
+    visible: true
+  - name: pages/main_page.py
+    visible: true
+  - name: pages/product_page.py
+    visible: true
+  - name: test_util.py
+    visible: false

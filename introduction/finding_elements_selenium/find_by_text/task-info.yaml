@@ -1,15 +1,15 @@
 type: edu
 custom_name: find element by text in the link
 files:
-- name: task.py
-  visible: true
-  placeholders:
-  - offset: 164
-    length: 553
-    placeholder_text: '# TODO'
-- name: tests/test_task.py
-  visible: false
-- name: __init__.py
-  visible: false
-- name: tests/__init__.py
-  visible: false
+  - name: task.py
+    visible: true
+    placeholders:
+      - offset: 164
+        length: 553
+        placeholder_text: "# TODO"
+  - name: tests/test_task.py
+    visible: false
+  - name: __init__.py
+    visible: false
+  - name: tests/__init__.py
+    visible: false

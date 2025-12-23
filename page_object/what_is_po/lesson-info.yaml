@@ -1,8 +1,8 @@
 custom_name: what is page object model?
 content:
-- about code style
-- code style
-- code style in tests
-- task4
-- first_page_object
-- why page object
+  - about code style
+  - code style
+  - code style in tests
+  - task4
+  - first_page_object
+  - why page object

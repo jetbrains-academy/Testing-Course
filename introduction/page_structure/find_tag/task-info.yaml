@@ -1,20 +1,20 @@
 type: choice
 is_multiple_choice: false
-custom_name: "task: find correct tag"
 options:
-- text: div
-  is_correct: false
-- text: value
-  is_correct: false
-- text: button
-  is_correct: true
-- text: input
-  is_correct: false
-- text: btnK
-  is_correct: false
+  - text: div
+    is_correct: false
+  - text: value
+    is_correct: false
+  - text: button
+    is_correct: true
+  - text: input
+    is_correct: false
+  - text: btnK
+    is_correct: false
 files:
-- name: main.py
-  visible: true
-- name: __init__.py
-  visible: false
+  - name: main.py
+    visible: true
+  - name: __init__.py
+    visible: false
+custom_name: "task: find correct tag"
 local_check: true

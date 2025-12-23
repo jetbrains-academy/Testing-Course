@@ -1,11 +1,11 @@
 custom_name: web page structure
 content:
-- webpage structure
-- html structure
-- find_tag
-- visual attributes
-- about data attributes
-- task_attributes
-- task_attributes_2
-- finding attributes task
-- page_layout
+  - webpage structure
+  - html structure
+  - find_tag
+  - visual attributes
+  - about data attributes
+  - task_attributes
+  - task_attributes_2
+  - finding attributes task
+  - page_layout

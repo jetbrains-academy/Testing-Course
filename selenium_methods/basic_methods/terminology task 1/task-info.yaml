@@ -1,15 +1,15 @@
 type: choice
 is_multiple_choice: false
 options:
-- text: this is radiobutton
-  is_correct: true
-- text: this is checkbox
-  is_correct: false
-- text: this is neither chechbox or radiobutton
-  is_correct: false
+  - text: this is radiobutton
+    is_correct: true
+  - text: this is checkbox
+    is_correct: false
+  - text: this is neither chechbox or radiobutton
+    is_correct: false
 files:
-- name: main.py
-  visible: true
-- name: __init__.py
-  visible: false
+  - name: main.py
+    visible: true
+  - name: __init__.py
+    visible: false
 local_check: true

@@ -1,27 +1,27 @@
 type: framework
 custom_name: writing test with page object model
 content:
-- base_page
-- main_page
-- po_test
-- red_test
-- assert_method
-- elements
-- login_page
-- page_switching
-- logic_encapsulation
-- task10
-- task11
-- task_add_item
-- task_data_independence
-- task_data_independence_bug
-- task_data_independence_bug_fix
-- checking_element_absence
-- task_check_element_absence
-- task_check_element_absence_fix
-- benefits_inheritance
-- task_inheritance
-- task_negative_inheritance
-- task_test_grouping
-- task_test_grouping_setup
+  - base_page
+  - main_page
+  - po_test
+  - red_test
+  - assert_method
+  - elements
+  - login_page
+  - page_switching
+  - logic_encapsulation
+  - task10
+  - task11
+  - task_add_item
+  - task_data_independence
+  - task_data_independence_bug
+  - task_data_independence_bug_fix
+  - checking_element_absence
+  - task_check_element_absence
+  - task_check_element_absence_fix
+  - benefits_inheritance
+  - task_inheritance
+  - task_negative_inheritance
+  - task_test_grouping
+  - task_test_grouping_setup
 is_template_based: false
