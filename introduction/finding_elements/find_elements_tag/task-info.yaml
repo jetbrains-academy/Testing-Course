@@ -1,5 +1,5 @@
 type: edu
-custom_name: "task: find element by tag in browser"
+custom_name: Find elements tag
 files:
   - name: task.py
     visible: true

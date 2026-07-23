@@ -1,5 +1,5 @@
 type: edu
-custom_name: multi class selector
+custom_name: Multi class selector
 files:
   - name: task.py
     visible: true

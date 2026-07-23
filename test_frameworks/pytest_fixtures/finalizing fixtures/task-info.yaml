@@ -1,3 +1,4 @@
+custom_name: Finalizing fixtures
 type: theory
 files:
   - name: test_fixture3.py

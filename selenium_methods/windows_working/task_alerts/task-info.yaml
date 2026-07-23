@@ -1,5 +1,5 @@
 type: edu
-custom_name: "task: working with alerts"
+custom_name: Task alerts
 files:
   - name: task.py
     visible: true

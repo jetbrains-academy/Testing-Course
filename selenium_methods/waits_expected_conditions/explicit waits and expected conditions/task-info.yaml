@@ -1,3 +1,4 @@
+custom_name: Explicit waits and expected conditions
 type: theory
 files:
   - name: main.py

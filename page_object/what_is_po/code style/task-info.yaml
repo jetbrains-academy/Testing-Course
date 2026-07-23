@@ -1,5 +1,5 @@
 type: theory
-custom_name: "code style: basic principles"
+custom_name: Code style
 files:
   - name: main.py
     visible: true

@@ -1,4 +1,4 @@
-custom_name: 'Test frameworks '
+custom_name: Test frameworks
 content:
   - test_frameworks
   - testing_pytest

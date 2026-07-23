@@ -1,5 +1,5 @@
 type: theory
-custom_name: working with alerts
+custom_name: Alerts
 files:
   - name: main.py
     visible: true

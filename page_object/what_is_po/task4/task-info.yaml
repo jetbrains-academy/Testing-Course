@@ -1,5 +1,5 @@
 type: theory
-custom_name: first step towards page object
+custom_name: Task4
 files:
   - name: main.py
     visible: true

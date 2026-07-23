@@ -1,3 +1,4 @@
+custom_name: How to run test cases
 type: theory
 files:
   - name: test_abs_project.py

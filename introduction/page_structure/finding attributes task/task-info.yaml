@@ -22,5 +22,5 @@ files:
     visible: true
   - name: __init__.py
     visible: false
-custom_name: "task: finding attributes"
+custom_name: Finding attributes task
 local_check: true

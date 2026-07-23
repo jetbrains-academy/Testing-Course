@@ -1,5 +1,5 @@
 type: edu
-custom_name: find element by text in the link
+custom_name: Find by text
 files:
   - name: task.py
     visible: true

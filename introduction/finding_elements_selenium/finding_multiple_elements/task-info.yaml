@@ -1,5 +1,5 @@
 type: edu
-custom_name: "task: finding multiple elements "
+custom_name: Finding multiple elements
 files:
   - name: task.py
     visible: true

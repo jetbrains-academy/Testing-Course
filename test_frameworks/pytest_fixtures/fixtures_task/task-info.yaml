@@ -26,5 +26,5 @@ files:
     visible: true
   - name: __init__.py
     visible: false
-custom_name: "task: fixture scope"
+custom_name: Fixtures task
 local_check: true

@@ -1,5 +1,5 @@
 type: edu
-custom_name: "task: finding elements with XPath"
+custom_name: Find elements with xpath
 files:
   - name: task.py
     visible: true

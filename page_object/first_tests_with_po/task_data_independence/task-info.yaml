@@ -1,5 +1,5 @@
 type: edu
-custom_name: "task: data independence"
+custom_name: Task data independence
 files:
   - name: __init__.py
     visible: false

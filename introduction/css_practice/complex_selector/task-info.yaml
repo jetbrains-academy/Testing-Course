@@ -1,5 +1,5 @@
 type: edu
-custom_name: complex selector
+custom_name: Complex selector
 files:
   - name: task.py
     visible: true

@@ -1,3 +1,4 @@
+custom_name: Example for executing scripts
 type: theory
 files:
   - name: main.py

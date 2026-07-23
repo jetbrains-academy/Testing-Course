@@ -1,5 +1,5 @@
 type: edu
-custom_name: "task: writing abstract methods"
+custom_name: First page object
 files:
   - name: task.py
     visible: true

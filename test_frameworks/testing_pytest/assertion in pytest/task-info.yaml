@@ -1,3 +1,4 @@
+custom_name: Assertion in pytest
 type: theory
 files:
   - name: main.py

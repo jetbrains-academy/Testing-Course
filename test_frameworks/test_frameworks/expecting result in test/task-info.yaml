@@ -1,3 +1,4 @@
+custom_name: Expecting result in test
 type: theory
 files:
   - name: main.py

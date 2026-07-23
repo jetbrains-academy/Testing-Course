@@ -1,4 +1,4 @@
-custom_name: marking tests with pytest
+custom_name: Pytest marking
 content:
   - marking tests with pytest
   - marking tests with pytest - inversion

@@ -1,5 +1,5 @@
 type: edu
-custom_name: "task: fixture scopes"
+custom_name: Task scopes
 files:
   - name: task.py
     visible: true

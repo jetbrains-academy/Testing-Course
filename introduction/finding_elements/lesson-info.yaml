@@ -1,4 +1,4 @@
-custom_name: finding elements
+custom_name: Finding elements
 content:
   - finding elements with css selectors
   - find_elements_tag

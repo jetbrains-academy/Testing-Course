@@ -1,3 +1,4 @@
+custom_name: Fixtures autouse
 type: theory
 files:
   - name: test_fixture_autouse.py

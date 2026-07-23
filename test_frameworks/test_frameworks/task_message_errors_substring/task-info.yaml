@@ -1,5 +1,5 @@
 type: edu
-custom_name: "task: correct error messages with substrings"
+custom_name: Task message errors substring
 files:
   - name: task.py
     visible: true

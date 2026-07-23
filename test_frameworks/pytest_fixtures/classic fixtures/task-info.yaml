@@ -1,3 +1,4 @@
+custom_name: Classic fixtures
 type: theory
 files:
   - name: test_fixture1.py

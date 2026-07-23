@@ -1,5 +1,5 @@
 type: edu
-custom_name: "task: unique selectors"
+custom_name: Unique selectors
 files:
   - name: task.py
     visible: true

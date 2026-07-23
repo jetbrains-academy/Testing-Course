@@ -1,5 +1,5 @@
 type: edu
-custom_name: "task: executing script"
+custom_name: Task execute script
 files:
   - name: task.py
     visible: true

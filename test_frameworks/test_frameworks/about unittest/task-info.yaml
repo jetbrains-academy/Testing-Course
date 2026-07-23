@@ -1,3 +1,4 @@
+custom_name: About unittest
 type: theory
 files:
   - name: main.py

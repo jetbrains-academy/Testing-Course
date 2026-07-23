@@ -1,5 +1,5 @@
 type: edu
-custom_name: "task: finding elements with selenium"
+custom_name: Task first script
 files:
   - name: task.py
     visible: true

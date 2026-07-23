@@ -1,5 +1,5 @@
 type: edu
-custom_name: "task: fixtures returning value"
+custom_name: Fixtures value task
 files:
   - name: task.py
     visible: true

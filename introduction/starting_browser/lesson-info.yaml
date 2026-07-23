@@ -1,4 +1,4 @@
-custom_name: starting browser with selenium webdriver
+custom_name: Starting browser
 content:
   - installing chrome webdriver
   - installing chromedriver for windows

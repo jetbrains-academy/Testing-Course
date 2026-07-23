@@ -1,5 +1,5 @@
 type: theory
-custom_name: 'fixtures returning value '
+custom_name: Fixtures returning value
 files:
   - name: test_fixture2.py
     visible: true

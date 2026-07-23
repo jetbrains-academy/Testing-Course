@@ -1,5 +1,5 @@
 type: edu
-custom_name: login page implementation
+custom_name: Login page
 files:
   - name: test_main_page.py
     visible: true

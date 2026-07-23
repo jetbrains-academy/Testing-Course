@@ -1,5 +1,5 @@
 type: edu
-custom_name: logic encapsulation
+custom_name: Logic encapsulation
 files:
   - name: test_main_page.py
     visible: true

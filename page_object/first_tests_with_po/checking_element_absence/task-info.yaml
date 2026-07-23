@@ -1,5 +1,5 @@
 type: edu
-custom_name: checking element absence
+custom_name: Checking element absence
 files:
   - name: test_main_page.py
     visible: true

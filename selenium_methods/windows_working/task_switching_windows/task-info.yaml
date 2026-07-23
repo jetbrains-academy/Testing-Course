@@ -1,5 +1,5 @@
 type: edu
-custom_name: "task: switching windows"
+custom_name: Task switching windows
 files:
   - name: task.py
     visible: true
