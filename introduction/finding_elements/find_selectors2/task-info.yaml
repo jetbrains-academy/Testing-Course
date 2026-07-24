@@ -20,5 +20,5 @@ files:
     visible: false
   - name: tests/__init__.py
     visible: false
-custom_name: Find selectors2
+custom_name: Find selectors 2
 local_check: true

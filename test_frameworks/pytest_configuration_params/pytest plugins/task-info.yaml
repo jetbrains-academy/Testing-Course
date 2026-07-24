@@ -1,4 +1,4 @@
-custom_name: Pytest plugins
+custom_name: Plugins and test reruns
 type: theory
 files:
   - name: main.py

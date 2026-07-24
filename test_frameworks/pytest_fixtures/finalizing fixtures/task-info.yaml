@@ -1,4 +1,4 @@
-custom_name: Finalizing fixtures
+custom_name: "Finalizers — closing the browser"
 type: theory
 files:
   - name: test_fixture3.py

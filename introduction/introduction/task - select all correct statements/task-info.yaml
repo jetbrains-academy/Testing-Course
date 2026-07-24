@@ -1,4 +1,4 @@
-custom_name: Task   select all correct statements
+custom_name: Task – Selenium project
 type: choice
 is_multiple_choice: true
 options:

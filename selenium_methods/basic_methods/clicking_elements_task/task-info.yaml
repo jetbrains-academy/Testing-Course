@@ -1,5 +1,5 @@
 type: edu
-custom_name: Clicking elements task
+custom_name: Clicking elements (Captcha Test)
 files:
   - name: task.py
     visible: true

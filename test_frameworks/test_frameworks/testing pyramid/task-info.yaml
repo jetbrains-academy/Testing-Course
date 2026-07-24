@@ -1,4 +1,4 @@
-custom_name: Testing pyramid
+custom_name: Unit tests and integration tests
 type: theory
 files:
   - name: main.py

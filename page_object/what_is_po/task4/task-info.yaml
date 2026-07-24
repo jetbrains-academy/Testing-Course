@@ -1,5 +1,5 @@
 type: theory
-custom_name: Task4
+custom_name: What is Page Object Model?
 files:
   - name: main.py
     visible: true

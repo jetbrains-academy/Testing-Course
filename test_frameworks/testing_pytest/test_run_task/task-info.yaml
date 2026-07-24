@@ -22,5 +22,5 @@ files:
     visible: true
   - name: __init__.py
     visible: false
-custom_name: Test run task
+custom_name: "Task: running tests"
 local_check: true

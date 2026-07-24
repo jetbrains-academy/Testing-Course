@@ -51,5 +51,5 @@ files:
     visible: false
   - name: pages2.svg
     visible: false
-custom_name: Task10
+custom_name: Task Page Object
 local_check: true

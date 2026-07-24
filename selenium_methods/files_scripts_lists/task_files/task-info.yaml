@@ -1,5 +1,5 @@
 type: edu
-custom_name: Task files
+custom_name: "Task: uploading a file"
 files:
   - name: task.py
     visible: true

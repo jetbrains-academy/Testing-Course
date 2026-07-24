@@ -1,5 +1,5 @@
 type: edu
-custom_name: Task message errors substring
+custom_name: "Task: compound error messages and substring search"
 files:
   - name: task.py
     visible: true

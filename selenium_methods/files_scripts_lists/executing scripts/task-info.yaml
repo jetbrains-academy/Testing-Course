@@ -1,4 +1,4 @@
-custom_name: Executing scripts
+custom_name: The execute_script method
 type: theory
 files:
   - name: main.py

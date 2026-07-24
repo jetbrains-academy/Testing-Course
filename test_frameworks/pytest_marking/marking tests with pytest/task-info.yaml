@@ -1,4 +1,4 @@
-custom_name: Marking tests with pytest
+custom_name: "Test marking: part 1"
 type: theory
 files:
   - name: test_fixture8.py

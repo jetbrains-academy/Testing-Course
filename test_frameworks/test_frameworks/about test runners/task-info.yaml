@@ -1,4 +1,4 @@
-custom_name: About test runners
+custom_name: Choosing a test runner
 type: theory
 files:
   - name: main.py

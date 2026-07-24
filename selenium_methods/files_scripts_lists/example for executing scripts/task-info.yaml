@@ -1,4 +1,4 @@
-custom_name: Example for executing scripts
+custom_name: Sample execute_script task
 type: theory
 files:
   - name: main.py
