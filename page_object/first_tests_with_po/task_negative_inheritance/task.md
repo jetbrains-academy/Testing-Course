@@ -1,6 +1,4 @@
-<h2>Task: Inheritance and negative checks</h2>
-
-<p>In the<em> test_main_page.py</em> file, add a test with the following description:</p>
+﻿<p>In the<em> test_main_page.py</em> file, add a test with the following description:</p>
 
 <p><samp><strong> test_guest_cant_see_product_in_basket_opened_from_main_page:</strong></samp></p>
 

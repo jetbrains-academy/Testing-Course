@@ -1,5 +1,3 @@
-<h2>A few words about the modern web</h2>
-
 <p>Developers worked hard to ensure
 that in 2022, web pages would look neat and open quickly 
 with the transitions between pages being almost unnoticeable.

@@ -1,5 +1,3 @@
-<h2>Task: finalizing fixtures, fixtures returning value</h2>
-
 <p>
 In this task, you need to implement two fixture functions – the browser fixture, and the 'answer_file' fixture. 
 </p>

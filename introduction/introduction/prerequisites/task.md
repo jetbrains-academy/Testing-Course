@@ -1,5 +1,3 @@
-## Prerequisites 
-
 Please note that this course does not cover the basics of programming or Python programming language.
 We suggest that you study Python in the following [course](https://plugins.jetbrains.com/plugin/16630-introduction-to-python). 
 

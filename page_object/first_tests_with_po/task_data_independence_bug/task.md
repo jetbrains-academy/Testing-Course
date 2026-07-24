@@ -1,4 +1,3 @@
-<h2>Task: Content independence, finding a bug</h2>
 This task is for true testing ninjas. Not because it's difficult, but because now we'll be catching a real bug with our automated tests. Several new promotions were launched for our online store, one of which led to the appearance of a bug. The promotion is activated by adding the parameter ?promo=offerN to the product link.</p>
 
 <p>Fortunately, we don't have to change our test to check the code changes. We'll simply run the same test on the page&nbsp;<a href="http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/" rel="noopener noreferrer nofollow">http://selenium1py.pythonanywhere.com/catalogue/coders-at-work_207/</a>&nbsp;with parameterization. You need to determine at which value of the promo parameter the automated test will fail. To do this, check the PyTest result and find the URL where the error occurred. The parameter value can range from offer0 to offer9.</p>

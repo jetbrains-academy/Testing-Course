@@ -1,5 +1,3 @@
-<h2>Unique selectors: part 2</h2>
-
 <p>Let's try to realize one of the automated tests from the previous step. You are given a <a href="http://suninjuly.github.io/registration1.html" rel="nofollow noopener noreferrer">page</a> with a registration form. Check if it's possible to get registered at the site having filled in the mandatory fields only – those marked with the * symbol: first name, last name, email. The text in the fields may be arbitrary. The success of registration is checked by the comparison of the expected text &quot;Congratulations! You have successfully registered!&quot; with the text on the page opened after the registration. To compare the texts, let's use Python's standard&nbsp;"assert" construct.</p>
 
 <p>Below you have a template of the code that you need to use for the test. Remember that selectors must be unique.</p>

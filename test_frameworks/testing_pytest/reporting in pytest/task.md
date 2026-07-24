@@ -1,5 +1,3 @@
-<h2>PyTest — reports</h2>
-
 <p>You might have noticed that PyTest allows generating a detailed report supporting color schemes and formatting right out of the box.</p>
 
 <p>Let's run our tests with unittest and PyTest once again and compare the outputted result.</p>

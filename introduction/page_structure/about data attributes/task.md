@@ -1,6 +1,4 @@
-## More about attributes (data attributes)
-
-As we've already said, some attributes directly affect the representation of the element on a page.
+﻿As we've already said, some attributes directly affect the representation of the element on a page.
 We've already discussed some of these important attributes.
 
 Actually, the list of attributes can be expanded: it means that developers can create their own

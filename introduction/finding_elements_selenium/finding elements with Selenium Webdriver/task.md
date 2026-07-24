@@ -1,5 +1,3 @@
-<h2>Finding elements with&nbsp;Selenium</h2>
-
 <p>To find web page elements, Selenium WebDriver uses several strategies, which allow searching by element attributes, link text, CSS selectors, and XPath selectors. Selenium provides a search method find_element, which takes two arguments – locator type and locator value. The available search methods are the following:</p>
 
 <ul>

@@ -1,5 +1,3 @@
-<h2>Verification methods in Page Object</h2>
-
 <p>Let's now automate another test case and see, through an example, how to create verification methods. </p>
 
 <p>Suppose we need to check the following scenario: </p>

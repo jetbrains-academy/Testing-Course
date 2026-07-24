@@ -1,5 +1,3 @@
-<h2>Task: clicking checkboxes and radio buttons (captcha test)</h2>
-
 <p>Let's continue using the power of robots 🤖 for everyday tasks. In this <a href="https://suninjuly.github.io/math.html" rel="nofollow noopener noreferrer">page</a>, we've added a captcha test, i.e., a test that is easy for a computer but complicated for a human.</p>
 
 <p>Your program has to perform the following steps:</p>

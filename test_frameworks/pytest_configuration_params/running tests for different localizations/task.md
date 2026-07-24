@@ -1,5 +1,3 @@
-<h2>Running automated tests for different interface languages</h2>
-
 <p>Our goal is to learn to run automated tests for different local settings, i.e., different interface languages.</p>
 
 <p>In one of our previous <a href="/lesson/237240/step/2" rel="noopener noreferrer nofollow">steps</a>, we've already run automated tests for various languages. We used parametrization with different links, but such an approach is hard to scale up onto a large number of tests. Let's make the server decide what interface language to use depending on the browser data. The browser sends the information about the user's language via requests to the server, indicating the <strong>accept-language</strong> parameter in the header. If the server receives a request with the header {accept-language: ru, en}, it will display the Russian-language site interface. If Russian is not supported, the next language in the list will be used – in our case, English. That is actually similar to defining the preferable language in your browser's settings: </p>

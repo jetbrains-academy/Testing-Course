@@ -1,5 +1,3 @@
-<h2>PyTest — checking the expected result (assert)</h2>
-
 <p>If you're working with unittest to check the expected test results, you need to know and use a large number of assert methods: for example, assertEqual, assertNotEqual, assertTrue, assertFalse, and <a href="https://docs.python.org/3/library/unittest.html#assert-methods﻿" rel="nofollow noopener noreferrer">others</a>.</p>
 
 <p>PyTest uses the standard Python's assert method, which makes code more explicit.</p>

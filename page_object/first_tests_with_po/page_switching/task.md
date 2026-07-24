@@ -1,5 +1,3 @@
-<h2>Switching between pages</h2>
-
 <p>Switching can be implemented in two different ways. </p>
 
 <p>The first way is to return the required Page Object.</p>

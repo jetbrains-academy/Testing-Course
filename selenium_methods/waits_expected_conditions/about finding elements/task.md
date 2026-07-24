@@ -1,5 +1,3 @@
-<h2>How get and find_element methods work</h2>
-
 <p>Let's consider one more WebDriver test – the one that checks the functioning of a button.</p>
 
 <p>The test scenario is as follows:</p>

@@ -1,6 +1,4 @@
-<h2>Page Object for the main page of the website</h2>
-
-<p>Now let's implement a Page Object that will be associated with the main page of the online store. </p>
+﻿<p>Now let's implement a Page Object that will be associated with the main page of the online store. </p>
 
 <p>1. Open the file <code>main_page.py</code> </p>
 

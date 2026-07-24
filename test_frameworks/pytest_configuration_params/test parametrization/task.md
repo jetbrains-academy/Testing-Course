@@ -1,5 +1,3 @@
-<h2>Test parametrization</h2>
-
 <p>PyTest allows running the same test with different input parameters. To do that, use the <strong>@pytest.mark.parametrize()</strong> decorator. Our site is available in various languages. Let's write a test that checks that the Russian- and English-language site displays a link to the log-in form. We'll pass the links to the Russian and English versions of our site's front page to our tests.</p>
 
 <p>We need to pass the parameter that may change and the list of parameter values to <strong>@pytest.mark.parametrize()</strong>. In the test itself, the parameter should also be passed as an argument. Notice that inside the decorator, the name of the parameter is put in quotes, while the list of test arguments does not require quotes.</p>

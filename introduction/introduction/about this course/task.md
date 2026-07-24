@@ -1,5 +1,3 @@
-## About the course
-
 We are happy to welcome you to our course. 
 We means Julia Liakh and Lesha Pogibelev, formerly – the testing team on Stepik.org. 
 This course is an Edu Tools adapted translation of materials from an open Russian-language course available at https://stepik.org/course/575/promo.

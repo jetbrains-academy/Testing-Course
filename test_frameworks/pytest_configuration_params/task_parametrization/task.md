@@ -1,5 +1,3 @@
-<h2>Task: test parametrization</h2>
-
 <p>Aliens leave mysterious messages on Stepik as feedback for correctly solved tasks. We managed to localize several task URLs where fragments of these messages appear. Your task is to implement an automated test with the following steps:</p>
 
 <ul>

@@ -1,5 +1,3 @@
-<h2>Test structure</h2>
-
 <p>When writing UI tests, you can use the same Python features as in the case of unit tests created by developers. </p>
 
 <p>Any test should contain:</p>

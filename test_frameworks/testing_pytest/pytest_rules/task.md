@@ -1,5 +1,3 @@
-<h2><strong>PyTest: rules of test running</strong></h2>
-
 <p>In this step, we will briefly discuss several important aspects of running tests with PyTest. When we execute the <strong>pytest</strong> command, the test runner collects all the tests to be run according to specific rules:</p>
 
 <ul>

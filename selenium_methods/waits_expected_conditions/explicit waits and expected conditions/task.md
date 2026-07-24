@@ -1,5 +1,3 @@
-<h2>Explicit Waits (WebDriverWait and expected_conditions)</h2>
-
 <p>In the previous step, we've figured out the problem of element waits on a page. However, the <strong>find_element</strong> methods check only the fact that the page element has been displayed. Meanwhile, the element might have additional properties that may be relevant to our tests. Let's consider the example with the button that sends data:</p>
 
 <ul>

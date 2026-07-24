@@ -1,5 +1,3 @@
-## Finding elements with CSS selectors
-
 <p> Below you can see the parts of an HTML page we can use to find an element with the help of the CSS syntax:</p>
 
 <ul>

@@ -1,5 +1,3 @@
-<h2>Task: running tests</h2>
-
 <p>An applicant sent a testing project as a test task for a vacancy in your company: </p>
 
 <p><img alt="" src="https://ucarecdn.com/c115593c-155f-4cb4-a8f3-f58cdb9bcda7/"></p>

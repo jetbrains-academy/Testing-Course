@@ -1,5 +1,3 @@
-<h2>Classic fixtures</h2>
-
 <p>An important aspect of working with PyTest is the concept of fixture. In the context of PyTest, fixtures are auxiliary functions that are not part of the test scenario.</p>
 
 <p>The purposes of fixtures may be different. One of the most popular uses of fixtures is preparing the test environment and cleaning up the test environment and data after test completion. However, fixtures may be used for a wide range of purposes: connecting to a database the tests work with, creating test files, or preparing data in the current environment with the help of API methods. You can read about fixtures in the general sense in more detail in <a href="https://en.wikipedia.org/wiki/Test_fixture#Software" rel="nofollow noopener noreferrer">Wikipedia</a>.</p>

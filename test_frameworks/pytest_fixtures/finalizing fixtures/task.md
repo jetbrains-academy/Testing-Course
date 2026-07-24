@@ -1,5 +1,3 @@
-<h2>Finalizers — closing the browser</h2>
-
 <p>You may have noticed that in our example we didn't use the <strong>browser.quit()</strong> command. As a result, several browser windows remained open after the test was over and closed only after the completion of all tests. The browsers were closed thanks to a built-in fixture – garbage collector. However, if we had several dozens of tests, the open browser windows could have eaten all RAM. That's why it's important to explicitly close browsers after each test. To do that, we can use <strong>finalizers</strong>. One of possible finalizers is the use of Python's key word <strong>yield</strong>. After the test that called the fixture is complete, the fixture will be executed starting with the line that follows the line with the <strong>yield</strong> word:</p>
 
 <p>test_fixture3.py</p>

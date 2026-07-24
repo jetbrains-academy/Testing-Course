@@ -1,4 +1,3 @@
-# What is Selenium WebDriver? 
 There are different kinds of automated tests; they check different things and work with different application levels. 
 You must have previously seen the so-called "testing pyramid". 
 In our course, we'll mostly talk about the end-to-end tests,

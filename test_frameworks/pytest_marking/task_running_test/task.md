@@ -1,5 +1,3 @@
-<h2>Task: running tests</h2>
-
 <p>In this task, you need to figure out the intricacies of test marking. We have a file with tests that have been marked for different launching situations.</p>
 
 <p><strong>test_task_run_1.py:</strong></p>

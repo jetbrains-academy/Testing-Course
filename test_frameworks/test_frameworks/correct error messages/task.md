@@ -1,5 +1,3 @@
-<h2>Compound error messages </h2>
-
 <p>Another thing we need to focus on is the quality of the error messages appearing when tests fail. Why is that important? A well-written text helps quickly locate the bug and figure out what has happened and why the test failed. A good assert will save you hours of work, especially when the number of tests is over a hundred.</p>
 
 <p>Generally speaking, it's like with any feedback: it should be precise and timely. If you're checking for the presence of an element, make sure to write what kind of element it is: </p>

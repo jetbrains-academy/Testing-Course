@@ -1,5 +1,3 @@
-<h2>Scope</h2>
-
 <p>For fixtures, we can define scope. The possible values are: “<strong>function</strong>”, “<strong>class</strong>”, “<strong>module</strong>”, and “<strong>session</strong>”. Consequently, the fixture will be executed once for a test method, once for a class, once for a module, or once for all the tests run in the current session. </p>
 
 <p>Let's run all our tests from the <strong>TestMainPage1</strong> class in one browser to save time. In the browser fixture, we'll set scope="class":</p>

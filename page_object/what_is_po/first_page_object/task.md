@@ -1,6 +1,3 @@
-<h2>Task: writing abstract methods </h2>
-
-
 Now let's rewrite our script from [waiting task](course://selenium_methods/waits_expected_conditions/task_waiting_for_text)
 in pytest style and using abstract methods to make test more human-readable.
 Firstly, implement methods in step.py, using your code from [waiting task](course://selenium_methods/waits_expected_conditions/task_waiting_for_text)

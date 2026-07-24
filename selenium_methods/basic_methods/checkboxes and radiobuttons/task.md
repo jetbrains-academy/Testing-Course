@@ -1,5 +1,3 @@
-<h2>Working with checkboxes and radiobuttons</h2>
-
 <p>Checkbox and radiobutton are commonly used form elements.
 The main difference between them is that checkboxes allow you to select/deselect any amount of the presented options,
 while radio buttons allow you to select only one of the options.</p>

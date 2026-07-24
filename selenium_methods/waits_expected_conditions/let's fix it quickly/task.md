@@ -1,5 +1,3 @@
-<h2>Let's fix it quickly: time.sleep()</h2>
-
 <p>Now that we know that the button is displayed with a delay,
 we can add a wait before the element search starts.
 We have already used the <strong>time</strong> library before. 

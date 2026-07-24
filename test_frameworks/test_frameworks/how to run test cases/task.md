@@ -1,5 +1,3 @@
-<h2>Test scenarios</h2>
-
 <p>You need to save the created tests in a file, which is easy to run and keep
 in a version control system.
 Let's create a file <strong>test_abs_project.py</strong> and write the following code in it:</p>

@@ -1,5 +1,3 @@
-<h2>Better solutions: Selenium Waits (Implicit Waits)</h2>
-
 <p>Hopefully, you've figured out that the solution involving <strong> time.sleep() </strong>isn't a good one: 
 it is not scalable and is hard to support.</p>
 

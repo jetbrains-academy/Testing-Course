@@ -1,5 +1,3 @@
-<h2>Why exactly Page Object?</h2>
-
 <p>We can, of course, save all the logic of our tests in a single file named, for example, steps.py, and for starters, that's not too bad. However, if we are testing a large web product with numerous states and transitions, that file may grow to an enormous size and it will be hard to find the needed method in it. Besides, there are situations when logically the same method has different realizations in different pages. For example, our web store may have a method "add to the cart", and the user can add merchandise to the cart both from the catalogue page and from the specific merchandise page.</p>
 
 <p>It might be convenient to separate the methods logically related to one web page of our product into a specific class in our code. Hence the name — Page Object. It is an abstract object containing the methods of working with a certain web page.</p>

@@ -1,6 +1,4 @@
-<h2>Benefits of Inheritance: The Magic of OOP</h2>
-
-<p>If you've previously used the OOP paradigm in your code, you likely appreciate the ways good architecture can make life easier. In this regard, test automation code is no different from application code—we can use the same techniques to organize methods.</p>
+﻿<p>If you've previously used the OOP paradigm in your code, you likely appreciate the ways good architecture can make life easier. In this regard, test automation code is no different from application code—we can use the same techniques to organize methods.</p>
 
 <p>Here, we will explore just one example: the use of the inheritance mechanism.</p>
 

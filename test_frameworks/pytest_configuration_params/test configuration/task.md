@@ -1,5 +1,3 @@
-<h2>Conftest.py&nbsp;&mdash; test configuration</h2>
-
 <p>We've previously added the browser fixture, which creates a copy of the browser for tests in a given file. When we have more than one test file, we need to describe the fixture in each file. That's very inconvenient. Frequently used fixtures as well as global settings should be stored in the <strong> conftest.py</strong> file, which must be located in the upper-level directory of your project with the tests. We can also create additional conftest.py files in other directories, but then the settings in those files will be applied only to the tests in subdirectories.</p>
 
 <p>Let's create a <strong>conftest.py</strong> file in the root directory of our test project and move the <strong>browser</strong> fixture there. See how much more concise the file with tests looks now.</p>

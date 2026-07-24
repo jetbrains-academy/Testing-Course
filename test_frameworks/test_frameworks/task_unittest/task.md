@@ -1,5 +1,3 @@
-<h2>Task: writing tests in the unittest style</h2>
-
 <p>Try to rewrite the tests from the first module in the unittest style.</p>
 
 Take the [step](course://introduction/finding_elements_selenium/task10)  from the first 

@@ -1,5 +1,3 @@
-<h2><strong>Benefits of inheritance: example</strong></h2>
-
 <p>In the previous lesson, we wrote a test "a guest can go to the login page from the main store page." However, if you look closely at the other pages, you'll notice that the link to the login page is present on every page. If we want to add a test "a guest can go to the login page from the product page," to avoid duplication, it makes sense to move the relevant methods to the BasePage class. Let's do just that: </p>
 
 <p>In the <em>locators.py</em> file, create a new class <strong>BasePageLocators</strong><em> </em>and move the corresponding elements there:</p>

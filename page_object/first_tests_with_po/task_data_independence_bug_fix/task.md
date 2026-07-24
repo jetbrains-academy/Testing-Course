@@ -1,5 +1,3 @@
-<h2>Task: content independence, finding a bug</h2>
-
 <p>Once you've found the bug,
 considering that it won't be fixed,
 it's best to mark the failing test as <strong>xfail</strong>&nbsp;or <strong>skip.&nbsp;</strong>Remember how we did it in Module 3?&nbsp;Refresh your memory: <a href="/lesson/236918/step/5?unit=209305" rel="noopener noreferrer nofollow">XFail: mark the test as expected to fail</a>.</p>

@@ -1,5 +1,3 @@
-<h2>Task: compound error messages</h2>
-
 <p>To solidify what you have learned, implement a check by yourself.&nbsp;</p>
 
 <p>You are given a function&nbsp;<samp><code><strong>test_input_text</strong></code></samp>,&nbsp;which takes two values:&nbsp;<strong>expected_result</strong>&nbsp;&mdash; the expected result, and&nbsp;<strong>actual_result</strong>&nbsp;&mdash; the actual result. Notice that you <strong>don't</strong> need to use <em>input</em>!</p>

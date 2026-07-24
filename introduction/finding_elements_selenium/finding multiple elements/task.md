@@ -1,5 +1,3 @@
-<h2>Finding all necessary elements with find_elements</h2>
-
 <p>We have already mentioned that the method <strong>find_element</strong> returns only the first of all possible elements matching the search conditions. In some situations, there may be several identical elements on a page: for example, the item icons in the shopping cart of an online store. In our test, we need to check that all selected goods are displayed. To do that, we can use the&nbsp;<strong>find_elements</strong> method, which, unlike <strong>find_element</strong>, returns the list of all the elements found according to the search condition. Having checked the list length, we can make sure the shopping cart contains the right number of items. Here's a sample code (the code is just an illustration, the site fake-shop.com most probably does not exist):</p>
 
 <pre>

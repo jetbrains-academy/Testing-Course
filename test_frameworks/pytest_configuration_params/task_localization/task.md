@@ -1,5 +1,3 @@
-<h2>Task: run autotests for different interface languages</h2>
-
 <p>We want our internet store to work equally well for users from any country.
 To make sure that our solution for supporting multiple languages works,
 we will run a set of autotests for each language. 
