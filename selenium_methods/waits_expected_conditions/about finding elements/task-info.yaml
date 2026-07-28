@@ -1,5 +1,5 @@
 type: theory
-custom_name: 'about finding elements '
+custom_name: About finding elements
 files:
   - name: main.py
     visible: true

@@ -1,5 +1,5 @@
 type: theory
-custom_name: running test cases with pytest
+custom_name: Pytest rules
 files:
   - name: main.py
     visible: true

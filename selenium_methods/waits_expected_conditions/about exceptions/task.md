@@ -1,5 +1,3 @@
-<h2>Task: exceptions</h2>
-
 <p>Now we know how to set up waits in element search. 
 While searching, WebDriver checks every 0.5 second whether
 the required element has appeared in the browser's DOM model

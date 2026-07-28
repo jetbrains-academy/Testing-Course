@@ -1,5 +1,5 @@
 type: edu
-custom_name: "task: correct error messages"
+custom_name: "Task: compound error messages"
 files:
   - name: task.py
     visible: true

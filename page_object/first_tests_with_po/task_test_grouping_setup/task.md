@@ -1,5 +1,3 @@
-<h2>Task: test grouping and setup</h2>
-
 <p><span style="color: #ff4363;"><strong>Important! </strong></span>Generally, manipulating the browser in the setup, especially performing checks, is bad practice. It's better not to do this without special necessity. Here, this example is purely for educational purposes, for you to try writing setups for tests. In real life, we would implement all these manipulations using an API or directly through the database.</p>
 
 <p>In this task, we want to add test scenarios not only for website visitors but also for registered users. To achieve this:</p>

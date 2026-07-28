@@ -1,5 +1,3 @@
-<h2>Task: compound error messages and substring search</h2>
-
 <p>Sometimes when working with texts, we do not need strict checks for exact matching – instead, we just need to check that a certain text is a substring of another text. We can do that either with the <strong>in</strong> key word or with the <strong>find</strong> function:</p>
 
 <pre><code>s = 'My Name is Julia'

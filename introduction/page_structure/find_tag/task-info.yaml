@@ -16,5 +16,5 @@ files:
     visible: true
   - name: __init__.py
     visible: false
-custom_name: "task: find correct tag"
+custom_name: Find tag
 local_check: true

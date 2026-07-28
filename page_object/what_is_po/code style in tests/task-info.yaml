@@ -1,5 +1,5 @@
 type: theory
-custom_name: 'code style in tests '
+custom_name: Code style in tests
 files:
   - name: main.py
     visible: true

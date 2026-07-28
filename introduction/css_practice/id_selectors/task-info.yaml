@@ -1,5 +1,5 @@
 type: edu
-custom_name: ID selectors
+custom_name: Id selectors
 files:
   - name: task.py
     visible: true

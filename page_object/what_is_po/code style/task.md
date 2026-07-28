@@ -1,5 +1,3 @@
-<h2>Code Style: basic principles</h2>
-
 <h3>Names of variables and functions</h3>
 
 <p>One of the crucial aspects of code readability is naming – in variable declarations, function description, class names, etc. When naming entities, it's very important to use meaningful names, the ones that reflect the essence of the object. Avoid single-letter and senseless names, like var1, x, y, my_function, class2, etc. Ideal code is self-documenting, i.e., it does not require additional explanations. If you feel that you want to write a comment, it is an excuse to write new code, which won't need the comment.</p>

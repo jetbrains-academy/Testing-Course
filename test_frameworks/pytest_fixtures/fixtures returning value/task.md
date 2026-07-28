@@ -1,5 +1,3 @@
-<h2>Fixtures returning a value</h2>
-
 <p>We've discussed the basic approach to creating fixtures, with test data being set up and cleaned up in the setup and teardown methods. PyTest offers an advanced approach to fixtures, within which fixtures may be defined globally and passed to test methods as parameters; besides, there is a set of built-in fixtures. It's a more flexible and convenient way of working with auxiliary functions, and now you will see why. </p>
 
 <p><strong>Returned value</strong></p>

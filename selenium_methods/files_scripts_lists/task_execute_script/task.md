@@ -1,5 +1,3 @@
-<h2>Task: execute_script</h2>
-
 <p>In this task, you will once again need to pass the captcha test and handle the huge horrible footer, which the designer hasn't fixed yet. You'll need to write code to:</p>
 
 <ol>

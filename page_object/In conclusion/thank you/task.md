@@ -1,5 +1,3 @@
-## Thank you!
-
 Our course is coming to an end! Thank you for being with us until the victorious end. 
 We put in a lot of effort to make sure everything was clear and interesting for everyone :)
 

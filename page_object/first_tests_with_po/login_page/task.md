@@ -1,5 +1,3 @@
-<h2>Implementation of LoginPage</h2>
-
 <p>If you're well-versed in test design, you may have noticed that there are no checks in the test for navigating to the login page. Let's verify that we have indeed navigated to the login page. For this, we'll need a new Page Object. At the same time, we'll understand how to switch between those during the test.&nbsp;</p>
 
 <p> Open the LoginPage file in the pages folder. Inside, there are verification methods:&nbsp;</p>

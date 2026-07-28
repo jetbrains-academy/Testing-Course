@@ -1,5 +1,3 @@
-<h2>Task: fixture scope</h2>
-
 <p>We have a set of tests that uses several fixtures. Calculate how many smileys will be printed after executing this test class. </p>
 
 <pre><code>import pytest

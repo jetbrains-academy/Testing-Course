@@ -1,5 +1,3 @@
-<h2>PyTest — pros and cons</h2>
-
 Additional links: 
 
 https://realpython.com/pytest-python-testing/

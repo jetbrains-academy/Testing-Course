@@ -1,5 +1,5 @@
 type: edu
-custom_name: "task: assertion in pytest"
+custom_name: Assert task
 files:
   - name: task.py
     visible: true

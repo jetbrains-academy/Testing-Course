@@ -1,3 +1,4 @@
+custom_name: "Test marking: part 2"
 type: theory
 files:
   - name: test_fixture81.py

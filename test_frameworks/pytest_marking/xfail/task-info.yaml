@@ -1,5 +1,5 @@
 type: theory
-custom_name: xfail - expecting tests to fail
+custom_name: Xfail
 files:
   - name: test_fixture10.py
     visible: true

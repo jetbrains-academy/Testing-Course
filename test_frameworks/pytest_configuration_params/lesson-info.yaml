@@ -1,4 +1,4 @@
-custom_name: "test configuration, parametrization, plugins"
+custom_name: Pytest configuration params
 content:
   - test configuration
   - test parametrization

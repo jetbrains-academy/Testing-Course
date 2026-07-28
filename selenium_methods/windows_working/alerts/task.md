@@ -1,5 +1,3 @@
-<h2>Alerts and how to deal with them</h2>
-
 <p>We've already come across alerts in our course when we got a solution number in our tasks. We also already know that we can trigger alerts with JavaScript:</p>
 
 <pre><code class="language-javascript">alert('Hello!');</code></pre>

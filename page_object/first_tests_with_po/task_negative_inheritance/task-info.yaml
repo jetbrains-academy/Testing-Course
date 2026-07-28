@@ -1,5 +1,5 @@
 type: edu
-custom_name: "task: negative checks and inheritance"
+custom_name: Task negative inheritance
 files:
   - name: test_main_page.py
     visible: true

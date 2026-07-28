@@ -1,5 +1,5 @@
 type: theory
-custom_name: 'pytest style of test cases '
+custom_name: Pytest style of test cases
 files:
   - name: main.py
     visible: true

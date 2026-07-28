@@ -1,5 +1,5 @@
 type: edu
-custom_name: check element presence on the page
+custom_name: Assert method
 files:
   - name: test_main_page.py
     visible: true

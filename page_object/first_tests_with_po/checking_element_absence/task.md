@@ -1,5 +1,3 @@
-<h2>Negative checks: how to verify the absence of an element</h2>
-
 <p>Sometimes, during the process of writing automated tests, a situation arises where we need to check not only the presence of an element on a page but also that an element is absent. Here, it's essential to distinguish between two fundamentally different cases, depending on how the web application behaves: </p>
 
 <p> <strong>1. The element might potentially appear on the page (but ideally shouldn't). For example, when we open a product page and expect there to be no message about a successful addition to the cart. We check that the element is not present. However, in a positive scenario, when we add a product to the cart, the message also doesn't appear immediately. If, during negative checking, we don't include a wait and immediately provide the result as "True, the element is indeed not there, everything is good," we risk encountering a falsely green test. In other words, we might overlook a bug. </p>

@@ -1,5 +1,3 @@
-<h2>Unit tests and integration tests</h2>
-
 <p>If you work with testing, you must already know the difference between unit tests and integration tests. Unit tests check a small fragment of code – usually, a specific function. In most cases, they are written by developers, who clearly understand the possible extreme cases in their tech stack. On the other hand, integration tests check the interaction of several systems. They may be written and supported by both developers or testers and analysts (in case they have a conveniently developed test writing framework).</p>
 
 <p>Unit tests are always automated because they directly check code functioning. Integration tests may be both automated and manual. Sometimes, a separate category of end-to-end (е2е) tests is isolated – they check the whole tech stack of an application and the user's black box scenario of interacting with the application. As regards the UI tests developed with Selenium, they should be considered as end-to-end tests, as they check the joint work of all the systems of a web product: frontend and backend, databases, additional services like analytics, payment systems, etc.</p>

@@ -1,5 +1,3 @@
-<h2>Task: PyTest — checking the expected result (assert)</h2>
-
 Using pytest, implement two test cases. 
 
 The first test case `test_valid_input` takes a valid number from 1 to 1000 as input and realizes the following scenario: 

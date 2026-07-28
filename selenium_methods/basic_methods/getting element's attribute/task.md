@@ -1,5 +1,3 @@
-<h2>The get_attribute method</h2>
-
 <p>We already know how to find the necessary element on a page and how to get a text visible to the reader. For more detailed tests, we may need to learn the value of the element attribute. Attributes may be standard properties understood and used by the browser to display and format elements and keep the technical data, for example, name, width, height, color, and <a href="https://www.w3schools.com/tags/ref_attributes.asp" rel="nofollow noopener noreferrer">other</a>. Besides, attributes may be created by project developers to set their own styles and rules.</p>
 
 <p>The attribute value is a string. If the value is absent, that is equal to the attribute value &quot;false&quot;.&nbsp;Let's look at the page <a href="http://suninjuly.github.io/math.html" rel="nofollow noopener noreferrer">http://suninjuly.github.io/math.html</a> again. It has radio buttons with default values. In the automated test, we may need to check that one of the&nbsp;radio buttons&nbsp;has a checked default value. To do that, we can check the value of the "checked" attribute of this element. Here's the element's HTML code:</p>

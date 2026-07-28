@@ -1,5 +1,3 @@
-<h2>Task: find an element by the link text</h2>
-
 <p>In this task, we'll try to find elements by link text, and to do that, we'll use the find_element_by_link_text method:</p>
 
 <pre><code>link = browser.find_element(By.LINK_TEXT, text)</code></pre>

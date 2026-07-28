@@ -1,5 +1,3 @@
-<h2>Finding elements with complex CSS selectors</h2>
-
 <p>Now, let's imagine that we cannot find an element on a page using a simple selector, as such a selector finds several elements at once. Below, you can see a part of the code of a simple HTML page describing a blog. You can find the page <a href="http://suninjuly.github.io/blog_example.html" rel="noopener noreferrer nofollow">here</a>.</p>
 
 <p>Question: how can we find a selector for the title of the second image? Here, the hierarchic page structure and the possibility of combining CSS selectors come to the resque. CSS selectors allow simultaneously using any previously considered selectors; besides, they have some additional options for fine search.</p>

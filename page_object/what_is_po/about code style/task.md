@@ -1,5 +1,3 @@
-<h2>A few words about Code Style</h2>
-
 <p>Among those who frequently write code,
 there is a certain agreement about the &quot;code style&quot;.
 Code style is what does not refer to code functionality:

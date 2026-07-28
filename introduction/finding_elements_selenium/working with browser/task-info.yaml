@@ -1,3 +1,4 @@
+custom_name: Working with browser
 type: theory
 files:
   - name: quit_example.py

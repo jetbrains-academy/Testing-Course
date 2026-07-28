@@ -1,5 +1,3 @@
-<h2>Task: waiting for the required text on the page</h2>
-
 <p>Let's now try to write a program that will make a vacation cabin reservation at a strictly defined price. Higher prices are unacceptable, while in the case of a lower price, the cabin will be immediately rented by someone else.</p>
 
 <p>In this task, you need to write a program according to the following scenario:</p>

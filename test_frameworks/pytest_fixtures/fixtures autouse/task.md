@@ -1,5 +1,3 @@
-<h2>Fixture autouse</h2>
-
 <p>While describing a fixture, we can indicate an additional parameter <strong>autouse=True,</strong> which shows that the fixture should be run for each test even without an explicit call: </p>
 
 <p>test_fixture_autouse.py</p>

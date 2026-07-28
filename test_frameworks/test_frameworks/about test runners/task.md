@@ -1,5 +1,3 @@
-<h2>Choosing a test runner</h2>
-
 <p>In the previous steps, we've learned to write simple tests and run them with Python. Let's remember the test code and the results of test running from the previous step.</p>
 
 <p><strong>test_abs_project.py:</strong></p>

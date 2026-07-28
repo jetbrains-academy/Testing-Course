@@ -1,5 +1,3 @@
-<h2>PyTest — how to write tests</h2>
-
 <p>Unlike unittest, PyTest does not require writing additional specific constructs in tests.</p>
 
 <p>We've already seen that PyTest can run tests written in the unittest style. Let's rewrite our tests from <strong>test_abs_project.py</strong> in a simpler format, which is also understood by PyTest. Let's name the new file test_abs.py:</p>

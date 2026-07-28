@@ -1,5 +1,5 @@
 type: edu
-custom_name: "task: inheritance"
+custom_name: "Benefits of inheritance: example"
 files:
   - name: test_main_page.py
     visible: true

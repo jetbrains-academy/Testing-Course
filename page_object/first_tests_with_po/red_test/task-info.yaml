@@ -1,5 +1,5 @@
 type: edu
-custom_name: assertion methods in page object
+custom_name: Red test
 files:
   - name: test_main_page.py
     visible: true

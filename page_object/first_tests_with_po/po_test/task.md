@@ -1,5 +1,3 @@
-<h2>First test based on&nbsp;Page Object</h2>
-
 <p>Hooray, we've implemented the first prototype of the page! Now let's rewrite the test using the Page Object:&nbsp;</p>
 
 <p>1. Open the file with your test,&nbsp;<em>test_main_page.py</em>.</p>

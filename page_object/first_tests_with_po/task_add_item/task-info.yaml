@@ -1,5 +1,5 @@
 type: edu
-custom_name: "task: adding an item to basket"
+custom_name: Task add item
 files:
   - name: __init__.py
     visible: false

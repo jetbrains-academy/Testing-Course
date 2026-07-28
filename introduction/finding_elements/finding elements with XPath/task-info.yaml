@@ -1,3 +1,4 @@
+custom_name: Finding elements with XPath
 type: theory
 files:
   - name: main.py

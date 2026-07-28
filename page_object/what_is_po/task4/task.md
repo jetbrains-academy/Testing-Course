@@ -1,5 +1,3 @@
-<h2>What is Page Object Model?</h2>
-
 <p><strong>Page Object Model</strong> or just Page Object is a programming pattern that is very popular in test automation and is one of the standards of web product test automation. Besides, it is one of handy methods of structuring your code to make it easier to maintain, modify, and work with.</p>
 
 <p>The main point is that each page of a web application may be described as a class object. The user's interactions with the page may be described with class methods. In the ideal case, the test using a Page Object needs to describe the business logic of the test scenario and hide Selenium's methods of interaction with the browser and the page. If the page coding changes, we won't need to fix the tests connected with the page. Instead, we'll only need to fix the class describing the page.</p>

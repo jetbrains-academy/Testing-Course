@@ -1,5 +1,5 @@
 type: edu
-custom_name: first test using page object
+custom_name: Po test
 files:
   - name: test_main_page.py
     visible: true

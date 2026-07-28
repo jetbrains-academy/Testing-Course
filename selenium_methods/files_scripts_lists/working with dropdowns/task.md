@@ -1,5 +1,3 @@
-<h2>Working with lists</h2>
-
 <p>Web pages may also have dropdown lists. Such lists have a number of important features:</p>
 
 <ol>

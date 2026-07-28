@@ -1,5 +1,3 @@
-<h2>Task: switching to a new tab</h2>
-
 <p>In this task, after you click the button, a page will open in a new tab. You need to switch WebDriver to the new tab and solve a problem there.</p>
 
 <p>The implementation scenario is as follows:</p>

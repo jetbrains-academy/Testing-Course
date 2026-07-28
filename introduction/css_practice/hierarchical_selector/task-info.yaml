@@ -1,5 +1,5 @@
 type: edu
-custom_name: hierarchical selectors
+custom_name: Hierarchical selector
 files:
   - name: task.py
     visible: true

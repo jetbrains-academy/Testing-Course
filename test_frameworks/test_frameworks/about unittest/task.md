@@ -1,5 +1,3 @@
-<h2>unittest</h2>
-
 <p>Test runners can find test methods in the files defined at the test start; however, to ensure that, we need to follow common rules. Here is a common rule for all frameworks: the name of a test method must start with the word "test_".  What follows is any text – the unique name of the test:</p>
 
 <pre><code class="language-python">def test_name_for_your_test():</code></pre>

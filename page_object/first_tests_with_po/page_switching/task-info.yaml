@@ -1,5 +1,5 @@
 type: edu
-custom_name: switching between pages
+custom_name: Page switching
 files:
   - name: test_main_page.py
     visible: true

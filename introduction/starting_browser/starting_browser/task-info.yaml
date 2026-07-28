@@ -1,5 +1,5 @@
 type: edu
-custom_name: "task: starting browser with first script"
+custom_name: Starting browser
 files:
   - name: task.py
     visible: true

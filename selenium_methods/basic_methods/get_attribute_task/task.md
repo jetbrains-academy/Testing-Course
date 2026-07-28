@@ -1,5 +1,3 @@
-<h2>Task: treasure hunt with get_attribute</h2>
-
 <p>In this task, with the help of a robot, you need to solve the same mathematical problem as in the previous task. However, now the value of the <strong>х</strong> variable is hidden in a "chest", i.e., in the <strong>valuex</strong> attribute of the chest image.</p>
 
 <p>Your program needs to:</p>

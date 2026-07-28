@@ -1,5 +1,3 @@
-<h2>Task: accepting an alert</h2>
-
 <p>In this task, you need to write a program that executes the following scenario:</p>
 
 <ol>

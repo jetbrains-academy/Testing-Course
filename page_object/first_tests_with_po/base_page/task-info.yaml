@@ -1,5 +1,5 @@
 type: edu
-custom_name: "task: base page for our project"
+custom_name: Base page
 files:
   - name: __init__.py
     visible: false

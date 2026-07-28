@@ -1,4 +1,4 @@
-custom_name: pytest test runner
+custom_name: Testing pytest
 content:
   - pytest_pros_cons
   - pytest_rules

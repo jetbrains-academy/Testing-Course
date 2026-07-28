@@ -1,4 +1,4 @@
-custom_name: using fixtures in pytest
+custom_name: Pytest fixtures
 content:
   - classic fixtures
   - fixtures returning value

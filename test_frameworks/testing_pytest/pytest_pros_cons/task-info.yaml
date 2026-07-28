@@ -1,5 +1,5 @@
 type: theory
-custom_name: "pytest: pros and cons"
+custom_name: Pytest pros cons
 files:
   - name: main.py
     visible: true

@@ -1,5 +1,3 @@
-<h2>Task: unique selectors</h2>
-
 <p>We already have a simple test from the previous step, which checks the possibility of registering at a site. However, developers decided to slightly modify the coding of the page to make it look more up-to-date. The updated page is available at a different&nbsp;<a href="http://suninjuly.github.io/registration2.html" rel="nofollow noopener noreferrer" target="_blank" title="Link: http://suninjuly.github.io/registration2.html">link</a>. Unfortunately, while modifying the page, the developers accidentally left a bug in the registration form.</p>
 
 <p>Try running the code from the previous step with the new&nbsp;<a href="http://suninjuly.github.io/registration2.html" rel="nofollow noopener noreferrer" target="_blank" title="Link: http://suninjuly.github.io/registration2.html">link</a> as the start page. If your test crashes with the NoSuchElementException error, it means that you have chosen the right selectors and found the bug left by the developers. That's good. It means that your tests did work. Don't get scared, it's an error in the application you're testing, not in your test.&nbsp;</p>

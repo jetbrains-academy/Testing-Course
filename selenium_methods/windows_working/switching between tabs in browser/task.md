@@ -1,5 +1,3 @@
-<h2>Switching between browser tabs</h2>
-
 <p>When working with web applications, we sometimes need to use links that open in a new browser tab. WebDriver can only work with one tab. When a new tab is opened, WebDriver continues working with the old tab. To switch to a new tab, we need to indicate which tab we want to use. You can do that with the switch_to.window command:</p>
 
 <pre><code class="language-python">browser.switch_to.window(window_name)</code></pre>

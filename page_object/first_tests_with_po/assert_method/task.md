@@ -1,5 +1,3 @@
-<h2>Checking an element on a page</h2>
-
 <p>To display an appropriate error message, we will perform all checks using assert and catch the exceptions.</p>
 
 <p>For this purpose, let's write a helper method to find an element on our BasePage, which will return either <code>True</code> or <code>False</code>. This can be done in various ways (with explicit or implicit waits). For now, let's use implicit waiting.</p>

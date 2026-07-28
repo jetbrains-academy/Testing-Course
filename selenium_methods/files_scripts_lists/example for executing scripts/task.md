@@ -1,5 +1,3 @@
-<h2>Sample execute_script task</h2>
-
 <p>Let's consider a real-life situation where the user needs to click a page element that suddenly appears to be overlapped by another element.</p>
 
 <p>In WebDriver, we use the click() method for a click. If the element is overlapped by another element, the program throws the following error:</p>

@@ -1,5 +1,5 @@
 type: edu
-custom_name: "task: finalizing fixtures"
+custom_name: Fixtures finalizing task
 files:
   - name: task.py
     visible: true

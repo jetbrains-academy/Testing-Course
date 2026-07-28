@@ -1,5 +1,5 @@
 type: edu
-custom_name: custom attribute selector
+custom_name: Data type
 files:
   - name: task.py
     visible: true

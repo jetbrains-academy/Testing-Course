@@ -1,5 +1,5 @@
 type: edu
-custom_name: "task: working with dropdown"
+custom_name: Task dropdown
 files:
   - name: task.py
     visible: true

@@ -1,5 +1,3 @@
-<h2>Test marking: part 2</h2>
-
 <h3><strong>Inversion</strong></h3>
 
 <p>To launch all the tests that do not have a given mark, you can use inversion. To run all the tests that are not marked as smoke ones, execute the following command:</p>

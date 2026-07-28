@@ -1,5 +1,3 @@
-<h2>Uploading files</h2>
-
 <p>﻿In case we need to upload a file on a web page, we can use the already familiar send_keys method. However, instead of plain text, we now need to pass the file path as an argument.</p>
 
 <p>To indicate the file path, we can use the standard Python module for working with an operating system — <strong>os</strong>. In such a case, your code won't depend on the operating system you are using. It will work with Windows, Linux, and even with MaсOS.</p>

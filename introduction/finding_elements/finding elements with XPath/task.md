@@ -1,5 +1,3 @@
-<h2>Finding elements with XPath</h2>
-
 <p>When working with web pages, we can't always find a selector unambiguously describing the path to the required element. In such cases, the best solution would be talking to the front-end developer of the project and agreeing on a special attribute that will be used in automated tests. This way, you can increase the testability of the application. However, projects vary, and it's not always possible to do that. When there is no other solution for automating your tests, you can use the&nbsp;<strong>XPath</strong> query language.</p>
 
 <p>There are different opinions as regards XPath. However, it is a powerful and versatile tool, which allows writing complex queries to find elements.</p>

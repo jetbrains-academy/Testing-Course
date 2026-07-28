@@ -1,5 +1,4 @@
 
-## What is Selenium?
 This term might mean different things in different contexts. 
 
 Let's figure it all out! 

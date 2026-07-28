@@ -1,5 +1,5 @@
 type: edu
-custom_name: "task: checking element absence - fix"
+custom_name: Task check element absence fix
 files:
   - name: test_main_page.py
     visible: true

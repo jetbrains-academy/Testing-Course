@@ -1,5 +1,3 @@
-<h2>Task: authorization on a web site</h2>
-
 <p>This task requires an account on the teaching platform <a href="https://stepik.org/" rel="noopener noreferrer nofollow"> https://stepik.org/ </a> .
 
 Please register your personal account there with an email and a password. </p>

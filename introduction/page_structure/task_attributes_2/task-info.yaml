@@ -1,5 +1,5 @@
 type: edu
-custom_name: "task: more attributes"
+custom_name: Task attributes 2
 files:
   - name: task.py
     visible: true

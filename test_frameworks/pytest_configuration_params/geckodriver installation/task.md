@@ -1,5 +1,3 @@
-<h2>Installing Firefox and Selenium geckodriver</h2>
-
 <p>So far, we've launched our tests only in Chrome, but what if we need to test our web application in other browsers, too? We will run the same tests, but when launching them, we will indicate what browser they need to be run on. Let's take Firefox as the second browser, as it is the second most popular browser and it may be run on any platform. We will launch our tests with the parameter browser_name using the following command:</p>
 
 <pre><code>pytest -s -v --browser_name=firefox test_cmd.py</code></pre>

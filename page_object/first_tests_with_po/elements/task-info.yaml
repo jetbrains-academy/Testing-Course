@@ -1,5 +1,5 @@
 type: edu
-custom_name: page element in page object
+custom_name: Elements
 files:
   - name: __init__.py
     visible: false

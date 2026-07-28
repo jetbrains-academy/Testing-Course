@@ -1,5 +1,5 @@
 type: theory
-custom_name: 'implicit waits in selenium '
+custom_name: Implicit waits in selenium
 files:
   - name: main.py
     visible: true

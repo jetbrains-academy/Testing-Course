@@ -1,5 +1,3 @@
-<h2>Checking for expected result</h2>
-
 <p>How can we check for the expected result? We can use Python's built-in <strong>assert</strong> instruction, which checks the validity of statements. <strong>assert True</strong> does not result in the output of additional messages, while <strong>assert False</strong> will throw an exception: <strong>AssertionError</strong>.</p>
 
 <p>Let's discuss the functioning of assert using an example with the built-in function <strong>abs</strong>(), which returns the absolute value of a number. First, activate the previously created virtual environment and run the Python interpreter. </p>

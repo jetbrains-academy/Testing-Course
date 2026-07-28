@@ -1,5 +1,5 @@
 type: theory
-custom_name: first step towards page object
+custom_name: What is Page Object Model?
 files:
   - name: main.py
     visible: true

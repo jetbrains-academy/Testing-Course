@@ -1,5 +1,3 @@
-<h2>Testing: automated vs. manual</h2>
-
 <p>To start writing good automated tests, you need to clearly understand the pros and cons of both automated and manual testing.</p>
 
 <table border="1" cellpadding="1" cellspacing="1" style="width:700px">

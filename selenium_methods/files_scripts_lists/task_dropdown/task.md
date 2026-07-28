@@ -1,5 +1,3 @@
-<h2>Task: working with dropdown lists</h2>
-
 <p>For this task, we came up with another version of a captcha test. We'll need to slightly retrain our robot so that it can handle the task.</p>
 
 <p>Write code that realizes the following scenario:</p>

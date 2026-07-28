@@ -1,3 +1,4 @@
+custom_name: Switching between tabs in browser
 type: theory
 files:
   - name: main.py

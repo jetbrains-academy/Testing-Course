@@ -1,5 +1,3 @@
-<h2>Working with the browser in Selenium</h2>
-
 <p>If you have already tried running sample scripts, you might have noticed that the browser does not always close after executing the code. Thus, make sure to explicitly close the browser window in code using the command <strong>browser.quit().</strong> Each time you open the browser <code>browser = webdriver.Chrome()</code>, the system launches a process which will remain there unless you manually close the browser window. In order not to run out of RAM after launching several scripts, always add the closing command to your scripts:</p>
 
 <pre><code>from selenium import webdriver

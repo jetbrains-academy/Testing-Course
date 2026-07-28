@@ -1,6 +1,4 @@
-<h2>Page elements in the Page Object pattern</h2>
-
-<p>Remember, we talked about how the tests almost adhere to the Page Object approach?&nbsp;</p>
+﻿<p>Remember, we talked about how the tests almost adhere to the Page Object approach?&nbsp;</p>
 
 <p>Now, with the help of a short and instructive story, let's see why it's <strong>almost&nbsp;</strong>the case.</p>
 

@@ -1,5 +1,5 @@
 type: edu
-custom_name: test grouping and setup
+custom_name: Task test grouping
 files:
   - name: __init__.py
     visible: false

@@ -1,5 +1,3 @@
-<h2>Conftest.py and passing parameters in command line</h2>
-
 <p>The built-in <strong>request</strong> fixture can receive data about currently running tests, which allows saving additional data in reports as well as doing many other interesting things. In this step, we want to show how you can set up test environments by passing parameters in the command line.</p>
 
 <p>You can do that with the help of the built-in pytest_addoption function and the request fixture. First, in the conftest file, we'll add an option handler in the pytest_addoption function; then we'll write a fixture that will process the data passed in the option. You can find details here: <a href="https://docs.pytest.org/en/latest/example/simple.html?highlight=addoption" rel="nofollow noopener noreferrer" target="_blank">https://docs.pytest.org/en/latest/example/simple.html?highlight=addoption</a>.</p>

@@ -1,5 +1,3 @@
-<h2>XFail: marking tests expected to fail</h2>
-
 <p><strong>Mark a test as failing</strong></p>
 
 <p>Now, let's add a new test to our test class – it checks for the "Favorite" button:</p>

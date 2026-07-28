@@ -1,6 +1,4 @@
-<h2>Test Grouping: setup </h2>
-
-<p>Now, let's leverage the magic of OOP for organizing the code of the test cases themselves. PyTest allows us to combine multiple test cases into one class. Why do this, and why is it convenient?</p>
+﻿<p>Now, let's leverage the magic of OOP for organizing the code of the test cases themselves. PyTest allows us to combine multiple test cases into one class. Why do this, and why is it convenient?</p>
 
 <p><strong>Firstly,</strong> we can logically group tests into one class simply for the sake of more structured code. It's convenient when tests related to one component are in one class, and with <strong>pytest.mark</strong>, you can mark the entire class at once. The main rule is that the class name should start with <strong>Test</strong> so that PyTest can detect and run it.</p>
 

@@ -1,5 +1,5 @@
 type: edu
-custom_name: 'benefits of inheritance '
+custom_name: "Benefits of Inheritance: The Magic of OOP"
 files:
   - name: __init__.py
     visible: false

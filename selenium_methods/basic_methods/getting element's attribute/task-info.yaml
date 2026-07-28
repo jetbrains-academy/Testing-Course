@@ -1,3 +1,4 @@
+custom_name: The get_attribute method
 type: theory
 files:
   - name: main.py

@@ -1,5 +1,5 @@
 type: edu
-custom_name: "task: page object for main page"
+custom_name: Main page
 files:
   - name: __init__.py
     visible: false

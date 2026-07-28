@@ -1,5 +1,5 @@
 type: edu
-custom_name: "task: authorization"
+custom_name: Task authorization
 files:
   - name: task_authorisation.py
     visible: true

@@ -1,5 +1,3 @@
-<h2>Code Style in autotests</h2>
-
 <p>Here we tried to summarize the important principles of autotest writing: </p>
 
 <ul>

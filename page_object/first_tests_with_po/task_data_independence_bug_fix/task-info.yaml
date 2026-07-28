@@ -1,5 +1,5 @@
 type: edu
-custom_name: "task: localizing bug"
+custom_name: Task data independence bug fix
 files:
   - name: test_main_page.py
     visible: true

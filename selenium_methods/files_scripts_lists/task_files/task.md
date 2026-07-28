@@ -1,5 +1,3 @@
-<h2>Task: uploading a file</h2>
-
 <p>In this task, you will need to upload a text file in a registration form.</p>
 
 <p>Write a script that will execute the following scenario:</p>

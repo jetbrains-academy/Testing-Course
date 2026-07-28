@@ -18,5 +18,5 @@ files:
     visible: true
   - name: task.py
     visible: true
-custom_name: "task: finding correct selectors"
+custom_name: Find selectors
 local_check: true
