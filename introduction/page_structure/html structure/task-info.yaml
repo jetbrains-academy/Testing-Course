@@ -1,5 +1,5 @@
-custom_name: Html structure
 type: theory
+custom_name: Html structure
 files:
   - name: main.py
     visible: true

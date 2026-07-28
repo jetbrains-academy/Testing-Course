@@ -1,5 +1,5 @@
-custom_name: Classic fixtures
 type: theory
+custom_name: Classic fixtures
 files:
   - name: test_fixture1.py
     visible: true

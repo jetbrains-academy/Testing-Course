@@ -1,5 +1,5 @@
-custom_name: Prerequisites
 type: theory
+custom_name: Prerequisites
 files:
   - name: main.py
     visible: true

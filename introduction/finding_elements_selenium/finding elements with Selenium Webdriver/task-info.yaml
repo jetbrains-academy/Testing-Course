@@ -1,5 +1,5 @@
-custom_name: Finding elements with Selenium Webdriver
 type: theory
+custom_name: Finding elements with Selenium Webdriver
 files:
   - name: main.py
     visible: true

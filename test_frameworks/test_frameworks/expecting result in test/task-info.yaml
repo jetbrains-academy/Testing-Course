@@ -1,5 +1,5 @@
-custom_name: Checking for expected result
 type: theory
+custom_name: Checking for expected result
 files:
   - name: main.py
     visible: true

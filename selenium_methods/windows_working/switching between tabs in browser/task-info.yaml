@@ -1,5 +1,5 @@
-custom_name: Switching between tabs in browser
 type: theory
+custom_name: Switching between tabs in browser
 files:
   - name: main.py
     visible: true

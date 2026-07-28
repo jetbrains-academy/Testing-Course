@@ -1,5 +1,5 @@
-custom_name: Test parametrization
 type: theory
+custom_name: Test parametrization
 files:
   - name: main.py
     visible: true

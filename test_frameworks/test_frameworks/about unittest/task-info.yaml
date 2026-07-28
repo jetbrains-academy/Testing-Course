@@ -1,5 +1,5 @@
-custom_name: About unittest
 type: theory
+custom_name: About unittest
 files:
   - name: main.py
     visible: true

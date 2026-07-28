@@ -1,5 +1,5 @@
-custom_name: Fixtures autouse
 type: theory
+custom_name: Fixtures autouse
 files:
   - name: test_fixture_autouse.py
     visible: true

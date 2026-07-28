@@ -1,5 +1,5 @@
-custom_name: Running tests for different localizations
 type: theory
+custom_name: Running tests for different localizations
 files:
   - name: main.py
     visible: true

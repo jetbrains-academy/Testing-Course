@@ -1,5 +1,5 @@
-custom_name: Visual attributes
 type: edu
+custom_name: Visual attributes
 files:
   - name: index.html
     visible: true

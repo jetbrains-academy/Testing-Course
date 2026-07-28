@@ -1,5 +1,5 @@
-custom_name: Installing chrome webdriver
 type: theory
+custom_name: Installing chrome webdriver
 files:
   - name: main.py
     visible: true

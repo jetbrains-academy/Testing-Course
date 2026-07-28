@@ -1,5 +1,5 @@
-custom_name: The execute_script method
 type: theory
+custom_name: The execute_script method
 files:
   - name: main.py
     visible: true

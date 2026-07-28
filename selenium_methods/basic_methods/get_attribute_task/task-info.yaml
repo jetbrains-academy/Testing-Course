@@ -1,5 +1,5 @@
 type: edu
-custom_name: "Treasure hunt with get_attribute"
+custom_name: Treasure hunt with get_attribute
 files:
   - name: task.py
     visible: true

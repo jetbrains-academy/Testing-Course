@@ -1,5 +1,5 @@
-custom_name: Plugins and test reruns
 type: theory
+custom_name: Plugins and test reruns
 files:
   - name: main.py
     visible: true

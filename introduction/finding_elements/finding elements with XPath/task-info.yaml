@@ -1,5 +1,5 @@
-custom_name: Finding elements with XPath
 type: theory
+custom_name: Finding elements with XPath
 files:
   - name: main.py
     visible: true

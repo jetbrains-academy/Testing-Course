@@ -1,5 +1,5 @@
-custom_name: Manual vs automated tests
 type: theory
+custom_name: Manual vs automated tests
 files:
   - name: main.py
     visible: true

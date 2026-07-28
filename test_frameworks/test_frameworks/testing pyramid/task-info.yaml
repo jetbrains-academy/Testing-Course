@@ -1,5 +1,5 @@
-custom_name: Unit tests and integration tests
 type: theory
+custom_name: Unit tests and integration tests
 files:
   - name: main.py
     visible: true

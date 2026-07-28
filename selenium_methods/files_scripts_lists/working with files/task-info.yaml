@@ -1,5 +1,5 @@
-custom_name: Working with files
 type: theory
+custom_name: Working with files
 files:
   - name: main.py
     visible: true

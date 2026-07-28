@@ -1,5 +1,5 @@
-custom_name: Explicit waits and expected conditions
 type: theory
+custom_name: Explicit waits and expected conditions
 files:
   - name: main.py
     visible: true

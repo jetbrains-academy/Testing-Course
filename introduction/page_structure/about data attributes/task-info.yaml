@@ -1,5 +1,5 @@
-custom_name: About data attributes
 type: theory
+custom_name: About data attributes
 files:
   - name: main.py
     visible: true

@@ -1,5 +1,5 @@
-custom_name: Installing chromedriver for linux
 type: theory
+custom_name: Installing chromedriver for linux
 files:
   - name: main.py
     visible: true

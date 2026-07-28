@@ -9,7 +9,7 @@ summary: |-
   <li>Best practices and popular frameworks for test automation.</li>
   </ol>
 vendor:
-  name: JetBrains
+  name: JetBrains s.r.o.
   email: support@jetbrains.com
   url: https://www.jetbrains.com/
 programming_language: Python
@@ -29,4 +29,4 @@ additional_files:
   - name: test_frameworks/pytest_configuration_params/__init__.py
   - name: requirements.txt
   - name: courseIcon.svg
-yaml_version: 2
+yaml_version: 6

@@ -1,5 +1,5 @@
-custom_name: Reporting in pytest
 type: theory
+custom_name: Reporting in pytest
 files:
   - name: main.py
     visible: true

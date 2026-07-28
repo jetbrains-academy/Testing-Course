@@ -1,5 +1,5 @@
-custom_name: Assertion in pytest
 type: theory
+custom_name: Assertion in pytest
 files:
   - name: main.py
     visible: true

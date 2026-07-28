@@ -1,5 +1,5 @@
-custom_name: Test structure
 type: theory
+custom_name: Test structure
 files:
   - name: main.py
     visible: true

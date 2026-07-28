@@ -1,5 +1,5 @@
-custom_name: Task localization
 type: edu
+custom_name: Task localization
 files:
   - name: test_items.py
     visible: true

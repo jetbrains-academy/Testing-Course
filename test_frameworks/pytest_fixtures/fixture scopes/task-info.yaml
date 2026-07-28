@@ -1,5 +1,5 @@
-custom_name: Fixture scopes
 type: theory
+custom_name: Fixture scopes
 files:
   - name: test_fixture5.py
     visible: true

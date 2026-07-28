@@ -1,5 +1,5 @@
-custom_name: Why page object
 type: theory
+custom_name: Why page object
 files:
   - name: main.py
     visible: true

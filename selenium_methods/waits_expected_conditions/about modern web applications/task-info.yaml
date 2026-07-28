@@ -1,5 +1,5 @@
-custom_name: About modern web applications
 type: theory
+custom_name: About modern web applications
 files:
   - name: main.py
     visible: true

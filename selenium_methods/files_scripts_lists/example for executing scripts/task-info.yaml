@@ -1,5 +1,5 @@
-custom_name: Sample execute_script task
 type: theory
+custom_name: Sample execute_script task
 files:
   - name: main.py
     visible: true

@@ -1,5 +1,5 @@
-custom_name: Geckodriver installation
 type: theory
+custom_name: Geckodriver installation
 files:
   - name: main.py
     visible: true

@@ -1,5 +1,5 @@
-custom_name: Webpage structure
 type: theory
+custom_name: Webpage structure
 files:
   - name: main.py
     visible: true

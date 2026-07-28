@@ -1,5 +1,5 @@
-custom_name: Choosing a test runner
 type: theory
+custom_name: Choosing a test runner
 files:
   - name: main.py
     visible: true

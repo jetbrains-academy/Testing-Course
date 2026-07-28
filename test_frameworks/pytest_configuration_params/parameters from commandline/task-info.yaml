@@ -1,5 +1,5 @@
-custom_name: Parameters from commandline
 type: theory
+custom_name: Parameters from commandline
 files:
   - name: main.py
     visible: true

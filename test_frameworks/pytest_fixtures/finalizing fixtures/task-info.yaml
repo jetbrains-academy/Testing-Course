@@ -1,5 +1,5 @@
-custom_name: "Finalizers — closing the browser"
 type: theory
+custom_name: Finalizers — closing the browser
 files:
   - name: test_fixture3.py
     visible: true

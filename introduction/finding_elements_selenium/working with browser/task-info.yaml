@@ -1,5 +1,5 @@
-custom_name: Working with browser
 type: theory
+custom_name: Working with browser
 files:
   - name: quit_example.py
     visible: true

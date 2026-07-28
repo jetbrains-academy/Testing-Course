@@ -1,5 +1,5 @@
-custom_name: Let's fix it quickly
 type: theory
+custom_name: Let's fix it quickly
 files:
   - name: main.py
     visible: true

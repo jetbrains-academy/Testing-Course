@@ -1,5 +1,5 @@
-custom_name: Correct error messages
 type: theory
+custom_name: Correct error messages
 files:
   - name: main.py
     visible: true

@@ -1,4 +1,3 @@
-custom_name: Task – Selenium project
 type: choice
 is_multiple_choice: true
 options:
@@ -18,4 +17,5 @@ files:
     visible: true
   - name: __init__.py
     visible: false
+custom_name: Task – Selenium project
 local_check: true

@@ -1,5 +1,5 @@
-custom_name: Finding elements with complex css selectors
 type: theory
+custom_name: Finding elements with complex css selectors
 files:
   - name: main.py
     visible: true

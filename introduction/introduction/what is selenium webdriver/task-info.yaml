@@ -1,5 +1,5 @@
-custom_name: What is selenium webdriver
 type: theory
+custom_name: What is selenium webdriver
 files:
   - name: main.py
     visible: true

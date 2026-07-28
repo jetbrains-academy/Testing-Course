@@ -1,5 +1,5 @@
-custom_name: Installing chromedriver for windows
 type: theory
+custom_name: Installing chromedriver for windows
 files:
   - name: main.py
     visible: true

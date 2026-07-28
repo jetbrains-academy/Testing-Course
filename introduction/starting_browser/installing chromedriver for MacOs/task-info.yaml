@@ -1,5 +1,5 @@
-custom_name: Installing chromedriver for MacOs
 type: theory
+custom_name: Installing chromedriver for MacOs
 files:
   - name: main.py
     visible: true

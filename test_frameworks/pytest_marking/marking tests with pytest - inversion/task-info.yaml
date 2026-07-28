@@ -1,5 +1,5 @@
-custom_name: "Test marking: part 2"
 type: theory
+custom_name: "Test marking: part 2"
 files:
   - name: test_fixture81.py
     visible: true

@@ -1,5 +1,5 @@
-custom_name: Test configuration
 type: theory
+custom_name: Test configuration
 files:
   - name: main.py
     visible: true
